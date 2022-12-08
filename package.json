@@ -12,7 +12,6 @@
     "@react-three/drei": "^9.46.1",
     "@react-three/fiber": "^8.9.1",
     "bootstrap": "^5.2.3",
-    "main": "build/dat.gui.js",
     "dat": "^14.0.3",
     "dat.gui": "^0.7.9",
     "gsap": "^3.11.3",
