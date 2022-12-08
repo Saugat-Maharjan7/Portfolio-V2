@@ -5,11 +5,15 @@ import Toggle from "./components/togglemenu"
 import ThreeD  from "./components/ThreeD"
 import Footer from "./components/Footer"
 import Script from 'next/script'
-import * as Three from 'three'
+import {useEffect,useRef} from 'react'
 import World from "./components/worldcanvas"
 
 
+
 export default function Home() {
+
+
+
   return (
     
       <>
@@ -91,7 +95,7 @@ export default function Home() {
                         MANAGEMENT PLATFORM</h3>
                       <p className="project-details">Vendor Rating Solution is a next and robust level of supply chain management for any B2B companies that rely on large chunk of supply data to be carried on a daily basis.</p>
                     </div>
-                    <button className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                    <button  className="btn btn-outline-primary position-relative thiss" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
                       <img className="position-absolute" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314484710_805482084003173_978510453423547081_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=gzSRtD5kgYoAX8uy4YW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSTHGF6lyn3hEu9hE-OAcdf12yErgFWuESXjJUvf5TH5w&oe=638D5564" alt="btn-blr" />
                       VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
