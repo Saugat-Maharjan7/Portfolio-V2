@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import Script from 'next/script'
 import {useEffect,useRef} from 'react'
 import World from "./components/worldcanvas"
+import Mouse from "./components/Mouse"
 
 
 
@@ -33,7 +34,9 @@ export default function Home() {
         <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} />
         <World/>
         <Toggle></Toggle>
-        <div className="mouse-cursor"/>
+      <Mouse></Mouse>
+
+
         {/* <World/> */}
         <main>
           {/* <a href="http://www.onlinewebfonts.com" style={{display: 'none'}}>oNline Web Fonts</a> */}

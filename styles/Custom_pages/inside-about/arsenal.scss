@@ -1,0 +1,171 @@
+.rolling-video{
+    height: fit-content;
+    overflow: hidden;
+
+    .arsenal-description{
+        top: 10%;
+        left: 5%;
+        display: flex;
+        gap:2rem;
+        flex-direction: column;
+
+        h2{
+            max-width: 600px;
+            color: white;
+            font-size: 4rem;
+            line-height: 3.4rem;
+        }
+        p{
+            color: #565656;
+            font-size: 1.625rem;
+            max-width: 600px;
+        }
+
+        
+      // Small devices (Potrait phones, 576px and up)
+    
+      @media (min-width: 350px) {
+        h2{
+            max-width: 300px;
+            font-size: 1.5rem;
+            line-height: 1.4rem;
+        }
+        p{
+            font-size: 1rem;
+            max-width: 300px;
+            color: #c7c7c7;
+            line-height: 1.4rem;
+
+        }
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        h2{
+            max-width: 400px;
+            font-size: 1.65rem;
+            line-height: 1.5rem;
+        }
+        p{
+            font-size: 1.2rem;
+            max-width: 400px;
+            color: #c7c7c7;
+            line-height: 1.6rem;
+
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        h2{
+            max-width: 400px;
+            font-size: 3rem;
+            line-height: 2.8rem;
+        }
+        p{
+            font-size: 1.5rem;
+            max-width: 400px;
+            color: #c7c7c7;
+            line-height: 1.8rem;
+
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        h2{
+            max-width: 600px;
+            color: white;
+            font-size: 4rem;
+            line-height: 3.4rem;
+        }
+        p{
+            color: #565656;
+            font-size: 1.625rem;
+            max-width: 600px;
+            line-height: 2.2rem;
+
+        }
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        h2{
+            max-width: 600px;
+            color: white;
+            font-size: 4rem;
+            line-height: 3.4rem;
+        }
+        p{
+            color: #565656;
+            font-size: 1.625rem;
+            max-width: 600px;
+            line-height: 2.2rem;
+
+        }
+
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        h2{
+            max-width: 600px;
+            color: white;
+            font-size: 4rem;
+            line-height: 3.4rem;
+        }
+        p{
+            color: #565656;
+            font-size: 1.625rem;
+            max-width: 560px;
+            line-height: 2rem;
+
+        }
+
+    }
+    }
+}
+
+.arsenal-video{
+    width: 100%;
+
+      // Small devices (Potrait phones, 576px and up)
+    
+      @media (min-width: 350px) {
+        width: 200%;
+        transform: translateX(-200px);
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        width: 200%;
+        transform: translateX(-334px)
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        width: 150%;
+        transform: translateX(-100px);
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        width: 100%;        transform: translateX(0px);
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        width: 100%;        transform: translateX(0px);
+
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        width: 100%;
+        transform: translateX(0px);
+
+    }
+}

@@ -11,7 +11,13 @@ function head(){
                   </div>
                   <div className="links d-flex flex-row">
                     <ul className="navbar-nav me-auto d-flex flex-row">
-                      <li className="nav-item d-flex flex-row "><a className="anchor" href="#" id="about">about</a></li>
+                    <li className="nav-item d-flex flex-row ">
+                    <Link className="anchor" href="about" id="about">about</Link>
+
+                    </li>
+
+
+                      {/* <li className="nav-item d-flex flex-row "><a className="anchor" href="#" id="about">about</a></li> */}
                       <li className="nav-item d-flex flex-row ">
                       <Link className="anchor" href="projects" id="works">Works</Link>
                         {/* <a className="anchor" href="#" id="works">work</a> */}
