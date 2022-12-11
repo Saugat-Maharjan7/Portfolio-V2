@@ -5,13 +5,15 @@ import Toggle from "./components/togglemenu"
 import ThreeD  from "./components/ThreeD"
 import Footer from "./components/Footer"
 import Script from 'next/script'
-import {useEffect,useRef} from 'react'
+import {use, useEffect,useRef,useState } from 'react'
 import World from "./components/worldcanvas"
 import Mouse from "./components/Mouse"
 
 
 
 export default function Home() {
+
+  const [isToggled, setToggled] = useState(false);
 
 
 
@@ -32,13 +34,15 @@ export default function Home() {
         <title>Shirish - The Design World</title>
         
         <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} />
-        <World/>
+        <button className="btn btn-primary explore-world" onClick={() => setToggled(!isToggled)} style={{position:'fixed', top:'10%',right:"10%",zIndex:10}}>{isToggled ? 'Back' : ''}{!isToggled ? 'Explore' : ''}</button>
+
+        <World></World>
         <Toggle></Toggle>
-      <Mouse></Mouse>
+        <Mouse></Mouse>
 
 
         {/* <World/> */}
-        <main>
+        <main className={isToggled ? 'main-inactive' : ''}>
           {/* <a href="http://www.onlinewebfonts.com" style={{display: 'none'}}>oNline Web Fonts</a> */}
           <div className="hero-wrapper position-relative">
             <Head></Head>

@@ -10,6 +10,7 @@ function head(){
                     <span>SHIRISH.</span> 
                   </div>
                   <div className="links d-flex flex-row">
+                    
                     <ul className="navbar-nav me-auto d-flex flex-row">
                     <li className="nav-item d-flex flex-row ">
                     <Link className="anchor" href="about" id="about">about</Link>
