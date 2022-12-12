@@ -1,6 +1,9 @@
 import Link from "next/link"
+import { useState } from "react";
 
 function head(){
+  
+
     return(
         <header>
               <div className="container">

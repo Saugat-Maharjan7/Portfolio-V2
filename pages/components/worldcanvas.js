@@ -1,10 +1,13 @@
 import Script from 'next/script'
 import { Canvas } from '@react-three/fiber';
-import {  useLoader } from '@react-three/fiber'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
+// import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { Suspense } from 'react';
 // import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+
 import gsap from 'gsap';
+
+// import { TweenMax } from 'gsap/gsap-core';
+
 import {OrbitControls,PerspectiveCamera, useTexture, Stars  } from "@react-three/drei"
 
 import React, { useRef,useState  } from "react";
@@ -13,7 +16,10 @@ import { MeshStandardMaterial, RepeatWrapping } from 'three';
 // import {Starfi}
 
 import {useEffect} from 'react'
-import { useMouse } from "react-use";
+// import { useMouse } from "react-use";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { useLoader } from '@react-three/fiber';
+// import rocketmodel from "../../public/assets/gltf/satellite.glb"
 
 
 
@@ -25,8 +31,14 @@ import { useMouse } from "react-use";
 
 function Three(){
 
+
     let starref=useRef()
-    
+
+    let mousesathover=useRef(false)
+    const satellite = useLoader(GLTFLoader, '/satellite.glb');
+
+    let satelliteref=useRef()
+
     const scrollable=document.querySelector('main')
 
     const cameraref=useRef();
@@ -63,10 +75,8 @@ function Three(){
 
         //this is the rotate effect of sphere
         scrollable.addEventListener('scroll',(e)=>{
-        // console.log(scrollable.scrollTop)
         let t=scrollable.scrollTop;
     
-        // console.log(t);
         let o=1
         sphereRef.current.position.z=t*0.004;
         sphereRef.current.rotation.z +=t*10;
@@ -83,12 +93,41 @@ function Three(){
        
 
     });
+    // function hoversatellite(){
+    //   if (satelliteref.current) {
+      
+    //     // satelliteref.current.position.y +=   0.1;
+    //         gsap.to(satelliteref.current.position,{
+    //         y:10,
+    //         duration:1.5
+    //     })
+    //   }
+    // }
+
+    // useFrame(hoversatellite())
+
+
 
     // Rotate the sphere in the y-axis on each frame
     useFrame(() => {
 
         starref.current.rotation.y+=0.0002
 
+
+       
+
+        if (satelliteref.current) {
+            // Use a sine wave to move the model up and down
+            const time = performance.now() / 1000;
+            satelliteref.current.position.y = Math.sin(time) * 0.1+2;
+          }
+
+          //this is the hover on satellite
+
+         
+
+         
+        
 
         sphereRef.current.rotation.y += 0.001;
         pointLightRef.current.position.set(
@@ -104,6 +143,8 @@ function Three(){
 
         }
         scrollable.addEventListener('scroll', onscroll);
+
+        
     });
 
     const material = new MeshStandardMaterial({ color: (0x1a1a1a),  normalMap: normal,heightTextureMap:height})
@@ -123,6 +164,40 @@ function Three(){
         <OrbitControls></OrbitControls>
        {/* <pointLight position={[10, 7, 64]} /> */}
 
+       <primitive 
+       
+       
+      //  onPointerOver={() => {
+      //   console.log("in ")
+
+      //   // Use the `current` property of the `objectRef` to animate the object
+      //   if (satelliteref.current) {
+      //     gsap.to(satelliteref.current.position.x, {
+      //       duration: 0.5,
+      //       x: 2,
+            
+            
+      //       ease: 'Elastic.easeOut'
+      //     });
+      //   }
+      // }}
+      // onPointerOut={() => {
+      //   // Use the `current` property of the `objectRef` to animate the object
+      //   console.log("out")
+      //   if (satelliteref.current) {
+      //       gsap.to(satelliteref.current.position.x, {
+      //       duration: 0.5,
+      //       x: 0.15,
+            
+            
+      //       ease: 'Elastic.easeOut'
+      //     });
+      //   }
+      // }}
+       
+      
+       
+       ref={satelliteref} position={[2,2.5,2]} rotation={[19,-500,-10]} scale={[0.15,0.15,0.15]} object={satellite.scene} />
 
         {/* this is the sphere world */}
     <mesh ref={sphereRef} material={material}>

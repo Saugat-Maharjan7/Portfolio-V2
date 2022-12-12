@@ -12,9 +12,8 @@ import Mouse from "./components/Mouse"
 
 
 export default function Home() {
-
+  
   const [isToggled, setToggled] = useState(false);
-
 
 
   return (
@@ -34,18 +33,20 @@ export default function Home() {
         <title>Shirish - The Design World</title>
         
         <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} />
-        <button className="btn btn-primary explore-world" onClick={() => setToggled(!isToggled)} style={{position:'fixed', top:'10%',right:"10%",zIndex:10}}>{isToggled ? 'Back' : ''}{!isToggled ? 'Explore' : ''}</button>
+      
 
         <World></World>
         <Toggle></Toggle>
         <Mouse></Mouse>
-
+        <button className="btn btn-primary explore-world" onClick={() => setToggled(!isToggled)}>{isToggled ? 'Back' : ''}{!isToggled ? 'Explore' : ''}</button>
 
         {/* <World/> */}
         <main className={isToggled ? 'main-inactive' : ''}>
+        <Head></Head>
+
           {/* <a href="http://www.onlinewebfonts.com" style={{display: 'none'}}>oNline Web Fonts</a> */}
           <div className="hero-wrapper position-relative">
-            <Head></Head>
+            
             <section className="w-100 hero-container" style={{top: 0}} >
               <div className="container position-relative">
                 <div className="gradient-shade w-100" />
