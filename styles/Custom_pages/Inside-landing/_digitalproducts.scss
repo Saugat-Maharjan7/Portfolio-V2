@@ -1,14 +1,12 @@
 #digital-products{
-    
+    :nth-child(1){
+        .border-l-r-b{
+            border-top: 1px white solid;
+        }
+    }
 
     #products-container{
         overflow: hidden;
-        
-       
-
-     
-        
-    
          
     }
       

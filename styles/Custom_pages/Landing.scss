@@ -176,9 +176,11 @@ header{
     overflow:hidden;
 }
 .hero-container{
+    height: 100vh;
     z-index: -1;
 
-    .container{        
+    .container{     
+        height: 100%;   
         .gradient-shade{
             border-left: 1px solid white;
             border-right: 1px solid white;
@@ -220,14 +222,17 @@ header{
         }
 
         .hero{
-        
+            height: 95%;  
             gap:2rem;
+            display: flex;
+            justify-content: flex-end;
+
 
             // Small devices (Potrait phones, 576px and up)
     
             @media (min-width: 350px) {
                 padding:0 1rem;
-                padding-top: 26rem;
+                
                 padding-bottom: 2rem;
 
             }
@@ -235,7 +240,7 @@ header{
             // Small devices (landscape phones, 576px and up)
             @media (min-width: 576px) {
                 padding:0 1rem;
-                padding-top: 26rem;
+                
                 padding-bottom: 2rem;
 
             }
@@ -243,7 +248,7 @@ header{
             // Medium devices (tablets, 768px and up)
             @media (min-width: 768px) {
                 padding:0 1rem;
-                padding-top: 28rem;
+                
                 padding-bottom: 2rem;
 
             }
@@ -251,7 +256,7 @@ header{
             // Large devices (desktops, 992px and up)
             @media (min-width: 992px) {
                 padding:0 4rem;
-                padding-top: 20rem;
+                
                 padding-bottom: 2rem;
 
             }
@@ -259,7 +264,7 @@ header{
             // X-Large devices (large desktops, 1200px and up)
             @media (min-width: 1200px) {
                 padding:0 4rem;
-                padding-top: 20rem;
+                
                 padding-bottom: 2rem;
 
             }
@@ -267,7 +272,7 @@ header{
             // XX-Large devices (larger desktops, 1400px and up)
             @media (min-width: 1400px) {
                 padding:0 4rem;
-                padding-top: 20rem;
+                
                 padding-bottom: 2rem;
 
             }
