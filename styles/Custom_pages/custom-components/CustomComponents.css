@@ -1,0 +1,44 @@
+.btn {
+  text-transform: uppercase;
+}
+
+.btn-outline-primary {
+  border-radius: 0px;
+  padding: 0.625 1rem;
+  overflow: hidden;
+}
+.btn-outline-primary img {
+  z-index: 1;
+  top: -60px;
+  left: -100%;
+  transition: ease-in-out 0.8s;
+}
+.btn-outline-primary:hover {
+  background: none;
+  color: #FB722E;
+  filter: drop-shadow(0px 0px 10px #FB722E);
+}
+.btn-outline-primary:hover svg {
+  fill: #FB722E;
+}
+.btn-outline-primary:hover img {
+  left: 100%;
+}
+.btn-outline-primary:active svg {
+  fill: black;
+}
+
+.btn-icon svg {
+  fill: white;
+  transform: scale(1.5);
+}
+
+.modal-content {
+  color: rgb(22, 21, 21);
+}
+
+.modal-body {
+  font-family: "NexaLight";
+  font-size: 1.4rem;
+  align-items: center;
+}/*# sourceMappingURL=CustomComponents.css.map */

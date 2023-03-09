@@ -23,7 +23,7 @@ function head(){
 
                       {/* <li className="nav-item d-flex flex-row "><a className="anchor" href="#" id="about">about</a></li> */}
                       <li className="nav-item d-flex flex-row ">
-                      <Link className="anchor" href="projects" id="works">Works</Link>
+                      <Link className="anchor" href="projects" id="works">works</Link>
                         {/* <a className="anchor" href="#" id="works">work</a> */}
                         </li>
                       <li className="nav-item d-flex flex-row" id="contact"><a className="anchor" href="#" id="contact"><span id="contact">LET'S CONNECT</span><div id="contact" className="send-btn "><svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-cursor-fill" viewBox="0 0 16 16">

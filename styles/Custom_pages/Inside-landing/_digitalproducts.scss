@@ -1,12 +1,14 @@
 #digital-products{
-    :nth-child(1){
-        .border-l-r-b{
-            border-top: 1px white solid;
-        }
-    }
+    
 
     #products-container{
         overflow: hidden;
+        
+       
+
+     
+        
+    
          
     }
       
@@ -18,7 +20,7 @@
 
         .project{
             border-bottom: 1px solid white;
-            padding: 2rem 0 4rem 0;
+            padding: 4rem 0 4rem 0;
             flex-direction: row;
             width: 100%;
             gap:1rem;
@@ -234,4 +236,17 @@
         }
 
     }    
+}
+
+.phidden{
+    opacity: 0;
+    transition: .75s ease-in-out all;
+    filter: blur(40px)
+};
+
+.pshow{
+    opacity: 1;
+    filter: blur(0px)
+
+
 }

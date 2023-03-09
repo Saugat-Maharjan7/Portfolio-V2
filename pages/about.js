@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 // import "../styles/Custom_pages/aboutpage.scss"
 // import profile from "../public/assets/videos/profile.mp4"
+import { motion as m } from "framer-motion"
 
 
 function About(){
@@ -16,6 +17,8 @@ function About(){
     
     return(
         <>
+        <m.div
+       >
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -127,7 +130,7 @@ function About(){
             </div>
           </footer>
         </main>
-
+        </m.div>
         </>
 
         

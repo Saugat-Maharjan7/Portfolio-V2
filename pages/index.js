@@ -1,25 +1,29 @@
 
 import Link from "next/link"
-import Head from "./components/header"
-import Toggle from "./components/togglemenu"
-import ThreeD  from "./components/ThreeD"
-import Footer from "./components/Footer"
+import Head from "../components/header"
+import Toggle from "../components/togglemenu"
+import ThreeD  from "../components/ThreeD"
+import Footer from "../components/Footer"
 import Script from 'next/script'
 import {use, useEffect,useRef,useState } from 'react'
-import World from "./components/worldcanvas"
-import Mouse from "./components/Mouse"
+import World from "../components/worldcanvas"
+import Mouse from "../components/Mouse"
+
+import { motion as m } from "framer-motion"
+
 
 
 
 export default function Home() {
-  
-  const [isToggled, setToggled] = useState(false);
+ 
+    const [isToggled, setToggled] = useState(false);
 
 
   return (
     
       <>
-      
+      <m.div
+   >
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* <Link rel="icon" type="image/x-icon" href="../public/favicon.ico"></Link> */}
@@ -81,9 +85,9 @@ export default function Home() {
           </div>
           <section id="digital-products" className="w-100">
             <div className="container position-relative" id="products-container">
-              <div className="border-l-r-b d-flex flex-row container-title">
+              <div style={{borderTop:"1px solid white"}} className="border-l-r-b d-flex flex-row container-title">
                 <div className="container-header-img">
-                  <img  src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314373315_462764565923626_5148449814013596555_n.png?_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=HC_dKc6prB4AX9nGbvo&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRUK5Lp7DndVGDhZ6HFCvniRdaA7IEoiwxMXHra87TuNQ&oe=638D3CFD" alt="UFO" />
+                  <img style={{width:"75px",transform:"scale(3.5) translateY(18px)"}}  src="https://i.ibb.co/54TbLsP/UFO.png" alt="UFO" />
                 </div>
                 <div className=" container-header d-flex align-items-center" >
                   <h2 className="secton-header-h2">DIGITAL PRODUCTS</h2>
@@ -110,7 +114,7 @@ export default function Home() {
                       </svg></button>
                   </div>
                   <div className="p-right d-flex align-items-center justify-content-center">
-                    <img className="rightimg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/312701493_3328269600779255_9200647379406778027_n.png?_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_ohc=BySecZasVDsAX9yRJIP&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQedd4I5pw1TwSnWQ0lRncaAzHZqqtks-lH4sLt2Aw6CA&oe=638D5426" alt="VRS" />
+                    <img className="rightimg" src="https://i.ibb.co/2ntxsfx/desktop-frame.png" alt="VRS" />
                   </div>
                   {/* modal of the vrs */}
                   <div className="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -142,14 +146,14 @@ export default function Home() {
                       </p>
                     </div>
                     <button className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-                      <img className="position-absolute" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314484710_805482084003173_978510453423547081_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=gzSRtD5kgYoAX8uy4YW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSTHGF6lyn3hEu9hE-OAcdf12yErgFWuESXjJUvf5TH5w&oe=638D5564" alt="btn-blr" />
+                      <img className="position-absolute" style={{width:"75px",transform:"scale(3.5) translateY(18px)"}}  src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314484710_805482084003173_978510453423547081_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=gzSRtD5kgYoAX8uy4YW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSTHGF6lyn3hEu9hE-OAcdf12yErgFWuESXjJUvf5TH5w&oe=638D5564" alt="btn-blr" />
                       VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
                       </svg></button>
                   </div>
                   <div className="p-right d-flex align-items-center justify-content-center position-relative">
                     <img className="position-absolute sub-image" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314190049_800881437796960_2340701915487757918_n.png?_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ko89pBYsJGoAX-DKpVC&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTlHJ2i7mXABwntqGqgcIUzvtPwEwArHDlXW47Bwcx0Ag&oe=638D7043" alt="tractor imgae" />
-                    <img className="rightimg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314066753_515508703771376_7998324926288853017_n.png?_nc_cat=105&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ptWP_M3seVYAX82wH9c&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSX6baGnCv23nshXoUJi9BOBv-ddA5f4jzHOuTXIUBdWQ&oe=638D7DE0" alt="Super Krishak" />
+                    <img className="rightimg" src="https://i.ibb.co/7n53gy1/super-krishak.png" alt="Super Krishak" />
                   </div>
                   {/* modal of the krishak */}
                   <div className="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -215,7 +219,7 @@ export default function Home() {
             <div className="container">
               <div className="border-l-r-b d-flex flex-row container-title">
                 <div className="container-header-img">
-                  <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/315089857_1073661459949892_7142420866194164271_n.png?_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_ohc=O6mvKc0NeJ4AX8rwl69&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTivssnysR45muHs0Hmwwj6I0BjwsEykWqQkyb1bC58Mg&oe=639451ED" alt="moon" />
+                  <img style={{width:"75px",transform:"scale(2.5) translateY(2px)"}}  src="https://i.ibb.co/3d1pzkP/moon2-1.png" alt="moon" />
                 </div>
                 <div className=" container-header d-flex align-items-center" >
                   <h2 className="secton-header-h2">VISUAL DESIGNS</h2>
@@ -255,7 +259,7 @@ export default function Home() {
          <Footer/>
         </main>
         <Script type="module" src="/script.js"></Script>
-       
+        </m.div>           
       </>
    
   )

@@ -135,6 +135,7 @@ main{
     overflow-x: hidden;
     height: 100vh;
     transition: opacity .5s ease-out ;
+    scroll-behavior: smooth;
 
     
       // Small devices (Potrait phones, 576px and up)
@@ -207,7 +208,13 @@ main{
 
 
 
-
+.spinner-wrapper{
+    position: relative;
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(230, 25, 25);
+}
 
 .loading{
     opacity: 1;

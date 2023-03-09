@@ -1,0 +1,144 @@
+.rolling-video {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+.rolling-video .arsenal-description {
+  top: 10%;
+  left: 5%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.rolling-video .arsenal-description h2 {
+  max-width: 600px;
+  color: white;
+  font-size: 4rem;
+  line-height: 3.4rem;
+}
+.rolling-video .arsenal-description p {
+  color: #565656;
+  font-size: 1.625rem;
+  max-width: 600px;
+}
+@media (min-width: 350px) {
+  .rolling-video .arsenal-description h2 {
+    max-width: 300px;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+  }
+  .rolling-video .arsenal-description p {
+    font-size: 1rem;
+    max-width: 300px;
+    color: #c7c7c7;
+    line-height: 1.4rem;
+  }
+}
+@media (min-width: 576px) {
+  .rolling-video .arsenal-description h2 {
+    max-width: 400px;
+    font-size: 1.65rem;
+    line-height: 1.5rem;
+  }
+  .rolling-video .arsenal-description p {
+    font-size: 1.2rem;
+    max-width: 400px;
+    color: #c7c7c7;
+    line-height: 1.6rem;
+  }
+}
+@media (min-width: 768px) {
+  .rolling-video .arsenal-description h2 {
+    max-width: 400px;
+    font-size: 3rem;
+    line-height: 2.8rem;
+  }
+  .rolling-video .arsenal-description p {
+    font-size: 1.5rem;
+    max-width: 400px;
+    color: #c7c7c7;
+    line-height: 1.8rem;
+  }
+}
+@media (min-width: 992px) {
+  .rolling-video .arsenal-description h2 {
+    max-width: 600px;
+    color: white;
+    font-size: 4rem;
+    line-height: 3.4rem;
+  }
+  .rolling-video .arsenal-description p {
+    color: #565656;
+    font-size: 1.625rem;
+    max-width: 600px;
+    line-height: 2.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .rolling-video .arsenal-description h2 {
+    max-width: 600px;
+    color: white;
+    font-size: 4rem;
+    line-height: 3.4rem;
+  }
+  .rolling-video .arsenal-description p {
+    color: #565656;
+    font-size: 1.625rem;
+    max-width: 600px;
+    line-height: 2.2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .rolling-video .arsenal-description h2 {
+    max-width: 600px;
+    color: white;
+    font-size: 4rem;
+    line-height: 3.4rem;
+  }
+  .rolling-video .arsenal-description p {
+    color: #565656;
+    font-size: 1.625rem;
+    max-width: 560px;
+    line-height: 2rem;
+  }
+}
+
+.arsenal-video {
+  width: 100%;
+}
+@media (min-width: 350px) {
+  .arsenal-video {
+    width: 200%;
+    transform: translateX(-200px);
+  }
+}
+@media (min-width: 576px) {
+  .arsenal-video {
+    width: 200%;
+    transform: translateX(-334px);
+  }
+}
+@media (min-width: 768px) {
+  .arsenal-video {
+    width: 150%;
+    transform: translateX(-100px);
+  }
+}
+@media (min-width: 992px) {
+  .arsenal-video {
+    width: 100%;
+    transform: translateX(0px);
+  }
+}
+@media (min-width: 1200px) {
+  .arsenal-video {
+    width: 100%;
+    transform: translateX(0px);
+  }
+}
+@media (min-width: 1400px) {
+  .arsenal-video {
+    width: 100%;
+    transform: translateX(0px);
+  }
+}/*# sourceMappingURL=arsenal.css.map */
