@@ -1,13 +1,13 @@
 
 import Link from "next/link"
-import Head from "../components/header"
-import Toggle from "../components/togglemenu"
-import ThreeD  from "../components/ThreeD"
-import Footer from "../components/Footer"
+import Head from "../public/components/header"
+import Toggle from "../public/components/togglemenu"
+import ThreeD  from "../public/components/ThreeD"
+import Footer from "../public/components/Footer"
 import Script from 'next/script'
 import {use, useEffect,useRef,useState } from 'react'
-import World from "../components/worldcanvas"
-import Mouse from "../components/Mouse"
+import World from "../public/components/worldcanvas"
+import Mouse from "../public/components/Mouse"
 
 import { motion as m } from "framer-motion"
 

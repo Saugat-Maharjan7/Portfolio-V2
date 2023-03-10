@@ -37,24 +37,24 @@ return()=>{
     <AnimatePresence mode="wait">
   <motion.div 
     // key={}
-      initial="initialState"
-      animate="animateState"
-      exit="exitState"
-      transition={{
-        duration:3
-      }}
-      variants={{initialState:{
-        opacity:0
-      },
-      animateState:{
-        opacity:1
+//       initial="initialState"
+//       animate="animateState"
+//       exit="exitState"
+//       transition={{
+//         duration:1
+//       }}
+//       variants={{initialState:{
+//         opacity:0
+//       },
+//       animateState:{
+//         opacity:1
 
-      },
-      exitState:{
-        opacity:0
+//       },
+//       exitState:{
+//         opacity:0
 
-      }
-}}
+//       }
+// }}
   className='Base-page' ><div className='loader'></div>  <Component {...pageProps} />
 </motion.div>
   </AnimatePresence>

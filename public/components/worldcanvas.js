@@ -4,8 +4,9 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 // import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
-// import gsap from 'gsap';
+import gsap from 'gsap';
 // import ScrollTrigger from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger)
 
 // import { TweenMax } from 'gsap/gsap-core';
 
@@ -59,8 +60,9 @@ function Three(){
             let t=scrollable.scrollTop;
         
             let o=1
-            sphereRef.current.position.z=t*0.004;
+            sphereRef.current.position.z=t*0.8;
             sphereRef.current.rotation.z +=t*10;
+            starref.current.position.z=t*0.5
             if (t>0){
                 o=0*t
             }
@@ -68,11 +70,28 @@ function Three(){
                 o=1+t;
             }
     
+            console.log(t)
             //lag during scrolling
             sphereRef.current.rotation.z+=0.11;
             sphereRef.current.visible=o;
-            document.querySelector(".webgl").style.opacity=o
+            material.opacity=o
+
+         
         })
+
+        // const tl = gsap.timeline({
+        //     scrollTrigger: {
+        //       trigger: scrollable,
+        //       start: 'top 50%',
+        //       end: 'bottom 50%',
+        //       scrub: true
+        //     }
+        //   })
+      
+        //   tl.to(sphereRef.current.position, {
+        //     y: 5,
+        //     duration: 1
+        //   })
     })
 
     useFrame(() => {
