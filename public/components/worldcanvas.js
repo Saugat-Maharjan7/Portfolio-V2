@@ -70,7 +70,6 @@ function Three(){
                 o=1+t;
             }
     
-            console.log(t)
             //lag during scrolling
             sphereRef.current.rotation.z+=0.11;
             sphereRef.current.visible=o;

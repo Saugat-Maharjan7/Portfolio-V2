@@ -16,12 +16,30 @@ import { motion as m } from "framer-motion"
 
 export default function Home() {
  
+    let exploreref=useRef()
     const [isToggled, setToggled] = useState(false);
 
+    useEffect(()=>{
+      let scrollable=document.querySelector('main')
+      let explore=document.querySelector('.explore-world')
+      
+      scrollable.addEventListener('scroll',(e)=>{
+        let t=scrollable.scrollTop;
+        if (t>0){
+          explore.style.display="none"
+
+        }
+      if(t<=0){
+        explore.style.display="block"
+       
+      }
+        
+      })
+    })
 
   return (
     
-      <>
+      
       <m.div
    >
         <meta charSet="UTF-8" />
@@ -42,7 +60,7 @@ export default function Home() {
         <World></World>
         <Toggle></Toggle>
         <Mouse></Mouse>
-        <button className="btn btn-primary explore-world" onClick={() => setToggled(!isToggled)}>{isToggled ? 'Back' : ''}{!isToggled ? 'Explore' : ''}</button>
+        <button ref={exploreref} className="btn btn-primary explore-world" onClick={() => setToggled(!isToggled)}>{isToggled ? 'Back' : ''}{!isToggled ? 'Explore' : ''}</button>
 
         {/* <World/> */}
         <main className={isToggled ? 'main-inactive' : ''}>
@@ -260,7 +278,7 @@ export default function Home() {
         </main>
         <Script type="module" src="/script.js"></Script>
         </m.div>           
-      </>
+      
    
   )
 }
