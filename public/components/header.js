@@ -1,11 +1,28 @@
 import Link from "next/link"
 import { useState } from "react";
+import { easeInOut, easeOut, motion as m } from "framer-motion"
+
 
 function head(){
   
 
     return(
-        <header>
+        <m.header
+        
+        initial={{
+          y:-100,
+          opacity:0
+        }}
+        
+        animate={{
+          y:0,
+          opacity:1
+        }}
+        transition={{
+          duration:1,
+          
+        }}
+        >
               <div className="container">
                 <nav className="d-flex flex-row justify-content-between align-items-center">
                   <div className="Logo d-flex flex-row">
@@ -38,7 +55,7 @@ function head(){
                   </div>  
                 </nav>
               </div>
-            </header>
+            </m.header>
     )
 }
 

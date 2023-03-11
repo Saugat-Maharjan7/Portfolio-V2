@@ -9,6 +9,7 @@ import gsap from 'gsap';
 // gsap.registerPlugin(ScrollTrigger)
 
 // import { TweenMax } from 'gsap/gsap-core';
+import { easeIn, motion as m } from "framer-motion"
 
 import {OrbitControls,PerspectiveCamera, useTexture, Stars  } from "@react-three/drei"
 
@@ -137,7 +138,21 @@ function World(){
 
   
     return(
-        <>
+        <m.div
+        initial={{
+            
+            opacity:0
+          }}
+          
+          animate={{
+            
+            opacity:1
+          }}
+          transition={{
+            duration:2,
+
+           
+          }}>
         <Canvas  id="threed-container" className="webgl" style={{position:"fixed",zIndex:1}}>
             <Suspense>
                 <Three/>
@@ -148,7 +163,7 @@ function World(){
             
             
             }</Script>
-        </>
+        </m.div>
     )
 }
 

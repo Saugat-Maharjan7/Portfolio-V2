@@ -9,7 +9,8 @@ import {use, useEffect,useRef,useState } from 'react'
 import World from "../public/components/worldcanvas"
 import Mouse from "../public/components/Mouse"
 
-import { motion as m } from "framer-motion"
+import { easeIn, motion as m } from "framer-motion"
+import { Spring } from "@react-spring/core"
 
 
 
@@ -71,7 +72,22 @@ export default function Home() {
             
             <section className="w-100 hero-container" style={{top: 0}} >
               <div className="container position-relative">
-                <div className="gradient-shade w-100" />
+                <m.div 
+                 initial={{
+                  y:-100,
+                  opacity:0
+                }}
+                
+                animate={{
+                  y:0,
+                  opacity:1
+                }}
+                transition={{
+                  duration:1,
+
+                 
+                }}
+                className="gradient-shade w-100" />
                 <div className="hero border-l-r-b d-flex flex-column">
                   <img className="blur_purple_1" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/313479256_441074301297160_4045645680689999996_n.png?_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_ohc=BzXvvAA_jf4AX8ZvoyI&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdR-PW0VRmR0wPatq0d1oqC6ePOtG7lIdXFqvEfQmqm3lQ&oe=6384022B" alt="purple light" />
                   <img className="sun_light" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/313447552_795166854896686_2591347491281059701_n.png?_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_ohc=tgKaeaGHcGgAX-87D4s&_nc_oc=AQm_TteOTHijzqhuo9SFAS2B6U8sMUShLb3MjyW3RaHthO9eQEII8Rp_sSknUxGDLTtqvHOBtq9uaBPY_P0tyKpg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSriLuF3KeHLAogomxbbjwanaeM-BFPnGTOwmhKZoGuTg&oe=6384FFC5" alt="sun light" />
