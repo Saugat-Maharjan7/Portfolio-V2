@@ -9,6 +9,7 @@
     flex-direction: column;
     transition: ease-out .8s;
     z-index: 4;
+    top:-100%;
 
     .loader{
         height: .5rem;
@@ -29,8 +30,6 @@ height: 100%;
     };
 
     
-}.loader-inactive{
-    top:-100%
 }
 
 .loader-active{
