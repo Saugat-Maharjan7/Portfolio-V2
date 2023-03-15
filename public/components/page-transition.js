@@ -27,11 +27,11 @@ export default function pageTransition() {
     <div className='loader'>
         <div className='load-bar'></div>
     </div> 
-    <div className='projectContent d-flex justify-content-start align-items-end'>
+    <div className='projectContent d-flex justify-content-center align-items-center'>
       {/* <h2>{title}</h2> */}
-<h1 style={{fontSize:"164px"}}><Typewriter
+<h1 style={{fontSize:"44px"}}><Typewriter
   options={{
-    strings: ['WAIT', 'LOADING...'],
+    strings: ['PAGE', 'LOADING...'],
     autoStart: true,
     loop: true,
   }}

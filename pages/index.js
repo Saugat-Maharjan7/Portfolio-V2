@@ -126,7 +126,7 @@ export default function Home() {
                     </div>
                     <div className="social_links d-flex flex-column">
                       <span>shirish.shakya5@gmail.com</span>
-                      <div className="time">{time}</div>
+                      <div className="time">{time} <span>Local Time</span></div>
                       <ul className="d-flex flex-row" >
                         <li><a href="https://www.linkedin.com/in/shirish-shakya-ba8a49200/">Linkedin</a></li>
                         <li><a href="https://www.behance.net/shirishshakya">Behance</a></li>
