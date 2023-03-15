@@ -1,10 +1,23 @@
-import Link from "next/link"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { easeInOut, easeOut, motion as m } from "framer-motion"
+import Link from "next/link";
+
 
 
 function head(){
   
+  // useEffect(()=>{
+  //   let anchor=document.querySelector('.thiss')
+
+  //   anchor.addEventListener('click',()=>{
+  //       document.querySelector('.page-transition').classList.add('loader-active');
+  //       document.querySelector('.load-bar').style.width="100%";
+  
+  
+  //   }  )
+  // })
+
+
 
     return(
         <m.header
@@ -25,22 +38,22 @@ function head(){
         >
               <div className="container">
                 <nav className="d-flex flex-row justify-content-between align-items-center">
-                  <div className="Logo d-flex flex-row">
+                  <Link className="Logo d-flex flex-row" style={{textDecoration:"none",color:"white"}} href="/" id="home">
                     <div className="Logo-container" />
                     <span>SHIRISH.</span> 
-                  </div>
+                  </Link>
                   <div className="links d-flex flex-row">
                     
                     <ul className="navbar-nav me-auto d-flex flex-row">
                     <li className="nav-item d-flex flex-row ">
-                    <Link className="anchor" href="about" id="about">about</Link>
+                    <Link className="anchor " href="about" id="about">about</Link>
 
                     </li>
 
 
                       {/* <li className="nav-item d-flex flex-row "><a className="anchor" href="#" id="about">about</a></li> */}
                       <li className="nav-item d-flex flex-row ">
-                      <Link className="anchor" href="projects" id="works">works</Link>
+                      <Link className="anchor thiss" href="projects" id="works">works</Link>
                         {/* <a className="anchor" href="#" id="works">work</a> */}
                         </li>
                       <li className="nav-item d-flex flex-row" id="contact"><a className="anchor" href="#" id="contact"><span id="contact">LET'S CONNECT</span><div id="contact" className="send-btn "><svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-cursor-fill" viewBox="0 0 16 16">

@@ -1,5 +1,8 @@
 import Link from "next/link";
 import {useRouter} from "next/router"
+import Mouse from "../../public/components/Mouse"
+import Head from "../../public/components/header"
+
 
 function Projects(){
     const projects=[
@@ -16,7 +19,12 @@ function Projects(){
 
   
     return(
+        
         <div>
+                    
+
+            <Mouse></Mouse>
+            <Head></Head>
         <h1>Hello this is main project page</h1>
         {/* <Link href=""></Link> */}
         
@@ -41,5 +49,19 @@ function Projects(){
         </div>
     )
 }
+
+
+Projects.getInitialProps = async () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({
+            data: {
+              title: 'Welcome to my website',
+              content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            },
+          });
+      }, 4000);
+    });
+  };
 
 export default Projects;

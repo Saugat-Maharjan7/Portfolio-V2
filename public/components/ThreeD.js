@@ -20,7 +20,8 @@ function ThreeD(){
         </div>
         <div className="container d-flex flex-column " style={{justifyContent: 'center'}}>
           <div className="border-l-r-b w-100 threedwork-container">
-            <div className="phidden">
+            <div className="">
+            {/* phidden class */}
               <p className=" section-details">
                 Visual Designs are the key fundamental for strong designs in any medium whether it be on paper or screen. It has always been supporting creativity and a fun thing to play around.
               </p>

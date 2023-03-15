@@ -1,9 +1,15 @@
-import Head from 'next/head'
 import Image from 'next/image'
+import { resolve } from 'styled-jsx/css'
 import styles from '../styles/Home.module.css'
 import work from"./work"
 
-export default function Home() {
+
+ function Home() {
+
+  // await new Promise((resolve)=>{
+  //   setTimeout(resolve,5000)
+  // })
+
   return (
     <div className={styles.container}>
       <div>
@@ -47,3 +53,19 @@ export default function Home() {
     </div>
   )
 }
+
+// export async function getServerSideProps(){
+//   await new Promise((resolve)=>{
+//     setTimeout(resolve,1000)
+//   })
+// }
+
+Home.getInitialProps = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve;
+    }, 1000);
+  });
+};
+
+export default Home()

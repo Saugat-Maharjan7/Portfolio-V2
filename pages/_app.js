@@ -1,9 +1,14 @@
 
-import '../styles/globals.css'
-import { motion, AnimatePresence } from "framer-motion"
-import { useRouter } from 'next/router'
-import { useState,useEffect } from 'react'
-import "../styles/style.scss"
+import '../styles/globals.css';
+import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from 'next/router';
+import { useState,useEffect } from 'react';
+import "../styles/style.scss";
+import Head from "../public/components/header"
+import Router from "next/router"
+
+
+import Pagetransition from "../public/components/page-transition"
 // import "./scripts/script"
 // import "./scripts/navigation";
 // import "./scripts/Mouseenter";
@@ -12,54 +17,42 @@ import "../styles/style.scss"
 
 
 function MyApp({ Component, pageProps }) {
-
-  const laoding=useRouter();
-  const [loading,setLoading]=useState(false)
+const router=useRouter()
 
 useEffect(()=>{
-  const handleStart=(url)=>(url !== router.asPath) && setLoading(true);
-  const handleComplete=(url)=>(url == router.asPath) && setTimeout(()=>{setLoading(false)},5000);
+  Router.events.on('routeChangeStart',(url)=>{
+    console.log("route change start");
+    document.querySelector('.page-transition').classList.add('loader-active')
+    document.querySelector('.load-bar').classList.add('load-bar-active')
 
-  router.events.on('routerChangeStart',handleStart)
-  router.events.on('routerChangeComplete',handleComplete)
-  router.events.on('routerChangeError',handleComplete)
 
-return()=>{
-  router.events.off('routerChangeStart',handleStart)
-  router.events.off('routerChangeComplete',handleComplete)
-  router.events.off('routerChangeError',handleComplete)
-}
+  })
+
+  Router.events.on("routeChangeComplete",(url)=>{
+    console.log("route change complete")
+    document.querySelector('.page-transition').classList.remove('loader-active')
+    document.querySelector('.load-bar').classList.remove('load-bar-active')
+
+  })
+
+ 
+
 })
 
-
-  const router=useRouter();
   return( 
     <AnimatePresence mode="wait">
   <motion.div 
-    // key={}
-//       initial="initialState"
-//       animate="animateState"
-//       exit="exitState"
-//       transition={{
-//         duration:1
-//       }}
-//       variants={{initialState:{
-//         opacity:0
-//       },
-//       animateState:{
-//         opacity:1
 
-//       },
-//       exitState:{
-//         opacity:0
-
-//       }
-// }}
-  className='Base-page' ><div className='loader'></div>  <Component {...pageProps} />
+className='Base-page' >
+      <Pagetransition/>
+    <Component {...pageProps}
+    // onLoaded={() => setLoaded(true)} 
+    />
 </motion.div>
   </AnimatePresence>
   )
-  
+  return ()=>clearTimeout(timer)
+
 }
 
 export default MyApp  
