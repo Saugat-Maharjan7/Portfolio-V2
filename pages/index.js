@@ -20,7 +20,21 @@ export default function Home() {
  
     let exploreref=useRef()
     const [isToggled, setToggled] = useState(false);
+    const [time, setTime] = useState('');
 
+
+  //for time
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const date = new Date();
+      const localTime = date.toLocaleTimeString();
+      setTime(localTime);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+    //for scrolling of the button
     useEffect(()=>{
       let scrollable=document.querySelector('main')
       let explore=document.querySelector('.explore-world')
@@ -43,11 +57,8 @@ export default function Home() {
   return (
     
       
-      <m.div
-   >
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* <Link rel="icon" type="image/x-icon" href="../public/favicon.ico"></Link> */}
+      <m.div>
+        
         <meta property="og:image" content="https://scontent.xx.fbcdn.net/v/t1.15752-9/313273686_827503425189555_3207342809800637848_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=mtft8E-ZwkUAX9C4eAk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTHQ8fYnEQ5DaG4H5No7212K8qluiamCzyTikBCNaWZ0Q&oe=6383DEDB" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -64,14 +75,14 @@ export default function Home() {
         <Toggle></Toggle>
         <Mouse></Mouse>
 
-        {/* <Toggleswitch style={{position:"fixed",zIndex:'200'}}></Toggleswitch> */}
+        {/* switch button */}
+
         <div ref={exploreref} className={`${styles.toggleWrapper} explore-world` } onClick={()=>setChecked(!checked)}>
         <div
           className={`${styles.toggleSwitch} ${checked ? styles.checked : ''} ${!checked ? styles.unchecked:''}`}
         />
       </div>
 
-        {/* <button ref={exploreref} className="btn btn-primary explore-world" onClick={() => setToggled(!isToggled)}>{isToggled ? 'Back' : ''}{!isToggled ? 'Explore' : ''}</button> */}
 
         {/* <World/> */}
         <main className={checked ? 'main-inactive' : ''}>
@@ -115,7 +126,7 @@ export default function Home() {
                     </div>
                     <div className="social_links d-flex flex-column">
                       <span>shirish.shakya5@gmail.com</span>
-                      <span className="time"/>
+                      <div className="time">{time}</div>
                       <ul className="d-flex flex-row" >
                         <li><a href="https://www.linkedin.com/in/shirish-shakya-ba8a49200/">Linkedin</a></li>
                         <li><a href="https://www.behance.net/shirishshakya">Behance</a></li>

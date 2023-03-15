@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect,useState } from 'react'
 import { useRouter } from 'next/router';
 // import Router from "next/router"
+import Typewriter from 'typewriter-effect';
+
 
 
 
@@ -27,7 +29,13 @@ export default function pageTransition() {
     </div> 
     <div className='projectContent d-flex justify-content-start align-items-end'>
       {/* <h2>{title}</h2> */}
-<h1 style={{fontSize:"164px"}}>LOADING</h1>
+<h1 style={{fontSize:"164px"}}><Typewriter
+  options={{
+    strings: ['WAIT', 'LOADING...'],
+    autoStart: true,
+    loop: true,
+  }}
+/></h1>
       </div>
     
 </div>   

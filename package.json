@@ -24,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-use": "^17.4.0",
     "sass": "^1.56.1",
-    "three": "^0.147.0"
+    "three": "^0.147.0",
+    "typewriter-effect": "^2.19.0"
   }
 }
