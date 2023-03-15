@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {useRouter} from "next/router"
 import Mouse from "../../public/components/Mouse"
-import Head from "../../public/components/header"
+import SubHead from "../../public/components/subheader"
 
 
 function Projects(){
@@ -24,7 +24,7 @@ function Projects(){
                     
 
             <Mouse></Mouse>
-            <Head></Head>
+            <SubHead></SubHead>
         <h1>Hello this is main project page</h1>
         {/* <Link href=""></Link> */}
         

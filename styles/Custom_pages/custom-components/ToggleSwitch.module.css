@@ -1,0 +1,33 @@
+.toggleWrapper {
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    position: fixed;
+    cursor: pointer;
+    z-index: 3;
+    margin: 0 auto;
+    top:10%;
+  }
+  
+  .toggleSwitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .checked {
+    transform: translateX(26px);
+    background-color: red!important;
+  }
+
+  .unchecked{
+    transform: translateX(0px);
+  }
+  

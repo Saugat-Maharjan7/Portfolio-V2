@@ -6,19 +6,6 @@ import Link from "next/link";
 
 function head(){
   
-  // useEffect(()=>{
-  //   let anchor=document.querySelector('.thiss')
-
-  //   anchor.addEventListener('click',()=>{
-  //       document.querySelector('.page-transition').classList.add('loader-active');
-  //       document.querySelector('.load-bar').style.width="100%";
-  
-  
-  //   }  )
-  // })
-
-
-
     return(
         <m.header
         
@@ -32,7 +19,7 @@ function head(){
           opacity:1
         }}
         transition={{
-          duration:1,
+          duration:1.5,
           
         }}
         >

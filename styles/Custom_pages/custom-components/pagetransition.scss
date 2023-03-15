@@ -7,7 +7,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    transition: ease-in .8s;
+    transition: ease-out .8s;
     z-index: 4;
 
     .loader{

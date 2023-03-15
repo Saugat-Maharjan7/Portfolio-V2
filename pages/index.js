@@ -11,6 +11,7 @@ import Mouse from "../public/components/Mouse"
 
 import { easeIn, motion as m } from "framer-motion"
 import { Spring } from "@react-spring/core"
+import styles from '../styles/Custom_pages/custom-components/ToggleSwitch.module.css';
 
 
 
@@ -37,6 +38,7 @@ export default function Home() {
         
       })
     })
+    const [checked, setChecked] = useState(false);
 
   return (
     
@@ -57,14 +59,22 @@ export default function Home() {
         
         <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} />
       
-
         <World></World>
+        
         <Toggle></Toggle>
         <Mouse></Mouse>
-        <button ref={exploreref} className="btn btn-primary explore-world" onClick={() => setToggled(!isToggled)}>{isToggled ? 'Back' : ''}{!isToggled ? 'Explore' : ''}</button>
+
+        {/* <Toggleswitch style={{position:"fixed",zIndex:'200'}}></Toggleswitch> */}
+        <div ref={exploreref} className={`${styles.toggleWrapper} explore-world` } onClick={()=>setChecked(!checked)}>
+        <div
+          className={`${styles.toggleSwitch} ${checked ? styles.checked : ''} ${!checked ? styles.unchecked:''}`}
+        />
+      </div>
+
+        {/* <button ref={exploreref} className="btn btn-primary explore-world" onClick={() => setToggled(!isToggled)}>{isToggled ? 'Back' : ''}{!isToggled ? 'Explore' : ''}</button> */}
 
         {/* <World/> */}
-        <main className={isToggled ? 'main-inactive' : ''}>
+        <main className={checked ? 'main-inactive' : ''}>
         <Head></Head>
 
           {/* <a href="http://www.onlinewebfonts.com" style={{display: 'none'}}>oNline Web Fonts</a> */}
@@ -83,7 +93,7 @@ export default function Home() {
                   opacity:1
                 }}
                 transition={{
-                  duration:1,
+                  duration:1.5,
 
                  
                 }}
