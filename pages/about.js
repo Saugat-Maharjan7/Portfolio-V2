@@ -5,6 +5,10 @@ import { useRef } from 'react';
 // import profile from "../public/assets/videos/profile.mp4"
 import { motion as m } from "framer-motion"
 import Mouse from "../public/components/Mouse"
+import Link from "next/link";
+import Head from "../public/components/header"
+
+
 
 
 
@@ -32,6 +36,7 @@ function About(){
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></Script>
        
         <Mouse></Mouse>
+        <Head></Head>
         <main>
           <div className="head">
             <div className="container">
