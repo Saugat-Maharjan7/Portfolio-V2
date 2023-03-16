@@ -5,22 +5,7 @@ import Link from "next/link";
 
 export default function head({ toggleSidebar,isSidebarOpen }) {
   return (
-    <m.header
-        
-    initial={{
-      y:-100,
-      opacity:0
-    }}
-    
-    animate={{
-      y:0,
-      opacity:1
-    }}
-    transition={{
-      duration:1.5,
-      
-    }}
-    >
+    <m.header>
           <div className="container">
             <nav className="d-flex flex-row justify-content-between align-items-center">
               <Link className="Logo d-flex flex-row" style={{textDecoration:"none",color:"white"}} href="/" id="home">
