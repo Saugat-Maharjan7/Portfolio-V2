@@ -12,7 +12,7 @@ import Mouse from "../public/components/Mouse"
 import { easeIn, motion as m } from "framer-motion"
 import { Spring } from "@react-spring/core"
 import styles from '../styles/Custom_pages/custom-components/ToggleSwitch.module.css';
-
+import Sidenavigation from "../public/components/side-navigation";
 
 
 
@@ -33,6 +33,14 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  //side-bar toggle
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  function toggleSidebar() {
+    setIsSidebarOpen(!isSidebarOpen);
+  }
 
     //for scrolling of the button
     useEffect(()=>{
@@ -83,14 +91,15 @@ export default function Home() {
         />
       </div>
 
+      {/* Mobile Navigation */}
+      <Sidenavigation isSidebarOpen={isSidebarOpen}></Sidenavigation>
+
 
         {/* <World/> */}
         <main className={checked ? 'main-inactive' : ''}>
-        <Head></Head>
+        <Head toggleSidebar={toggleSidebar}></Head>
 
-          {/* <a href="http://www.onlinewebfonts.com" style={{display: 'none'}}>oNline Web Fonts</a> */}
-          <div className="hero-wrapper position-relative">
-            
+          <div className="hero-wrapper position-relative">           
             <section className="w-100 hero-container" style={{top: 0}} >
               <div className="container position-relative">
                 <m.div 
