@@ -21,7 +21,6 @@ const router=useRouter()
 
 useEffect(()=>{
   Router.events.on('routeChangeStart',(url)=>{
-    console.log("route change start");
     document.querySelector('.page-transition').classList.add('loader-active')
     document.querySelector('.load-bar').classList.add('load-bar-active')
 
@@ -29,7 +28,6 @@ useEffect(()=>{
   })
 
   Router.events.on("routeChangeComplete",(url)=>{
-    console.log("route change complete")
     document.querySelector('.page-transition').classList.remove('loader-active')
     document.querySelector('.load-bar').classList.remove('load-bar-active')
 
@@ -40,7 +38,6 @@ useEffect(()=>{
 })
 
   return( 
-    <AnimatePresence mode="wait">
   <motion.div 
 
 className='Base-page' >
@@ -49,7 +46,6 @@ className='Base-page' >
     // onLoaded={() => setLoaded(true)} 
     />
 </motion.div>
-  </AnimatePresence>
   )
   return ()=>clearTimeout(timer)
 
