@@ -9,7 +9,7 @@ export default function Sidebar({ isSidebarOpen }) {
 
       className=
 
-      {`toggle-menu-section ${isSidebarOpen ? 'toggle-active' : 'toggle-inactive'}`}>
+      {`toggle-menu-section ${ isSidebarOpen ? 'toggle-active' : 'toggle-inactive'}`}>
         {/* Sidebar content */}
                     
             <div className="toggle-wrapper d-flex flex-column justify-content-between">
@@ -31,7 +31,7 @@ export default function Sidebar({ isSidebarOpen }) {
                 <p>
                     © Shirish Shakya.<span className="dated"> </span>
                 </p>
-                <span>All Rights Reserved</span>
+                <span className="copyright">All Rights Reserved</span>
                 </div>
             </div>
             

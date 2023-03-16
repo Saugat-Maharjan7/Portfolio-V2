@@ -97,7 +97,7 @@ export default function Home() {
 
         {/* <World/> */}
         <main className={checked ? 'main-inactive' : ''}>
-        <Head toggleSidebar={toggleSidebar}></Head>
+        <Head toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Head>
 
           <div className="hero-wrapper position-relative">           
             <section className="w-100 hero-container" style={{top: 0}} >

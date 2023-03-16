@@ -3,7 +3,7 @@ import { easeInOut, easeOut, motion as m } from "framer-motion"
 import Link from "next/link";
 
 
-export default function head({ toggleSidebar }) {
+export default function head({ toggleSidebar,isSidebarOpen }) {
   return (
     <m.header
         
@@ -45,10 +45,16 @@ export default function head({ toggleSidebar }) {
                           <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
                         </svg></div></a></li>                            
                 </ul>
-                <button onClick={ toggleSidebar } className="ham-menu" style={{height: '3rem', width: '3rem'}}><svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x={6} y={5} width={12} height={2} fill="#D9D9D9" />
-                    <rect y={11} width={24} height={2} fill="#D9D9D9" />
-                    <rect x={6} y={17} width={12} height={2} fill="#D9D9D9" />
+                <button onClick={ toggleSidebar } 
+                
+                className=
+                {`ham-menu ${isSidebarOpen ? 'ham-icon-active' : ''} ${!isSidebarOpen ? 'ham-icon-inactive':''}`}
+                
+                
+                style={{height: '3rem', width: '3rem'}}><svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect className="topRect" x={6} y={5} width={12} height={2} fill="#D9D9D9" />
+                    <rect className="midRect" y={11} width={24} height={2} fill="#D9D9D9" />
+                    <rect className="lowRect" x={6} y={17} width={12} height={2} fill="#D9D9D9" />
                   </svg></button>
               </div>  
             </nav>
