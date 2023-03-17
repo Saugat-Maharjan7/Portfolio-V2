@@ -60,7 +60,7 @@ const handleSubmit=(e)=>{
               <form 
               ref={formref}
               onSubmit={handleSubmit}>
-                <ul>
+                <ul style={{overflowX:'hidden'}}>
                   <m.li
                   initial={{
                     x:100,
