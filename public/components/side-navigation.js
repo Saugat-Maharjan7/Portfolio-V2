@@ -25,6 +25,10 @@ export default function Sidebar({ isSidebarOpen }) {
                     <Link href="/projects" id="works">
                     <li>// Works</li>
                     </Link>
+
+                    <Link href="/contact" id="works">
+                    <li>// Contact</li>
+                    </Link>
                
                 </ul>
                 <div className="copyright">

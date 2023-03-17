@@ -1,0 +1,24 @@
+.contact-section{
+    form{
+        padding:2rem 0;
+
+        ul{
+            padding: 0;
+
+            .input-holder{
+                padding: 2rem 1rem;
+                border-top: 1px solid $gray-700;
+                border-bottom: 1px solid $gray-700;
+                font-family: 'NexaLight';
+                gap:2rem;
+
+                label{
+                    font-size: 1.5rem;
+                }
+            
+            }
+        }
+
+       
+    }
+}
