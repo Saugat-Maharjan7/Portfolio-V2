@@ -7,7 +7,6 @@ import { motion as m } from "framer-motion"
 import Mouse from "../public/components/Mouse"
 import Link from "next/link";
 import SubHead from "../public/components/subheader"
-import { FormControl } from '@chakra-ui/react';
 import emailjs from '@emailjs/browser'
 
 
@@ -21,6 +20,8 @@ function Contact(){
     email:'',
     message:''
   })
+
+  const [loaded, setLoaded]=useState(false)
 
   const [loading, setLoading]= useState(false)    ;
 const handleChange=(e) =>{
@@ -36,6 +37,8 @@ setForm({...form,[name]:value})
 const handleSubmit=(e)=>{
   e.preventDefault();
   setLoading(true);
+  setLoaded(true);
+
   emailjs.send('service_395olyt', 'template_5wew57s', 
   {
     from_name:form.name,
@@ -58,20 +61,65 @@ const handleSubmit=(e)=>{
               ref={formref}
               onSubmit={handleSubmit}>
                 <ul>
-                  <li className='input-holder d-flex flex-column'>
+                  <m.li
+                  initial={{
+                    x:100,
+                    opacity:0
+                  }}
+                  
+                  animate={{
+                    x:0,
+                    opacity:1
+                  }}
+                  transition={{
+                    duration:1.5,
+  
+                   
+                  }}
+                  className='input-holder d-flex flex-column'>
                     <label>What is your name?</label>
                     <input name='name' type='text' id='name' value={form.name} onChange={handleChange} placeholder='e.g. Mike' required></input>
-                  </li>
-                  <li className='input-holder d-flex flex-column'>
+                  </m.li>
+                  <m.li
+                   initial={{
+                    x:200,
+                    opacity:0
+                  }}
+                  
+                  animate={{
+                    x:0,
+                    opacity:1
+                  }}
+                  transition={{
+                    duration:1.5,
+  
+                   
+                  }}
+                  className='input-holder d-flex flex-column'>
                     <label>What is your email?</label>
                     <input name='email' type='email' id='name' value={form.email} onChange={handleChange} placeholder='e.g. Mike@gmail.com' required></input>
-                  </li>
-                  <li className='input-holder d-flex flex-column'>
+                  </m.li>
+                  <m.li
+                   initial={{
+                    x:300,
+                    opacity:0
+                  }}
+                  
+                  animate={{
+                    x:0,
+                    opacity:1
+                  }}
+                  transition={{
+                    duration:1.5,
+  
+                   
+                  }}
+                  className='input-holder d-flex flex-column'>
                     <label>Your Message</label>
                     <textarea name='message' rows='7' type='text' id='name' value={form.message} onChange={handleChange} placeholder='Your Message Here' required></textarea>
-                  </li>
+                  </m.li>
                 </ul>
-                <button type="submit" className="btn btn-outline-primary position-relative">  {loading ? 'Sending...':"Send"}</button>
+                <button type="submit" className="btn btn-outline-primary position-relative">  Send</button>
               </form>
             </div>
           </section>
@@ -81,6 +129,7 @@ const handleSubmit=(e)=>{
         
     )
 
+    
     
 }
 Contact.getInitialProps = async () => {
