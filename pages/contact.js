@@ -67,7 +67,7 @@ const handleSubmit=(e)=>{
               </div>
             
             <div className='contact row d-flex flex-row'>
-              <div className='col d-flex flex-column gap-4'>
+              <div className='col-4 d-flex flex-column gap-4'>
               <Image src={me} alt="me" className="me-large"></Image >
 
              <div>
