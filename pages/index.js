@@ -13,6 +13,8 @@ import { easeIn, motion as m } from "framer-motion"
 import { Spring } from "@react-spring/core"
 import styles from '../styles/Custom_pages/custom-components/ToggleSwitch.module.css';
 import Sidenavigation from "../public/components/side-navigation";
+import Typewriter from 'typewriter-effect';
+
 
 
 
@@ -123,8 +125,20 @@ export default function Home() {
                   <img className="sun_light" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/313447552_795166854896686_2591347491281059701_n.png?_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_ohc=tgKaeaGHcGgAX-87D4s&_nc_oc=AQm_TteOTHijzqhuo9SFAS2B6U8sMUShLb3MjyW3RaHthO9eQEII8Rp_sSknUxGDLTtqvHOBtq9uaBPY_P0tyKpg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSriLuF3KeHLAogomxbbjwanaeM-BFPnGTOwmhKZoGuTg&oe=6384FFC5" alt="sun light" />
                   <div className="hero-title d-flex flex-column">
                     <span>SHIRISH SHAKYA</span>
-                    <h1>YOU'VE SAFELY LANDED ON MY DESIGN WORLD</h1>
-                    <p>Enjoy your stay :)</p>
+                    <h1>
+YOU'VE SAFELY LANDED ON MY DESIGN WORLD
+</h1>
+                    <p>
+                    <Typewriter
+  options={{
+    strings: ['You are welcome,', 'Please enjoy your stay'],
+    autoStart: true,
+    loop: true,
+  }}
+/>
+                      
+                      
+                      </p>
                   </div>
                   <div className="profile_info_top d-flex w-100">
                     <div className="profile_detail d-flex flex-row">

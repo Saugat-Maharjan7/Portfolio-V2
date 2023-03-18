@@ -14,9 +14,6 @@ export default function Sidebar({ isSidebarOpen }) {
                     
             <div className="toggle-wrapper d-flex flex-column justify-content-between">
                 <ul className="nav-links d-flex flex-column" >
-                <Link href="/" id="home">
-                    <li>// Home</li>
-                    </Link>
                 
                     <Link href="/about" id="about">
                     <li>// About</li>
