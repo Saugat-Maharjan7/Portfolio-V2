@@ -1,24 +1,171 @@
 .contact-section{
-    form{
-        padding:2rem 0;
 
-        ul{
-            padding: 0;
+    .container{
 
-            .input-holder{
-                padding: 2rem 1rem;
-                border-top: 1px solid $gray-700;
-                border-bottom: 1px solid $gray-700;
-                font-family: 'NexaLight';
-                gap:2rem;
 
-                label{
-                    font-size: 1.5rem;
+            .headingContainer{
+                h1{
                 }
-            
-            }
-        }
 
-       
+                img{
+                    top:3rem;
+                    right:3.8rem;
+                    height: 58px;
+                    width: 58px;
+                    filter: drop-shadow(0px 9px 41px #000000);
+                               }
+
+                // Small devices (Potrait phones, 576px and up)
+                    
+                @media (min-width: 350px) {
+                    h1{
+                        font-size: 40px;
+                        max-width:350px;
+                        line-height: 36.6px
+                    }
+                    img{
+                        display: block;
+                    }
+                }
+
+                // Small devices (landscape phones, 576px and up)
+                @media (min-width: 576px) {
+                    h1{
+                        font-size: 64px;
+                        max-width:666px;
+                        line-height: 57.6px
+
+                    }
+                    img{
+                        display: none;
+                    }
+                }
+
+                // Medium devices (tablets, 768px and up)
+                @media (min-width: 768px) {
+                    h1{
+                        font-size: 72px;
+                        max-width:666px;
+                        line-height: 59px;
+
+                    }
+                    img{
+                        display: none;
+                    }
+                }
+
+                // Large devices (desktops, 992px and up)
+                @media (min-width: 992px) {
+                    h1{
+                        font-size: 72px;
+                        max-width: 739px;
+                        line-height: 65px;
+
+                    }
+                    img{
+                        display: none;
+                    }
+                }
+
+                // X-Large devices (large desktops, 1200px and up)
+                @media (min-width: 1200px) {
+                    h1{
+                        font-size: 94px;
+                        max-width: 775px;
+                        line-height: 86.01px;
+
+                    }
+                    img{
+                        display: none;
+                    }
+                }
+
+                // XX-Large devices (larger desktops, 1400px and up)
+                @media (min-width: 1400px) {
+                    h1{
+                        font-size: 94px;
+                        max-width: 775px;
+                        line-height: 86.01px;
+                    }
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        
+
+        form{
+            padding:2rem 0;
+    
+            ul{
+                padding: 0;
+    
+                .input-holder{
+                    padding: 2rem 1rem;
+                    border-top: 1px solid $gray-700;
+                    border-bottom: 1px solid $gray-700;
+                    font-family: 'NexaLight';
+                    gap:2rem;
+    
+                    label{
+                        font-size: 1.5rem;
+                    }
+                
+                }
+            }
+    
+           
+        }
     }
+    
 }
+
+// // Small devices (Potrait phones, 576px and up)
+    
+// @media (min-width: 350px) {
+//     &::-webkit-scrollbar{
+//         width: 10px;
+//         display: none;
+//     }
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//     &::-webkit-scrollbar{
+//         width: 10px;
+//         display: none;
+//     }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//     &::-webkit-scrollbar{
+//         width: 10px;
+//         display: none;
+//     }
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//     &::-webkit-scrollbar{
+//         width: 10px;
+//         display: block;
+//     }
+// }
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//     &::-webkit-scrollbar{
+//         width: 10px;
+//         display: block;
+//     }
+// }
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) {
+//     &::-webkit-scrollbar{
+//         width: 10px;
+//         display: block;
+//     }
+
+// }

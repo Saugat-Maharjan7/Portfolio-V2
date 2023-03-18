@@ -8,6 +8,9 @@ import Mouse from "../public/components/Mouse"
 import Link from "next/link";
 import SubHead from "../public/components/subheader"
 import emailjs from '@emailjs/browser'
+import me from "../public/me.png"
+import Image from 'next/image'
+
 
 
 
@@ -55,8 +58,29 @@ const handleSubmit=(e)=>{
         <m.div>
         <SubHead></SubHead>
           <section className='contact-section'> 
-            <div style={{paddingTop:"6rem"}} className='container'>
-            <h1>LETS GET IN TOUCH</h1>
+            <div style={{paddingTop:"6rem"}} className='container d-flex flex-column gap-5'>
+
+              <div className='headingContainer position-relative'>
+              <h1>LETS WORK TOGETHER</h1>
+              <Image src={me} className="position-absolute"></Image >
+              </div>
+            
+            <div className='row d-flex flex-row'>
+              <div className='col d-flex flex-column gap-4'>
+             <div>
+              <span>Contact Details</span>
+              <p>shirish.shakya@gmail.com</p>
+              <p>+977 9869134750</p>
+
+              </div> 
+              <div>
+              <span>Socials </span>
+              <p>shirish.shakya@gmail.com</p>
+              <p>+977 9869134750</p>
+
+              </div> 
+              </div>
+              <div className='col'>
               <form 
               ref={formref}
               onSubmit={handleSubmit}>
@@ -121,6 +145,10 @@ const handleSubmit=(e)=>{
                 </ul>
                 <button type="submit" className="btn btn-outline-primary position-relative">  Send</button>
               </form>
+              </div>
+
+            </div>
+              
             </div>
           </section>
         </m.div>
