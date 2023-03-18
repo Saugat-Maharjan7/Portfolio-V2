@@ -1,3 +1,5 @@
+import SubFooter from "./subfooter";
+
 function Footer(){
     return(
         <footer> 
@@ -18,12 +20,9 @@ function Footer(){
               <img className="position-absolute astro" src="https://i.ibb.co/wcBvzDw/astro.png" alt="astro" />
             </div>
           </div>
-          <div className="copyrights d-flex flex-row justify-content-between">
-            <span>Designed and Developed with love and threejs</span>
-            <p>© Shirish Shakya.<span className="dated"> </span></p>
-            <span>All Rights Reserved</span>
-          </div>
+          
         </div>
+        <SubFooter></SubFooter>
       </footer>
     )
 }

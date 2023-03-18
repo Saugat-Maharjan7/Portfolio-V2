@@ -1,7 +1,68 @@
 .contact-section{
 
     .container{
+        
 
+        .contact{
+            .me-large{
+                // Small devices (Potrait phones, 576px and up)
+                    
+                @media (min-width: 350px) {
+                  
+                        display: none;
+                    
+                }
+
+                // Small devices (landscape phones, 576px and up)
+                @media (min-width: 576px) {
+                   
+                    
+                        display: block;
+                    
+                }
+
+                // Medium devices (tablets, 768px and up)
+                @media (min-width: 768px) {
+                  
+                    
+                        display: block;
+                    
+                }
+
+                // Large devices (desktops, 992px and up)
+                @media (min-width: 992px) {
+                  
+                    
+                        display: block;
+                    
+                }
+
+                // X-Large devices (large desktops, 1200px and up)
+                @media (min-width: 1200px) {
+                   
+                    
+                        display: block;
+                    
+                }
+
+                // XX-Large devices (larger desktops, 1400px and up)
+                @media (min-width: 1400px) {
+                   
+                    
+                        display: block;
+                    
+                }
+            }
+
+            ul{
+                padding: 0;
+                margin: 0;
+                li{
+                    list-style: none;
+                }
+            }
+           
+        }
 
             .headingContainer{
                 h1{
@@ -95,7 +156,7 @@
         
 
         form{
-            padding:2rem 0;
+            padding:4rem 0 ;
     
             ul{
                 padding: 0;

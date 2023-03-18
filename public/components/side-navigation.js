@@ -4,6 +4,9 @@ import Link from "next/link";
 
 
 export default function Sidebar({ isSidebarOpen }) {
+
+  const currentDate = new Date();
+    const year = currentDate.getFullYear();
     return (
       <aside 
 
@@ -30,7 +33,7 @@ export default function Sidebar({ isSidebarOpen }) {
                 </ul>
                 <div className="copyright">
                 <p>
-                    © Shirish Shakya.<span className="dated"> </span>
+                    © Shirish Shakya.<span className="dated">{year} </span>
                 </p>
                 <span className="copyright">All Rights Reserved</span>
                 </div>

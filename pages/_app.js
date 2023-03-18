@@ -38,6 +38,7 @@ useEffect(()=>{
 })
 
   return( 
+    <AnimatePresence>
   <motion.div 
 
 className='Base-page' >
@@ -46,6 +47,7 @@ className='Base-page' >
     // onLoaded={() => setLoaded(true)} 
     />
 </motion.div>
+</AnimatePresence>
   )
   return ()=>clearTimeout(timer)
 

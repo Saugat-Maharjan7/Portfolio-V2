@@ -10,6 +10,7 @@ import SubHead from "../public/components/subheader"
 import emailjs from '@emailjs/browser'
 import me from "../public/me.png"
 import Image from 'next/image'
+import SubFooter from '../public/components/subfooter';
 
 
 
@@ -62,11 +63,13 @@ const handleSubmit=(e)=>{
 
               <div className='headingContainer position-relative'>
               <h1>LETS WORK TOGETHER</h1>
-              <Image src={me} className="position-absolute"></Image >
+              <Image alt="me" src={me} className="position-absolute"></Image >
               </div>
             
-            <div className='row d-flex flex-row'>
+            <div className='contact row d-flex flex-row'>
               <div className='col d-flex flex-column gap-4'>
+              <Image src={me} alt="me" className="me-large"></Image >
+
              <div>
               <span>Contact Details</span>
               <p>shirish.shakya@gmail.com</p>
@@ -75,13 +78,17 @@ const handleSubmit=(e)=>{
               </div> 
               <div>
               <span>Socials </span>
-              <p>shirish.shakya@gmail.com</p>
-              <p>+977 9869134750</p>
+              <ul className="contact d-flex flex-column gap-2" >
+                        <li><a href="https://www.linkedin.com/in/shirish-shakya-ba8a49200/">Linkedin</a></li>
+                        <li><a href="https://www.behance.net/shirishshakya">Behance</a></li>
+                        <li><a href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
+                      </ul>
 
               </div> 
               </div>
               <div className='col'>
               <form 
+              className='d-flex flex-column gap-5'
               ref={formref}
               onSubmit={handleSubmit}>
                 <ul style={{overflowX:'hidden'}}>
@@ -151,6 +158,7 @@ const handleSubmit=(e)=>{
               
             </div>
           </section>
+          <SubFooter> </SubFooter>
         </m.div>
         </>
 
