@@ -72,7 +72,7 @@ const handleSubmit=(e)=>{
 
              <div>
               <span>Contact Details</span>
-              <p>shirish.shakya@gmail.com</p>
+              <p>shirish.shakya5@gmail.com</p>
               <p>+977 9869134750</p>
 
               </div> 
