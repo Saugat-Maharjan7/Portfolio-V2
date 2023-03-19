@@ -1,6 +1,6 @@
 
 import Link from "next/link"
-import Header from "../public/components/Header"
+import Header from "../public/components/header"
 import Toggle from "../public/components/togglemenu"
 import ThreeD  from "../public/components/ThreeD"
 import Footer from "../public/components/Footer"
