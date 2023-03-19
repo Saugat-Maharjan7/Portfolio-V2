@@ -11,6 +11,7 @@ import emailjs from '@emailjs/browser'
 import me from "../public/me.png"
 import Image from 'next/image'
 import SubFooter from '../public/components/subfooter';
+import Head from 'next/head';
 
 
 
@@ -56,6 +57,11 @@ const handleSubmit=(e)=>{
 
     return(
         <>
+        <Head>
+          <title>
+            Contact
+          </title>
+        </Head>
         <m.div>
         <SubHead></SubHead>
           <section className='contact-section'> 

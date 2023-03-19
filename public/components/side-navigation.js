@@ -22,7 +22,7 @@ export default function Sidebar({ isSidebarOpen }) {
                     <li>// About</li>
                     </Link>
                 
-                    <Link href="/projects" id="works">
+                    <Link href="/work" id="works">
                     <li>// Works</li>
                     </Link>
 

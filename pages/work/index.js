@@ -2,6 +2,7 @@ import Link from "next/link";
 import {useRouter} from "next/router"
 import Mouse from "../../public/components/Mouse"
 import SubHead from "../../public/components/subheader"
+import Head from "next/head";
 
 
 function Projects(){
@@ -22,7 +23,9 @@ function Projects(){
         
         <div>
                     
-
+        <Head>
+            <title>Works</title>
+        </Head>
             <Mouse></Mouse>
             <SubHead></SubHead>
         <h1>Hello this is main project page</h1>

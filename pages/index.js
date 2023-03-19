@@ -1,6 +1,6 @@
 
 import Link from "next/link"
-import Head from "../public/components/header"
+import Header from "../public/components/Header"
 import Toggle from "../public/components/togglemenu"
 import ThreeD  from "../public/components/ThreeD"
 import Footer from "../public/components/Footer"
@@ -8,7 +8,7 @@ import Script from 'next/script'
 import {use, useEffect,useRef,useState } from 'react'
 import World from "../public/components/worldcanvas"
 import Mouse from "../public/components/Mouse"
-
+import Head from "next/head"
 import { easeIn, motion as m } from "framer-motion"
 import { Spring } from "@react-spring/core"
 import styles from '../styles/Custom_pages/custom-components/ToggleSwitch.module.css';
@@ -68,7 +68,7 @@ export default function Home() {
     
       
       <m.div>
-        
+        <Head>
         <meta property="og:image" content="https://scontent.xx.fbcdn.net/v/t1.15752-9/313273686_827503425189555_3207342809800637848_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=mtft8E-ZwkUAX9C4eAk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTHQ8fYnEQ5DaG4H5No7212K8qluiamCzyTikBCNaWZ0Q&oe=6383DEDB" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -79,7 +79,7 @@ export default function Home() {
         <title>Shirish - The Design World</title>
         
         <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} />
-      
+        </Head>
         <World></World>
         
         <Toggle></Toggle>
@@ -99,7 +99,7 @@ export default function Home() {
 
         {/* <World/> */}
         <main className={checked ? 'main-inactive' : ''}>
-        <Head toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Head>
+        <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Header>
 
           <div className="hero-wrapper position-relative">           
             <section className="w-100 hero-container" style={{top: 0}} >
@@ -130,12 +130,12 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
 </h1>
                     <p>
                     <Typewriter
-  options={{
-    strings: ['You are welcome,', 'Please enjoy your stay'],
-    autoStart: true,
-    loop: true,
-  }}
-/>
+                        options={{
+                          strings: ['You are welcome,', 'Please enjoy your stay'],
+                          autoStart: true,
+                          loop: true,
+                        }}
+                      />
                       
                       
                       </p>
@@ -164,11 +164,11 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
           <section id="digital-products" className="w-100">
             <div className="container position-relative" id="products-container">
               <div style={{borderTop:"1px solid white"}} className="border-l-r-b d-flex flex-row container-title">
-                <div className="container-header-img">
+                <div className="container-Headerer-img">
                   <img style={{width:"75px",transform:"scale(3.5) translateY(18px)"}}  src="https://i.ibb.co/54TbLsP/UFO.png" alt="UFO" />
                 </div>
-                <div className=" container-header d-flex align-items-center" >
-                  <h2 className="secton-header-h2">DIGITAL PRODUCTS</h2>
+                <div className=" container-Headerer d-flex align-items-center" >
+                  <h2 className="secton-Headerer-h2">DIGITAL PRODUCTS</h2>
                   <span className="leader-subtitle">.THE UFO</span>
                 </div>
               </div>
@@ -198,7 +198,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                   <div className="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div className="modal-dialog">
                       <div className="modal-content">
-                        <div className="modal-header">
+                        <div className="modal-Headerer">
                           <h5 className="modal-title" id="staticBackdropLabel">Vendor Rating Solution</h5>
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                         </div>
@@ -237,7 +237,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                   <div className="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div className="modal-dialog">
                       <div className="modal-content">
-                        <div className="modal-header">
+                        <div className="modal-Headerer">
                           <h5 className="modal-title" id="staticBackdropLabel">Super Krishak</h5>
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                         </div>
@@ -274,7 +274,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                   <div className="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div className="modal-dialog">
                       <div className="modal-content">
-                        <div className="modal-header">
+                        <div className="modal-Headerer">
                           <h5 className="modal-title" id="staticBackdropLabel">AEOS Auction</h5>
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                         </div>
@@ -293,14 +293,14 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
             </div>
           </section> 
           <section className="section-visual-designs" id="visual-designs">
-            {/* this isthe header of the container */}
+            {/* this isthe Headerer of the container */}
             <div className="container">
               <div className="border-l-r-b d-flex flex-row container-title">
-                <div className="container-header-img">
+                <div className="container-Headerer-img">
                   <img style={{width:"75px",transform:"scale(2.5) translateY(2px)"}}  src="https://i.ibb.co/3d1pzkP/moon2-1.png" alt="moon" />
                 </div>
-                <div className=" container-header d-flex align-items-center" >
-                  <h2 className="secton-header-h2">VISUAL DESIGNS</h2>
+                <div className=" container-Headerer d-flex align-items-center" >
+                  <h2 className="secton-Headerer-h2">VISUAL DESIGNS</h2>
                   <span className="leader-subtitle">.THE MOON</span>
                 </div>
               </div>
