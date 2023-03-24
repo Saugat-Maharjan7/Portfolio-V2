@@ -8,6 +8,28 @@
     border-radius: 0px;
     padding: 0.625 1rem;
     overflow: hidden;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top:0;
+        left: -1000px;
+        background-color: $primary-orange;
+        height: 100px;
+        width: 10px;
+        filter: blur(10px);
+        transition: ease-in-out .8s;
+        transform: rotateY(45deg);
+    }
+
+    &:hover{
+        &::before{
+            content: '';
+            top:0;
+            left: 1000px;
+           
+        }
+    }
 
     img{
         z-index: 1;

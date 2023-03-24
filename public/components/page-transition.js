@@ -29,13 +29,16 @@ export default function pageTransition() {
     </div> 
     <div className='projectContent d-flex justify-content-center align-items-center'>
       {/* <h2>{title}</h2> */}
-<h1 style={{fontSize:"44px"}}><Typewriter
+<h1 style={{fontSize:"44px"}}>
+  
+  <Typewriter
   options={{
     strings: ['PAGE', 'LOADING...'],
     autoStart: true,
     loop: true,
-  }}
-/></h1>
+  }}s
+/>
+</h1>
       </div>
     
 </div>   

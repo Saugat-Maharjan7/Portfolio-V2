@@ -77,7 +77,8 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         <title>Shirish - The Design World</title>
-        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
         <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} />
         </Head>
         <World></World>
@@ -186,7 +187,6 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                       <p className="project-details">Vendor Rating Solution is a next and robust level of supply chain management for any B2B companies that rely on large chunk of supply data to be carried on a daily basis.</p>
                     </div>
                     <button  className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-                      <img className="position-absolute" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314484710_805482084003173_978510453423547081_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=gzSRtD5kgYoAX8uy4YW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSTHGF6lyn3hEu9hE-OAcdf12yErgFWuESXjJUvf5TH5w&oe=638D5564" alt="btn-blr" />
                       VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
                       </svg></button>
@@ -224,7 +224,6 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                       </p>
                     </div>
                     <button className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-                      <img className="position-absolute" style={{width:"75px",transform:"scale(3.5) translateY(18px)"}}  src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314484710_805482084003173_978510453423547081_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=gzSRtD5kgYoAX8uy4YW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSTHGF6lyn3hEu9hE-OAcdf12yErgFWuESXjJUvf5TH5w&oe=638D5564" alt="btn-blr" />
                       VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
                       </svg></button>
@@ -261,7 +260,6 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                       <p className="project-details"> AEOS auction brings the wine lovers a step closer to the wines that they dream of buying, whether it be for the collection purposes or the vintage test requirement.</p>
                     </div>
                     <button className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
-                      <img className="position-absolute" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314484710_805482084003173_978510453423547081_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=gzSRtD5kgYoAX8uy4YW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSTHGF6lyn3hEu9hE-OAcdf12yErgFWuESXjJUvf5TH5w&oe=638D5564" alt="btn-blr" />
                       VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
                       </svg></button>
