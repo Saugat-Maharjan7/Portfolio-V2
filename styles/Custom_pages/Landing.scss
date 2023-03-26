@@ -9,7 +9,11 @@ header{
     -webkit-backdrop-filter:blur(8px);
     border-bottom: 1px solid white;
     position: fixed;
+    top:-100px;
     width: 100%;
+    transition: ease-in-out top .5s;
+
+  
 
     nav{
         align-items: center;
@@ -220,6 +224,10 @@ header{
 
         }
     }
+}
+
+.header-visible{
+    top:0px!important;
 }
 
 

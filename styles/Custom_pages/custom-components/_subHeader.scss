@@ -7,6 +7,12 @@
     position:fixed;
     width: 100%;
     z-index: 3;
+    transition: ease-in-out top .5s;
+    top:-100px;
+
+
+    //the visible class is under Landing.scss/header-visible
+
     
     .container{
 

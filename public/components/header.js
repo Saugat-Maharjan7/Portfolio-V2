@@ -4,8 +4,34 @@ import Link from "next/link";
 
 
 export default function head({ toggleSidebar,isSidebarOpen }) {
+
+  const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    let scrollable=document.querySelector('main')
+
+
+    const handleScroll = (event) => {
+
+      if (event.deltaY > 0) {
+        console.log("scrolled")
+
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
+    };
+
+    scrollable.addEventListener('wheel', handleScroll);
+
+    return () => {
+      scrollable.removeEventListener('wheel', handleScroll);
+    };
+  }, []);
+
+
   return (
-    <m.header>
+    <m.header className={`${showNav ? '' : 'header-visible'}`}>
           <div className="container">
             <nav className="d-flex flex-row justify-content-between align-items-center">
               <Link className="Logo d-flex flex-row" style={{textDecoration:"none",color:"white"}} href="/" id="home">

@@ -5,9 +5,32 @@ import Link from "next/link";
 
 
 function subhead(){
+  const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    // let scrollable=document.querySelector('main')
+
+
+    const handleScroll = (event) => {
+
+      if (event.deltaY > 0) {
+        console.log("scrolled")
+
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
+    };
+
+    window.addEventListener('wheel', handleScroll);
+
+    return () => {
+      window.removeEventListener('wheel', handleScroll);
+    };
+  }, []);
   
     return(
-        <m.nav className="subHeader"
+        <m.nav  className={`subHeader ${showNav ? '' : 'header-visible'}`}
         
         initial={{
           y:-100,

@@ -122,28 +122,7 @@
                 order: 1;
                
                 button{
-                    position: relative;
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        top:0;
-                        left: -100px;
-                        background-color: $primary-orange;
-                        height: 50px;
-                        width: 10px;
-                        filter: blur(10px);
-                        transition: ease-in-out .8s;
-                        transform: rotateY('45deg');
-                    }
-
-                    &:hover{
-                        &::before{
-                            content: '';
-                            top:0;
-                            left: 1000px;
-                           
-                        }
-                    }
+                  
                 }
                 
                    // Small devices (Potrait phones, 576px and up)
