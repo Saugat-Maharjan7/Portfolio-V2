@@ -19,6 +19,40 @@ import Head from 'next/head';
 
 
 function Contact(){
+
+  //Width classname
+
+
+  const [viewWidth, setViewWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewWidth(window.innerWidth);
+    };
+    
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+
+    };
+    
+  }, []);
+
+  let classs='col'
+
+if(viewWidth<768){
+classs='col-12'
+}
+if(viewWidth>768){
+  classs='col-4'
+  }
+  const divClassName = classs
+
+  //form request
+
     const formref=useRef();
   const [form, setForm]=useState({
     name:'',
@@ -62,8 +96,13 @@ const handleSubmit=(e)=>{
             Contact
           </title>
         </Head>
+        <Mouse/>
         <m.div>
+          
         <SubHead></SubHead>
+       
+        <main>
+        
           <section className='contact-section'> 
             <div style={{paddingTop:"6rem"}} className='container d-flex flex-column gap-5'>
 
@@ -73,7 +112,7 @@ const handleSubmit=(e)=>{
               </div>
             
             <div className='contact row d-flex flex-row'>
-              <div className='col-4 d-flex flex-column gap-4'>
+              <div className={`${divClassName} d-flex flex-column gap-4`}>
               <Image src={me} alt="me" className="me-large"></Image >
 
              <div>
@@ -164,6 +203,7 @@ const handleSubmit=(e)=>{
               
             </div>
           </section>
+          </main>
           <SubFooter> </SubFooter>
         </m.div>
         </>
