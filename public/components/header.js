@@ -14,7 +14,6 @@ export default function head({ toggleSidebar,isSidebarOpen }) {
     const handleScroll = (event) => {
 
       if (event.deltaY > 0) {
-        console.log("scrolled")
 
         setShowNav(true);
       } else {
