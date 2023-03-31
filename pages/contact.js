@@ -203,8 +203,9 @@ const handleSubmit=(e)=>{
               
             </div>
           </section>
-          </main>
           <SubFooter> </SubFooter>
+
+          </main>
         </m.div>
         </>
 
