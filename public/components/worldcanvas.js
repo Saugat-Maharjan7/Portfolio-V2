@@ -30,7 +30,7 @@ function Three(){
     let starref=useRef()
 
     let mousesathover=useRef(false)
-    const satellite = useLoader(GLTFLoader, '/satellite.glb');
+    // const satellite = useLoader(GLTFLoader, '/satellite.glb');
 
     let satelliteref=useRef()
 
@@ -79,19 +79,6 @@ function Three(){
          
         })
 
-        // const tl = gsap.timeline({
-        //     scrollTrigger: {
-        //       trigger: scrollable,
-        //       start: 'top 50%',
-        //       end: 'bottom 50%',
-        //       scrub: true
-        //     }
-        //   })
-      
-        //   tl.to(sphereRef.current.position, {
-        //     y: 5,
-        //     duration: 1
-        //   })
     })
 
     useFrame(() => {
@@ -123,7 +110,7 @@ function Three(){
         <OrbitControls></OrbitControls>
        
 
-       <primitive ref={satelliteref} position={[2,2.5,2]} rotation={[19,-500,-10]} scale={[0.15,0.15,0.15]} object={satellite.scene} />
+       {/* <primitive ref={satelliteref} position={[2,2.5,2]} rotation={[19,-500,-10]} scale={[0.15,0.15,0.15]} object={satellite.scene} /> */}
 
         {/* this is the sphere world */}
     <mesh ref={sphereRef} material={material}>
