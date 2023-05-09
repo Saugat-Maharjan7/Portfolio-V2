@@ -165,11 +165,11 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
           <section id="digital-products" className="w-100">
             <div className="container position-relative" id="products-container">
               <div style={{borderTop:"1px solid white"}} className="border-l-r-b d-flex flex-row container-title">
-                <div className="container-Headerer-img">
+                <div className="container-header-img">
                   <img style={{width:"75px",transform:"scale(3.5) translateY(18px)"}}  src="https://i.ibb.co/54TbLsP/UFO.png" alt="UFO" />
                 </div>
-                <div className=" container-Headerer d-flex align-items-center" >
-                  <h2 className="secton-Headerer-h2">DIGITAL PRODUCTS</h2>
+                <div className=" container-header d-flex align-items-center" >
+                  <h2 className="secton-header-h2">DIGITAL PRODUCTS</h2>
                   <span className="leader-subtitle">.THE UFO</span>
                 </div>
               </div>
@@ -184,6 +184,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                       <span className="project-leading">Research . UI Design . Frontend dev. </span>
                       <h3>VENDOR RATING SOLUTIONS
                         MANAGEMENT PLATFORM</h3>
+       
                       <p className="project-details">Vendor Rating Solution is a next and robust level of supply chain management for any B2B companies that rely on large chunk of supply data to be carried on a daily basis.</p>
                     </div>
                     <button  className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
@@ -198,7 +199,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                   <div className="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div className="modal-dialog">
                       <div className="modal-content">
-                        <div className="modal-Headerer">
+                        <div className="modal-header">
                           <h5 className="modal-title" id="staticBackdropLabel">Vendor Rating Solution</h5>
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                         </div>
@@ -236,7 +237,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                   <div className="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div className="modal-dialog">
                       <div className="modal-content">
-                        <div className="modal-Headerer">
+                        <div className="modal-header">
                           <h5 className="modal-title" id="staticBackdropLabel">Super Krishak</h5>
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                         </div>
@@ -272,7 +273,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                   <div className="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div className="modal-dialog">
                       <div className="modal-content">
-                        <div className="modal-Headerer">
+                        <div className="modal-header">
                           <h5 className="modal-title" id="staticBackdropLabel">AEOS Auction</h5>
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                         </div>
@@ -291,14 +292,14 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
             </div>
           </section> 
           <section className="section-visual-designs" id="visual-designs">
-            {/* this isthe Headerer of the container */}
+            {/* this isthe header of the container */}
             <div className="container">
               <div className="border-l-r-b d-flex flex-row container-title">
-                <div className="container-Headerer-img">
+                <div className="container-header-img">
                   <img style={{width:"75px",transform:"scale(2.5) translateY(2px)"}}  src="https://i.ibb.co/3d1pzkP/moon2-1.png" alt="moon" />
                 </div>
-                <div className=" container-Headerer d-flex align-items-center" >
-                  <h2 className="secton-Headerer-h2">VISUAL DESIGNS</h2>
+                <div className=" container-header d-flex align-items-center" >
+                  <h2 className="secton-header-h2">VISUAL DESIGNS</h2>
                   <span className="leader-subtitle">.THE MOON</span>
                 </div>
               </div>

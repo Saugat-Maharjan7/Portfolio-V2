@@ -1,8 +1,9 @@
 import Script from 'next/script'
 import { Canvas } from '@react-three/fiber';
-// import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { Suspense } from 'react';
-// import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+
+import { EffectComposer, Bloom, Noise } from 'postprocessing';
+
 
 import gsap from 'gsap';
 // import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -16,13 +17,10 @@ import {OrbitControls,PerspectiveCamera, useTexture, Stars  } from "@react-three
 import React, { useRef,useState  } from "react";
 import { useFrame,useThree } from '@react-three/fiber';
 import { MeshStandardMaterial, RepeatWrapping } from 'three';
-// import {Starfi}
 
 import {useEffect} from 'react'
-// import { useMouse } from "react-use";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useLoader } from '@react-three/fiber';
-// import rocketmodel from "../../public/assets/gltf/satellite.glb"
 
 function Three(){
 
@@ -30,9 +28,9 @@ function Three(){
     let starref=useRef()
 
     let mousesathover=useRef(false)
-    // const satellite = useLoader(GLTFLoader, '/satellite.glb');
+    const earth = useLoader(GLTFLoader, '/earth.glb');
 
-    let satelliteref=useRef()
+    let earthref=useRef()
 
     const scrollable=document.querySelector('main')
 
@@ -85,13 +83,13 @@ function Three(){
 
         starref.current.rotation.y+=0.0002
 
-        if (satelliteref.current) {
+        if (earthref.current) {
             // Use a sine wave to move the model up and down
             const time = performance.now() / 1000;
-            satelliteref.current.position.y = Math.sin(time) * 0.1+2;
+            earthref.current.position.y = Math.sin(time) * 0.1+2;
           }
 
-          //this is the hover on satellite        
+          //this is the hover on earth        
         sphereRef.current.rotation.y += 0.001;
         pointLightRef.current.position.set(
         pointLightRef.current.position.x,
@@ -110,7 +108,7 @@ function Three(){
         <OrbitControls></OrbitControls>
        
 
-       {/* <primitive ref={satelliteref} position={[2,2.5,2]} rotation={[19,-500,-10]} scale={[0.15,0.15,0.15]} object={satellite.scene} /> */}
+       <primitive ref={earthref} position={[20,2.5,2]} rotation={[19,-500,-10]} scale={[1,1,1]} object={earth.scene} />
 
         {/* this is the sphere world */}
     <mesh ref={sphereRef} material={material}>
@@ -142,8 +140,10 @@ function World(){
           }}>
         <Canvas  id="threed-container" className="webgl" style={{position:"fixed",zIndex:1}}>
             <Suspense>
+                
                 <Three/>
         </Suspense>
+        
         </Canvas>
         <Script>{
 
