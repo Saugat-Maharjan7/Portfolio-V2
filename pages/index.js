@@ -19,6 +19,9 @@ import Typewriter from 'typewriter-effect';
 
 
 export default function Home() {
+
+
+  
  
     let exploreref=useRef()
     const [isToggled, setToggled] = useState(false);

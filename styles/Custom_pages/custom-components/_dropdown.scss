@@ -1,0 +1,27 @@
+@import "../../Variables.scss";
+
+.dropdown_menu{
+position: absolute;
+top:120%;
+z-index: 100;
+gap: 0em!important;
+display: flex;
+flex-direction: column;
+list-style: none;
+background-color:rgb(7, 18, 32);
+border-radius: 12px;
+border: 1px solid rgb(31, 55, 84);
+max-width: 260px;
+width: 260px;
+
+    .dropdown_item{
+padding: 1rem 1.2rem;
+border-bottom:.5px solid rgb(31, 55, 84);
+text-decoration: none!important;
+
+&:hover{
+    background-color: $primary-orange;
+    color: rgb(7, 18, 32);
+}
+    }
+}
