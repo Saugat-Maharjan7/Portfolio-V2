@@ -28,7 +28,7 @@ function Three(){
     let starref=useRef()
 
     let mousesathover=useRef(false)
-    const earth = useLoader(GLTFLoader, '/earth.glb');
+    // const earth = useLoader(GLTFLoader, '/earth.glb');
 
     let earthref=useRef()
 
@@ -108,7 +108,7 @@ function Three(){
         <OrbitControls></OrbitControls>
        
 
-       <primitive ref={earthref} position={[20,2.5,2]} rotation={[19,-500,-10]} scale={[1,1,1]} object={earth.scene} />
+       {/* <primitive ref={earthref} position={[20,2.5,2]} rotation={[19,-500,-10]} scale={[1,1,1]} object={earth.scene} /> */}
 
         {/* this is the sphere world */}
     <mesh ref={sphereRef} material={material}>

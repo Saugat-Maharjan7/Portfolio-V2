@@ -53,15 +53,13 @@ export default function head({ toggleSidebar,isSidebarOpen }) {
                 </li>
 
 
-                  {/* <li className="nav-item d-flex flex-row "><a className="anchor" href="#" id="about">about</a></li> */}
                   <li className="nav-item d-flex flex-row ">
-                    <Dropdown/>
-                    {/* <Link className="anchor " href="work" id="about">work</Link> */}
+                  <Dropdown/>
 
                     </li>
                                         {/* <a className="anchor" href="#" id="works">work</a> */}
 
-                  <li className="nav-item d-flex flex-row" id="contact"><Link className="anchor" href="/contact" id="contact"><span id="contact">LET'S CONNECT</span><div id="contact" className="send-btn "><svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-cursor-fill" viewBox="0 0 16 16">
+                  <li className="nav-item nav-connect d-flex flex-row" id="contact"><Link className="anchor" href="/contact" id="contact"><span id="contact">LET'S CONNECT</span><div id="contact" className="send-btn "><svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-cursor-fill" viewBox="0 0 16 16">
                           <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
                         </svg></div></Link></li>                            
                 </ul>

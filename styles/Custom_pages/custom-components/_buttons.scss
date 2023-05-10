@@ -4,6 +4,28 @@
     text-transform: uppercase;
 }
 
+.btn-down{
+    color: white;
+    text-transform: lowercase;
+    display: flex;
+    gap:.5rem;
+    align-items: center;
+
+    &:hover{
+        text-decoration: underline;
+        svg{
+            transform: translateY(0)!important;
+        }
+    }
+
+    
+
+}
+.btn-down:active{
+    border-color:transparent!important;
+}
+
+
 .btn-outline-primary{
     border-radius: 0px;
     padding: 0.625 1rem;

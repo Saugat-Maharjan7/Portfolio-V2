@@ -14,17 +14,17 @@ function Dropdown(){
       const menuitems=[    {
         id:1,
         "title":"Super Krishak",
-        "link":'/work'
+        "link":'/projects'
       },
       {
         id:2,
         "title":"VRS",
-        "link":'/work'
+        "link":'/projects'
       },
       {
         id:3,
         "title":"ABC",
-        "link":'/work'
+        "link":'/projects'
       }]
 
 
@@ -37,9 +37,24 @@ function Dropdown(){
         
         <button 
         onClick={()=>setIsOpen((prev)=>!prev)}
-        className="btn btn-primary" id="works"> works <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-      </svg>
+
+        className="btn btn-down" 
+        
+        id="works"> 
+        projects
+
+        {isOpen &&(
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+        </svg>
+         )}
+
+        {!isOpen &&(
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+         )}
+        
       </button>
      
      {isOpen &&(
