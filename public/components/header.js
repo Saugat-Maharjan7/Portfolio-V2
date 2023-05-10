@@ -55,8 +55,8 @@ export default function head({ toggleSidebar,isSidebarOpen }) {
 
                   {/* <li className="nav-item d-flex flex-row "><a className="anchor" href="#" id="about">about</a></li> */}
                   <li className="nav-item d-flex flex-row ">
-                    {/* <Dropdown/> */}
-                    <Link className="anchor " href="work" id="about">work</Link>
+                    <Dropdown/>
+                    {/* <Link className="anchor " href="work" id="about">work</Link> */}
 
                     </li>
                                         {/* <a className="anchor" href="#" id="works">work</a> */}
