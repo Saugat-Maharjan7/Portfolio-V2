@@ -1,6 +1,8 @@
 import Script from 'next/script'
 import { Canvas, useLoader  } from '@react-three/fiber';
 import { Suspense } from 'react';
+import { Vector3 } from 'three';
+
 
 import { EffectComposer, Bloom, Noise } from 'postprocessing';
 
@@ -22,7 +24,10 @@ import {useEffect} from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 function Three(){
-
+    
+      const [targetMesh, setTargetUfo] = useState(null);
+      const cameraPosition = new Vector3();
+      const cameraLookAt = new Vector3();
     const projects = useTexture("../me.png");
 
     let starref=useRef()
@@ -59,10 +64,7 @@ function Three(){
 
     const material = new MeshStandardMaterial({ color: (0x1a1a1a),  normalMap: normal,heightTextureMap:height})
 
-    // const squarematerial=new MeshBasicMaterial({
-    //     map: texture,
-    //     side: DoubleSide, // Enable double-sided rendering
-    //   });
+
 
     material.normalMap.repeat.set(8, 8)
     material.normalMap.repeat.set(8, 8)
@@ -117,7 +119,14 @@ function Three(){
             const scale = isHovered ? 0.8 : 0.7;
             uforef.current.scale.x = uforef.current.scale.y = uforef.current.scale.z += (scale - uforef.current.scale.x) * 0.05;
           }
+
+          if (targetMesh) {
+            const { x, y, z } = targetMesh.position;
+            camera.lookAt(uforef.current.position);
+          }
     });
+
+    
 
     const square1Ref = useRef();
     const square2Ref = useRef();
@@ -135,7 +144,8 @@ function Three(){
        
 
        <primitive ref={uforef} position={[6,1,1]} 
-       rotation={[0.1,-10,0]} 
+       rotation={[0.1,-10,0]}
+       onClick={() => setTargetUfo(uforef.current)}
        onPointerOver={handlePointerOver}
         onPointerOut={handlePointerOut}
        scale={[1,1,1]}
