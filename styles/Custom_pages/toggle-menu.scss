@@ -91,14 +91,12 @@
                         padding: .5rem 1.2rem;
                         text-decoration: none!important;
                         font-family: "NexaLight"!important;
-                        border-radius: getSize(2);
                         font-size: getSize(8);
                         color: getColor(Natural,White,100);
 
                         &:active{
                             color: getColor(Brand,Orange,500);
                             background: rgba(255, 255, 255, 0.048);
-                            // backdrop-filter: blur(0px);                   
                              }
                     }
                 }

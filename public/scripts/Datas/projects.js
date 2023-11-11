@@ -2,7 +2,7 @@ export const projects = [
     {
       id: 1,
       title: 'Super Krishak',
-      link: '/projects',
+      link: '/projects/SuperKrishak',
     },
     {
       id: 2,
