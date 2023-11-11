@@ -1,10 +1,7 @@
 // Variables
-//
-// Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
 
 // Color system
-
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -38,3 +35,400 @@ $zindex-modal:                      1050 ;
 $zindex-popover:                    1070 !default;
 $zindex-tooltip:                    1080 !default;
 $zindex-toast:                      1090 !default;
+
+/* Mode 1 */
+/* Brand Default colors */ //Dont use these Directly
+
+$black: #000000;
+$brand-black: #161515;
+$brand-grey: #8d8d8d;
+$brand-orange: #fb722e;
+$brand-purple: #c25ffd;
+$brand-basilgreen: #cbffc2;
+$brand-green: #4bd20b;
+$brand-verdanalight: #00c9cb;
+$brand-yellow: #ffae10;
+$white: #ffffff;
+
+$Colors: (
+  Natural: (
+    White:(
+      100: #ffffff
+    ),
+    Black:(
+      100:#000000)
+    ),
+  Brand: (
+    Black: (
+      100: #292828,
+      200: #232222,
+      300: #1d1c1c,
+      400: #161515,
+      500: #161515,
+      600: #0b0b0b,
+      700: #050505,
+      800: #000000,
+      900: #000000,
+    ),
+    Orange: (
+      100: #fbece6,
+      200: #f6d1c2,
+      300: #f0b79f,
+      400: #eb9e7b,
+      500: #fb722e,
+      600: #d16c4f, 
+      700: #a9543f,
+      800: #7d3c30,
+      900: #512322,
+    ),
+    Purple: (
+      100: #f2e1ff,
+      200: #d9b3ff,
+      300: #c186ff,
+      400: #a959ff,
+      500: #c25ffd,
+      600: #7a25cc,
+      700: #641f99,
+      800: #4e1966,
+      900: #381333,
+    ),
+  ),
+  Tailwind: (
+    Amber: (
+      100: #fff2cc,
+      200: #ffdf99,
+      300: #ffcc66,
+      400: #ffbf40,
+      500: #ffc107,
+      600: #e69e00,
+      700: #c28500,
+      800: #996b00,
+      900: #664200,
+    ),
+    Blue: (
+      100: #e3f2fd,
+      200: #bbdefb,
+      300: #90caf9,
+      400: #64b5f6,
+      500: #1976d2,
+      600: #1565c0,
+      700: #0d47a1,
+      800: #0a367d,
+      900: #002171,
+    ),
+    Cyan: (
+      100: #e0f7fa,
+      200: #b2ebf2,
+      300: #80deea,
+      400: #4dd0e1,
+      500: #00bcd4,
+      600: #0097a7,
+      700: #00796b,
+      800: #005662,
+      900: #003d33,
+    ),
+    Emerald: (
+      100: #d9f7e7,
+      200: #a3e9c8,
+      300: #5fdcb1,
+      400: #29c68f,
+      500: #00897b,
+      600: #00695c,
+      700: #004d40,
+      800: #00352e,
+      900: #002522,
+    ),
+    Fuchsia: (
+      100: #f8bbd0,
+      200: #f48fb1,
+      300: #f06292,
+      400: #ec407a,
+      500: #e91e63,
+      600: #d81b60,
+      700: #c2185b,
+      800: #ad1457,
+      900: #880e4f,
+    ),
+    Gray: (
+      100: #cccccc,
+      200: #b3b3b3,
+      300: #999999,
+      400: #808080,
+      500: #666666,
+      600: #4d4d4d,
+      700: #333333,
+      800: #1a1a1a,
+      900: #000000,
+    ),
+    Green: (
+      100: #ccffcc,
+      200: #99ff99,
+      300: #66ff66,
+      400: #33ff33,
+      500: #4caf50,
+      600: #388e3c,
+      700: #2e7d32,
+      800: #22571e,
+      900: #1b451f,
+    ),
+    Indigo: (
+      100: #e8eaf6,
+      200: #c5cae9,
+      300: #9fa8da,
+      400: #7986cb,
+      500: #3f51b5,
+      600: #3949ab,
+      700: #303f9f,
+      800: #283593,
+      900: #1a237e,
+    ),
+    Lime: (
+      100: #f2f2cc,
+      200: #e0e066,
+      300: #cccc00,
+      400: #b8b800,
+      500: #99cc00,
+      600: #80a600,
+      700: #666d00,
+      800: #4d4d00,
+      900: #333300,
+    ),
+    Neutral: (
+      100: #e6e6e6,
+      200: #b3b3b3,
+      300: #808080,
+      400: #4d4d4d,
+      500: #262626,
+      600: #1f1f1f,
+      700: #191919,
+      800: #121212,
+      900: #0c0c0c,
+    ),
+    Orange: (
+      100: #ffdab3,
+      200: #ffbb80,
+      300: #ffa54d,
+      400: #ff8c1a,
+      500: #ff6f00,
+      600: #e65a00,
+      700: #c24c00,
+      800: #993e00,
+      900: #662f00,
+    ),
+    Pink: (
+      100: #fce4ec,
+      200: #f8bbd0,
+      300: #f48fb1,
+      400: #f06292,
+      500: #ec407a,
+      600: #d81b60,
+      700: #c2185b,
+      800: #ad1457,
+      900: #880e4f,
+    ),
+    Purple: (
+      100: #f3e5f5,
+      200: #e1bee7,
+      300: #ce93d8,
+      400: #ba68c8,
+      500: #9c27b0,
+      600: #8e24aa,
+      700: #7b1fa2,
+      800: #6a1b9a,
+      900: #4a148c,
+    ),
+    Red: (
+      100: #ffd6d6,
+      200: #ffa6a6,
+      300: #ff7878,
+      400: #ff4848,
+      500: #ff0000,
+      600: #e60000,
+      700: #c20000,
+      800: #990000,
+      900: #660000,
+    ),
+    Rose: (
+      100: #fff5f7,
+      200: #fed7e2,
+      300: #fbb6ce,
+      400: #f687b3,
+      500: #ed64a6,
+      600: #d53f8c,
+      700: #b83280,
+      800: #97266d,
+      900: #702459,
+    ),
+    Sky: (
+      100: #e3f2fd,
+      200: #bbdefb,
+      300: #90caf9,
+      400: #64b5f6,
+      500: #2196f3,
+      600: #1e88e5,
+      700: #1976d2,
+      800: #1565c0,
+      900: #0d47a1,
+    ),
+    Slate: (
+      100: #d9e1e3,
+      200: #adc4c9,
+      300: #81a7af,
+      400: #557a94,
+      500: #2a5d79,
+      600: #254f6b,
+      700: #1f425d,
+      800: #192e3e,
+      900: #121e2f,
+    ),
+    Stone: (
+      100: #f2f2f2,
+      200: #e0e0e0,
+      300: #cccccc,
+      400: #b8b8b8,
+      500: #a3a3a3,
+      600: #8f8f8f,
+      700: #7a7a7a,
+      800: #666666,
+      900: #515151,
+    ),
+    Teal: (
+      100: #e0f2f1,
+      200: #b2ebf2,
+      300: #80deea,
+      400: #4dd0e1,
+      500: #009688,
+      600: #00796b,
+      700: #005a4d,
+      800: #004240,
+      900: #002f30,
+    ),
+    Violet: (
+      100: #f3e5f5,
+      200: #e1bee7,
+      300: #ce93d8,
+      400: #ba68c8,
+      500: #673ab7,
+      600: #5e35b1,
+      700: #512da8,
+      800: #4527a0,
+      900: #311b92,
+    ),
+    Yellow: (
+      100: #ffffe6,
+      200: #ffffb3,
+      300: #ffff80,
+      400: #ffff4d,
+      500: #ffd600,
+      600: #e6c200,
+      700: #c2a100,
+      800: #997f00,
+      900: #664d00,
+    ),
+    Zinc: (
+      100: #595959,
+      200: #4d4d4d,
+      300: #404040,
+      400: #333333,
+      500: #262626,
+      600: #1a1a1a,
+      700: #0d0d0d,
+      800: #000000,
+      900: #000000,
+    ),
+  ),
+);
+
+@function getColor($group, $color, $shade) {
+    @return map-get(map-get(map-get($Colors, $group), $color), $shade);
+  }
+  
+   // .your-element {
+//     gap: getColor(Brand, Orange,200); // Adjust the abbreviation as needed
+//   }
+
+//Sizes
+$Sizes: (
+  0: 0px,
+  2: 4px,
+  4: 8px,
+  6: 12px,
+  8: 16px,
+  10: 20px,
+  12: 24px,
+  14: 28px,
+  16: 32px,
+  18: 36px,
+  20: 40px,
+  22: 44px,
+  24: 48px,
+  26: 52px,
+  28: 56px,
+  30: 60px,
+  32: 64px,
+  34: 68px,
+  36: 72px,
+  38: 76px,
+  40: 80px,
+  42: 84px,
+  44: 88px,
+  46: 92px,
+  48: 96px,
+  50: 100px,
+  52: 104px,
+  54: 108px,
+  56: 112px,
+  58: 116px,
+  60: 120px,
+  62: 124px,
+  64: 128px,
+  66: 132px,
+  68: 136px,
+  70: 140px,
+  72: 144px,
+  74: 148px,
+  76: 152px,
+  78: 156px,
+  80: 160px,
+  82: 164px,
+  84: 168px,
+  86: 172px,
+  88: 176px,
+  90: 180px,
+  92: 184px,
+  94: 188px,
+  96: 192px,
+  98: 196px,
+  100: 200px,
+  // Add more sizes as needed
+);
+
+@function getSize($key) {
+    @return map-get($Sizes, $key);
+  }
+
+  // .your-element {
+//     gap: getSize(2); // Adjust the abbreviation as needed
+//   }
+
+
+  $Spacing: (
+    0:map-get($Sizes, 0 ),
+    s: map-get($Sizes, 2),    // small
+    m: map-get($Sizes, 4),    // medium
+    l: map-get($Sizes, 8),    // large
+    xl: map-get($Sizes, 16),  // x-large
+    xxl: map-get($Sizes, 32), // xx-large
+    // Add more abbreviations as needed
+  );
+
+  @function getSpacing($abbreviation) {
+    @return map-get($Spacing, $abbreviation);
+  }
+
+  // Your element using the getSpacing function
+// .your-element {
+//     padding: getSpacing('m'); // Adjust the abbreviation as needed
+//   }
+  
+

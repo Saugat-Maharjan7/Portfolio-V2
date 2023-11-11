@@ -1,0 +1,35 @@
+@import "./Variables.scss";
+
+//Background
+@each $color-type, $Color in $Colors {
+  @each $color-group, $shades in $Color {
+    @each $shade, $value in $shades {
+      .BG#{$color-type}#{$color-group}#{$shade} {
+        background-color: $value!important;
+      }
+    }
+  }
+}
+
+//Text
+@each $color-type, $Color in $Colors {
+  @each $color-group, $shades in $Color {
+    @each $shade, $value in $shades {
+      .TXT#{$color-type}#{$color-group}#{$shade} {
+        color: $value!important;
+      }
+    }
+  }
+}
+
+//Border
+@each $color-type, $Color in $Colors {
+  @each $color-group, $shades in $Color {
+    @each $shade, $value in $shades {
+      .BRDR#{$color-type}#{$color-group}#{$shade} {
+        border-color: $value;
+      }
+    }
+  }
+}
+

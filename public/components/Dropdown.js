@@ -6,27 +6,11 @@ import {useEffect} from 'react'
 import React, { useRef,useState  } from "react";
 // import Menu from './menu';
 import Link from "next/link";
+import {projects} from '../scripts/Datas/projects'; //projects database
+
 
 
 function Dropdown(){
-
-  
-      const menuitems=[    {
-        id:1,
-        "title":"Super Krishak",
-        "link":'/projects'
-      },
-      {
-        id:2,
-        "title":"VRS",
-        "link":'/projects'
-      },
-      {
-        id:3,
-        "title":"ABC",
-        "link":'/projects'
-      }]
-
 
    const [isOpen,setIsOpen]=useState(false)
 
@@ -61,7 +45,7 @@ function Dropdown(){
       <div>
         
           <ul className='dropdown_menu'>
-            {menuitems.map(item=>(
+            {projects.map(item=>(
                  <Link href={item.link} key={item.id} className='dropdown_item'>{item.title}</Link>
             ))}
             </ul>

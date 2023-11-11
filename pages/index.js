@@ -14,6 +14,7 @@ import { Spring } from "@react-spring/core"
 import styles from '../styles/Custom_pages/custom-components/ToggleSwitch.module.css';
 import Sidenavigation from "../public/components/side-navigation";
 import Typewriter from 'typewriter-effect';
+import {projects} from '../public/scripts/Datas/projects'; //projects database
 
 
 
@@ -221,8 +222,9 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                   <div className="p-left d-flex flex-column">
                     <div className="project-detail d-flex flex-column">
                       <span className="project-leading">UX Research . Branding . UI Design </span>
-                      <h3>SUPER KRISHAK
-                        APP DESIGN</h3>
+                      <h3 className="allCaps">       
+                        {projects.find(item => item.id === 1)?.title || 'Item not found'}
+                      </h3>
                       <p className="project-details"> Super krishak is introduced into the Nepali market to educate the farmers from the east to the west of Nepal. 
                         The education of farming has never been executed like this in such a  easy and fun way.
                       </p>

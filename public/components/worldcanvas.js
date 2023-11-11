@@ -127,13 +127,6 @@ function Three(){
     });
 
     
-
-    const square1Ref = useRef();
-    const square2Ref = useRef();
-    const square3Ref = useRef();
-
-    
-
     return(
 
         <>
@@ -158,21 +151,7 @@ function Three(){
     <mesh ref={sphereRef} material={material}>
       <sphereGeometry args={[2.2,120,100]}/>
     </mesh>
-{/*     
-    <mesh ref={square1Ref} position={[-5, 0, 6]}>
-        <planeGeometry args={[1, 1]} />
-        <meshBasicMaterial map={projects} side={DoubleSide} />
-      </mesh>
-
-      <mesh ref={square2Ref} scale={3} position={[0, 5, 2]}>
-        <planeGeometry args={[1, 1]} />
-        <meshBasicMaterial map={projects}  side={DoubleSide} />
-      </mesh>
-
-      <mesh ref={square2Ref} position={[2, -5, 0]}>
-        <planeGeometry args={[1, 1]} />
-        <meshBasicMaterial map={projects}  side={DoubleSide} />
-      </mesh> */}
+    
         <Stars ref={starref} />
         </>
     )
@@ -199,7 +178,15 @@ function World(){
           }}>
             
 
-        <Canvas  id="threed-container" className="webgl" style={{position:"fixed",zIndex:1}}>
+        <Canvas 
+         style={{
+          // background: 'url(../space.jpg) center no-repeat',
+          // backgroundSize: 'cover',
+          position:"fixed",
+          zIndex:1
+        }}
+        id="threed-container" className="webgl"
+        >
             <Suspense>
                 
                 <Three/>
