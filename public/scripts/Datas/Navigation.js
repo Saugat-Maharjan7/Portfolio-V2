@@ -4,6 +4,7 @@ const menuItems = [
     {
       id: 1,
       label: '//About',
+      url:"/about",
       
     },
     {
@@ -17,7 +18,9 @@ const menuItems = [
     },
     {
         id: 3,
-        label: 'Contact'
+        label: 'Contact',
+        url:"/contact",
+
       },
     
   ];

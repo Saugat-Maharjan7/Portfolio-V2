@@ -35,7 +35,7 @@ const SideNavItem = ({ item }) => {
           )}
         </>
       ) : (
-        <div className='itemWithoutChildren' >{item.label}</div>
+        <Link className='itemWithoutChildren' href={item.url}>{item.label}</Link>
       )}
     </li>
   );
