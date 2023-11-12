@@ -135,7 +135,7 @@ const handleCopyClick = () => {
               <div className='d-flex flex-column GAPxs'>
               <div className='d-flex flex-row GAPm align-items-center'>
               <span className="FONTNEXA SIZEF8 TXTNaturalWhite100">Email:</span>
-              <p id="email" className='TXTTailwindGray200 '>shirish.shakya5@gmail.com</p>
+              <p id="email" className='TXTTailwindGray400 '>shirish.shakya5@gmail.com</p>
               <div className='position-relative'>
               <button onClick={handleCopyClick} className='btn d-flex flex-row align-items-center  BDR50 GAPs SIZEF8  BGBrandBlack100 TXTNaturalWhite100 '>
                 
@@ -157,7 +157,7 @@ const handleCopyClick = () => {
               </div>
               <div className='d-flex flex-row GAPm'>
               <span className="FONTNEXA SIZEF8 TXTNaturalWhite100">Mobile:</span>
-              <p className='TXTTailwindGray200 FONTNEXA'>+977 9869134750</p>
+              <p className='TXTTailwindGray400 FONTNEXA'>+977 9869134750</p>
               </div>
               </div>
               </div> 

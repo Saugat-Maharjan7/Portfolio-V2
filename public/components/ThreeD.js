@@ -22,7 +22,7 @@ function ThreeD(){
           <div className="border-l-r-b w-100 threedwork-container">
             <div className="">
             {/* phidden class */}
-              <p className=" section-details">
+              <p className=" section-details TXTTailwindGray400">
                 Visual Designs are the key fundamental for strong designs in any medium whether it be on paper or screen. It has always been supporting creativity and a fun thing to play around.
               </p>
             </div>

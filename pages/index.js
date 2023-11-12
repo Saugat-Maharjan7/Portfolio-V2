@@ -312,7 +312,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
             <div className="container d-flex flex-column " style={{justifyContent: 'center'}}>
               <div className="border-l-r-b w-100 visual-designcontainer">
                 <div >
-                  <p className="section-details">
+                  <p className="section-details TXTTailwindGray400">
                     Visual Designs are the key fundamental for strong designs in any medium whether it be on paper or screen. It has always been supporting creativity and a fun thing to play around.
                   </p>
                 </div>

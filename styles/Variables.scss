@@ -2,21 +2,7 @@
 
 
 // Color system
-// scss-docs-start gray-color-variables
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
-// scss-docs-end gray-color-variables
 
-$bg-color:#161515;
 
 
 //these are the custom variables
@@ -40,10 +26,10 @@ $zindex-toast:                      1090 !default;
 /* Brand Default colors */ //Dont use these Directly
 
 $black: #000000;
-$brand-black: #161515;
-$brand-grey: #8d8d8d;
-$brand-orange: #fb722e;
-$brand-purple: #c25ffd;
+$brand-black: getColor(Brand, Black,500 );
+$brand-grey: getColor(Tailwind, Gray,500 );
+$brand-orange: getColor(Brand, Orange,500 );
+$brand-purple: getColor(Brand, Purple,500 );
 $brand-basilgreen: #cbffc2;
 $brand-green: #4bd20b;
 $brand-verdanalight: #00c9cb;
@@ -57,6 +43,14 @@ $Colors: (
     ),
     Black:(
       100:#000000)
+    ),
+
+  Alpha: (
+    White:(
+      100: #ffffff93
+    ),
+    Black:(
+      100:#00000051)
     ),
   Brand: (
     Black: (
@@ -150,15 +144,15 @@ $Colors: (
       900: #880e4f,
     ),
     Gray: (
-      100: #cccccc,
-      200: #b3b3b3,
-      300: #999999,
-      400: #808080,
-      500: #666666,
-      600: #4d4d4d,
-      700: #333333,
-      800: #1a1a1a,
-      900: #000000,
+      100: #f3f4f6,
+      200: #e5e7eb,
+      300: #d1d5db,
+      400: #9ca3af,
+      500: #6b7280,
+      600: #4b5563,
+      700: #374151,
+      800: #1f2937,
+      900: #111827,
     ),
     Green: (
       100: #ccffcc,
@@ -343,6 +337,21 @@ $Colors: (
     @return map-get(map-get(map-get($Colors, $group), $color), $shade);
   }
   
+  // scss-docs-start gray-color-variables
+$white:    getColor(Natural, White,100 );
+$gray-100: getColor(Tailwind,Gray ,100 ) !default;
+$gray-200: getColor(Tailwind,Gray ,200 ) !default;
+$gray-300: getColor(Tailwind,Gray ,300 ) !default;
+$gray-400: getColor(Tailwind,Gray ,400 ) !default;
+$gray-500: getColor(Tailwind,Gray ,500 ) !default;
+$gray-600: getColor(Tailwind,Gray ,600 ) !default;
+$gray-700: getColor(Tailwind,Gray ,700 ) !default;
+$gray-800: getColor(Tailwind,Gray ,800 ) !default;
+$gray-900: getColor(Tailwind,Gray ,900 ) !default;
+$black:    getColor(Natural, Black,100 );
+// scss-docs-end gray-color-variables
+$bg-color:getColor(Brand, Black,500 );
+
    // .your-element {
 //     gap: getColor(Brand, Orange,200); // Adjust the abbreviation as needed
 //   }

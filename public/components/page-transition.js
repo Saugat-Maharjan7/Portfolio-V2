@@ -28,7 +28,6 @@ export default function pageTransition() {
         <div className='load-bar'></div>
     </div> 
     <div className='projectContent d-flex justify-content-center align-items-center'>
-      {/* <h2>{title}</h2> */}
 <h1 style={{fontSize:"44px"}}>
   
   <Typewriter
