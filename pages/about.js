@@ -146,18 +146,18 @@ function About(){
 
     
 }
-About.getInitialProps = async () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-          data: {
-            title: 'Welcome to my website',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          },
-        });
-    }, 4000);
-  });
-};
+// About.getInitialProps = async () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve({
+//           data: {
+//             title: 'Welcome to my website',
+//             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+//           },
+//         });
+//     }, 4000);
+//   });
+// };
 export default About;
 
 
