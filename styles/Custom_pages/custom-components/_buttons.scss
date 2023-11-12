@@ -97,3 +97,22 @@
     }
   
 }
+
+.BTNICON{
+    outline: none;
+    padding: getSpacing('s');
+    color: $primary-orange;
+    background-color: getColor(Brand,Black,100);
+    padding: getSpacing('s') getSize(6);
+    border-radius: getSize(50);
+
+    &:hover{
+        background-color: getColor(Brand,Black,600);
+        border-color: $primary-orange!important;
+        color: $primary-orange;
+
+    }
+    &:active{
+        border-color: $primary-orange!important;
+    }
+}

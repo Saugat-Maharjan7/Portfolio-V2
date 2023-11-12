@@ -9,11 +9,7 @@ import Router from "next/router"
 
 
 import Pagetransition from "../public/components/page-transition"
-// import "./scripts/script"
-// import "./scripts/navigation";
-// import "./scripts/Mouseenter";
-// import "./scripts/exceldatabase"
-// import "./scripts/BGeraser";
+
 
 
 function MyApp({ Component, pageProps }) {
@@ -45,23 +41,23 @@ const router=useRouter()
 className='Base-page' >
       {/* <Pagetransition/> */}
       <Component {...pageProps}/>
-
-    <motion.div 
-    className='slide-in'
-    initial={{scaleY:0}}
-    animate={{scaleY:0}}
-    exit={{scaleY:1}}
-    transition={{duration:1,ease:[0.22,1,0.36,1]}}
-    >
-    </motion.div>
-    <motion.div 
-    className='slide-out'
-    initial={{scaleY:1}}
-    animate={{scaleY:0}}
-    exit={{scaleY:0}}
-    transition={{duration:1,ease:[0.22,1,0.36,1]}}
-    >
-    </motion.div>
+{/* Page Transition */}
+      <motion.div 
+      className='slide-in'
+      initial={{scaleY:0}}
+      animate={{scaleY:0}}
+      exit={{scaleY:1}}
+      transition={{duration:1,ease:[0.22,1,0.36,1]}}
+      >
+      </motion.div>
+      <motion.div 
+      className='slide-out'
+      initial={{scaleY:1}}
+      animate={{scaleY:0}}
+      exit={{scaleY:0}}
+      transition={{duration:1,ease:[0.22,1,0.36,1]}}
+      >
+      </motion.div>
 </motion.div>
 </AnimatePresence>
   )
