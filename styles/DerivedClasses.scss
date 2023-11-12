@@ -1,5 +1,17 @@
 @import "./Variables.scss";
 
+////-----------------------------------------Font-----------------------------------------------
+.FONTMONUMENT{
+  font-family: "Monument Extended Bold";
+}
+
+.FONTNEXA{
+  font-family: "NexaLight";
+}
+
+
+////------------------------------------------- color -------------------------------------------------
+
 //Background
 @each $color-type, $Color in $Colors {
   @each $color-group, $shades in $Color {
@@ -32,4 +44,108 @@
     }
   }
 }
+
+////-----------------------------------------Size and Spacing-----------------------------------------------
+
+//------------------Size--------------------
+
+// Sizes
+@each $key, $value in $Sizes {
+
+  //height,width and font
+
+  //Width
+  .SIZEW#{$key} {
+    width: $value;
+    // You can customize this to apply the size property you need
+  }
+
+  //height
+  .SIZEH#{$key} {
+    width: $value;
+    // You can customize this to apply the size property you need
+  }
+
+  //font
+   .SIZEF#{$key} {
+    font-size: $value;
+    // You can customize this to apply the size property you need
+  }
+}
+
+//--------------------- Border Radius--------------------------
+// Border Radius
+@each $key, $value in $Sizes {
+  .BDR#{$key} {
+    border-radius: $value;
+  }
+}
+
+
+//------------------Spacing--------------------
+// Margin
+
+//all sides
+@each $abbreviation, $value in $Spacing {
+  .MARGIN#{$abbreviation} {
+    margin: $value;
+  }
+}
+
+// Padding
+@each $abbreviation, $value in $Spacing {
+  .PADDING#{$abbreviation} {
+    padding: $value;
+  }
+}
+
+// Gap
+@each $abbreviation, $value in $Spacing {
+  .GAP#{$abbreviation} {
+    gap: $value;
+  }
+}
+
+
+//individual sides
+// Margin
+@each $abbreviation, $value in $Spacing {
+  .MT#{$abbreviation} {
+    margin-top: $value;
+  }
+  
+  .MR#{$abbreviation} {
+    margin-right: $value;
+  }
+  
+  .MB#{$abbreviation} {
+    margin-bottom: $value;
+  }
+  
+  .ML#{$abbreviation} {
+    margin-left: $value;
+  }
+}
+
+// Padding
+@each $abbreviation, $value in $Spacing {
+  .PT#{$abbreviation} {
+    padding-top: $value;
+  }
+  
+  .PR#{$abbreviation} {
+    padding-right: $value;
+  }
+  
+  .PB#{$abbreviation} {
+    padding-bottom: $value;
+  }
+  
+  .PL#{$abbreviation} {
+    padding-left: $value;
+  }
+}
+
+
+
 

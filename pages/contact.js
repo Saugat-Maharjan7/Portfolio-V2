@@ -14,14 +14,9 @@ import SubFooter from '../public/components/subfooter';
 import Head from 'next/head';
 
 
-
-
-
-
 function Contact(){
 
-  //Width classname
-
+  
 
   const [viewWidth, setViewWidth] = useState(0);
 
@@ -89,6 +84,27 @@ const handleSubmit=(e)=>{
   'SzlVDNiBR3_3JB8YE')
 }
 
+const [isCopied, setIsCopied] = useState(false);
+
+const handleCopyClick = () => {
+  // Logic to copy the email to the clipboard
+  const emailElement = document.getElementById('email');
+  if (emailElement) {
+    const range = document.createRange();
+    range.selectNode(emailElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    setIsCopied(true);
+     // Reset the "Copied!" message after a delay (e.g., 3 seconds)
+     setTimeout(() => {
+      setIsCopied(false);
+    }, 2000)
+  }
+  
+};
+
     return(
         <>
         <Head>
@@ -115,18 +131,44 @@ const handleSubmit=(e)=>{
               <div className={`${divClassName} d-flex flex-column gap-4`}>
               <Image src={me} alt="me" className="me-large"></Image >
 
-             <div>
+             <div className='d-flex flex-column GAPm'>
               <span>Contact Details</span>
-              <p>shirish.shakya5@gmail.com</p>
-              <p>+977 9869134750</p>
-
+              <div className='d-flex flex-column GAPxs'>
+              <div className='d-flex flex-row GAPm align-items-center'>
+              <span className="FONTNEXA SIZEF8 TXTNaturalWhite100">Email:</span>
+              <p id="email" className='TXTTailwindGray200 '>shirish.shakya5@gmail.com</p>
+              <div className='position-relative'>
+              <button onClick={handleCopyClick} className='btn d-flex flex-row align-items-center  BDR50 GAPs SIZEF8  BGBrandBlack100 TXTNaturalWhite100 '>
+                
+                {isCopied ? 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                  <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+                </svg>
+                 : 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                  </svg>
+                 }
+                 
+              </button>
+              {isCopied && <div style={{top:'-140%',left:'-50%'}} className='position-absolute FONTNEXA BGBrandBlack300 BDR4 PLm PTxs PBxs PRm TXTNaturalWhite100'>Copied!</div>}
+              </div>
+              </div>
+              <div className='d-flex flex-row GAPm'>
+              <span className="FONTNEXA SIZEF8 TXTNaturalWhite100">Mobile:</span>
+              <p className='TXTTailwindGray200 FONTNEXA'>+977 9869134750</p>
+              </div>
+              </div>
               </div> 
-              <div>
+
+              <div className='d-flex flex-column GAPm'>
               <span>Socials </span>
               <ul className="contact d-flex flex-column gap-2" >
-                        <li><a href="https://www.linkedin.com/in/shirish-shakya-ba8a49200/">Linkedin</a></li>
-                        <li><a href="https://www.behance.net/shirishshakya">Behance</a></li>
-                        <li><a href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
+                        <li ><a className='TXTBrandOrange500' href="https://www.linkedin.com/in/shirish-shakya-ba8a49200/">Linkedin</a></li>
+                        <li><a className='TXTBrandOrange500' href="https://www.behance.net/shirishshakya">Behance</a></li>
+                        <li><a className='TXTBrandOrange500' href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
                       </ul>
 
               </div> 
@@ -153,7 +195,7 @@ const handleSubmit=(e)=>{
                    
                   }}
                   className='input-holder d-flex flex-column'>
-                    <label>What is your name?</label>
+                    <label className='TXTNaturalWhite100'>What is your name?</label>
                     <input name='name' type='text' id='name' value={form.name} onChange={handleChange} placeholder='e.g. Mike' required></input>
                   </m.li>
                   <m.li
@@ -191,7 +233,7 @@ const handleSubmit=(e)=>{
                    
                   }}
                   className='input-holder d-flex flex-column'>
-                    <label>Your Message</label>
+                    <label className='TXTNaturalWhite100'>Your Message</label>
                     <textarea name='message' rows='7' type='text' id='name' value={form.message} onChange={handleChange} placeholder='Your Message Here' required></textarea>
                   </m.li>
                 </ul>

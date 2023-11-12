@@ -18,7 +18,7 @@ const menuItems = [
     },
     {
         id: 3,
-        label: 'Contact',
+        label: '//Contact',
         url:"/contact",
 
       },

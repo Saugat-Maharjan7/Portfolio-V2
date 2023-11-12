@@ -1,3 +1,5 @@
+@import "../../Variables.scss";
+
 .rolling-video{
     height: fit-content;
     overflow: hidden;
@@ -6,7 +8,7 @@
         top: 10%;
         left: 5%;
         display: flex;
-        gap:2rem;
+        gap:getSpacing('xxl');
         flex-direction: column;
 
         h2{

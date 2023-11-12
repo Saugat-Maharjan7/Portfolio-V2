@@ -413,12 +413,15 @@ $Sizes: (
 
 
   $Spacing: (
-    0:map-get($Sizes, 0 ),
-    s: map-get($Sizes, 2),    // small
-    m: map-get($Sizes, 4),    // medium
-    l: map-get($Sizes, 8),    // large
-    xl: map-get($Sizes, 16),  // x-large
-    xxl: map-get($Sizes, 32), // xx-large
+    0:map-get($Sizes, 0 ),      // zero   0
+    xs:map-get($Sizes, 2 ),    // x-small 4px
+    s: map-get($Sizes, 4),    // small    8px
+    m: map-get($Sizes, 8),    // medium   16px
+    l: map-get($Sizes, 12),    // large   24px
+    xl: map-get($Sizes, 16),  // x-large  32px
+    xxl: map-get($Sizes, 20), // xx-large 40px
+    xxxl: map-get($Sizes, 26), // xx-large 40px
+
     // Add more abbreviations as needed
   );
 

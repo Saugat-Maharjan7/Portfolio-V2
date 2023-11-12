@@ -1,7 +1,10 @@
+
+@import "../Variables.scss";
+
 .contact-section{
 
     .container{
-        padding:0 32px ;
+        padding:getSpacing(0) getSpacing('xxl') ;
 
         .contact{
             .me-large{
@@ -55,8 +58,8 @@
             }
 
             ul{
-                padding: 0;
-                margin: 0;
+                padding: getSpacing(0);
+                margin: getSpacing(0);
                 li{
                     list-style: none;
                 }
@@ -71,8 +74,8 @@
                 img{
                     top:3rem;
                     right:3.8rem;
-                    height: 58px;
-                    width: 58px;
+                    height: getSize(26);
+                    width: getSize(26);
                     filter: drop-shadow(0px 9px 41px #000000);
                                }
 
@@ -166,10 +169,10 @@
                     border-top: 1px solid $gray-700;
                     border-bottom: 1px solid $gray-700;
                     font-family: 'NexaLight';
-                    gap:2rem;
+                    gap:getSpacing('m');
     
                     label{
-                        font-size: 1.5rem;
+                        font-size: getSize(12)
                     }
                 
                 }
