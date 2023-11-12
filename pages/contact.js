@@ -5,7 +5,6 @@ import { useRef } from 'react';
 // import profile from "../public/assets/videos/profile.mp4"
 import { motion as m } from "framer-motion"
 import Mouse from "../public/components/Mouse"
-import Link from "next/link";
 import SubHead from "../public/components/subheader"
 import emailjs from '@emailjs/browser'
 import me from "../public/me.png"
@@ -73,7 +72,7 @@ const handleSubmit=(e)=>{
   setLoading(true);
   setLoaded(true);
 
-  emailjs.send('service_395olyt', 'template_5wew57s', 
+  emailjs.send('service_50n9tf3', 'template_5wew57s', 
   {
     from_name:form.name,
     to_name:'Shirish',
