@@ -5,18 +5,12 @@ import Dropdown from "./Dropdown"
 
 export default function head({ toggleSidebar,isSidebarOpen }) {
 
-  const work_items=[
-
-    {title:'Super Krishak'},
-    {title:'VRS'},
-    {title:'abc'}
-  ]
 
   const [showNav, setShowNav] = useState(false);
+  const [startY, setStartY] = useState(0);
+
 
   useEffect(() => {
-    let scrollable=document.querySelector('main')
-
 
     const handleScroll = (event) => {
 
@@ -28,10 +22,29 @@ export default function head({ toggleSidebar,isSidebarOpen }) {
       }
     };
 
-    scrollable.addEventListener('wheel', handleScroll);
+
+    //For the touch swipe
+
+    const handleStart = (event) => {
+      setStartY(event.touches ? event.touches[0].clientY : event.clientY);
+    };
+
+    const handleMove = (event) => {
+      const currentY = event.touches ? event.touches[0].clientY : event.clientY;
+      const deltaY = currentY - startY;
+
+      setShowNav(deltaY < 0); // Show nav if deltaY is negative (scrolling/swiping up)
+    };
+
+    window.addEventListener('wheel', handleScroll);
+    window.addEventListener("touchmove", handleMove);
+    window.addEventListener("touchstart", handleStart);
+
 
     return () => {
-      scrollable.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener("touchmove", handleMove);
+      window.removeEventListener("touchstart", handleStart);
     };
   }, []);
 

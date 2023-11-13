@@ -1,4 +1,4 @@
-
+@import "../../Variables.scss";
 
 .menu {
 	-webkit-touch-callout: none;
@@ -23,7 +23,6 @@
 	width: 100%;
 	overflow: hidden;
 	pointer-events: none;
-	mix-blend-mode: color-burn;
     background-color: #161515;
 	border-bottom: 1px solid white;
 	border-top: 1px solid white;
@@ -37,6 +36,7 @@
 	transform: translate3d(var(--move-initial), 0, 0);
 	animation: marquee 5s linear infinite;
 	animation-play-state: paused;
+	color: $white;
 	opacity: 0;
 	transition: opacity 0.1s;
 	padding: 0.5rem 0;

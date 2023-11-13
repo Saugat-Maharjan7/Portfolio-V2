@@ -19,5 +19,10 @@ export const projects = [
       title: 'Phone Care Clinic',
       link: '/projects',
     },
+    {
+      id: 5,
+      title: 'ISEAA',
+      link: '/projects',
+    },
 
   ];

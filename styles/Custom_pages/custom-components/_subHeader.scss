@@ -18,7 +18,7 @@
 
 
         a{
-            background-color: $bg-color;
+            background-color: getColor(Brand,Black,100);
             border-radius: 100px;
             padding: .4rem .8rem;
                 gap: .5rem;
@@ -26,7 +26,7 @@
             span{
                 font-size: 1.2rem;
                 font-family: 'NexaLight';
-                color: white;
+                color: $white;
             }
 
                 .btn-contain{

@@ -1,5 +1,7 @@
 import Script from 'next/script'
 import { useEffect } from 'react';
+import SubFooter from '../public/components/subfooter';
+
 import { useRef } from 'react';
 // import "../styles/Custom_pages/aboutpage.scss"
 // import profile from "../public/assets/videos/profile.mp4"
@@ -8,27 +10,29 @@ import Mouse from "../public/components/Mouse"
 import Link from "next/link";
 import SubHead from "../public/components/subheader"
 import Head from 'next/head';
+import Footer from "../public/components/Footer"
+
 
 
 
 
 
 function About(){
-    const videoref=useRef();
+    const profileVideoref=useRef();
+    const arsenalVideoRef=useRef()
 
     useEffect(()=>{
-        console.log(videoref)
 
-        videoref.current.play()
+      profileVideoref.current.play()
+      arsenalVideoRef.current.play()
+
     })
     
     return(
         <>
         <m.div>
        <Head>
-        {/* <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+        
         <meta property="og:image" content="https://i.ibb.co/gPk5DGs/Thumbnail.jpg" />
         <title>About</title>
         <link rel="icon" type="image/x-icon" href="https://scontent.xx.fbcdn.net/v/t1.15752-9/314541792_577870877351356_5957186771622315824_n.png?stp=cp0_dst-png&_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=u_olMuCmVgkAX_xU1GZ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTVF-d0zRxLjMQRzXBxcGK7IkhNp2goY33AcADQ3vdOKw&oe=638F3735" />
@@ -38,19 +42,8 @@ function About(){
         </Head>
         <Mouse></Mouse>
         <SubHead></SubHead>
-        <main>
-          <div className="head">
-            <div className="container">
-              <nav className="d-flex flex-row align-items-center">
-                <div className="Logo d-flex flex-row ">
-                  {/* <a tabindex="0" class="Logo-container" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a> */}
-                  <a href="./index.html" className="Logo-container " tabIndex={0} data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="Back to the world, Yay!">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">{/*! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" /></svg>
-                  </a> 
-                </div>
-              </nav>
-            </div>
-          </div>
+        <main className='aboutMain'>
+          
           <section className="about-hero container-fluid position-relative">
             <img className="blur_purple_1 position-absolute" src="https://i.ibb.co/gMHM5rm/blur-purple.png" alt="purple light" />
             <div className="about-info d-flex flex-row row">
@@ -72,9 +65,7 @@ function About(){
                   </div>
                   <img src="https://i.ibb.co/RNhPV5t/rotate-circle.png" alt="rotate-circle" className="rotation-text" border={0} />
                 </div>
-                <video ref={videoref} src="/assets/videos/profile.mp4" className="prof-video" autoPlay> 
-                        {/* <source src="/assets/videos/profile.mp4" type='video/mp4'></source> */}
-
+                <video ref={profileVideoref} src="/assets/videos/profile.mp4" className="prof-video" loop muted plays-inline> 
                     </video>                
               </div>
             </div></section>
@@ -96,11 +87,11 @@ function About(){
               <span>I HAVE A THING FOR SICK BLEND MODES</span>
             </div>
           </section>
-          <section>
+          <section className='BGBrandBlack500'>
             <div className="menu">
               <div className="menu__item">
                 <div className="marquee">
-                  <div className="marquee__inner">
+                  <div className="marquee__inner ">
                     <span>ART DIRECTION . </span>
                     <span>DIGITAL DESIGN .</span>
                     <span>LEAN UX .</span>
@@ -117,26 +108,24 @@ function About(){
                   This set of tools have worked wonders for me in staying motivated everyday.
                 </p>
               </div>
-              <video className="arsenal-video" id="arsenalVideo" muted plays-inline />
+              <video 
+              ref={arsenalVideoRef} 
+              className="arsenal-video"
+              src="/assets/videos/Balls.mp4"
+              id="arsenalVideo" loop muted plays-inline />
             </div>
           </section>
           <section className="experience-section"><div className="background">
               <h2 >MY EXPERIENCE</h2>
               <ul className="experience-table">
-                <li><span>2021 - now</span><span>Proshore</span><span>UX Design, Frontend</span></li>
+               <li><span>2023</span><span>GlobalyHub</span><span>Sr. Product Designer</span></li>
+                <li><span>2021</span><span>Proshore</span><span>UX Design, Frontend</span></li>
                 <li><span>2020 - 2021</span><span>Swivt</span><span>Creative Director</span></li>
                 <li><span>2018 - 2020</span><span>Waayu Studios </span><span>UX designer</span></li>
               </ul>
             </div></section>
-          <footer>
-            <div className="container">
-              <div className="copyrights d-flex flex-row justify-content-between">
-                <span>Designed and Developed with love and threejs</span>
-                <p>© Shirish Shakya.<span className="dated"> </span></p>
-                <span>All Rights Reserved</span>
-              </div>
-            </div>
-          </footer>
+            <SubFooter/>
+          {/* footer */}
         </main>
         </m.div>
         </>
