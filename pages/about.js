@@ -24,9 +24,41 @@ function About(){
     useEffect(()=>{
 
       profileVideoref.current.play()
-      arsenalVideoRef.current.play()
+      // arsenalVideoRef.current.play()
+    }
+    )
 
-    })
+    useEffect(() => {
+      // Function to handle video play when entering the section
+      const handleIntersection = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Play the video when it comes into view
+            arsenalVideoRef.current.play();
+          } else {
+            // Pause the video when it goes out of view
+            arsenalVideoRef.current.pause();
+            // Reset the video to the beginning
+            arsenalVideoRef.current.currentTime = 0;
+          }
+        });
+      };
+  
+      // Create an intersection observer
+      const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.5, // Adjust the threshold as needed
+      });
+  
+      // Observe the target element (arsenal video section)
+      observer.observe(document.querySelector('.arsenal-video-section'));
+  
+      // Clean up the observer when the component is unmounted
+      return () => {
+        observer.disconnect();
+      };
+    }, []);
+
+    
     
     return(
         <>
@@ -88,7 +120,7 @@ function About(){
               <span>I HAVE A THING FOR SICK BLEND MODES</span>
             </div>
           </section>
-          <section className='BGBrandBlack500'>
+          <section className='BGBrandBlack500 arsenal-video-section'>
             <div className="menu">
               <div className="menu__item">
                 <div className="marquee">
@@ -113,7 +145,7 @@ function About(){
               ref={arsenalVideoRef} 
               className="arsenal-video"
               src="/assets/videos/Balls.mp4"
-              id="arsenalVideo" loop muted plays-inline />
+              id="arsenalVideo" muted plays-inline />
             </div>
           </section>
           <section className="experience-section"><div className="background">
@@ -136,18 +168,5 @@ function About(){
 
     
 }
-// About.getInitialProps = async () => {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve({
-//           data: {
-//             title: 'Welcome to my website',
-//             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-//           },
-//         });
-//     }, 4000);
-//   });
-// };
+
 export default About;
-
-
