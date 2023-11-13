@@ -11,6 +11,8 @@ export default function head({ toggleSidebar,isSidebarOpen }) {
 
 
   useEffect(() => {
+    let scrollable=document.querySelector('main')
+
 
     const handleScroll = (event) => {
 
@@ -27,26 +29,29 @@ export default function head({ toggleSidebar,isSidebarOpen }) {
 
     const handleStart = (event) => {
       setStartY(event.touches ? event.touches[0].clientY : event.clientY);
+      console.log('handleStart')
     };
 
     const handleMove = (event) => {
       const currentY = event.touches ? event.touches[0].clientY : event.clientY;
       const deltaY = currentY - startY;
+      console.log('handlemove')
+
 
       setShowNav(deltaY < 0); // Show nav if deltaY is negative (scrolling/swiping up)
     };
 
-    window.addEventListener('wheel', handleScroll);
-    window.addEventListener("touchmove", handleMove);
-    window.addEventListener("touchstart", handleStart);
+    scrollable.addEventListener('wheel', handleScroll);
+    scrollable.addEventListener("touchmove", handleMove);
+    scrollable.addEventListener("touchstart", handleStart);
 
 
     return () => {
-      window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener("touchmove", handleMove);
-      window.removeEventListener("touchstart", handleStart);
+      scrollable.removeEventListener('wheel', handleScroll);
+      scrollable.removeEventListener("touchmove", handleMove);
+      scrollable.removeEventListener("touchstart", handleStart);
     };
-  }, []);
+  }, [startY]);
 
 
   return (
