@@ -2,7 +2,7 @@ import SubFooter from "./subfooter";
 
 function Footer(){
     return(
-        <footer> 
+        <footer className="BGBrandBlack500"> 
         <div className="container">
           <div className="footer-wrapper d-flex flex-row justify-content-between">
             <div className="foot-content d-flex flex-column">
@@ -17,7 +17,7 @@ function Footer(){
             </div>
             <div className="image-container position-relative">
               {/* <a href="https://ibb.co/dmjh5nL"><img src="https://i.ibb.co/wcBvzDw/astro.png" alt="astro" border="0"></a> */}
-              <img className="position-absolute astro" src="https://i.ibb.co/wcBvzDw/astro.png" alt="astro" />
+              <img className="position-absolute astro" src="./../assets/astro.png" alt="astro" />
             </div>
           </div>
           

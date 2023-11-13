@@ -2,11 +2,11 @@
 
 ////-----------------------------------------Font-----------------------------------------------
 .FONTMONUMENT{
-  font-family: "Monument Extended Bold";
+  font-family: "Monument Extended Bold"!important;
 }
 
 .FONTNEXA{
-  font-family: "NexaLight";
+  font-family: "NexaLight"!important;
 }
 
 
@@ -39,7 +39,7 @@
   @each $color-group, $shades in $Color {
     @each $shade, $value in $shades {
       .BRDR#{$color-type}#{$color-group}#{$shade} {
-        border-color: $value;
+        border-color: $value!important;
       }
     }
   }
@@ -56,19 +56,19 @@
 
   //Width
   .SIZEW#{$key} {
-    width: $value;
+    width: $value!important;
     // You can customize this to apply the size property you need
   }
 
   //height
   .SIZEH#{$key} {
-    width: $value;
+    width: $value!important;
     // You can customize this to apply the size property you need
   }
 
   //font
    .SIZEF#{$key} {
-    font-size: $value;
+    font-size: $value!important;
     // You can customize this to apply the size property you need
   }
 }
@@ -77,7 +77,7 @@
 // Border Radius
 @each $key, $value in $Sizes {
   .BDR#{$key} {
-    border-radius: $value;
+    border-radius: $value!important;
   }
 }
 
@@ -88,21 +88,21 @@
 //all sides
 @each $abbreviation, $value in $Spacing {
   .MARGIN#{$abbreviation} {
-    margin: $value;
+    margin: $value!important;
   }
 }
 
 // Padding
 @each $abbreviation, $value in $Spacing {
   .PADDING#{$abbreviation} {
-    padding: $value;
+    padding: $value!important;
   }
 }
 
 // Gap
 @each $abbreviation, $value in $Spacing {
   .GAP#{$abbreviation} {
-    gap: $value;
+    gap: $value!important;
   }
 }
 
@@ -111,38 +111,38 @@
 // Margin
 @each $abbreviation, $value in $Spacing {
   .MT#{$abbreviation} {
-    margin-top: $value;
+    margin-top: $value!important;
   }
   
   .MR#{$abbreviation} {
-    margin-right: $value;
+    margin-right: $value!important;
   }
   
   .MB#{$abbreviation} {
-    margin-bottom: $value;
+    margin-bottom: $value!important;
   }
   
   .ML#{$abbreviation} {
-    margin-left: $value;
+    margin-left: $value!important;
   }
 }
 
 // Padding
 @each $abbreviation, $value in $Spacing {
   .PT#{$abbreviation} {
-    padding-top: $value;
+    padding-top: $value!important;
   }
   
   .PR#{$abbreviation} {
-    padding-right: $value;
+    padding-right: $value!important;
   }
   
   .PB#{$abbreviation} {
-    padding-bottom: $value;
+    padding-bottom: $value!important;
   }
   
   .PL#{$abbreviation} {
-    padding-left: $value;
+    padding-left: $value!important;
   }
 }
 

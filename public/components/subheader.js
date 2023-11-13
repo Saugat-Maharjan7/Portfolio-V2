@@ -13,7 +13,6 @@ function Subhead() {
     const handleScroll = (event) => {
 
       if (event.deltaY > 0) {
-        console.log("scrolled")
 
         setShowNav(true);
       } else {
@@ -25,15 +24,12 @@ function Subhead() {
 
     const handleStart = (event) => {
       setStartY(event.touches ? event.touches[0].clientY : event.clientY);
-      console.log('handleStart')
 
     };
 
     const handleMove = (event) => {
       const currentY = event.touches ? event.touches[0].clientY : event.clientY;
       const deltaY = currentY - startY;
-      console.log('handlemove')
-
 
       setShowNav(deltaY < 0); // Show nav if deltaY is negative (scrolling/swiping up)
     };

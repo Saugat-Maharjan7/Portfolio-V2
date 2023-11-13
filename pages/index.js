@@ -15,6 +15,7 @@ import styles from '../styles/Custom_pages/custom-components/ToggleSwitch.module
 import Sidenavigation from "../public/components/side-navigation";
 import Typewriter from 'typewriter-effect';
 import {projects} from '../public/scripts/Datas/projects'; //projects database
+import BGERASER from "../public/components/BgEraserSection";
 
 
 
@@ -296,47 +297,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
               {/* end of project container */}
             </div>
           </section> 
-          <section className="section-visual-designs" id="visual-designs">
-            {/* this isthe header of the container */}
-            <div className="container">
-              <div className="border-l-r-b d-flex flex-row container-title">
-                <div className="container-header-img">
-                  <img style={{width:"75px",transform:"scale(2.5) translateY(2px)"}}  src="https://i.ibb.co/3d1pzkP/moon2-1.png" alt="moon" />
-                </div>
-                <div className=" container-header d-flex align-items-center" >
-                  <h2 className="secton-header-h2">VISUAL DESIGNS</h2>
-                  <span className="leader-subtitle">.THE MOON</span>
-                </div>
-              </div>
-            </div>
-            <div className="container d-flex flex-column " style={{justifyContent: 'center'}}>
-              <div className="border-l-r-b w-100 visual-designcontainer">
-                <div >
-                  <p className="section-details TXTTailwindGray400">
-                    Visual Designs are the key fundamental for strong designs in any medium whether it be on paper or screen. It has always been supporting creativity and a fun thing to play around.
-                  </p>
-                </div>
-              </div> 
-              <div className="designs-grid-container position-relative" style={{overflow: 'hidden'}}>
-                <div className="tips position-absolute">
-                  <h5>Tip:</h5>
-                  <p>Somethings just need a TAP for magic to happen</p>
-                </div>
-                <div className="eraseable-content position-relative">
-                  <div className="box" style={{overflow: 'hidden'}}>
-                    <canvas id="canvas" />
-                  </div>
-                  <div className="designs-grid" style={{pointerEvents: 'none'}}>
-                    <div className="design " id="design-0"><img src="https://i.ibb.co/r4ZHkfC/valentine-choclate-1.png" alt="choclate" /></div>
-                    <div className="design" id="design-1"><img src="https://i.ibb.co/fq9t1X9/Booklet.png" alt="Booklet design" /></div>
-                    <div className="design" id="design-2"><img src="https://i.ibb.co/tMGvw5P/Basanta.png" alt="Basanta poster" /></div>
-                    <div className="design" id="design-3"><img src="https://i.ibb.co/Kz3MLg6/nft.png" alt="NFT" /></div>
-                    <div className="design" id="design-4"><img src="https://i.ibb.co/pn8gBW8/Posters.png" alt="company posters" /></div>
-                  </div>
-                </div>
-              </div>               
-            </div>
-          </section>   
+          <BGERASER/>   
          <ThreeD/>
          <Footer/>
         </main>

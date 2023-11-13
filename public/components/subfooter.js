@@ -1,6 +1,5 @@
 
 import { useState,useRef,useEffect } from "react";
-
 //this is the sub footer component
 
 function SubFooter(){
@@ -23,7 +22,7 @@ function SubFooter(){
 //   }, []);
 
     return(
-        <footer> 
+        <footer className="BGBrandBlack500"> 
         <div className="container">
           <div className="copyrights d-flex flex-row justify-content-between">
             <span>Designed and Developed with love and threejs</span>
