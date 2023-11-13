@@ -46,7 +46,7 @@ function About(){
           
           <section className="about-hero container-fluid position-relative">
             <img className="blur_purple_1 position-absolute" src="https://i.ibb.co/gMHM5rm/blur-purple.png" alt="purple light" />
-            <div className="about-info d-flex flex-row row">
+            <div className="about-info d-flex flex-row row TXTBrandBlack600">
               <div className="col"><h1>SHIRISH SHAKYA</h1></div>
               <div className="col"><ul className="featured d-flex flex-column">
                   <li>CREATIVE DIRECTOR</li>
@@ -55,7 +55,7 @@ function About(){
                   <li>UX DESIGNER</li>
                 </ul></div>
             </div>
-            <h6>In the game for over 5 years. Currently based in Kathmandu.</h6>
+            <h6 >In the field for over 5 years. Currently based in Kathmandu.</h6>
           </section>
           <section className="about-video">
             <div className="container-fluid d-flex align-items-center justify-content-center  video-slideshow">
@@ -75,11 +75,12 @@ function About(){
                 <div className="image-container">
                   <img src="https://i.ibb.co/tM8GHfk/transparent-me.png" alt="transparent-me" border={0} />
                 </div>
-                <div className="about-container">
+                <div className="about-container TXTBrandBlack600">
                   <p>
-                    Hey! I am Shirish Shakya, an Interactive designer and art director here from the country of mountains, Nepal.
+                    Hey! I am Shirish Shakya, an Interactive designer and Art Director here from the country of mountains, Nepal.
                     I hone the art of story telling through designs and creative direction. (ssh, dont let giant companies know about it, I try stay low key). 
-                  </p><p style={{marginTop: '2rem'}}>
+                  </p>
+                  <p style={{marginTop: '2rem'}}>
                     I’ve wore many hats, creative designer, art director, creative art director, UI / UX designer, interaction designer, product designer, design director and all those things that make your eyes swoon over.
                   </p>
                 </div>
@@ -104,7 +105,7 @@ function About(){
               <div className="arsenal-description position-absolute" style={{zIndex: 1}}>
                 <h2 >LET’S HAVE A
                   LOOK AT MY ARSENAL</h2>
-                <p>Having a good set of tools and knowledge goes way ahead for me.
+                <p className='TXTTailwindGray400'>Having a good set of tools and knowledge goes way ahead for me.
                   This set of tools have worked wonders for me in staying motivated everyday.
                 </p>
               </div>

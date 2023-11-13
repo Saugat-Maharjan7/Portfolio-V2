@@ -1,7 +1,14 @@
+import { useRef,useEffect } from 'react';
 
 
 function ThreeD(){
-  
+  const porscheVideoref=useRef();
+
+  useEffect(()=>{
+    porscheVideoref.current.play()
+
+  })
+
     return(
       
         <section>
@@ -33,7 +40,8 @@ function ThreeD(){
             <div className="model-row1 d-flex flex-row">
               <div className="threeD " id="threeD-0"><img src="https://i.ibb.co/yVmq85q/iron-man.png" alt="Iron Man" /></div>
               <div className="threeD" id="threeD-1"><img src="https://i.ibb.co/cwtbd4y/omnitrix.png" alt="Omnitrix" /></div>
-              <div className="threeD" id="threeD-2"><video className="threeDvideo" id="nft" autoPlay loop muted > 
+              <div className="threeD" id="threeD-2">
+                <video className="threeDvideo" src="../assets/videos/horsenft.mp4" id="nft" autoPlay loop muted > 
                 </video></div>
               <div className="threeD" id="threeD-3"><img src="https://i.ibb.co/RBzCRfD/PSG.png" alt="PSG" /></div>
               <div className="threeD invisible" id="threeD-0" />
@@ -41,8 +49,10 @@ function ThreeD(){
             <div className="model-row2 d-flex flex-row ">
               <div className="threeD invisible" id="threeD-0" />
               <div className="threeD " id="threeD-0"><img src="https://i.ibb.co/ZNyMWQh/logistics.png" alt="Iron Man" /></div>
-              <div className="threeD" id="threeD-2"><video className="threeDvideo" id="porsche" autoPlay loop muted >  
-                </video></div>
+              <div className="threeD" id="threeD-2">
+              <video ref={porscheVideoref} className="threeDvideo" src="../assets/videos/car.mp4" id="nft" plays-inline loop muted > 
+                </video>
+              </div>
               <div className="threeD" id="threeD-1"><img src="https://i.ibb.co/C1Ddcps/clonexself.png" alt="Omnitrix" /></div>
               <div className="threeD" id="threeD-3"><img src="https://i.ibb.co/xStFcCQ/arcreactor.png" alt="PSG" /></div>
               <div className="threeD invisible" id="threeD-0" />
