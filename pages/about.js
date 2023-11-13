@@ -109,18 +109,23 @@ function About(){
                 </div>
                 <div className="about-container TXTBrandBlack600">
                   <p>
-                    Hey! I am Shirish Shakya, an Interactive designer and Art Director here from the country of mountains, Nepal.
-                    I hone the art of story telling through designs and creative direction. (ssh, dont let giant companies know about it, I try stay low key). 
+                  Greetings! I'm Shirish Shakya, your friendly neighborhood Interactive Designer and Art Director hailing from the land of breathtaking mountains, Nepal!
+
+I've mastered the enchanting craft of storytelling through designs and creative direction. 
+
+
+      <span  className='TXTTailwindOrange600 FONTNEXA SIZEF9'>(Psst, let's keep it between us—don't want those big-shot companies catching wind of my low-key wizardry!) </span>. 
                   </p>
                   <p style={{marginTop: '2rem'}}>
-                    I’ve wore many hats, creative designer, art director, creative art director, UI / UX designer, interaction designer, product designer, design director and all those things that make your eyes swoon over.
+                  I've worn more hats than a hat enthusiast's dream collection—Creative Designer, Art Director, Creative Art Director, UI/UX maestro, Interaction Virtuoso, Product Design Dynamo, Design Director, and all those titles that make your eyes do a little happy dance. 
                   </p>
                 </div>
               </div>
-              <span>I HAVE A THING FOR SICK BLEND MODES</span>
+              <span className='BlendText'> I HAVE A THING FOR SICK BLEND MODES</span>
             </div>
           </section>
-          <section className='BGBrandBlack500 arsenal-video-section'>
+          <div className='arsenal-video-section'>
+          <section className='BGBrandBlack500 '>
             <div className="menu">
               <div className="menu__item">
                 <div className="marquee">
@@ -137,8 +142,8 @@ function About(){
               <div className="arsenal-description position-absolute" style={{zIndex: 1}}>
                 <h2 >LET’S HAVE A
                   LOOK AT MY ARSENAL</h2>
-                <p className='TXTTailwindGray400'>Having a good set of tools and knowledge goes way ahead for me.
-                  This set of tools have worked wonders for me in staying motivated everyday.
+                <p className='TXTTailwindGray400'>
+For me, having a solid set of tools and knowledge is an absolute game-changer. This toolkit has been my secret sauce, working wonders in keeping me motivated every single day.
                 </p>
               </div>
               <video 
@@ -158,6 +163,7 @@ function About(){
               </ul>
             </div></section>
             <SubFooter/>
+            </div>
           {/* footer */}
         </main>
         </m.div>
