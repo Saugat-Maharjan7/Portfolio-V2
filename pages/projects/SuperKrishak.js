@@ -30,12 +30,13 @@ function SuperKrishak(){
             <main className="BGProjectsSuperKrishak100" style={{height:'100vh',width:'100%'}}>
                 <Image src={Grain} alt="Grain Texture" style={{width:'100%',height:'100vh',position:'absolute',zIndex:3,mixBlendMode:'overlay',opacity:0.5,pointerEvents:'none'}}></Image>
             <section className="projectHero">
-                <div className="projectContainer">
-                    <div className="d-flex flex-row"> 
-                    <h1 className="SIZEF16">{project.title }</h1>
+                <div className="projectContainer d-flex flex-column MTfxl GAPxxl">
+                    <div className="d-flex flex-row MTxxl justify-content-between"> 
+                    <h1 className="text-uppercase projectTitle ">{project.title }</h1>
+                    <span className="projectYear">{project.finishedYear}</span>
                     </div>
                     
-            <h1 className="projectLeadingTitle text-uppercase">{project.LeadingTitle }</h1></div>
+            <h1 className="projectLeadingTitle text-uppercase" >{'\u00A0\u00A0\u00A0\u00A0'}{project.LeadingTitle }</h1></div>
             
             </section>
             </main>

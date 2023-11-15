@@ -1,10 +1,168 @@
 @import "./../Variables.scss";
 
 .projectContainer{
-    padding: getSpacing('xxxl') getSpacing('xl');
+    // Small devices (Potrait phones, 350px and up)
+    
+    @media (min-width: 350px) {
+        padding: getSpacing(0) getSpacing('xl');
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        padding: getSpacing(0) getSpacing('xxl');
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        padding: getSpacing(0) getSpacing('fxl');
+
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        padding: getSpacing(0) getSpacing('fxl');
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        padding: getSpacing(0) getSpacing('fxl');
+
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        padding: getSpacing(0) getSpacing('fxl') ;
+
+    }
+}
+
+.projectTitle{
+    font-weight: 900;
+    line-height: 0.8;
+
+    // Small devices (Potrait phones, 350px and up)
+    
+    @media (min-width: 350px) {
+        font-size: getSize(8);
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        font-size: getSize(8);
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        font-size: getSize(9);
+
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        font-size: getSize(9);
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        font-size: getSize(10);
+
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        font-size: getSize(10);
+
+    }
 }
 
 .projectLeadingTitle{
     padding-bottom: getSpacing('l');
     border-bottom: getSize(2) solid $white;
+    font-weight: 900;
+    line-height: 0.8;
+
+    // Small devices (Potrait phones, 350px and up)
+    
+    @media (min-width: 350px) {
+        font-size: getSize(24);
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        font-size: getSize(24);
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        font-size: getSize(44);
+
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        font-size: getSize(44);
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        font-size: getSize(50);
+
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        font-size: getSize(50);
+
+    }
+}
+
+.projectYear{
+    font-weight: 500;
+    line-height: 0.8;
+
+    // Small devices (Potrait phones, 350px and up)
+    
+    @media (min-width: 350px) {
+        font-size: getSize(8);
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        font-size: getSize(8);
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        font-size: getSize(9);
+
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        font-size: getSize(9);
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        font-size: getSize(10);
+
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        font-size: getSize(10);
+
+    }
 }
