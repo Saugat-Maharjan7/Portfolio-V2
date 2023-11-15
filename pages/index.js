@@ -156,11 +156,11 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                     <div className="social_links d-flex flex-column">
                       <span>shirish.shakya5@gmail.com</span>
                       <div className="time">{time} <span>Local Time</span></div>
-                      <ul className="d-flex flex-row" >
+                      {/* <ul className="d-flex flex-row" >
                         <li><a href="https://www.linkedin.com/in/shirish-shakya-ba8a49200/">Linkedin</a></li>
                         <li><a href="https://www.behance.net/shirishshakya">Behance</a></li>
                         <li><a href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
-                      </ul>
+                      </ul> */}
                     </div>
                   </div>
                 </div>

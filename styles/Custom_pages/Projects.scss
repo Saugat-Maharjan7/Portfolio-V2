@@ -1,0 +1,10 @@
+@import "./../Variables.scss";
+
+.projectContainer{
+    padding: getSpacing('xxxl') getSpacing('xl');
+}
+
+.projectLeadingTitle{
+    padding-bottom: getSpacing('l');
+    border-bottom: getSize(2) solid $white;
+}

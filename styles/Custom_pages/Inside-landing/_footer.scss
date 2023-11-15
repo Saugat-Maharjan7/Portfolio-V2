@@ -60,9 +60,11 @@ footer{
             .footer-wrapper{
                 flex-direction: column!important;
                 gap:15rem;
+                
+
     
                 .foot-content{
-                    width: 100%;
+                    width: 100%;align-items: center;
                     .footer-contents{
                         gap:1rem;
                         text-align: center;
@@ -81,6 +83,7 @@ footer{
                     }
                     .contact{
                         text-align: center;
+                        align-items: center;
                         p{
                             font-size: 1.2rem;
     
@@ -110,11 +113,12 @@ footer{
          // Small devices (landscape phones, 576px and up)
          @media (min-width: 576px) {
             .footer-wrapper{
-                flex-direction: column!important;             gap:15rem;
+                flex-direction: column!important;             gap:15rem;                        
+
     
     
                 .foot-content{
-                    width: 100%;
+                    width: 100%;align-items: center;
                     .footer-contents{
                         gap:1rem;
                         text-align: center;
@@ -132,6 +136,8 @@ footer{
                     }
                     .contact{
                         text-align: center;
+                        align-items: center;
+
                         p{
                             font-size: 1.2rem;
     
@@ -160,12 +166,13 @@ footer{
         // Medium devices (tablets, 768px and up)
         @media (min-width: 768px) {
             .footer-wrapper{
-                flex-direction: row!important;             
+                flex-direction: row!important;                          
+           
     
     
                 .foot-content{
                     width: 50%;
-                    text-align: left!important;
+                    text-align: left!important;align-items: start;
     
                     .footer-contents{
                         gap:1rem;
@@ -183,6 +190,7 @@ footer{
                     }
                     .contact{
                         text-align: left;
+                        align-items: start;
     
                     }
                 }
@@ -210,7 +218,7 @@ footer{
     
     
                 .foot-content{
-                    width: 100%;
+                    width: 100%;align-items: start;
                     .footer-contents{
                         gap:1rem;
                         text-align: left;
@@ -228,6 +236,8 @@ footer{
                     
                     }
                     .contact{
+                        align-items: start;
+
                         text-align: left;
     
                     }
@@ -255,7 +265,7 @@ footer{
     
     
                 .foot-content{
-                    width: 100%;
+                    width: 100%;align-items: start;
                     .footer-contents{
                         gap:1rem;
                         text-align: left;
@@ -273,6 +283,8 @@ footer{
                     
                     }
                     .contact{
+                        align-items: start;
+
                         text-align: left;
     
                     }
@@ -300,7 +312,7 @@ footer{
     
     
                 .foot-content{
-                    width: 100%;
+                    width: 100%;align-items: start;
                     .footer-contents{
                         gap:1rem;
                         text-align: left;
@@ -319,6 +331,8 @@ footer{
                     }
     
                     .contact{
+                        align-items: start;
+
                         text-align: left;
     
                     }

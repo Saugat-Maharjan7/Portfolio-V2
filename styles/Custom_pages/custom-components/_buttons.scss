@@ -103,16 +103,20 @@
     padding: getSpacing('s');
     color: $primary-orange;
     background-color: getColor(Brand,Black,100);
-    padding: getSpacing('s') getSize(6);
+    padding: getSize(8) getSize(8);
+    text-transform: none;
     border-radius: getSize(50);
 
     &:hover{
         background-color: getColor(Brand,Black,600);
         border-color: $primary-orange!important;
-        color: $primary-orange;
+        color: $white!important;
+
 
     }
     &:active{
         border-color: $primary-orange!important;
+        color: $white!important;
+
     }
 }
