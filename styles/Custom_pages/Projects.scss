@@ -81,6 +81,177 @@
     }
 }
 
+.projectResponsibilities{
+    width: fit-content;
+    border-radius: getSize(50);
+    border: 1px solid $white;
+padding: getSpacing('s') getSpacing('m');
+}
+
+.projectRepsonibilityAndImage{
+// Small devices (Potrait phones, 350px and up)
+    
+@media (min-width: 350px) {
+    flex-direction: column;
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    flex-direction: column;
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    flex-direction: column;
+
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    flex-direction: row;
+
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    flex-direction: row;
+
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    flex-direction: row;
+}
+}
+
+.projectHeroImage{
+    
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    // Small devices (Potrait phones, 350px and up)
+    
+    @media (min-width: 350px) {
+        width: 362px;
+        height: 220px;
+        order: 1;
+        img{
+            transform: translateY(-10px);
+        }
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        width: 362px;
+        height: 220px;
+        order: 1;
+        img{
+            transform: translateY(-10px);
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        width: 720px;
+        height: 432px;
+        order: 1;
+
+        img{
+            transform: translateY(-10px);
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        width: 820px;
+        height: 492px;
+        order: 2;
+        img{
+            transform: translateY(-50px);
+        }
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        width: 820px;
+        height: 492px;
+        order: 2;
+        img{
+            transform: translateY(-220px);
+        }
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        width: 820px;
+        height: 492px;
+        order: 2;
+        img{
+            transform: translateY(-220px);
+        }
+    }
+}
+
+.projectResponsibility{
+     // Small devices (Potrait phones, 350px and up)
+    
+     @media (min-width: 350px) {
+        p{
+            font-size: getSize(8);
+        }
+       
+        order: 2;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        p{
+            font-size: getSize(10);
+        }
+        order: 2;
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        p{
+            font-size: getSize(10);
+        }        order: 2;
+
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        p{
+            font-size: getSize(12);
+        }
+        order: 1;
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        p{
+            font-size: getSize(12);
+        }        order: 1;
+
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        p{
+            font-size: getSize(12);
+        }        order: 1;
+
+    }
+}
+
 .projectLeadingTitle{
     padding-bottom: getSpacing('l');
     border-bottom: getSize(2) solid $white;
