@@ -1,18 +1,22 @@
+/* Mode 1 */
+/* Brand Default colors */
 .toggle-menu-section {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
+  top: 60px;
   position: fixed;
   z-index: 3;
   background: rgba(43, 43, 43, 0.66);
+  backdrop-filter: blur(20.5px);
   -webkit-backdrop-filter: blur(20.5px);
-          backdrop-filter: blur(20.5px);
   overflow: hidden;
+  transition: right 0.5s ease-in-out;
   -webkit-transition: right 0.5s ease-in-out;
   -moz-transition: right 0.5s ease-in-out;
   -o-transition: right 0.5s ease-in-out;
 }
 .toggle-menu-section .toggle-wrapper {
-  padding: 2rem;
+  padding: 6rem 2rem;
   height: 100%;
 }
 .toggle-menu-section .toggle-wrapper .toggle-header .Logo {
@@ -32,33 +36,53 @@
 .toggle-menu-section .toggle-wrapper .nav-links {
   list-style: none;
   gap: 24px;
-  padding: 0;
+  padding: 0px;
   margin: 0;
+}
+.toggle-menu-section .toggle-wrapper .nav-links a {
+  text-decoration: none !important;
 }
 .toggle-menu-section .toggle-wrapper .nav-links li {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  padding: 1rem;
   color: #FB722E;
-}
-.toggle-menu-section .toggle-wrapper .nav-links li a {
-  text-decoration: none;
+  padding: 16px;
+  gap: 16px;
 }
 .toggle-menu-section .toggle-wrapper .nav-links li:active {
   border-top: 1px solid #FB722E;
   border-bottom: 1px solid #FB722E;
+}
+.toggle-menu-section .toggle-wrapper .nav-links li .itemWithoutChildren:active {
   filter: drop-shadow(0px 0px 10px #FB722E);
+}
+.toggle-menu-section .toggle-wrapper .nav-links li ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+.toggle-menu-section .toggle-wrapper .nav-links li ul a {
+  padding: 0.5rem 1.2rem;
+  text-decoration: none !important;
+  font-family: "NexaLight" !important;
+  font-size: 16px;
+  color: #ffffff;
+}
+.toggle-menu-section .toggle-wrapper .nav-links li ul a:active {
+  color: #fb722e;
+  background: rgba(255, 255, 255, 0.048);
+}
+.toggle-menu-section .copyright {
+  font-family: "NexaLight";
 }
 
 .toggle-active {
-  border-radius: 0px !important;
   opacity: 1 !important;
   pointer-events: all !important;
   right: 0 !important;
 }
 
 .toggle-inactive {
-  border-radius: 1000px 0px 0px 1000px;
   transition: 0.8s cubic-bezier(0, 0, 0, 1.01);
   pointer-events: none;
   right: -300%;

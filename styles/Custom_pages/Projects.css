@@ -1,0 +1,272 @@
+/* Mode 1 */
+/* Brand Default colors */
+@media (min-width: 350px) {
+  .projectContainer {
+    padding: 0px 32px;
+  }
+}
+@media (min-width: 576px) {
+  .projectContainer {
+    padding: 0px 40px;
+  }
+}
+@media (min-width: 768px) {
+  .projectContainer {
+    padding: 0px 68px;
+  }
+}
+@media (min-width: 992px) {
+  .projectContainer {
+    padding: 0px 68px;
+  }
+}
+@media (min-width: 1200px) {
+  .projectContainer {
+    padding: 0px 68px;
+  }
+}
+@media (min-width: 1400px) {
+  .projectContainer {
+    padding: 0px 68px;
+  }
+}
+
+.projectTitle {
+  font-weight: 900;
+  line-height: 0.8;
+}
+@media (min-width: 350px) {
+  .projectTitle {
+    font-size: 16px;
+  }
+}
+@media (min-width: 576px) {
+  .projectTitle {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .projectTitle {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .projectTitle {
+    font-size: 20px;
+  }
+}
+
+.projectResponsibilities {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 100px;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+}
+
+@media (min-width: 350px) {
+  .projectRepsonibilityAndImage {
+    flex-direction: column;
+  }
+}
+@media (min-width: 576px) {
+  .projectRepsonibilityAndImage {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  .projectRepsonibilityAndImage {
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .projectRepsonibilityAndImage {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .projectRepsonibilityAndImage {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1400px) {
+  .projectRepsonibilityAndImage {
+    flex-direction: row;
+  }
+}
+
+.projectHeroImage img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 350px) {
+  .projectHeroImage {
+    width: 362px;
+    height: 220px;
+    order: 1;
+  }
+  .projectHeroImage img {
+    transform: translateY(-10px);
+  }
+}
+@media (min-width: 576px) {
+  .projectHeroImage {
+    width: 362px;
+    height: 220px;
+    order: 1;
+  }
+  .projectHeroImage img {
+    transform: translateY(-10px);
+  }
+}
+@media (min-width: 768px) {
+  .projectHeroImage {
+    width: 720px;
+    height: 432px;
+    order: 1;
+  }
+  .projectHeroImage img {
+    transform: translateY(-10px);
+  }
+}
+@media (min-width: 992px) {
+  .projectHeroImage {
+    width: 820px;
+    height: 492px;
+    order: 2;
+  }
+  .projectHeroImage img {
+    transform: translateY(-50px);
+  }
+}
+@media (min-width: 1200px) {
+  .projectHeroImage {
+    width: 820px;
+    height: 492px;
+    order: 2;
+  }
+  .projectHeroImage img {
+    transform: translateY(-220px);
+  }
+}
+@media (min-width: 1400px) {
+  .projectHeroImage {
+    width: 820px;
+    height: 492px;
+    order: 2;
+  }
+  .projectHeroImage img {
+    transform: translateY(-220px);
+  }
+}
+
+@media (min-width: 350px) {
+  .projectResponsibility {
+    order: 2;
+  }
+  .projectResponsibility p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 576px) {
+  .projectResponsibility {
+    order: 2;
+  }
+  .projectResponsibility p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .projectResponsibility {
+    order: 2;
+  }
+  .projectResponsibility p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .projectResponsibility {
+    order: 1;
+  }
+  .projectResponsibility p {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .projectResponsibility {
+    order: 1;
+  }
+  .projectResponsibility p {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1400px) {
+  .projectResponsibility {
+    order: 1;
+  }
+  .projectResponsibility p {
+    font-size: 24px;
+  }
+}
+
+.projectLeadingTitle {
+  padding-bottom: 24px;
+  border-bottom: 4px solid #ffffff;
+  font-weight: 900;
+  line-height: 0.8;
+}
+@media (min-width: 350px) {
+  .projectLeadingTitle {
+    font-size: 48px;
+  }
+}
+@media (min-width: 576px) {
+  .projectLeadingTitle {
+    font-size: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .projectLeadingTitle {
+    font-size: 88px;
+  }
+}
+@media (min-width: 992px) {
+  .projectLeadingTitle {
+    font-size: 88px;
+  }
+}
+@media (min-width: 1200px) {
+  .projectLeadingTitle {
+    font-size: 100px;
+  }
+}
+@media (min-width: 1400px) {
+  .projectLeadingTitle {
+    font-size: 100px;
+  }
+}
+
+.projectYear {
+  font-weight: 500;
+  line-height: 0.8;
+}
+@media (min-width: 350px) {
+  .projectYear {
+    font-size: 16px;
+  }
+}
+@media (min-width: 576px) {
+  .projectYear {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .projectYear {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .projectYear {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=Projects.css.map */
