@@ -80,9 +80,19 @@
 
     }
 }
+.topLine {
+    height: 2px;
+    width: 100%;
+    background-color: white; /* Set the color as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
 
 .projectSectionHeader{
-    border-top: 1px solid $white;
+    // border-top: 1px solid $white;
+    position: relative;
     padding:  getSpacing('m') getSpacing(0);
     span{
         width: 50%;
@@ -349,7 +359,7 @@ padding: getSpacing('s') getSpacing('m');
     // Small devices (Potrait phones, 350px and up)
     
     @media (min-width: 350px) {
-        font-size: getSize(24);
+        font-size: getSize(16);
     }
 
     // Small devices (landscape phones, 576px and up)

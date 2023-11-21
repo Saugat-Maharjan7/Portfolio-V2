@@ -22,8 +22,8 @@ export const projects = [
     LeadingTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     finishedYear: 2023,
     responsibilities: ['Developing website frontend', 'Implementing backend functionality'],
-    LogoLink: 'path/to/upkite_logo', // Add LogoLink for Upkite
-    projectImageLink: 'path/to/upkite_image', // Add projectImageLink for Upkite
+    LogoLink: '', // Add LogoLink for Upkite
+    projectImageLink: '', // Add projectImageLink for Upkite
     projectChallenge:'       ',
     projectApproach:'       ',
     projectVisionTitle:'',
@@ -62,10 +62,10 @@ export const projects = [
   {
     id: 5,
     title: 'ISEAA',
-    link: '/projects',
-    LeadingTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: '/projects/iseaa',
+    LeadingTitle: '       INTERNATIONAL STUDIES PROVIDER CONNECTED  ',
     finishedYear: 2023,
-    responsibilities: ['Conducting environmental impact assessments', 'Data analysis and reporting'],
+    responsibilities: ['Web Design', 'Front end Development'],
     LogoLink: 'path/to/iseaa_logo', // Add LogoLink for ISEAA
     projectImageLink: 'path/to/iseaa_image', // Add projectImageLink for ISEAA
     projectChallenge:'       ',

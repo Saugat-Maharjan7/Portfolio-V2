@@ -83,7 +83,9 @@
 .Home_container__bCOhY{
     padding: none!important;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 html,
 body
 {

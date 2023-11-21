@@ -7,17 +7,42 @@ import StarsCanvas from "../../public/components/StarsCanvas"
 import Grain from "../../public/assets/textures/Grain.png"
 import Image from "next/image";
 import OrangeBall from "../../public/assets/textures/ORANGEBALL.png";
-
+import { useEffect, useRef } from 'react';
+import { easeIn, easeInOut, easeOut, motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { projects } from "../../public/scripts/Datas/projects";
+import { AnimatePresence } from 'framer-motion';
 
 
 function SuperKrishak(){
-    const router= useRouter()
-   
- // Find the project with id: 1
- const project = projects.find((project) => project.id === 1);
 
-  
+     // Find the project with id: 1
+    const project = projects.find((project) => project.id === 1);
+    const router= useRouter()
+
+    const numSections = 2; // Define the number of sections you want to handle
+
+    const lineControls = Array.from({ length: numSections }, () => useAnimation());
+    const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
+    const lineInViews = linerefs.map(([, inView]) => inView);
+
+    // Controls for text opacity animations
+    const textControls = Array.from({ length: numSections }, () => useAnimation());
+    const textrefs = Array.from({ length: numSections }, () => useRef());
+    
+    useEffect(() => {
+        lineInViews.forEach((inView, index) => {
+          if (inView) {
+            lineControls[index].start({ width: '100%', transition: { duration: 1, ease: 'easeIn' } });
+            textControls[index].start({ opacity: 1, transition: { duration: 1, ease: 'easeIn' } });
+          } else {
+            lineControls[index].start({ width: 0, transition: { duration: 1, ease: 'easeIn' } });
+            textControls[index].start({ opacity: 0.2, transition: { duration: 1, ease: 'easeIn' } });
+          }
+        });
+      }, [lineControls, textControls, lineInViews]);
+   
+
     return(
         
         <div >
@@ -33,7 +58,7 @@ function SuperKrishak(){
             <main className="BGProjectsSuperKrishak100" style={{height:'100vh',width:'100%'}}>
             <section className="projectHero position-relative PBm " >
                 <div className="projectContainer d-flex flex-column MTfxl GAPxxl">
-                    <Image src={OrangeBall} className="position-absolute" priority={false} style={{right:0,top:"-70px",zIndex:0,pointerEvents:'none',opacity:0.8}} alt="OrangeBall"></Image>
+                    <Image src={OrangeBall} className="position-absolute" priority={false} style={{right:0,top:"-100px",zIndex:0,pointerEvents:'none',opacity:0.8}} alt="OrangeBall"></Image>
                     <div className="d-flex flex-row MTxxl justify-content-between"> 
                     <h1 className="text-uppercase projectTitle ">{project.title }</h1>
                     <span className="projectYear">{project.finishedYear}</span>
@@ -82,9 +107,15 @@ function SuperKrishak(){
             </div>
             
             </section>
-            <section className="">
+            <section className="projectContent">
             <div className="projectContainer d-flex flex-column MTxl GAPxxl">
                 <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+                <motion.div
+              className="topLine"
+              ref={linerefs[0][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[0]}
+            ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">01</span>
                     <h3 className="FONTNEXA">Overview</h3>
                 </div>
@@ -92,19 +123,32 @@ function SuperKrishak(){
                     <h4 childrenlassName="SIZEF12 w-50">
                     CHALLENGE
                     </h4>
-                    <p className=" FONTNEXA SIZEF10">{project.projectChallenge}</p>
+                    <motion.p 
+                     ref={textrefs[0][0]}
+                     animate={textControls[0]}
+                    className=" FONTNEXA SIZEF10">{project.projectChallenge}</motion.p>
                 </div>
                 <div className="projectInfo d-flex GAPm">
                 <h4 className="SIZEF12">
                         APPROACH
                 </h4>
-                    <p className=" FONTNEXA SIZEF10">{project.projectApproach}</p>                
+                    <motion.p
+                      ref={textrefs[0][0]}
+                      animate={textControls[0]}
+                    className=" FONTNEXA SIZEF10">{project.projectApproach}</motion.p>                
                     </div>
                     </div>
             </section>
-            <section className="MTfxl PBfxl">
+            <section className="MTfxl PBfxl projectContent">
             <div className="projectContainer d-flex flex-column MTxl GAPxxl">
                 <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                <motion.div
+              className="topLine"
+              ref={linerefs[1][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[1]}
+            ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">02</span>
                     <h3 className="FONTNEXA">Super Krishak 2.0</h3>
                 </div>
@@ -112,18 +156,29 @@ function SuperKrishak(){
                     <h4 childrenlassName="SIZEF12 w-50">
                     {project.projectVisionTitle}
                     </h4>
-                    <p className=" FONTNEXA SIZEF10">{project.projectVision}</p>
+                    
+                    <motion.p className=" FONTNEXA SIZEF10"
+                    ref={textrefs[1][0]}
+                    animate={textControls[1]}
+                    >{project.projectVision}</motion.p>
                 </div>
                 
-                    <div className="projectBanner" style={{height:'auto'}}>
+                    <motion.div
+                    whileHover={{ scale: 1.01 }}
+                    transition={{ duration: 0.5, ease:easeOut}}
+                    className="projectBanner" style={{height:'auto'}}>
                     <Image src={project.projectBannerImage}
+
                     alt="Project Banner"
                     width={1000} // Set an appropriate width
                     height={465}
-                    layout="responsive"></Image>
-                    </div>
+                    layout="responsive"
+                    ></Image>
+                    </motion.div>
                     </div>
             </section>
+        
+            
             </main>
         
         
