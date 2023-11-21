@@ -186,7 +186,7 @@ function SuperKrishak(){
                     <h3 className="FONTNEXA">Overview</h3>
                 </div>
                 <div className="projectInfo d-flex GAPm">
-                    <h4 className="SIZEF12 w-50">
+                    <h4 className="SIZEF12">
                     CHALLENGE
                     </h4>
                     <p className=" FONTNEXA SIZEF10">{project.projectChallenge}</p>
@@ -213,7 +213,7 @@ function SuperKrishak(){
                     <h3 className="FONTNEXA">Super Krishak 2.0</h3>
                 </div>
                 <div className="projectInfo d-flex GAPm">
-                    <h4 className="SIZEF12 w-50">
+                    <h4 className="SIZEF12 ">
                     {project.projectVisionTitle}
                     </h4>
                     
