@@ -50,23 +50,23 @@ export default function Home() {
   }
 
     //for scrolling of the button
-    useEffect(()=>{
-      let scrollable=document.querySelector('main')
-      let explore=document.querySelector('.explore-world')
+    // useEffect(()=>{
+    //   let scrollable=document.querySelector('main')
+    //   let explore=document.querySelector('.explore-world')
       
-      scrollable.addEventListener('scroll',(e)=>{
-        let t=scrollable.scrollTop;
-        if (t>0){
-          explore.style.display="none"
+    //   scrollable.addEventListener('scroll',(e)=>{
+    //     let t=scrollable.scrollTop;
+    //     if (t>0){
+    //       explore.style.display="none"
 
-        }
-      if(t<=0){
-        explore.style.display="block"
+    //     }
+    //   if(t<=0){
+    //     explore.style.display="block"
        
-      }
+    //   }
         
-      })
-    })
+    //   })
+    // })
     const [checked, setChecked] = useState(false);
 
   return (
@@ -96,11 +96,11 @@ export default function Home() {
 
         {/* switch button */}
 
-        <div ref={exploreref} className={`${styles.toggleWrapper} explore-world` } onClick={()=>setChecked(!checked)}>
+        {/* <div  ref={exploreref} className={`${styles.toggleWrapper} explore-world` } onClick={()=>setChecked(!checked)}>
         <div
           className={`${styles.toggleSwitch} ${checked ? styles.checked : ''} ${!checked ? styles.unchecked:''}`}
         />
-      </div>
+      </div> */}
 
       {/* Mobile Navigation */}
       <Sidenavigation isSidebarOpen={isSidebarOpen}></Sidenavigation>

@@ -135,8 +135,8 @@ function Three(){
        <pointLight   position={[-2000, 900, -900]} intensity= {(10)} color={(0xC25FFD)}/>
         <OrbitControls></OrbitControls>
        
-
-       <primitive ref={uforef} position={[6,1,1]} 
+{/* ufo */}
+       {/* <primitive ref={uforef} position={[6,1,1]} 
        rotation={[0.1,-10,0]}
        onClick={() => setTargetUfo(uforef.current)}
        onPointerOver={handlePointerOver}
@@ -144,7 +144,8 @@ function Three(){
        scale={[1,1,1]}
 
 
-       object={ufo.scene} />
+       object={ufo.scene} /> */}
+       
 
         {/* this is the sphere world */}
 

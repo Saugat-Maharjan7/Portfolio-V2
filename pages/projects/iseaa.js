@@ -33,7 +33,7 @@ function iseaa(){
             <main className="BGProjectsISEAA100" style={{height:'100vh',width:'100%'}}>
             <section className="projectHero position-relative PBm " >
                 <div className="projectContainer d-flex flex-column MTfxl GAPxxl">
-                    <Image src={OrangeBall} className="position-absolute" priority={false} style={{right:0,top:"-70px",zIndex:0,pointerEvents:'none',opacity:0.8}} alt="OrangeBall"></Image>
+                    <Image src={OrangeBall} className="position-absolute" priority={false} style={{right:0,top:"-100px",zIndex:0,pointerEvents:'none',opacity:0.8}} alt="OrangeBall"></Image>
                     <div className="d-flex flex-row MTxxl justify-content-between"> 
                     <h1 className="text-uppercase projectTitle ">{project.title }</h1>
                     <span className="projectYear">{project.finishedYear}</span>
