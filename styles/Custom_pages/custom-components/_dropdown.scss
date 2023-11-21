@@ -2,7 +2,7 @@
 
 .dropdown_menu{
 position: absolute;
-border-radius: getSize(0);
+border-radius: getSize(6);
 transform: translate3d(0px, 12px, 0px);
 z-index: 100;
 gap: 0em!important;
@@ -22,7 +22,7 @@ padding: getSpacing('s') !important;
 padding: .5rem 1.2rem;
 text-decoration: none!important;
 color: getColor(Tailwind, Gray,100);
-border-radius: getSize(0);
+border-radius: getSize(4);
 
 
 

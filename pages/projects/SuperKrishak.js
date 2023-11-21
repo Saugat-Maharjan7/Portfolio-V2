@@ -22,7 +22,7 @@ function SuperKrishak(){
     const titleLetters = project.LeadingTitle.split('');
 
 
-    const numSections = 2; // Define the number of sections you want to handle
+    const numSections = 4; // Define the number of sections you want to handle
 
     const lineControls = Array.from({ length: numSections }, () => useAnimation());
     const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
@@ -32,6 +32,10 @@ function SuperKrishak(){
     // Controls for text opacity animations
     const textControls = Array.from({ length: numSections }, () => useAnimation());
     const textrefs = Array.from({ length: numSections }, () => useRef());
+
+      // Extract the first three images for left and the next three for right
+  const leftImages = project.projectScreenShots.slice(0, 3);
+  const rightImages = project.projectScreenShots.slice(3, 6);
     
     useEffect(() => {
         lineInViews.forEach((inView, index) => {
@@ -70,7 +74,7 @@ function SuperKrishak(){
                     </div>
                     
             <h1 className="projectLeadingTitle text-uppercase" >
-                {'\u00A0\u00A0\u00A0\u00A0'}{titleLetters.map((letter, index) => (
+                {titleLetters.map((letter, index) => (
         <motion.span
           key={index}
           initial={{ y: -100, opacity: 0 }}
@@ -224,9 +228,62 @@ function SuperKrishak(){
                     height={465}
                     layout="responsive"
                     ></Image>
+                      <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
+                        <div className="projectInfo d-flex flex-column GAPm" style={{height:'fit-content'}}>
+                            <h4 className="SIZEF12 w-100">
+                            {project.projectFirstScreenShotsTitle}
+                            </h4>
+                            <p className=" FONTNEXA SIZEF10 w-100">{project.projectFirstScreenShotsInfo}</p>
+                        </div>
+                        <div className="projectFirstScreenshots  d-flex GAPxxl" >
+                            <div className="firstLeftScreenshots GAPxxl d-flex flex-column">
+                            {leftImages.map((image, index) => (
+                                        <img key={index} src={image} alt={`Image ${index}`} />
+                                    ))}
+                            </div>
+                            <div className="firstRightScreenshots GAPxxl d-flex flex-column">
+                                {rightImages.map((image, index) => (
+                                    <img key={index} src={image} alt={`Image ${index + 3}`} />
+                                ))}
+                            </div>
+                        </div>
+                </div>
                     </div>
                     </div>
             </section>
+            {/* <section className="MTfxl PBfxl projectContent">
+            <div className="projectContainer d-flex flex-column MTxl GAPxxl">
+                <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                <motion.div
+              className="topLine"
+              ref={linerefs[2][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[2]}
+            ></motion.div>
+                    <span className="FONTMONUMENT SIZEF16">03</span>
+                    <h3 className="FONTNEXA">Super Krishak 2.0</h3>
+                </div>
+                <div className="projectInfo d-flex GAPm">
+                    <h4 className="SIZEF12 w-50">
+                    {project.projectVisionTitle}
+                    </h4>
+                    
+                    <p className=" FONTNEXA SIZEF10">{project.projectVision}</p>
+                </div>
+                
+                    <div className="projectBanner" style={{height:'auto'}}>
+                    <Image src={project.projectBannerImage}
+
+                    alt="Project Banner"
+                    width={1000} // Set an appropriate width
+                    height={465}
+                    layout="responsive"
+                    ></Image>
+                    </div>
+                  
+                    </div>
+            </section> */}
         
             
             </main>
