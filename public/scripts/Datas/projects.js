@@ -61,7 +61,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: 'ISEAA',
+    title: 'Iseaa',
     link: '/projects/iseaa',
     LeadingTitle: '       INTERNATIONAL STUDIES PROVIDER CONNECTED  ',
     finishedYear: 2023,

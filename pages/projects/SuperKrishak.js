@@ -11,7 +11,6 @@ import { useEffect, useRef } from 'react';
 import { easeIn, easeInOut, easeOut, motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { projects } from "../../public/scripts/Datas/projects";
-import { AnimatePresence } from 'framer-motion';
 
 
 function SuperKrishak(){
@@ -20,11 +19,15 @@ function SuperKrishak(){
     const project = projects.find((project) => project.id === 1);
     const router= useRouter()
 
+    const titleLetters = project.LeadingTitle.split('');
+
+
     const numSections = 2; // Define the number of sections you want to handle
 
     const lineControls = Array.from({ length: numSections }, () => useAnimation());
     const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
     const lineInViews = linerefs.map(([, inView]) => inView);
+
 
     // Controls for text opacity animations
     const textControls = Array.from({ length: numSections }, () => useAnimation());
@@ -41,6 +44,8 @@ function SuperKrishak(){
           }
         });
       }, [lineControls, textControls, lineInViews]);
+
+     
    
 
     return(
@@ -64,7 +69,19 @@ function SuperKrishak(){
                     <span className="projectYear">{project.finishedYear}</span>
                     </div>
                     
-            <h1 className="projectLeadingTitle text-uppercase" >{'\u00A0\u00A0\u00A0\u00A0'}{project.LeadingTitle }</h1>
+            <h1 className="projectLeadingTitle text-uppercase" >
+                {'\u00A0\u00A0\u00A0\u00A0'}{titleLetters.map((letter, index) => (
+        <motion.span
+          key={index}
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: index * 0.08, type: 'spring', stiffness: 100 }}
+          
+        >
+          {letter}
+        </motion.span>
+      ))}
+                </h1>
             <div className="d-flex justify-content-between projectRepsonibilityAndImage GAPl">
                 <div className="d-flex flex-column GAPl projectResponsibility">
                     <p className="FONTNEXA ">My Responsibilities:</p>
@@ -137,6 +154,7 @@ function SuperKrishak(){
 </svg>
                                             
                       </Link>
+                      
                         <Image src={project.LogoLink} width={172} height={88} alt="project Logo"></Image>
                     </li>
                      </ul></div>
@@ -150,6 +168,7 @@ function SuperKrishak(){
             </div>
             
             </section>
+            
             <section className="projectContent">
             <div className="projectContainer d-flex flex-column MTxl GAPxxl">
                 <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
@@ -197,10 +216,7 @@ function SuperKrishak(){
                     <p className=" FONTNEXA SIZEF10">{project.projectVision}</p>
                 </div>
                 
-                    <motion.div
-                    whileHover={{ scale: 1.01 }}
-                    transition={{ duration: 0.5, ease:easeOut}}
-                    className="projectBanner" style={{height:'auto'}}>
+                    <div className="projectBanner" style={{height:'auto'}}>
                     <Image src={project.projectBannerImage}
 
                     alt="Project Banner"
@@ -208,7 +224,7 @@ function SuperKrishak(){
                     height={465}
                     layout="responsive"
                     ></Image>
-                    </motion.div>
+                    </div>
                     </div>
             </section>
         

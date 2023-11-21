@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
+    "@codaworks/react-glow": "^1.0.3",
     "@emailjs/browser": "^3.10.0",
     "@react-three/drei": "^9.46.1",
     "@react-three/fiber": "^8.9.1",

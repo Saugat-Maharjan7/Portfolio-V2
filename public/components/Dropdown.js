@@ -1,25 +1,35 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { projects } from '../scripts/Datas/projects';
 
-function Dropdown() {
+function Dropdown({dropName,links}) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
-
+  
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      const dropButtonRef = document.getElementById('dropButton'); // Change the ID to 'dropButton'
+      if (
+        dropdownRef.current &&
+        dropButtonRef &&
+        !dropdownRef.current.contains(event.target) &&
+        event.target !== dropButtonRef &&
+        !dropButtonRef.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     };
-    
-    document.addEventListener('mousedown', handleOutsideClick);
-
+  
+    window.addEventListener('mousedown', handleOutsideClick);
+    window.addEventListener('mouseup', handleOutsideClick);
+  
     return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
+      window.removeEventListener('mousedown', handleOutsideClick);
+      window.removeEventListener('mouseup', handleOutsideClick);
     };
   }, []);
+  
+  
 
   useEffect(() => {
     let scrollable = document.querySelector('main');
@@ -33,14 +43,15 @@ function Dropdown() {
   });
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative',fontFamily:'Nexa Light',height:'fit-content' }}>
       <motion.button
-        onClick={() => setIsOpen((prev) => !prev)}
+      style={{textDecoration:'none'}}
+        onClick={() => setIsOpen(prev => !prev)}
         className="btn btn-down"
-        id="works"
+        id="dropButton"
         transition={{ duration: 0.2 }}
       >
-        projects
+        {dropName}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -56,20 +67,18 @@ function Dropdown() {
         </svg>
       </motion.button>
 
-      <motion.div
+      
+        <motion.ul
+        style={{zIndex:1000}}
         ref={dropdownRef}
-        initial={{ opacity: 0, height: 0, overflow: 'hidden' }}
-        animate={isOpen ? { opacity: 1, height: 'auto', overflow: 'visible' } : { opacity: 0, height: 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <ul className='dropdown_menu'>
-          {projects.map((item) => (
-            <Link href={item.link} key={item.id} className='dropdown_item'>
-              {item.title}
-            </Link>
-          ))}
-        </ul>
-      </motion.div>
+        initial={{ opacity: 0, height: 0 }}
+        animate={isOpen ? { opacity: 1, height: 'auto'} : { opacity: 0, height: 0 }}
+        transition={{ duration: 0.2 }}
+        className='dropdown_menu'>
+          {links}
+          
+        
+      </motion.ul>
     </div>
   );
 }
