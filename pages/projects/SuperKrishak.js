@@ -37,7 +37,7 @@ function SuperKrishak(){
             textControls[index].start({ opacity: 1, transition: { duration: 1, ease: 'easeIn' } });
           } else {
             lineControls[index].start({ width: 0, transition: { duration: 1, ease: 'easeIn' } });
-            textControls[index].start({ opacity: 0.2, transition: { duration: 1, ease: 'easeIn' } });
+            textControls[index].start({ opacity: 0.5, transition: { duration: 1, ease: 'easeIn' } });
           }
         });
       }, [lineControls, textControls, lineInViews]);
