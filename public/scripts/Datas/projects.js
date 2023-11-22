@@ -22,6 +22,26 @@ export const projects = [
       '/assets/projects/Screenshots/SuperKrishak/4.png',
       '/assets/projects/Screenshots/SuperKrishak/5.png',
       '/assets/projects/Screenshots/SuperKrishak/6.png',
+    ],
+    projectFeatures: [
+      {
+        featureOneTitle: 'CONTINUOUS AGRICULTURAL SURVEILLANCE ENABLED BY GIS INTEGRATION        ',
+        featureOneHeadline: 'GIS Tracking',
+        featureOneInfo: 'Using the aid of Super Krishak, individuals are empowered to monitor their agricultural land via GIS technology. This innovative tool allows users to oversee various aspects of their farm, such as crop growth, soil conditions, and irrigation, offering a comprehensive view of their agricultural operations.',
+        featureOneImageLink: '/assets/projects/features/SuperKrishak/featureOne.jpg'
+      },
+      {
+        featureTwoTitle: 'Feature Two Title',
+        featureTwoHeadline: 'Feature Two Headline',
+        featureTwoInfo: 'Information about Feature Two.',
+        featureTwoImageLink: '/assets/projects/features/SuperKrishak/featureOne.jpg'
+      },
+      {
+        featureThreeTitle: 'Feature Three Title',
+        featureThreeHeadline: 'Feature Three Headline',
+        featureThreeInfo: 'Information about Feature Three.',
+        featureThreeImageLink: '/assets/projects/SuperKrishak/feature3.png'
+      }
     ]
   },
   {
@@ -40,7 +60,8 @@ export const projects = [
     projectBannerImage: '',
     projectFirstScreenShotsTitle: '',
     projectFirstScreenShotsInfo: '',
-    projectScreenShots: []
+    projectScreenShots: [],
+    projectFeatures: [] // No features added for Upkite
   },
   {
     id: 3,
@@ -58,7 +79,8 @@ export const projects = [
     projectBannerImage: '',
     projectFirstScreenShotsTitle: '',
     projectFirstScreenShotsInfo: '',
-    projectScreenShots: []
+    projectScreenShots: [],
+    projectFeatures: [] // No features added for Clean Eats
   },
   {
     id: 4,
@@ -76,7 +98,8 @@ export const projects = [
     projectBannerImage: '',
     projectFirstScreenShotsTitle: '',
     projectFirstScreenShotsInfo: '',
-    projectScreenShots: []
+    projectScreenShots: [],
+    projectFeatures: [] // No features added for Phone Care Clinic
   },
   {
     id: 5,
@@ -94,7 +117,8 @@ export const projects = [
     projectBannerImage: '',
     projectFirstScreenShotsTitle: '',
     projectFirstScreenShotsInfo: '',
-    projectScreenShots: []
+    projectScreenShots: [],
+    projectFeatures: [] // No features added for Iseaa
   }
   // Add projectImageLink entries for other projects if needed
 ];

@@ -28,6 +28,23 @@ function SuperKrishak(){
     const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
     const lineInViews = linerefs.map(([, inView]) => inView);
 
+    useEffect(() => {
+      const parallaxEffect = (event) => {
+        const parallaxImages = document.querySelectorAll('.parallax-image');
+        const deltaY = event.deltaY;
+  
+        parallaxImages.forEach((image) => {
+          const speed = parseFloat(image.getAttribute('data-speed')) || 0.4; // Default speed if not specified
+          image.style.transform = `translateY(${deltaY * speed}px)`;
+        });
+      };
+  
+      window.addEventListener('wheel', parallaxEffect);
+  
+      return () => {
+        window.removeEventListener('wheel', parallaxEffect);
+      };
+    }, []);
 
     // Controls for text opacity animations
     const textControls = Array.from({ length: numSections }, () => useAnimation());
@@ -220,15 +237,19 @@ function SuperKrishak(){
                     <p className=" FONTNEXA SIZEF10">{project.projectVision}</p>
                 </div>
                 
-                    <div className="projectBanner" style={{height:'auto'}}>
+                    <div className="projectBanner" style={{height:'auto',overflow:'hidden'}}>
                     <Image src={project.projectBannerImage}
 
                     alt="Project Banner"
                     width={1000} // Set an appropriate width
                     height={465}
                     layout="responsive"
+                    className="parallax-image"
+        style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
                     ></Image>
-                      <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
+                     
+                    </div>
+                    <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
                         <div className="projectInfo d-flex flex-column GAPm" style={{height:'fit-content'}}>
                             <h4 className="SIZEF12 w-100">
                             {project.projectFirstScreenShotsTitle}
@@ -249,41 +270,42 @@ function SuperKrishak(){
                         </div>
                 </div>
                     </div>
-                    </div>
             </section>
-            {/* <section className="MTfxl PBfxl projectContent">
+            <section className="MTfxl PBfxl projectContent">
             <div className="projectContainer d-flex flex-column MTxl GAPxxl">
                 <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
 
                 <motion.div
               className="topLine"
-              ref={linerefs[2][0]}
+              ref={linerefs[3][0]}
               initial={{ width: 0 }}
-              animate={lineControls[2]}
+              animate={lineControls[3]}
             ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">03</span>
-                    <h3 className="FONTNEXA">Super Krishak 2.0</h3>
+                    <h3 className="FONTNEXA">{project.projectFeatures[0].featureOneHeadline}</h3>
                 </div>
                 <div className="projectInfo d-flex GAPm">
                     <h4 className="SIZEF12 w-50">
-                    {project.projectVisionTitle}
+                    {project.projectFeatures[0].featureOneTitle}
                     </h4>
                     
-                    <p className=" FONTNEXA SIZEF10">{project.projectVision}</p>
+                    <p className=" FONTNEXA SIZEF10">{project.projectFeatures[0].featureOneInfo}</p>
                 </div>
                 
-                    <div className="projectBanner" style={{height:'auto'}}>
-                    <Image src={project.projectBannerImage}
+                    <div className="projectBanner" style={{height:'auto', overflow:'hidden'}}>
+                    <Image src={project.projectFeatures[0].featureOneImageLink}
 
                     alt="Project Banner"
                     width={1000} // Set an appropriate width
-                    height={465}
+                    height={814}
                     layout="responsive"
+                    className="parallax-image"
+        style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
                     ></Image>
                     </div>
                   
                     </div>
-            </section> */}
+            </section>
         
             
             </main>
