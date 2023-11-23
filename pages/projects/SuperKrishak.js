@@ -23,7 +23,7 @@ function SuperKrishak(){
     const titleLetters = project.LeadingTitle.split('');
 
 
-    const numSections = 4; // Define the number of sections you want to handle
+    const numSections = 5; // Define the number of sections you want to handle
 
     const lineControls = Array.from({ length: numSections }, () => useAnimation());
     const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
@@ -422,9 +422,9 @@ function SuperKrishak(){
 
                   <motion.div
                 className="topLine"
-                ref={linerefs[3][0]}
+                ref={linerefs[4][0]}
                 initial={{ width: 0 }}
-                animate={lineControls[3]}
+                animate={lineControls[4]}
               ></motion.div>
                       <span className="FONTMONUMENT SIZEF16">05</span>
                       <h3 className="FONTNEXA">The Result</h3>
