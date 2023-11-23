@@ -15,6 +15,8 @@ export const projects = [
     projectBannerImage: '/assets/projects/ProjectBannerSuperKrishak.jpg',
     projectFirstScreenShotsTitle: 'THE ONE STOP SOLUTION FOR ALL AGRICULTURAL QUERIES.',
     projectFirstScreenShotsInfo: 'The updated system enriches farming practices and learning experiences, fostering collaboration and innovation in both agricultural practices and education.',
+    projectSecondScreenShotsTitle: 'A COHESIVE DESIGN SYSTEM FOR THE USERS',
+    projectSecondScreenShotsInfo: 'Consistency is pivotal for a user-friendly app. By unifying design elements such as language, colors, typography, and icons, the Super Krishak app delivers a seamless visual experience across every section. This coherence cultivates familiarity and reduces cognitive strain, enabling users to concentrate on their primary goal—efficient agriculture learning',
     projectScreenShots: [
       '/assets/projects/Screenshots/SuperKrishak/1.png',
       '/assets/projects/Screenshots/SuperKrishak/2.png',
@@ -22,6 +24,12 @@ export const projects = [
       '/assets/projects/Screenshots/SuperKrishak/4.png',
       '/assets/projects/Screenshots/SuperKrishak/5.png',
       '/assets/projects/Screenshots/SuperKrishak/6.png',
+      '/assets/projects/Screenshots/SuperKrishak/7.png',
+      '/assets/projects/Screenshots/SuperKrishak/8.png',
+      '/assets/projects/Screenshots/SuperKrishak/9.png',
+      '/assets/projects/Screenshots/SuperKrishak/10.png',
+      '/assets/projects/Screenshots/SuperKrishak/11.png',
+      '/assets/projects/Screenshots/SuperKrishak/12.png',
     ],
     projectFeatures: [
       {
@@ -35,12 +43,6 @@ export const projects = [
         featureTwoHeadline: 'Feature Two Headline',
         featureTwoInfo: 'Information about Feature Two.',
         featureTwoImageLink: '/assets/projects/features/SuperKrishak/featureOne.jpg'
-      },
-      {
-        featureThreeTitle: 'Feature Three Title',
-        featureThreeHeadline: 'Feature Three Headline',
-        featureThreeInfo: 'Information about Feature Three.',
-        featureThreeImageLink: '/assets/projects/SuperKrishak/feature3.png'
       }
     ]
   },

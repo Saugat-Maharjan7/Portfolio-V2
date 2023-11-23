@@ -1,5 +1,4 @@
 import Link from "next/link";
-import {useRouter} from "next/router"
 import Mouse from "../../public/components/Mouse"
 import SubHead from "../../public/components/subheader"
 import Head from "next/head";
@@ -7,8 +6,8 @@ import StarsCanvas from "../../public/components/StarsCanvas"
 import Grain from "../../public/assets/textures/Grain.png"
 import Image from "next/image";
 import OrangeBall from "../../public/assets/textures/ORANGEBALL.png";
-import { useEffect, useRef } from 'react';
-import { easeIn, easeInOut, easeOut, motion, useAnimation } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { projects } from "../../public/scripts/Datas/projects";
 
@@ -17,8 +16,6 @@ function SuperKrishak(){
 
      // Find the project with id: 1
     const project = projects.find((project) => project.id === 1);
-    const router= useRouter()
-
     const titleLetters = project.LeadingTitle.split('');
 
 
@@ -27,6 +24,8 @@ function SuperKrishak(){
     const lineControls = Array.from({ length: numSections }, () => useAnimation());
     const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
     const lineInViews = linerefs.map(([, inView]) => inView);
+
+    //ParallaxEffect
 
     useEffect(() => {
       const parallaxEffect = (event) => {
@@ -46,13 +45,19 @@ function SuperKrishak(){
       };
     }, []);
 
+
+
     // Controls for text opacity animations
     const textControls = Array.from({ length: numSections }, () => useAnimation());
     const textrefs = Array.from({ length: numSections }, () => useRef());
 
-      // Extract the first three images for left and the next three for right
-  const leftImages = project.projectScreenShots.slice(0, 3);
-  const rightImages = project.projectScreenShots.slice(3, 6);
+  // Extract the first three images for left and the next three for right
+  const leftImages1 = project.projectScreenShots.slice(0, 3);
+  const rightImages1 = project.projectScreenShots.slice(3, 6);
+
+   // Extract the first three images for left and the next three for right
+   const leftImages2 = project.projectScreenShots.slice(6, 9);
+   const rightImages2 = project.projectScreenShots.slice(9, 12);
     
     useEffect(() => {
         lineInViews.forEach((inView, index) => {
@@ -245,7 +250,8 @@ function SuperKrishak(){
                     height={465}
                     layout="responsive"
                     className="parallax-image"
-        style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
+                    data-speed="0.2" // Speed of parallax effect
+                     style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
                     ></Image>
                      
                     </div>
@@ -258,12 +264,12 @@ function SuperKrishak(){
                         </div>
                         <div className="projectFirstScreenshots  d-flex GAPxxl" >
                             <div className="firstLeftScreenshots GAPxxl d-flex flex-column">
-                            {leftImages.map((image, index) => (
+                            {leftImages1.map((image, index) => (
                                         <img key={index} src={image} alt={`Image ${index}`} />
                                     ))}
                             </div>
                             <div className="firstRightScreenshots GAPxxl d-flex flex-column">
-                                {rightImages.map((image, index) => (
+                                {rightImages1.map((image, index) => (
                                     <img key={index} src={image} alt={`Image ${index + 3}`} />
                                 ))}
                             </div>
@@ -300,10 +306,30 @@ function SuperKrishak(){
                     height={814}
                     layout="responsive"
                     className="parallax-image"
-        style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
+                    data-speed="0.2" // Speed of parallax effect
+                    style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
                     ></Image>
                     </div>
-                  
+                    <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
+                        <div className="projectInfo d-flex flex-column GAPm" style={{height:'fit-content'}}>
+                            <h4 className="SIZEF12 w-100">
+                            {project.projectSecondScreenShotsTitle}
+                            </h4>
+                            <p className=" FONTNEXA SIZEF10 w-100">{project.projectSecondScreenShotsInfo}</p>
+                        </div>
+                        <div className="projectFirstScreenshots  d-flex GAPxxl" >
+                            <div className="firstLeftScreenshots GAPxxl d-flex flex-column">
+                            {leftImages2.map((image, index) => (
+                                        <img key={index} src={image} alt={`Image ${index}`} />
+                                    ))}
+                            </div>
+                            <div className="firstRightScreenshots GAPxxl d-flex flex-column">
+                                {rightImages2.map((image, index) => (
+                                    <img key={index} src={image} alt={`Image ${index + 3}`} />
+                                ))}
+                            </div>
+                        </div>
+                </div>
                     </div>
             </section>
         
