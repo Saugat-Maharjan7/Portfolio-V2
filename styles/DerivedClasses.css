@@ -12,6 +12,10 @@
   background-color: #15BC84 !important;
 }
 
+.BGProjectsISEAA100 {
+  background-color: #10172A !important;
+}
+
 .BGNaturalWhite100 {
   background-color: #ffffff !important;
 }
@@ -932,6 +936,10 @@
   color: #15BC84 !important;
 }
 
+.TXTProjectsISEAA100 {
+  color: #10172A !important;
+}
+
 .TXTNaturalWhite100 {
   color: #ffffff !important;
 }
@@ -1850,6 +1858,10 @@
 
 .BRDRProjectsSuperKrishak100 {
   border-color: #15BC84 !important;
+}
+
+.BRDRProjectsISEAA100 {
+  border-color: #10172A !important;
 }
 
 .BRDRNaturalWhite100 {
@@ -3617,7 +3629,7 @@
 }
 
 .MARGINfxl {
-  margin: 68px !important;
+  margin: 76px !important;
 }
 
 .PADDING0 {
@@ -3653,7 +3665,7 @@
 }
 
 .PADDINGfxl {
-  padding: 68px !important;
+  padding: 76px !important;
 }
 
 .GAP0 {
@@ -3689,7 +3701,7 @@
 }
 
 .GAPfxl {
-  gap: 68px !important;
+  gap: 76px !important;
 }
 
 .MT0 {
@@ -3821,19 +3833,19 @@
 }
 
 .MTfxl {
-  margin-top: 68px !important;
+  margin-top: 76px !important;
 }
 
 .MRfxl {
-  margin-right: 68px !important;
+  margin-right: 76px !important;
 }
 
 .MBfxl {
-  margin-bottom: 68px !important;
+  margin-bottom: 76px !important;
 }
 
 .MLfxl {
-  margin-left: 68px !important;
+  margin-left: 76px !important;
 }
 
 .PT0 {
@@ -3965,17 +3977,17 @@
 }
 
 .PTfxl {
-  padding-top: 68px !important;
+  padding-top: 76px !important;
 }
 
 .PRfxl {
-  padding-right: 68px !important;
+  padding-right: 76px !important;
 }
 
 .PBfxl {
-  padding-bottom: 68px !important;
+  padding-bottom: 76px !important;
 }
 
 .PLfxl {
-  padding-left: 68px !important;
+  padding-left: 76px !important;
 }/*# sourceMappingURL=DerivedClasses.css.map */

@@ -10,9 +10,13 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { projects } from "../../public/scripts/Datas/projects";
+import ImageGravityCanvas from "../../public/components/ImageGravityCanvas"
+import SubFooter from '../../public/components/subfooter';
+
 
 
 function SuperKrishak(){
+
 
      // Find the project with id: 1
     const project = projects.find((project) => project.id === 1);
@@ -205,19 +209,19 @@ function SuperKrishak(){
               animate={lineControls[0]}
             ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">01</span>
-                    <h3 className="FONTNEXA">Overview</h3>
+                    <h3 className="FONTNEXA">{project.projectOverview.Headline}</h3>
                 </div>
                 <div className="projectInfo d-flex GAPm">
                     <h4 className="SIZEF12">
                     CHALLENGE
                     </h4>
-                    <p className=" FONTNEXA SIZEF10">{project.projectChallenge}</p>
+                    <p className=" FONTNEXA SIZEF10">{project.projectOverview.Challenge}</p>
                 </div>
                 <div className="projectInfo d-flex GAPm">
                 <h4 className="SIZEF12">
                         APPROACH
                 </h4>
-                    <p className=" FONTNEXA SIZEF10">{project.projectApproach}</p>                
+                    <p className=" FONTNEXA SIZEF10">{project.projectOverview.Approach}</p>                
                     </div>
                     </div>
             </section>
@@ -232,14 +236,14 @@ function SuperKrishak(){
               animate={lineControls[1]}
             ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">02</span>
-                    <h3 className="FONTNEXA">Super Krishak 2.0</h3>
+                    <h3 className="FONTNEXA">{project.projectVision.Headline}</h3>
                 </div>
                 <div className="projectInfo d-flex GAPm">
                     <h4 className="SIZEF12 ">
-                    {project.projectVisionTitle}
+                    {project.projectVision.Title}
                     </h4>
                     
-                    <p className=" FONTNEXA SIZEF10">{project.projectVision}</p>
+                    <p className=" FONTNEXA SIZEF10">{project.projectVision.Info}</p>
                 </div>
                 
                     <div className="projectBanner" style={{height:'auto',overflow:'hidden'}}>
@@ -258,9 +262,9 @@ function SuperKrishak(){
                     <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
                         <div className="projectInfo d-flex flex-column GAPm" style={{height:'fit-content'}}>
                             <h4 className="SIZEF12 w-100">
-                            {project.projectFirstScreenShotsTitle}
+                            {project.projectFirstScreenshots.Title}
                             </h4>
-                            <p className=" FONTNEXA SIZEF10 w-100">{project.projectFirstScreenShotsInfo}</p>
+                            <p className=" FONTNEXA SIZEF10 w-100"> {project.projectFirstScreenshots.Info}</p>
                         </div>
                         <div className="projectFirstScreenshots  d-flex GAPxxl" >
                             <div className="firstLeftScreenshots GAPxxl d-flex flex-column">
@@ -283,23 +287,23 @@ function SuperKrishak(){
 
                 <motion.div
               className="topLine"
-              ref={linerefs[3][0]}
+              ref={linerefs[2][0]}
               initial={{ width: 0 }}
-              animate={lineControls[3]}
+              animate={lineControls[2]}
             ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">03</span>
-                    <h3 className="FONTNEXA">{project.projectFeatures[0].featureOneHeadline}</h3>
+                    <h3 className="FONTNEXA">{project.projectFeatures[0].Headline}</h3>
                 </div>
                 <div className="projectInfo d-flex GAPm">
                     <h4 className="SIZEF12 w-50">
-                    {project.projectFeatures[0].featureOneTitle}
+                    {project.projectFeatures[0].Title}
                     </h4>
                     
-                    <p className=" FONTNEXA SIZEF10">{project.projectFeatures[0].featureOneInfo}</p>
+                    <p className=" FONTNEXA SIZEF10">{project.projectFeatures[0].Info}</p>
                 </div>
                 
                     <div className="projectBanner" style={{height:'auto', overflow:'hidden'}}>
-                    <Image src={project.projectFeatures[0].featureOneImageLink}
+                    <Image src={project.projectFeatures[0].ImageLink}
 
                     alt="Project Banner"
                     width={1000} // Set an appropriate width
@@ -313,9 +317,9 @@ function SuperKrishak(){
                     <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
                         <div className="projectInfo d-flex flex-column GAPm" style={{height:'fit-content'}}>
                             <h4 className="SIZEF12 w-100">
-                            {project.projectSecondScreenShotsTitle}
+                            {project.projectSecondScreenshots.Title}
                             </h4>
-                            <p className=" FONTNEXA SIZEF10 w-100">{project.projectSecondScreenShotsInfo}</p>
+                            <p className=" FONTNEXA SIZEF10 w-100">{project.projectSecondScreenshots.Info}</p>
                         </div>
                         <div className="projectFirstScreenshots  d-flex GAPxxl" >
                             <div className="firstLeftScreenshots GAPxxl d-flex flex-column">
@@ -332,10 +336,133 @@ function SuperKrishak(){
                 </div>
                     </div>
             </section>
-        
-            
+            <section className="MTfxl PBfxl projectContent">
+            <div className="projectContainer d-flex flex-column MTxl GAPxxl "            >
+                <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                <motion.div
+              className="topLine"
+              ref={linerefs[3][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[3]}
+            ></motion.div>
+                    <span className="FONTMONUMENT SIZEF16">04</span>
+                    <h3 className="FONTNEXA">{project.projectResearch.Headline}</h3>
+                </div>
+                <div className="projectInfo d-flex GAPm">
+                    <h4 className="SIZEF12 ">
+                    {project.projectResearch.Title} </h4>
+                    
+                    <p className=" FONTNEXA SIZEF10">{project.projectResearch.Info}</p>
+                </div>
+                <div className="projectBanner" style={{height:'auto', overflow:'hidden'}}>
+                    <Image src={project.projectResearch.BannerLink}
+
+                    alt="Project Banner"
+                    width={1000} // Set an appropriate width
+                    height={814}
+                    layout="responsive"
+                    className="parallax-image"
+                    data-speed="0.2" // Speed of parallax effect
+                    style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
+                    ></Image>
+                    </div>
+                <div className="researchMethods d-flex flex-column GAPxxxl">
+                    <div className="projectInfo d-flex GAPm MTfxl">
+                        <h5 className="SIZEF12 ">
+                        {project.projectResearch.projectMethods[0].methodName} </h5>
+                        
+                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
+                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[0].methodInfo}</p>
+                          <Image src={project.projectResearch.projectMethods[0].methodImageLink}
+                          alt="Method Banner"
+                          width={1000} // Set an appropriate width
+                          height={814}
+                          layout="responsive"
+                          ></Image>
+                        </div>
+                   </div>
+
+                   <div className="projectInfo d-flex GAPm ">
+                        <h5 className="SIZEF12 ">
+                        {project.projectResearch.projectMethods[1].methodName} </h5>
+                        
+                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
+                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[1].methodInfo}</p>
+                          <Image src={project.projectResearch.projectMethods[1].methodImageLink}
+                          alt="Method Banner"
+                          width={1000} // Set an appropriate width
+                          height={814}
+                          layout="responsive"
+                          ></Image>
+                        </div>
+                   </div>
+                   <div className="projectInfo d-flex GAPm ">
+                        <h5 className="SIZEF12 ">
+                        {project.projectResearch.projectMethods[2].methodName} </h5>
+                        
+                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
+                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[2].methodInfo}</p>
+                          <Image src={project.projectResearch.projectMethods[2].methodImageLink}
+                          alt="Method Banner"
+                          width={1000} // Set an appropriate width
+                          height={814}
+                          layout="responsive"
+                          ></Image>
+                        </div>
+                   </div>
+                   </div>       
+                    <div className="projectBanner" style={{height:'auto',overflow:'hidden'}}>
+                    </div>
+                    </div>
+            </section>
+            <section className="MTfxl PBfxl projectContent position-relative " >
+              <div className="projectContainer d-flex flex-column MTxl GAPxxl projectResult " >
+                  <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                  <motion.div
+                className="topLine"
+                ref={linerefs[3][0]}
+                initial={{ width: 0 }}
+                animate={lineControls[3]}
+              ></motion.div>
+                      <span className="FONTMONUMENT SIZEF16">05</span>
+                      <h3 className="FONTNEXA">The Result</h3>
+                  </div>
+                  <div className="projectInfo d-flex GAPm">
+                      <h4 className="SIZEF12 ">
+                      EMPOWERING FARMERS AND STUDENTS: INSIGHTS FROM SUPERKRISHAK USER RESEARCH</h4>
+                      
+                      <p className=" FONTNEXA SIZEF10">The user research conducted on the SuperKrishak app yielded profound insights beneficial to both farmers and students. For farmers, it identified preferred features, addressed challenges, and tailored content to seamlessly integrate into their daily agricultural activities. Simultaneously, for students, the research optimized learning content, increased engagement factors, improved accessibility, and aligned the app's offerings with academic needs. Uncovering shared needs allowed for usability enhancements and ensured relevant, valuable content for both user groups. These insights led to significant improvements, enhancing user engagement, satisfaction, and the overall utility of the app among farmers and students.</p>
+                  </div>
+                  <div className="projectInfo d-flex GAPm">
+                      <h4 className="SIZEF12 ">
+                      THE NUMBERS</h4>
+                      
+                      <div className=" FONTNEXA SIZEF10 d-flex flex-wrap GAPxl">
+                          <div className="d-flex flex-column GAPxs position-relative">
+                            <div style={{position:'absolute',top:'-20px',right:'10px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>+ 20.4%</div>
+                            <span className="FONTMONUMENT SIZEF26" style={{fontWeight: 800}}>61.4%</span>
+                            <p className="FONTNEXA w-100">Users used app more than once in a day</p>
+                          </div>   
+                          <div className="d-flex flex-column GAPxs position-relative">
+                            <div style={{position:'absolute',top:'-20px',right:'40px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>+ 14.25%</div>
+                            <span className="FONTMONUMENT SIZEF26" style={{fontWeight: 800}}>55.9%</span>
+                            <p className="FONTNEXA w-100">Users have no problems at all using the app</p>
+                          </div>  
+                          <div className="d-flex flex-column GAPxs position-relative">
+                            <span className="FONTMONUMENT SIZEF18" style={{fontWeight: 800,width:'100%'}}>26.1%/46.7%</span>
+                            <p className="FONTNEXA w-100">Users are very satisfied and satisfied respectively</p>
+                          </div>       
+                      </div>
+                  </div>
+                  
+                  </div>
+                  <ImageGravityCanvas  />
+            </section>
+            <SubFooter/>
+
             </main>
-        
         
         
         </div>

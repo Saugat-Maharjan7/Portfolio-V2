@@ -184,33 +184,37 @@ input::placeholder, textarea::placeholder {
 /* Brand Default colors */
 .dropdown_menu {
   position: absolute;
-  border-radius: 8px;
-  top: 120%;
+  border-radius: 12px;
+  transform: translate3d(0px, 12px, 0px);
   z-index: 100;
   gap: 0em !important;
   display: flex;
   flex-direction: column;
+  font-family: "NexaLight";
   list-style: none;
-  background-color: #1f1f1f;
+  background: #232222;
   max-width: 260px;
-  width: 260px;
+  width: -moz-max-content;
+  width: max-content;
   overflow: hidden;
-  padding: 0.5rem 0 !important;
+  padding: 8px !important;
 }
 .dropdown_menu .dropdown_item {
   padding: 0.5rem 1.2rem;
   text-decoration: none !important;
   color: #f3f4f6;
+  border-radius: 8px;
 }
 .dropdown_menu .dropdown_item:hover {
-  background-color: #262626;
   color: #FB722E;
+  background: #161515;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* Mode 1 */
 /* Brand Default colors */
 header {
-  z-index: 3;
+  z-index: 100;
   background: rgba(77, 70, 70, 0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -220,9 +224,15 @@ header {
   width: 100%;
   transition: ease-in-out top 0.5s;
 }
+header .container {
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
 header nav {
   align-items: center;
   padding: 0.5rem 1rem;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 header nav .Logo {
   gap: 1rem;
