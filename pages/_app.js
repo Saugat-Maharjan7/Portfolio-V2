@@ -9,30 +9,12 @@ import Router from "next/router"
 
 
 
-import Pagetransition from "../public/components/page-transition"
 
 
 
 function MyApp({ Component, pageProps }) {
 const router=useRouter()
 
-// useEffect(()=>{
-//   Router.events.on('routeChangeStart',(url)=>{
-//     document.querySelector('.page-transition').classList.add('loader-active')
-//     document.querySelector('.load-bar').classList.add('load-bar-active')
-
-
-//   })
-
-//   Router.events.on("routeChangeComplete",(url)=>{
-//     document.querySelector('.page-transition').classList.remove('loader-active')
-//     document.querySelector('.load-bar').classList.remove('load-bar-active')
-
-//   })
-
- 
-
-// })
 
   return( 
     <AnimatePresence mode='wait'>

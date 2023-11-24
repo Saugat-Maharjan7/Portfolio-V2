@@ -153,7 +153,7 @@ function Three(){
       <sphereGeometry args={[2.2,120,100]}/>
     </mesh>
     
-        <Stars ref={starref} />
+        <Stars ref={starref} factor={0.5} />
         </>
     )
 }
