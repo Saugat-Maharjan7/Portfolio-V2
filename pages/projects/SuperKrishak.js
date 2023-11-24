@@ -440,20 +440,97 @@ function SuperKrishak(){
                       THE NUMBERS</h4>
                       
                       <div className=" FONTNEXA SIZEF10 d-flex flex-wrap GAPxl">
+                        <div className="d-flex flex-row GAPl align-items-center">
+                          <div style={{height:'80px',width:'80px'}}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="">
+  <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" />
+  <path fillRule="evenodd" d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z" clipRule="evenodd" />
+</svg></div>
+                        
+
                           <div className="d-flex flex-column GAPxs position-relative">
-                            <div style={{position:'absolute',top:'-20px',right:'10px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>+ 20.4%</div>
-                            <span className="FONTMONUMENT SIZEF26" style={{fontWeight: 800}}>61.4%</span>
+                            <div className="d-flex flex-row GAPxs align-items-center" style={{position:'absolute',top:'-20px',right:'40px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>
+                              <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width={24}
+                              height={24}
+                              fill="currentColor"
+                              className="bi bi-arrow-up-short"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"
+                              />
+                            </svg>
+                            20.4%</div>
+                            <span className="FONTMONUMENT SIZEF26 d-flex" style={{fontWeight: 800}}>61.4%</span>
                             <p className="FONTNEXA w-100">Users now used app more than once in a day</p>
                           </div>   
+                          </div>
+                          <div className="d-flex flex-row GAPl align-items-center">
+                          <div style={{height:'80px',width:'80px'}}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                          <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z" />
+                        </svg></div>
+                          
+
+
                           <div className="d-flex flex-column GAPxs position-relative">
-                            <div style={{position:'absolute',top:'-20px',right:'40px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>+ 14.25%</div>
+                            <div className="d-flex flex-row GAPxs align-items-center"  style={{position:'absolute',top:'-20px',right:'40px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>
+                              <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width={24}
+                              height={24}
+                              fill="currentColor"
+                              className="bi bi-arrow-up-short"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"
+                              />
+                            </svg> 14.25%</div>
                             <span className="FONTMONUMENT SIZEF26" style={{fontWeight: 800}}>55.9%</span>
                             <p className="FONTNEXA w-100">Users now have no problems at all using the app</p>
+                          </div>
                           </div>  
+                          <div className="d-flex flex-row GAPl align-items-center">
+                          <div style={{height:'80px',width:'80px'}}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+  <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z" clipRule="evenodd" />
+</svg></div>
+
+                          
                           <div className="d-flex flex-column GAPxs position-relative">
-                            <span className="FONTMONUMENT SIZEF18" style={{fontWeight: 800,width:'100%'}}>46.7%/26.1%</span>
+                            <span className="FONTMONUMENT SIZEF26" style={{fontWeight: 800,width:'100%'}}>72.8%</span>
                             <p className="FONTNEXA w-100">Users are now satisfied and very satisfied respectively</p>
-                          </div>       
+                          </div> 
+                          </div> 
+                          <div className="d-flex flex-row GAPl align-items-center">
+                          <div style={{height:'80px',width:'80px'}}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+  <path fillRule="evenodd" d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
+</svg>
+</div>
+                          <div className="d-flex flex-column GAPxs position-relative">
+                            <div className="d-flex flex-row GAPxs align-items-center" style={{position:'absolute',top:'-20px',right:'10px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width={24}
+                              height={24}
+                              fill="currentColor"
+                              className="bi bi-arrow-up-short"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"
+                              />
+                            </svg>
+                            44.8%</div>
+                            <span className="FONTMONUMENT SIZEF26 d-flex flex-row GAPl align-items-center" style={{fontWeight: 800}}>10K+ 
+                               
+                            </span>
+                            <p className="FONTNEXA w-100">Users have downloaded the app</p>
+                          </div> 
+                          </div>    
                       </div>
                   </div>
                   
