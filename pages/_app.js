@@ -35,6 +35,7 @@ const router=useRouter()
 // })
 
   return( 
+    <AnimatePresence mode='wait'>
       
   <motion.div key={router.pathname} 
 
@@ -59,6 +60,7 @@ className='Base-page' >
       >
       </motion.div>
 </motion.div>
+</AnimatePresence>
   )
   return ()=>clearTimeout(timer)
 
