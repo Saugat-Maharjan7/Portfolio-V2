@@ -46,8 +46,7 @@ function ThreeD(){
               <div className="threeD invisible" id="threeD-0" />
               <div className="threeD " id="threeD-0"><img src="https://i.ibb.co/ZNyMWQh/logistics.png" alt="Iron Man" /></div>
               <div className="threeD" id="threeD-2">
-              <video ref={porscheVideoref} className="threeDvideo" src="../assets/videos/car.mp4" id="nft" plays-inline loop muted > 
-                </video>
+              <video ref={porscheVideoref} className="threeDvideo" src="../assets/videos/car.mp4" id="nft" loop muted /> 
               </div>
               <div className="threeD" id="threeD-1"><img src="https://i.ibb.co/C1Ddcps/clonexself.png" alt="Omnitrix" /></div>
               <div className="threeD" id="threeD-3"><img src="https://i.ibb.co/xStFcCQ/arcreactor.png" alt="PSG" /></div>

@@ -83,7 +83,7 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
         <title>Shirish - The Design World</title>
 
-        <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} />
+        {/* <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} /> */}
         </Head>
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
 
@@ -137,17 +137,20 @@ export default function Home() {
                     <h1>
 YOU'VE SAFELY LANDED ON MY DESIGN WORLD
 </h1>
-                    <p>
+                    
+                      <div className="TypeWriterWrapper">
                     <Typewriter
+                    style={{letterSpacing:0}}
                         options={{
                           strings: ['You are welcome,', 'Please enjoy your stay'],
                           autoStart: true,
                           loop: true,
                         }}
                       />
+                      </div>
                       
                       
-                      </p>
+                      
                   </div>
                   <div className="profile_info_top d-flex w-100">
                     <div className="profile_detail d-flex flex-row">
@@ -179,7 +182,7 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
               {/* projects container */}
               <ul className="border-l-r-b project-contents">
               {projects.filter(project => project.featured === true).map((project) => (
-                   <li className="project d-flex " id={project.title}>
+                   <li className="project d-flex " id={project.title} key={project.id}>
                    <div className="p-left d-flex flex-column">
                      <div className="project-detail d-flex flex-column">
                        <span className="project-leading"> {/* Mapping responsibilities */}
