@@ -16,12 +16,8 @@ function ThreeD(){
 
         <div className="container">
           <div className="border-l-r-b d-flex flex-row container-title">
-            <div className="container-header-img">
-              <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/315089857_1073661459949892_7142420866194164271_n.png?_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_ohc=O6mvKc0NeJ4AX8rwl69&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTivssnysR45muHs0Hmwwj6I0BjwsEykWqQkyb1bC58Mg&oe=639451ED" alt="moon" />
-            </div>
             <div className=" container-header d-flex align-items-center" >
               <h2 className="secton-header-h2">3D WORKS</h2>
-              <span className="leader-subtitle">.THE SPECIES</span>
             </div>
           </div>
         </div>

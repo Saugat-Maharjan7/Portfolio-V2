@@ -190,7 +190,7 @@ function SuperKrishak(){
                      </ul></div>
                 
                      <div className="projectHeroImage">
-                     <Image src={project.projectImageLink} alt="Project Image" width={800} height={400} />
+                     <Image src={project.projectMascotImageLink} alt="Project Image" width={800} height={400} />
                      </div>
             </div>
             

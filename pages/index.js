@@ -159,11 +159,6 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                     <div className="social_links d-flex flex-column">
                       <span>shirish.shakya5@gmail.com</span>
                       <div className="time">{time} <span>Local Time</span></div>
-                      {/* <ul className="d-flex flex-row" >
-                        <li><a href="https://www.linkedin.com/in/shirish-shakya-ba8a49200/">Linkedin</a></li>
-                        <li><a href="https://www.behance.net/shirishshakya">Behance</a></li>
-                        <li><a href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
-                      </ul> */}
                     </div>
                   </div>
                 </div>
@@ -173,129 +168,45 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
           <section id="digital-products" className="w-100">
             <div className="container position-relative" id="products-container">
               <div style={{borderTop:"1px solid white"}} className="border-l-r-b d-flex flex-row container-title">
-                <div className="container-header-img">
-                  <img style={{width:"75px",transform:"scale(3.5) translateY(18px)"}}  src="https://i.ibb.co/54TbLsP/UFO.png" alt="UFO" />
-                </div>
+               
                 <div className=" container-header d-flex align-items-center" >
-                  <h2 className="secton-header-h2">DIGITAL PRODUCTS</h2>
-                  <span className="leader-subtitle">.THE UFO</span>
+                  <h2 className="secton-header-h2">FEATURED PROJECTS</h2>
+                  
                 </div>
               </div>
             </div>
             <div className="container d-flex flex-row " style={{justifyContent: 'center'}}>
               {/* projects container */}
               <ul className="border-l-r-b project-contents">
-                {/* first project */}
-                <li className="project d-flex" id="VRS">
-                  <div className="p-left d-flex flex-column">
-                    <div className="project-detail d-flex flex-column">
-                      <span className="project-leading">Research . UI Design . Frontend dev. </span>
-                      <h3>VENDOR RATING SOLUTIONS
-                        MANAGEMENT PLATFORM</h3>
-       
-                      <p className="project-details">Vendor Rating Solution is a next and robust level of supply chain management for any B2B companies that rely on large chunk of supply data to be carried on a daily basis.</p>
-                    </div>
-                    <button  className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-                      VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
-                        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
-                      </svg></button>
-                  </div>
-                  <div className="p-right d-flex align-items-center justify-content-center">
-                    <img className="rightimg" src="https://i.ibb.co/2ntxsfx/desktop-frame.png" alt="VRS" />
-                  </div>
-                  {/* modal of the vrs */}
-                  <div className="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div className="modal-dialog">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h5 className="modal-title" id="staticBackdropLabel">Vendor Rating Solution</h5>
-                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-                        </div>
-                        <div className="modal-body">
-                          Case studies are on its way
-                        </div>
-                        <div className="modal-footer">
-                          <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Understood</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                {/* second project */}
-                <li className="project d-flex" id="Super Krishak">
-                  <div className="p-left d-flex flex-column">
-                    <div className="project-detail d-flex flex-column">
-                      <span className="project-leading">UX Research . Branding . UI Design </span>
-                      <h3 className="allCaps">       
-                        {projects.find(item => item.id === 1)?.title || 'Item not found'}
-                      </h3>
-                      <p className="project-details"> Super krishak is introduced into the Nepali market to educate the farmers from the east to the west of Nepal. 
-                        The education of farming has never been executed like this in such a  easy and fun way.
-                      </p>
-                    </div>
-                    <button className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-                      VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
-                        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
-                      </svg></button>
-                  </div>
-                  <div className="p-right d-flex align-items-center justify-content-center position-relative">
-                    <img className="position-absolute sub-image" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314190049_800881437796960_2340701915487757918_n.png?_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ko89pBYsJGoAX-DKpVC&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTlHJ2i7mXABwntqGqgcIUzvtPwEwArHDlXW47Bwcx0Ag&oe=638D7043" alt="tractor imgae" />
-                    <img className="rightimg" src="https://i.ibb.co/7n53gy1/super-krishak.png" alt="Super Krishak" />
-                  </div>
-                  {/* modal of the krishak */}
-                  <div className="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div className="modal-dialog">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h5 className="modal-title" id="staticBackdropLabel">Super Krishak</h5>
-                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-                        </div>
-                        <div className="modal-body">
-                          Case studies are on its way
-                        </div>
-                        <div className="modal-footer">
-                          <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Understood</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                {/* third project */}
-                <li className="project d-flex" style={{border: 'none'}} id="AEOS">
-                  <div className="p-left d-flex flex-column">
-                    <div className="project-detail d-flex flex-column">
-                      <span className="project-leading">Research . UI Design </span>
-                      <h3>AEOS AUCTION
-                        BIDDING APP DESIGN</h3>
-                      <p className="project-details"> AEOS auction brings the wine lovers a step closer to the wines that they dream of buying, whether it be for the collection purposes or the vintage test requirement.</p>
-                    </div>
-                    <button className="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
-                      VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
-                        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
-                      </svg></button>
-                  </div>
-                  <div className="p-right d-flex align-items-center justify-content-center position-relative">
-                    <img style={{transform: 'scale(0.4)', bottom: '-210px'}} className="position-absolute sub-image" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314461857_510107067692356_5665182089033677973_n.png?_nc_cat=105&ccb=1-7&_nc_sid=aee45a&_nc_ohc=4SmD7aRNlp8AX_D8cfd&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRvZLVXKdUEl9Gmei9Nl1QpF-P2OxUvbbR6q3l_Igba9Q&oe=638D8AAA" alt="wine bottle" />
-                    <img className="rightimg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/314451535_861583205276439_3878732759128021508_n.png?_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=bnHA3mkYAycAX_3KE4Z&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTh8ag4WwRmWs-sq_DRfKGDOL_b9mNSkoEiB56nn24sSg&oe=638D8D71" alt="AEOS" />
-                  </div>
-                  {/* modal of the AEOS */}
-                  <div className="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div className="modal-dialog">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h5 className="modal-title" id="staticBackdropLabel">AEOS Auction</h5>
-                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-                        </div>
-                        <div className="modal-body">
-                          Case studies are on its way
-                        </div>
-                        <div className="modal-footer">
-                          <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Understood</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+              {projects.filter(project => project.featured === true).map((project) => (
+                   <li className="project d-flex " id={project.title}>
+                   <div className="p-left d-flex flex-column">
+                     <div className="project-detail d-flex flex-column">
+                       <span className="project-leading"> {/* Mapping responsibilities */}
+                        {project.responsibilities.map((responsibility, index) => (
+                          <span className="MRs" key={index}>{responsibility} .</span>
+                        ))}</span>
+                       <h3 className="allCaps">       
+                         {project.title}
+                       </h3>
+                       <p className="project-details"> {project.projectBrief}
+                       </p>
+                     </div>
+                     <Link className="btn btn-outline-primary position-relative" href={project.link}>
+                       VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
+                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+                       </svg></Link>
+                   </div>
+                   <div className="p-right d-flex align-items-center justify-content-center position-relative">
+                     <div className="position-absolute sub-image"  >
+                      <img src={project.projectMascotImageLink} alt="Project Mascot"></img>
+                     </div>
+                     <img className="rightimg" src={project.featuredImageLink} alt="featured-image" />
+                   </div>
+                 </li>
+                    ))}
+                
+                
               </ul>
               {/* end of project container */}
             </div>

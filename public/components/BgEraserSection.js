@@ -107,12 +107,9 @@ function BGERASER(){
                 <section className="section-visual-designs" id="visual-designs">
             <div className="container">
               <div className="border-l-r-b d-flex flex-row container-title">
-                <div className="container-header-img">
-                  <img style={{width:"75px",transform:"scale(2.5) translateY(2px)"}}  src="https://i.ibb.co/3d1pzkP/moon2-1.png" alt="moon" />
-                </div>
+                
                 <div className=" container-header d-flex align-items-center" >
                   <h2 className="secton-header-h2">VISUAL DESIGNS</h2>
-                  <span className="leader-subtitle">.THE MOON</span>
                 </div>
               </div>
             </div>
