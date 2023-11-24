@@ -22,7 +22,7 @@ function SubFooter(){
 //   }, []);
 
     return(
-        <footer className="BGBrandBlack500"> 
+        <footer className=""> 
         <div className="container">
           <div className="copyrights d-flex flex-row justify-content-between">
             <span>Designed and Developed with love and threejs</span>

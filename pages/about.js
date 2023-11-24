@@ -74,9 +74,9 @@ function About(){
         </Head>
         <Mouse></Mouse>
         <SubHead></SubHead>
-        <main className='aboutMain'>
+        <main className='aboutMain BGBrandBlack500'>
           
-          <section className="about-hero container-fluid position-relative">
+          <section className="about-hero container-fluid position-relative BGNaturalWhite100">
             <img className="blur_purple_1 position-absolute" src="https://i.ibb.co/gMHM5rm/blur-purple.png" alt="purple light" />
             <div className="about-info d-flex flex-row row TXTBrandBlack600">
               <div className="col"><h1>SHIRISH SHAKYA</h1></div>
@@ -88,8 +88,7 @@ function About(){
                 </ul></div>
             </div>
             <h6 >In the field for over 5 years. Currently based in Kathmandu.</h6>
-          </section>
-          <section className="about-video">
+            <div className="about-video">
             <div className="container-fluid d-flex align-items-center justify-content-center  video-slideshow">
               <div className="video-show position-relative">
                 <div className="gif-area">
@@ -100,7 +99,9 @@ function About(){
                 <video ref={profileVideoref} src="/assets/videos/profile.mp4" className="prof-video" loop muted plays-inline> 
                     </video>                
               </div>
-            </div></section>
+            </div></div>
+          </section>
+          
           <section>
             <div className="container-fluid about-me">
               <div className="bio-pic d-flex ">
