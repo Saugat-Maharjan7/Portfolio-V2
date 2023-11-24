@@ -443,16 +443,16 @@ function SuperKrishak(){
                           <div className="d-flex flex-column GAPxs position-relative">
                             <div style={{position:'absolute',top:'-20px',right:'10px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>+ 20.4%</div>
                             <span className="FONTMONUMENT SIZEF26" style={{fontWeight: 800}}>61.4%</span>
-                            <p className="FONTNEXA w-100">Users used app more than once in a day</p>
+                            <p className="FONTNEXA w-100">Users now used app more than once in a day</p>
                           </div>   
                           <div className="d-flex flex-column GAPxs position-relative">
                             <div style={{position:'absolute',top:'-20px',right:'40px',borderRadius:'56px',width:'fit-content',padding:'4px 12px',backgroundColor:'#4BD20B',boxShadow:'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}}>+ 14.25%</div>
                             <span className="FONTMONUMENT SIZEF26" style={{fontWeight: 800}}>55.9%</span>
-                            <p className="FONTNEXA w-100">Users have no problems at all using the app</p>
+                            <p className="FONTNEXA w-100">Users now have no problems at all using the app</p>
                           </div>  
                           <div className="d-flex flex-column GAPxs position-relative">
-                            <span className="FONTMONUMENT SIZEF18" style={{fontWeight: 800,width:'100%'}}>26.1%/46.7%</span>
-                            <p className="FONTNEXA w-100">Users are very satisfied and satisfied respectively</p>
+                            <span className="FONTMONUMENT SIZEF18" style={{fontWeight: 800,width:'100%'}}>46.7%/26.1%</span>
+                            <p className="FONTNEXA w-100">Users are now satisfied and very satisfied respectively</p>
                           </div>       
                       </div>
                   </div>

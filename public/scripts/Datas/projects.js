@@ -36,7 +36,7 @@ export const projects = [
         ,methodImageLink:'/assets/projects/features/SuperKrishak/method2.jpg',
       },
       {
-        methodName:'ON-FIELD RESEATCH',
+        methodName:'ON-FIELD RESEARCH',
         methodInfo:'Researchers immersed themselves in various agricultural settings to observe firsthand how users interacted with the SuperKrishak app. Ethnographic methods, including direct observation and informal interviews, captured user behaviors, challenges faced, and the integration of the app into daily agricultural workflows.'
         ,methodImageLink:'/assets/projects/features/SuperKrishak/method3.jpg',
       }],
