@@ -12,13 +12,14 @@ import Image from 'next/image'
 import SubFooter from '../public/components/subfooter';
 import Head from 'next/head';
 import IconButton from './../public/components/IconButton';
+import Alert from "../public/components/Alert";
 
 
 function Contact(){
 
-  
-
+  const [alertMessage, setAlertMessage] = useState(''); // State for the alert message
   const [viewWidth, setViewWidth] = useState(0);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false); // New state for success message
 
   useEffect(() => {
     const handleResize = () => {
@@ -68,21 +69,40 @@ setForm({...form,[name]:value})
 //template_5wew57s
 //service_395olyt
 
-const handleSubmit=(e)=>{
+const handleSubmit = (e) => {
   e.preventDefault();
   setLoading(true);
   setLoaded(true);
 
-  emailjs.send('service_50n9tf3', 'template_5wew57s', 
-  {
-    from_name:form.name,
-    to_name:'Shirish',
-    from_email:form.email,
-    to_email:'shirish.shakya5@gmail.com',
-    message:form.message
-  },
-  'SzlVDNiBR3_3JB8YE')
-}
+  emailjs
+    .send('service_50n9tf3', 'template_5wew57s', {
+      from_name: form.name,
+      to_name: 'Shirish',
+      from_email: form.email,
+      to_email: 'shirish.shakya5@gmail.com',
+      message: form.message,
+    }, 'SzlVDNiBR3_3JB8YE')
+    .then((response) => {
+      console.log('Email sent!', response);
+      // Show success message after successful submission
+      setShowSuccessMessage(true);
+      setAlertMessage('Message Sent Successfully');
+      setLoading(false);
+      setForm({ name: '', email: '', message: '' }); // Optionally reset the form fields
+
+      // Hide success message after 3 seconds
+      setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 3000);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+      
+      // Handle error scenarios here
+      setAlertMessage('Failed to send message'); // Update alert message for failure
+      setLoading(false);
+    });
+};
 
 const [isCopied, setIsCopied] = useState(false);
 
@@ -97,13 +117,16 @@ const handleCopyClick = () => {
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
     setIsCopied(true);
-     // Reset the "Copied!" message after a delay (e.g., 3 seconds)
+    //  Reset the "Copied!" message after a delay (e.g., 3 seconds)
      setTimeout(() => {
       setIsCopied(false);
     }, 2000)
   }
   
 };
+
+
+
 
     return(
         <>
@@ -175,7 +198,12 @@ const handleCopyClick = () => {
 
               </div> 
               </div>
-              <div className='col'>
+              <Alert message={alertMessage} type="success" className={showSuccessMessage ?'alertMessageActive' : ''}/>
+
+              <div className='col'> 
+              
+
+              
               <form 
               className='d-flex flex-column gap-5'
               ref={formref}
@@ -239,7 +267,7 @@ const handleCopyClick = () => {
                     <textarea name='message' rows='7' type='text' id='name' value={form.message} onChange={handleChange} placeholder='Your Message Here' required></textarea>
                   </m.li>
                 </ul>
-                <button type="submit" className="btn btn-outline-primary position-relative">  Send</button>
+                <button type="submit" className="btn btn-outline-primary position-relative">Send</button>
               </form>
               </div>
 
@@ -259,18 +287,7 @@ const handleCopyClick = () => {
     
     
 }
-// Contact.getInitialProps = async () => {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve({
-//           data: {
-//             title: 'Welcome to my website',
-//             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-//           },
-//         });
-//     }, 4000);
-//   });
-// };
+
 export default Contact;
 
 

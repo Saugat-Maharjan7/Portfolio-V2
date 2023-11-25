@@ -353,6 +353,14 @@ main{
     background-size: cover;
 }
 
+.mouse-cursor-brushed{
+    border: none;
+    transform: scale(6);
+    overflow: visible;
+    background-image: url('../public/assets/Brush.png');
+    background-size: cover;
+}
+
 .mouse-cursor-grab{
     border: none;
     transform: scale(5);
@@ -387,3 +395,5 @@ main{
   .allCaps{
     text-transform: uppercase!important;
   }
+
+  

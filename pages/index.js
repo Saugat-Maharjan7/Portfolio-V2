@@ -31,7 +31,7 @@ export default function Home() {
 
     const mouseTargetElements = [
       { targetClass: "p-right", hoverClass: "mouse-cursor-case" },
-      { targetClass: "designs-grid-container", hoverClass: "mouse-cursor-brush" },
+      { targetClass: "designs-grid-container", hoverClass: "mouse-cursor-brush",pressClass: "mouse-cursor-brushed" },
       // Add more objects for additional target elements and hover classes
     ];
 

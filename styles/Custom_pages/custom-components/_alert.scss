@@ -1,0 +1,34 @@
+@import "../../Variables.scss";
+
+.alertMessage{
+    position: fixed;
+    z-index: 12;
+    left: 0;
+    width: 100%;
+    color: white;
+    top:-100%;
+    background: rgba(255, 255, 255, 0.10);
+backdrop-filter: blur(10px);
+padding:getSpacing('s');
+transition: ease-in-out .5s;
+color: white;
+align-items: center;
+justify-content: center;
+font-family: "NexaLight";
+font-size: getSize(8);
+}
+
+.alertMessageActive{
+    position: fixed;
+    top:0;
+    left: 0;
+
+}
+
+.alertSuccess{
+    color: #4BD20B;
+}
+
+.alertError{
+    color:red;
+}
