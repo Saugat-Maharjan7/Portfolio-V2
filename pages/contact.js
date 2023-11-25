@@ -16,10 +16,10 @@ import Alert from "../public/components/Alert";
 
 
 function Contact(){
-
+  const [alertState, setAlertState] = useState('')
   const [alertMessage, setAlertMessage] = useState(''); // State for the alert message
   const [viewWidth, setViewWidth] = useState(0);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false); // New state for success message
+  const [showAlertMessage, showAlert] = useState(false); // New state for success message
 
   useEffect(() => {
     const handleResize = () => {
@@ -85,20 +85,23 @@ const handleSubmit = (e) => {
     .then((response) => {
       console.log('Email sent!', response);
       // Show success message after successful submission
-      setShowSuccessMessage(true);
+      showAlert(true);
+      setAlertState('success')
       setAlertMessage('Message Sent Successfully');
       setLoading(false);
       setForm({ name: '', email: '', message: '' }); // Optionally reset the form fields
 
       // Hide success message after 3 seconds
       setTimeout(() => {
-        setShowSuccessMessage(false);
+        showAlert(false);
       }, 3000);
     })
     .catch((error) => {
       console.error('Error sending email:', error);
-      
+      showAlert(true);
+
       // Handle error scenarios here
+      setAlertState('error')
       setAlertMessage('Failed to send message'); // Update alert message for failure
       setLoading(false);
     });
@@ -124,11 +127,7 @@ const handleCopyClick = () => {
   }
   
 };
-
-
-
-
-    return(
+  return(
         <>
         <Head>
           <title>
@@ -137,7 +136,8 @@ const handleCopyClick = () => {
         </Head>
         <Mouse/>
         <m.div>
-          
+        <Alert message={alertMessage} type={alertState} className={showAlertMessage ?'alertMessageActive' : ''}/>
+
         <SubHead></SubHead>
        
         <main>
@@ -198,12 +198,8 @@ const handleCopyClick = () => {
 
               </div> 
               </div>
-              <Alert message={alertMessage} type="success" className={showSuccessMessage ?'alertMessageActive' : ''}/>
 
               <div className='col'> 
-              
-
-              
               <form 
               className='d-flex flex-column gap-5'
               ref={formref}
