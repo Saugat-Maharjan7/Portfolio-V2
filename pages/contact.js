@@ -136,7 +136,10 @@ const handleCopyClick = () => {
         </Head>
         <Mouse/>
         <m.div>
-        <Alert message={alertMessage} type={alertState} className={showAlertMessage ?'alertMessageActive' : ''}/>
+        <Alert message={alertMessage} type={alertState} lefticon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+} className={showAlertMessage ?'alertMessageActive' : ''}/>
 
         <SubHead></SubHead>
        
@@ -191,7 +194,7 @@ const handleCopyClick = () => {
               <div className='d-flex flex-column GAPm'>
               <span>Socials </span>
               <ul className="contact d-flex flex-column gap-2" >
-                        <li ><a className='TXTBrandOrange500' href="https://www.linkedin.com/in/shirish-shakya-ba8a49200/">Linkedin</a></li>
+                        <li ><a className='TXTBrandOrange500' href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
                         <li><a className='TXTBrandOrange500' href="https://www.behance.net/shirishshakya">Behance</a></li>
                         <li><a className='TXTBrandOrange500' href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
                       </ul>
@@ -285,5 +288,7 @@ const handleCopyClick = () => {
 }
 
 export default Contact;
+
+
 
 

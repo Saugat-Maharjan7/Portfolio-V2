@@ -7,8 +7,6 @@
     width: 100%;
     color: white;
     top:-100%;
-    background: rgba(255, 255, 255, 0.10);
-backdrop-filter: blur(10px);
 padding:getSpacing('s');
 transition: ease-in-out .5s;
 color: white;
@@ -26,9 +24,10 @@ font-size: getSize(8);
 }
 
 .alertSuccess{
-    color: #4BD20B;
+    background-color: $brand-green;
+    color: white;
 }
 
 .alertError{
-    color:red;
+    background-color:red;color: white;
 }
