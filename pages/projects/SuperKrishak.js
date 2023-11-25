@@ -22,6 +22,11 @@ function SuperKrishak(){
     const project = projects.find((project) => project.id === 1);
     const titleLetters = project.LeadingTitle.split('');
 
+    const mouseTargetElements = [
+      { targetClass: "ImageGravityCanvas", hoverClass: "mouse-cursor-grab", pressClass: "mouse-cursor-grabbed" // CSS class for press effect
+    },
+      // Add more objects for additional target elements and hover classes
+    ];
 
     const numSections = 5; // Define the number of sections you want to handle
 
@@ -85,7 +90,7 @@ function SuperKrishak(){
         <Head>
             <title>Super Krishak</title>
         </Head>
-            <Mouse></Mouse>
+            <Mouse mouseTargetElements={mouseTargetElements}></Mouse>
             <SubHead></SubHead>
             <StarsCanvas starColor="#AFFFE4" starSize={1.5} numStars={150}/>
             {/* <Image src={Grain} alt="Grain Texture" style={{width:'100%',height:'100%',position:'absolute',zIndex:3,mixBlendMode:'overlay',opacity:0.5,pointerEvents:'none'}}></Image> */}

@@ -5,8 +5,8 @@ function Mouse({ mouseTargetElements = [] }) {
     const cursor = document.querySelector(".mouse-cursor");
 
     const handleMouseMove = (e) => {
-      cursor.style.top = e.pageY + (-10) + "px";
-      cursor.style.left = e.pageX + (-10) + "px";
+      cursor.style.top = e.pageY - 10 + "px";
+      cursor.style.left = e.pageX - 10 + "px";
     };
 
     const handleMouseEnter = (element, hoverClass) => {
@@ -17,9 +17,17 @@ function Mouse({ mouseTargetElements = [] }) {
       cursor.classList.remove(hoverClass);
     };
 
+    const handleMouseDown = (element, pressClass) => {
+      cursor.classList.add(pressClass);
+    };
+
+    const handleMouseUp = (element, pressClass) => {
+      cursor.classList.remove(pressClass);
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
 
-    mouseTargetElements.forEach(({ targetClass, hoverClass }) => {
+    mouseTargetElements.forEach(({ targetClass, hoverClass, pressClass }) => {
       const elements = document.querySelectorAll(`.${targetClass}`);
 
       elements.forEach((element) => {
@@ -29,6 +37,14 @@ function Mouse({ mouseTargetElements = [] }) {
 
         element.addEventListener("mouseleave", () =>
           handleMouseLeave(element, hoverClass)
+        );
+
+        element.addEventListener("mousedown", () =>
+          handleMouseDown(element, pressClass)
+        );
+
+        element.addEventListener("mouseup", () =>
+          handleMouseUp(element, pressClass)
         );
       });
     });
@@ -42,6 +58,8 @@ function Mouse({ mouseTargetElements = [] }) {
         elements.forEach((element) => {
           element.removeEventListener("mouseenter", () => {});
           element.removeEventListener("mouseleave", () => {});
+          element.removeEventListener("mousedown", () => {});
+          element.removeEventListener("mouseup", () => {});
         });
       });
     };

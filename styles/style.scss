@@ -334,6 +334,8 @@ main{
     }
 }
 
+//mousecursor
+
 .mouse-cursor-case{
     border: none;
     transform: scale(8)!important;
@@ -349,6 +351,23 @@ main{
     overflow: visible;
     background-image: url('../public/assets/Brush.png');
     background-size: cover;
+}
+
+.mouse-cursor-grab{
+    border: none;
+    transform: scale(5);
+    overflow: visible;
+    background-image: url('../public/assets/grab.png');
+    background-size: cover;
+
+}
+.mouse-cursor-grabbed{
+    border: none;
+    transform: scale(5);
+    overflow: visible;
+    background-image: url('../public/assets/grabbed.png');
+    background-size: cover;
+
 }
 
 .mouse-cursor-press{
