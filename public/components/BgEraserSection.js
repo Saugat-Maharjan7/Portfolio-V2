@@ -2,6 +2,7 @@ import React, { useEffect, useRef,useState } from 'react';
 
 function BGERASER() {
   const canvasRef = useRef(null);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const isPressRef = useRef(false);
   const ctxRef = useRef(null);
   const oldRef = useRef({ x: 0, y: 0 }); // Initialize oldRef with default values
@@ -32,8 +33,16 @@ function BGERASER() {
 
     const getBrushSize = () => {
       // Adjust brush size for mobile devices (smaller brush)
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       return isMobile ? 50 : 100; // Set smaller brush size for mobile devices
+    };
+
+    const performTapEffect = (x, y) => {
+      const { current: ctx } = ctxRef;
+
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(x, y, getBrushSize(), 0, 2 * Math.PI);
+      ctx.fill();
     };
 
     const handleDown = (e) => {
@@ -50,6 +59,9 @@ function BGERASER() {
 
         // Hide the tip when user starts touching the canvas on mobile
         setShowTip(false);
+
+        // Perform the tap effect
+        performTapEffect(offsetX, offsetY);
       }
 
       oldRef.current = { x: offsetX, y: offsetY };
@@ -60,16 +72,13 @@ function BGERASER() {
       const { current: old } = oldRef;
       const { current: ctx } = ctxRef;
 
-      if (isPress) {
+      if (isPress && !isMobile) {
         const rect = canvas.getBoundingClientRect();
         let offsetX, offsetY;
 
         if (e.type === 'mousemove') {
           offsetX = e.clientX - rect.left;
           offsetY = e.clientY - rect.top;
-        } else if (e.type === 'touchmove') {
-          offsetX = e.touches[0].clientX - rect.left;
-          offsetY = e.touches[0].clientY - rect.top;
         }
 
         ctx.globalCompositeOperation = 'destination-out';
@@ -96,7 +105,6 @@ function BGERASER() {
     canvas.addEventListener('mouseup', handleUp);
 
     canvas.addEventListener('touchstart', handleDown);
-    canvas.addEventListener('touchmove', handleMove);
     canvas.addEventListener('touchend', handleUp);
 
     return () => {
@@ -105,7 +113,6 @@ function BGERASER() {
       canvas.removeEventListener('mouseup', handleUp);
 
       canvas.removeEventListener('touchstart', handleDown);
-      canvas.removeEventListener('touchmove', handleMove);
       canvas.removeEventListener('touchend', handleUp);
     };
   }, []);
