@@ -1,148 +1,145 @@
+import React, { useEffect, useRef } from 'react';
 
+function BGERASER() {
+  const canvasRef = useRef(null);
+  const isPressRef = useRef(false);
+  const ctxRef = useRef(null);
+  const oldRef = useRef({ x: 0, y: 0 }); // Initialize oldRef with default values
 
-import {useEffect} from 'react'
-import React, { useRef,useState  } from "react";
+  useEffect(() => {
+    const canvas = canvasRef.current;
 
+    if (!canvas) {
+      return; // Ensure canvas exists before proceeding
+    }
 
-// {/* <a href="https://ibb.co/myyCStq"><img src="https://i.ibb.co/FYYbnJw/tap.png" alt="tap" border="0"></a> */}
+    const ctx = canvas.getContext('2d');
+    ctxRef.current = ctx;
 
-// var touchtips=document.querySelector('.tips')
-// var url = 'https://i.ibb.co/FYYbnJw/tap.png';
-// var refernce=document.querySelector('.designs-grid-container')
-// var canvas = document.getElementById('canvas');
-// var ctx = canvas.getContext('2d');
-// var img = new Image();
-// var cursor= document.querySelector('.mouse-cursor')
+    const img = new Image();
+    img.src = '/assets/ERASER.png';
 
-// img.src = url;
-// img.onload = function () {
-// //   var width = Math.min(500, img.width);
-// //   var height = img.height * (width / img.width);
-// var width=refernce.clientWidth;
-// var height=refernce.clientHeight;
+    img.onload = function () {
+      const reference = document.querySelector('.designs-grid-container');
+      const width = reference.clientWidth;
+      const height = reference.clientHeight;
 
-//   canvas.width = width;
-//   canvas.height = height;
-//   ctx.drawImage(img, 0, 0, width, height);
-// };
+      canvas.width = width;
+      canvas.height = height;
+      ctx.drawImage(img, 0, 0, width, height);
+    };
 
-// var isPress = false;
-// var old = null;
+    const handleDown = (e) => {
+      const rect = canvas.getBoundingClientRect();
+      isPressRef.current = true;
 
+      let offsetX, offsetY;
+      if (e.type === 'mousedown') {
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
+      } else if (e.type === 'touchstart') {
+        offsetX = e.touches[0].clientX - rect.left;
+        offsetY = e.touches[0].clientY - rect.top;
+      }
 
-// canvas.addEventListener('touchstart',function (e){
-//     isPress = true;
-//     old = {x: e.offsetX*3, y: e.offsetY*3};
-// })
+      oldRef.current = { x: offsetX, y: offsetY };
+    };
 
-// // canvas.addEventListener('touchmove',function (e){
-// //     if (isPress) {
-// //         var x = e.offsetX;
-// //         var y = e.offsetY;
-// //         ctx.globalCompositeOperation = 'destination-out';
-    
-// //         ctx.beginPath();
-// //         ctx.arc(100, y, 50, 100, 100 * Math.PI);
-// //         ctx.fill();
-    
-// //         ctx.lineWidth = 20;
-// //         ctx.beginPath();
-// //         ctx.moveTo(old.x, old.y);
-// //         ctx.lineTo(x, y);
-// //         ctx.stroke(50);
-    
-// //         old = {x: x, y: y};
-    
-// //       }
-// // })
+    const handleMove = (e) => {
+      const { current: isPress } = isPressRef;
+      const { current: old } = oldRef;
+      const { current: ctx } = ctxRef;
 
-// // canvas.addEventListener('touchend', function (e){
-// //     isPress = false;
-// //   });
+      if (isPress) {
+        const rect = canvas.getBoundingClientRect();
+        let offsetX, offsetY;
 
-// canvas.addEventListener('mouseenter',()=>{
-//     cursor.classList.add("mouse-cursor-brush");
-// })
+        if (e.type === 'mousemove') {
+          offsetX = e.clientX - rect.left;
+          offsetY = e.clientY - rect.top;
+        } else if (e.type === 'touchmove') {
+          offsetX = e.touches[0].clientX - rect.left;
+          offsetY = e.touches[0].clientY - rect.top;
+        }
 
-// canvas.addEventListener('mousedown', function (e){
-//   isPress = true;
-//   old = {x: e.offsetX, y: e.offsetY};
-//   touchtips.style.opacity=0
-// });
-// canvas.addEventListener('mousemove', function (e){
-//   if (isPress) {
-//     var x = e.offsetX;
-//     var y = e.offsetY;
-//     ctx.globalCompositeOperation = 'destination-out';
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.beginPath();
+        ctx.arc(offsetX, offsetY, 100, 0, 2 * Math.PI);
+        ctx.fill();
 
-//     ctx.beginPath();
-//     ctx.arc(x, y, 100, 0, 2 * Math.PI);
-//     ctx.fill();
+        ctx.lineWidth = 20;
+        ctx.beginPath();
+        ctx.moveTo(old.x, old.y);
+        ctx.lineTo(offsetX, offsetY);
+        ctx.stroke();
 
-//     ctx.lineWidth = 20;
-//     ctx.beginPath();
-//     ctx.moveTo(old.x, old.y);
-//     ctx.lineTo(x, y);
-//     ctx.stroke();
+        oldRef.current = { x: offsetX, y: offsetY };
+      }
+    };
 
-//     old = {x: x, y: y};
+    const handleUp = () => {
+      isPressRef.current = false;
+    };
 
-//   }
-// });
-// canvas.addEventListener('mouseleave', function (e){
-//   isPress = false;
-//   cursor.classList.remove("mouse-cursor-brush");
+    canvas.addEventListener('mousedown', handleDown);
+    canvas.addEventListener('mousemove', handleMove);
+    canvas.addEventListener('mouseup', handleUp);
 
-// });
-   
+    canvas.addEventListener('touchstart', handleDown);
+    canvas.addEventListener('touchmove', handleMove);
+    canvas.addEventListener('touchend', handleUp);
 
-function BGERASER(){
+    return () => {
+      canvas.removeEventListener('mousedown', handleDown);
+      canvas.removeEventListener('mousemove', handleMove);
+      canvas.removeEventListener('mouseup', handleUp);
 
-    useEffect(()=>{
-       
-    })
+      canvas.removeEventListener('touchstart', handleDown);
+      canvas.removeEventListener('touchmove', handleMove);
+      canvas.removeEventListener('touchend', handleUp);
+    };
+  }, []);
 
-    return(
-        <>
-                <section className="section-visual-designs" id="visual-designs">
-            <div className="container">
-              <div className="border-l-r-b d-flex flex-row container-title">
+  return (
+    <section className="section-visual-designs" id="visual-designs">
+      <div className="container">
+      <div className="border-l-r-b d-flex flex-row container-title">
                 
                 <div className=" container-header d-flex align-items-center" >
                   <h2 className="secton-header-h2">VISUAL DESIGNS</h2>
                 </div>
               </div>
-            </div>
-            <div className="container d-flex flex-column " style={{justifyContent: 'center'}}>
-              <div className="border-l-r-b w-100 visual-designcontainer">
-                <div >
+      </div>
+      <div className="container d-flex flex-column" style={{ justifyContent: 'center' }}>
+        <div className="border-l-r-b w-100 visual-designcontainer">
+          <div>
+          <div >
                   <p className="section-details TXTTailwindGray400">
-                    Visual Designs are the key fundamental for strong designs in any medium whether it be on paper or screen. It has always been supporting creativity and a fun thing to play around.
-                  </p>
+                  Graphic and visual design are the core of my work as a designer. They're the tools I use to tell compelling stories and create engaging experiences, simplifying complex ideas and captivating audiences in a visually-driven world.</p>
                 </div>
-              </div> 
-              <div className="designs-grid-container position-relative" style={{overflow: 'hidden'}}>
-                <div className="tips position-absolute">
-                  <h5>Tip:</h5>
-                  <p>Somethings just need a TAP for magic to happen</p>
-                </div>
-                <div className="eraseable-content position-relative">
-                  <div className="box" style={{overflow: 'hidden'}}>
-                    <canvas id="canvas" />
-                  </div>
-                  <div className="designs-grid" style={{pointerEvents: 'none'}}>
-                    <div className="design " id="design-0"><img src="https://i.ibb.co/r4ZHkfC/valentine-choclate-1.png" alt="choclate" /></div>
+          </div>
+          <div className="designs-grid-container position-relative" style={{ overflow: 'hidden' }}>
+            <div className="tips position-absolute">
+              <h5>Tip:</h5>
+              <p>Somethings just need a TAP for magic to happen</p>
+            </div>
+            <div className="eraseable-content position-relative">
+              <div className="box" style={{ overflow: 'hidden' }}>
+                <canvas ref={canvasRef} id="canvas" />
+              </div>
+              <div className="designs-grid" style={{ pointerEvents: 'none' }}>
+              <div className="design " id="design-0"><img src="https://i.ibb.co/r4ZHkfC/valentine-choclate-1.png" alt="choclate" /></div>
                     <div className="design" id="design-1"><img src="https://i.ibb.co/fq9t1X9/Booklet.png" alt="Booklet design" /></div>
                     <div className="design" id="design-2"><img src="https://i.ibb.co/tMGvw5P/Basanta.png" alt="Basanta poster" /></div>
-                    <div className="design" id="design-3"><img src="https://i.ibb.co/Kz3MLg6/nft.png" alt="NFT" /></div>
+                   <div className="design" id="design-3"><img src="https://i.ibb.co/Kz3MLg6/nft.png" alt="NFT" /></div>
                     <div className="design" id="design-4"><img src="https://i.ibb.co/pn8gBW8/Posters.png" alt="company posters" /></div>
-                  </div>
-                </div>
-              </div>               
+              </div>
             </div>
-          </section>
-        </>
-    )
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default BGERASER;

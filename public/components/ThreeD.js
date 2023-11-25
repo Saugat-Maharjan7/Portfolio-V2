@@ -17,7 +17,7 @@ function ThreeD(){
         <div className="container">
           <div className="border-l-r-b d-flex flex-row container-title">
             <div className=" container-header d-flex align-items-center" >
-              <h2 className="secton-header-h2">3D WORKS</h2>
+              <h2 className="secton-header-h2">3D AND ANIMATION</h2>
             </div>
           </div>
         </div>
@@ -26,8 +26,7 @@ function ThreeD(){
             <div className="">
             {/* phidden class */}
               <p className=" section-details TXTTailwindGray400">
-                Visual Designs are the key fundamental for strong designs in any medium whether it be on paper or screen. It has always been supporting creativity and a fun thing to play around.
-              </p>
+              In my design toolbox, 3D modeling and animation work wonders. They let me craft lifelike 3D visuals and bring them to motion, turning static designs into dynamic, engaging experiences. These tools breathe life into ideas, adding depth and interactivity that captivate audiences in exciting ways.</p>
             </div>
           </div>
         </div>
