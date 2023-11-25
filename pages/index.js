@@ -29,6 +29,11 @@ export default function Home() {
     const [isToggled, setToggled] = useState(false);
     const [time, setTime] = useState('');
 
+    const mouseTargetElements = [
+      { targetClass: "p-right", hoverClass: "mouse-cursor-case" },
+      { targetClass: "designs-grid-container", hoverClass: "mouse-cursor-brush" },
+      // Add more objects for additional target elements and hover classes
+    ];
 
   //for time
   useEffect(() => {
@@ -83,7 +88,6 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
         <title>Shirish - The Design World</title>
 
-        {/* <style dangerouslySetInnerHTML={{__html: "\n\n        .box {\n        display: inline-block;\n        background:transparent;\n        background-size: cover;\n        }\n\n        .canvas {\n        background: transparent;\n        width: 100%;\n        }\n\n        " }} /> */}
         </Head>
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
 
@@ -92,7 +96,11 @@ export default function Home() {
         <World></World>
         
         <Toggle></Toggle>
-        <Mouse></Mouse>
+        <Mouse 
+        mouseTargetElements={mouseTargetElements}
+        // targetClass="p-right" hoverClass="mouse-cursor-case" 
+        />
+
 
         {/* switch button */}
 
@@ -200,12 +208,12 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
                          <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
                        </svg></Link>
                    </div>
-                   <div className="p-right d-flex align-items-center justify-content-center position-relative">
+                   <Link href={project.link} className="p-right d-flex align-items-center justify-content-center position-relative">
                      <div className="position-absolute sub-image"  >
                       <img src={project.projectMascotImageLink} alt="Project Mascot"></img>
                      </div>
                      <img className="rightimg" src={project.featuredImageLink} alt="featured-image" />
-                   </div>
+                   </Link>
                  </li>
                     ))}
                 

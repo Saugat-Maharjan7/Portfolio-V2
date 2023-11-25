@@ -338,6 +338,8 @@ main{
     border: none;
     transform: scale(8)!important;
     mix-blend-mode: difference;
+    background-image: url('../public/assets/CASESTUDYIMAGE.png');
+    background-size: cover;
     
 }
 
@@ -345,6 +347,8 @@ main{
     border: none;
     transform: scale(5);
     overflow: visible;
+    background-image: url('../public/assets/Brush.png');
+    background-size: cover;
 }
 
 .mouse-cursor-press{

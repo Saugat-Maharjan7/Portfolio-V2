@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef,useState } from 'react';
 
 function BGERASER() {
   const canvasRef = useRef(null);
   const isPressRef = useRef(false);
   const ctxRef = useRef(null);
   const oldRef = useRef({ x: 0, y: 0 }); // Initialize oldRef with default values
+  const [showTip, setShowTip] = useState(true); // State to manage tip visibility
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -29,6 +30,12 @@ function BGERASER() {
       ctx.drawImage(img, 0, 0, width, height);
     };
 
+    const getBrushSize = () => {
+      // Adjust brush size for mobile devices (smaller brush)
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      return isMobile ? 50 : 100; // Set smaller brush size for mobile devices
+    };
+
     const handleDown = (e) => {
       const rect = canvas.getBoundingClientRect();
       isPressRef.current = true;
@@ -40,6 +47,9 @@ function BGERASER() {
       } else if (e.type === 'touchstart') {
         offsetX = e.touches[0].clientX - rect.left;
         offsetY = e.touches[0].clientY - rect.top;
+
+        // Hide the tip when user starts touching the canvas on mobile
+        setShowTip(false);
       }
 
       oldRef.current = { x: offsetX, y: offsetY };
@@ -64,10 +74,10 @@ function BGERASER() {
 
         ctx.globalCompositeOperation = 'destination-out';
         ctx.beginPath();
-        ctx.arc(offsetX, offsetY, 100, 0, 2 * Math.PI);
+        ctx.arc(offsetX, offsetY, getBrushSize(), 0, 2 * Math.PI);
         ctx.fill();
 
-        ctx.lineWidth = 20;
+        ctx.lineWidth = 10; // Set a smaller line width for mobile devices
         ctx.beginPath();
         ctx.moveTo(old.x, old.y);
         ctx.lineTo(offsetX, offsetY);
@@ -119,10 +129,12 @@ function BGERASER() {
                 </div>
           </div>
           <div className="designs-grid-container position-relative" style={{ overflow: 'hidden' }}>
-            <div className="tips position-absolute">
-              <h5>Tip:</h5>
-              <p>Somethings just need a TAP for magic to happen</p>
-            </div>
+          {showTip && (
+          <div className="tips position-absolute">
+            <h5>Tip:</h5>
+            <p>Somethings just need a TAP for magic to happen</p>
+          </div>
+        )}
             <div className="eraseable-content position-relative">
               <div className="box" style={{ overflow: 'hidden' }}>
                 <canvas ref={canvasRef} id="canvas" />

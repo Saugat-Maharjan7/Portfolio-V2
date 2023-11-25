@@ -1,30 +1,57 @@
-//this is the follow mouse cursor component
+import React, { useEffect } from "react";
 
+function Mouse({ mouseTargetElements = [] }) {
+  useEffect(() => {
+    const cursor = document.querySelector(".mouse-cursor");
 
-import Script from 'next/script'
-import {useEffect} from 'react'
-import React, { useRef,useState  } from "react";
+    const handleMouseMove = (e) => {
+      cursor.style.top = e.pageY + (-10) + "px";
+      cursor.style.left = e.pageX + (-10) + "px";
+    };
 
+    const handleMouseEnter = (element, hoverClass) => {
+      cursor.classList.add(hoverClass);
+    };
 
+    const handleMouseLeave = (element, hoverClass) => {
+      cursor.classList.remove(hoverClass);
+    };
 
-function Mouse(){
+    window.addEventListener("mousemove", handleMouseMove);
 
-    useEffect(()=>{
-        let cursor=document.querySelector('.mouse-cursor')
+    mouseTargetElements.forEach(({ targetClass, hoverClass }) => {
+      const elements = document.querySelectorAll(`.${targetClass}`);
 
-        window.addEventListener(('mousemove'),(e)=>{
+      elements.forEach((element) => {
+        element.addEventListener("mouseenter", () =>
+          handleMouseEnter(element, hoverClass)
+        );
 
-            cursor.style.top=e.pageY + (-10) +'px';
-            cursor.style.left=e.pageX + (-10) +'px';
+        element.addEventListener("mouseleave", () =>
+          handleMouseLeave(element, hoverClass)
+        );
+      });
+    });
 
-        })
-    })
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
 
-    return(
-        <>
-                <div className="mouse-cursor"/>
-        </>
-    )
+      mouseTargetElements.forEach(({ targetClass }) => {
+        const elements = document.querySelectorAll(`.${targetClass}`);
+
+        elements.forEach((element) => {
+          element.removeEventListener("mouseenter", () => {});
+          element.removeEventListener("mouseleave", () => {});
+        });
+      });
+    };
+  }, [mouseTargetElements]);
+
+  return (
+    <>
+      <div className="mouse-cursor" />
+    </>
+  );
 }
 
 export default Mouse;
