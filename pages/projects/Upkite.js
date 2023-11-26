@@ -27,7 +27,7 @@ function Upkite(){
       // Add more objects for additional target elements and hover classes
     ];
 
-    const numSections = 5; // Define the number of sections you want to handle
+    const numSections = 2; // Define the number of sections you want to handle
 
     const lineControls = Array.from({ length: numSections }, () => useAnimation());
     const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
@@ -91,7 +91,7 @@ function Upkite(){
         </Head>
             <Mouse mouseTargetElements={mouseTargetElements}></Mouse>
             <SubHead></SubHead>
-            <StarsCanvas starColor="#AFFFE4" starSize={1.5} numStars={150}/>
+            <StarsCanvas starColor={project.colorLight} starSize={1.5} numStars={150}/>
             {/* <Image src={Grain} alt="Grain Texture" style={{width:'100%',height:'100%',position:'absolute',zIndex:3,mixBlendMode:'overlay',opacity:0.5,pointerEvents:'none'}}></Image> */}
 
             <main className="" style={{height:'100vh',width:'100%',backgroundColor:project.color}}>
@@ -136,6 +136,88 @@ function Upkite(){
 
             </div>
             
+            </section>
+            <section className="projectContent">
+            <div className="projectContainer d-flex flex-column MTxl GAPxxl">
+                <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+                <motion.div
+              className="topLine"
+              ref={linerefs[0][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[0]}
+            ></motion.div>
+                    <span className="FONTMONUMENT SIZEF16">01</span>
+                    <h3 className="FONTNEXA">{project.projectOverview.Headline}</h3>
+                </div>
+                <div className="projectInfo d-flex GAPm">
+                    <h4 className="SIZEF12">
+                    CHALLENGE
+                    </h4>
+                    <p className=" FONTNEXA SIZEF10">{project.projectOverview.Challenge}</p>
+                </div>
+                <div className="projectInfo d-flex GAPm">
+                <h4 className="SIZEF12">
+                        APPROACH
+                </h4>
+                    <p className=" FONTNEXA SIZEF10">{project.projectOverview.Approach}</p>                
+                    </div>
+                    </div>
+            </section>
+            <section className="MTfxl PBfxl projectContent">
+            <div className="projectContainer d-flex flex-column MTxl GAPxxl">
+                <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                <motion.div
+              className="topLine"
+              ref={linerefs[1][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[1]}
+            ></motion.div>
+                    <span className="FONTMONUMENT SIZEF16">02</span>
+                    <h3 className="FONTNEXA">{project.projectVision.Headline}</h3>
+                </div>
+                <div className="projectInfo d-flex GAPm">
+                    <h4 className="SIZEF12 ">
+                    {project.projectVision.Title}
+                    </h4>
+                    
+                    <p className=" FONTNEXA SIZEF10">{project.projectVision.Info}</p>
+                </div>
+                
+                    <div className="projectBanner" >
+                    <Image src={project.projectBannerImage}
+
+                    alt="Project Banner"
+                    width={1000} // Set an appropriate width
+                    height={465}
+                    layout="responsive"
+                    className="parallax-image"
+                    data-speed="0.2" // Speed of parallax effect
+                     style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
+                    ></Image>
+                     
+                    </div>
+                    {/* <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
+                        <div className="projectInfo d-flex flex-column GAPm" style={{height:'fit-content'}}>
+                            <h4 className="SIZEF12 w-100">
+                            {project.projectFirstScreenshots.Title}
+                            </h4>
+                            <p className=" FONTNEXA SIZEF10 w-100"> {project.projectFirstScreenshots.Info}</p>
+                        </div>
+                        <div className="projectFirstScreenshots  d-flex GAPxxl" >
+                            <div className="firstLeftScreenshots GAPxxl d-flex flex-column">
+                            {leftImages1.map((image, index) => (
+                                        <img key={index} src={image} alt={`Image ${index}`} />
+                                    ))}
+                            </div>
+                            <div className="firstRightScreenshots GAPxxl d-flex flex-column">
+                                {rightImages1.map((image, index) => (
+                                    <img key={index} src={image} alt={`Image ${index + 3}`} />
+                                ))}
+                            </div>
+                        </div>
+                </div> */}
+                    </div>
             </section>
             <SubFooter/>
 

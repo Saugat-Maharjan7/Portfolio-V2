@@ -92,7 +92,7 @@ function SuperKrishak(){
         </Head>
             <Mouse mouseTargetElements={mouseTargetElements}></Mouse>
             <SubHead></SubHead>
-            <StarsCanvas starColor="#AFFFE4" starSize={1.5} numStars={150}/>
+            <StarsCanvas starColor={project.colorLight} starSize={1.5} numStars={150}/>
             {/* <Image src={Grain} alt="Grain Texture" style={{width:'100%',height:'100%',position:'absolute',zIndex:3,mixBlendMode:'overlay',opacity:0.5,pointerEvents:'none'}}></Image> */}
 
             <main className="" style={{height:'100vh',width:'100%',backgroundColor:project.color}}>
@@ -251,7 +251,7 @@ function SuperKrishak(){
                     <p className=" FONTNEXA SIZEF10">{project.projectVision.Info}</p>
                 </div>
                 
-                    <div className="projectBanner" style={{height:'auto',overflow:'hidden'}}>
+                    <div className="projectBanner" style={{overflow:'hidden'}}>
                     <Image src={project.projectBannerImage}
 
                     alt="Project Banner"
@@ -307,7 +307,7 @@ function SuperKrishak(){
                     <p className=" FONTNEXA SIZEF10">{project.projectFeatures[0].Info}</p>
                 </div>
                 
-                    <div className="projectBanner" style={{height:'auto', overflow:'hidden'}}>
+                    <div className="projectBanner" >
                     <Image src={project.projectFeatures[0].ImageLink}
 
                     alt="Project Banner"
@@ -360,7 +360,7 @@ function SuperKrishak(){
                     
                     <p className=" FONTNEXA SIZEF10">{project.projectResearch.Info}</p>
                 </div>
-                <div className="projectBanner" style={{height:'auto', overflow:'hidden'}}>
+                <div className="projectBanner" style={{overflow:'hidden'}}>
                     <Image src={project.projectResearch.BannerLink}
 
                     alt="Project Banner"
@@ -417,8 +417,7 @@ function SuperKrishak(){
                         </div>
                    </div>
                    </div>       
-                    <div className="projectBanner" style={{height:'auto',overflow:'hidden'}}>
-                    </div>
+                    
                     </div>
             </section>
             <section className="MTfxl PBfxl projectContent position-relative " >

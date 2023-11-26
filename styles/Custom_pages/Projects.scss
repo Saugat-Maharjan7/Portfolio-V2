@@ -315,7 +315,8 @@ display: block;
         height: 220px;
         order: 1;
         img{
-            transform: translateY(-10px);
+            transform: translate(-20px,-10px );
+
         }
     }
 
@@ -325,7 +326,7 @@ display: block;
         height: 220px;
         order: 1;
         img{
-            transform: translateY(-10px);
+            transform: translate(-20px,-10px );
         }
     }
 
@@ -336,7 +337,8 @@ display: block;
         order: 1;
 
         img{
-            transform: translateY(-10px);
+            transform: translate(-20px,-10px );
+  
         }
     }
 
@@ -346,7 +348,8 @@ display: block;
         height: 492px;
         order: 2;
         img{
-            transform: translateY(-50px);
+            transform: translate(0px,-50px );
+
         }
     }
 
@@ -356,7 +359,8 @@ display: block;
         height: 492px;
         order: 2;
         img{
-            transform: translateY(-220px);
+            transform: translate(0px,-220px );
+
         }
     }
 
@@ -366,7 +370,8 @@ display: block;
         height: 492px;
         order: 2;
         img{
-            transform: translateY(-220px);
+         
+            transform: translate(0px,-220px );
         }
     }
 }
@@ -675,5 +680,46 @@ display: block;
             margin-top: getSize(90);
             width: 50%;
         }
+    }
+}
+
+.projectBanner{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+align-items: center;
+align-self: stretch;
+    // Small devices (Potrait phones, 350px and up)
+    
+    @media (min-width: 350px) {
+        height: 194px;
+
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        height: 194px;
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        height: 264px;
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        height: 465px;
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        height: 465px;
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        height: 465px;
     }
 }
