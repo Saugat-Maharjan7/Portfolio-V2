@@ -27,7 +27,7 @@ function Upkite(){
       // Add more objects for additional target elements and hover classes
     ];
 
-    const numSections = 2; // Define the number of sections you want to handle
+    const numSections = 4; // Define the number of sections you want to handle
 
     const lineControls = Array.from({ length: numSections }, () => useAnimation());
     const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
@@ -217,6 +217,67 @@ function Upkite(){
                             </div>
                         </div>
                 </div>
+                    </div>
+            </section>
+            <section className="MTfxl PBfxl projectContent">
+            <div className="projectContainer d-flex flex-column MTxl GAPxxl "            >
+                <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                <motion.div
+              className="topLine"
+              ref={linerefs[3][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[3]}
+            ></motion.div>
+                    <span className="FONTMONUMENT SIZEF16">03</span>
+                    <h3 className="FONTNEXA">{project.projectResearch.Headline}</h3>
+                </div>
+                <div className="researchMethods d-flex flex-column GAPfxl">
+                    <div className="projectInfo d-flex GAPm">
+                        <h5 className="SIZEF12 ">
+                        {project.projectResearch.projectMethods[0].methodName} </h5>
+                        
+                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
+                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[0].methodInfo}</p>
+                          <Image src={project.projectResearch.projectMethods[0].methodImageLink}
+                          alt="Method Banner"
+                          width={1000} // Set an appropriate width
+                          height={814}
+                          layout="responsive"
+                          ></Image>
+                        </div>
+                   </div>
+
+                   <div className="projectInfo d-flex GAPm ">
+                        <h5 className="SIZEF12 ">
+                        {project.projectResearch.projectMethods[2].methodName} </h5>
+                        
+                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
+                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[2].methodInfo}</p>
+                          <Image src={project.projectResearch.projectMethods[2].methodImageLink}
+                          alt="Method Banner"
+                          width={1000} // Set an appropriate width
+                          height={814}
+                          layout="responsive"
+                          ></Image>
+                        </div>
+                   </div>
+                   <div className="projectInfo d-flex GAPm ">
+                        <h5 className="SIZEF12 ">
+                        {project.projectResearch.projectMethods[1].methodName} </h5>
+                        
+                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
+                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[1].methodInfo}</p>
+                          <Image src={project.projectResearch.projectMethods[1].methodImageLink}
+                          alt="Method Banner"
+                          width={1000} // Set an appropriate width
+                          height={814}
+                          layout="responsive"
+                          ></Image>
+                        </div>
+                   </div>
+                   </div>       
+                    
                     </div>
             </section>
             <SubFooter/>

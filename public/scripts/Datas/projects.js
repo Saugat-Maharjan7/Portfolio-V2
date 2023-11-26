@@ -109,6 +109,29 @@ export const projects = [
       Title:'THE EASY WAY TO ACCQUAINT IN A NEW CITY',
       Info:'UpKite accelerates familiarity by offering personalized recommendations, connecting users with like-minded individuals, and providing essential information on local services and transportation, expediting their acquaintance with the new city.',
     },
+    
+    projectResearch:{
+      Headline:'Art Direction',
+      Title:'',
+      Info:'',
+      BannerLink:'',
+
+      projectMethods:[{
+        methodName:'LOGO CONCEPT',
+        methodInfo:"During the creation of the UpKite logo, my focus was on infusing elements of fun and connectivity. I brainstormed playful imagery and activities, aiming to seamlessly integrate the initials 'U' and 'K' into the design. My goal was to craft a logo that not only represents the app's purpose but also embodies a vibrant and engaging spirit."
+        ,methodImageLink:'/assets/projects/features/Upkite/Logoconcept.png',
+      },
+      {
+        methodName:'FINAL DESIGN',
+        methodInfo:"The integration of the initials 'U' and 'K' seamlessly within the design forms a cohesive and recognizable symbol that represents the app's identity. The use of bold and lively elements ensures visibility and makes a memorable impression, reflecting UpKite's commitment to facilitating connections and fostering a vibrant community within a new city."
+        ,methodImageLink:'/assets/projects/features/Upkite/Finallogo.png',
+      },
+      {
+        methodName:'COLORS',
+        methodInfo:"Inspired by the vibrant hues of urban dawn or dusk and the energetic tones found in nature, I selected lively colors for the UpKite logo. These shades evoke excitement and new beginnings, capturing the app's dynamic spirit and positive vibe."
+        ,methodImageLink:'/assets/projects/features/Upkite/Colorpalette.png',
+      }],
+    },
     projectBannerImage: '/assets/projects/ProjectBannerUpkite.jpg',
     
     projectFirstScreenshots:{
