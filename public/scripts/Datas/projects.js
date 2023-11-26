@@ -88,14 +88,14 @@ export const projects = [
     id: 2,
     title: 'Upkite - Concept App',
     link: '/projects/Upkite',
-    color:'#562269',
+    color:'#511368',
     colorLight:'#B72FE9',
     featured:true,
     featuredImageLink:'/assets/projects/featuredimages/Upkite.png',
     LeadingTitle: 'Essential Partner for Easy Integration in a New City',
     finishedYear: 2022,
     projectBrief:'UpKite is a groundbreaking app dedicated to simplifying the integration process for newcomers in a new city. Through its tailored recommendations, community networking features, and a wealth of essential local insights, UpKite empowers users to swiftly adapt and explore their new environment with confidence.',
-    responsibilities: ['Design System', 'UI Design','Research','Prototyping'],
+    responsibilities: ['Logo Design','Design System', 'UI Design','Research','Prototyping'],
     LogoLink: '/assets/projects/upkitelogo.svg',
     projectMascotImageLink: '/assets/projects/UpkiteMascot.png',
     projectOverview:{
@@ -110,9 +110,29 @@ export const projects = [
       Info:'UpKite accelerates familiarity by offering personalized recommendations, connecting users with like-minded individuals, and providing essential information on local services and transportation, expediting their acquaintance with the new city.',
     },
     projectBannerImage: '/assets/projects/ProjectBannerUpkite.jpg',
-    projectFirstScreenShotsTitle: '',
-    projectFirstScreenShotsInfo: '',
-    projectScreenShots: [],
+    
+    projectFirstScreenshots:{
+      Title:'NAVIGATE & CONNECT IN YOUR NEW CITY ',
+      Info:'UpKite offers direct chat for instant connections, comprehensive transportation info, personalized interest picks, and group joining, fostering community and seamless integration for newcomers in a new city.'
+    },
+    projectSecondScreenshots:{
+      Title:'A COHESIVE DESIGN SYSTEM FOR THE USERS',
+      Info:'Consistency is pivotal for a user-friendly app. By unifying design elements such as language, colors, typography, and icons, the Super Krishak app delivers a seamless visual experience across every section. This coherence cultivates familiarity and reduces cognitive strain, enabling users to concentrate on their primary goal—efficient agriculture learning'
+    },
+    projectScreenShots: [
+      '/assets/projects/Screenshots/Upkite/1.png',
+      '/assets/projects/Screenshots/Upkite/2.png',
+      '/assets/projects/Screenshots/Upkite/3.png',
+      '/assets/projects/Screenshots/Upkite/4.png',
+      '/assets/projects/Screenshots/Upkite/5.png',
+      '/assets/projects/Screenshots/Upkite/6.png',
+      '/assets/projects/Screenshots/Upkite/7.png',
+      '/assets/projects/Screenshots/Upkite/8.png',
+      '/assets/projects/Screenshots/Upkite/9.png',
+      '/assets/projects/Screenshots/Upkite/10.png',
+      '/assets/projects/Screenshots/Upkite/11.png',
+      '/assets/projects/Screenshots/Upkite/12.png',
+    ],
     projectFeatures: [] // No features added for Upkite
   },
   // {

@@ -197,7 +197,7 @@ function Upkite(){
                     ></Image>
                      
                     </div>
-                    {/* <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
+                    <div className="d-flex projectFirstScreenShotsSection position-relative GAPfxl MTfxl PTfxl">
                         <div className="projectInfo d-flex flex-column GAPm" style={{height:'fit-content'}}>
                             <h4 className="SIZEF12 w-100">
                             {project.projectFirstScreenshots.Title}
@@ -216,7 +216,7 @@ function Upkite(){
                                 ))}
                             </div>
                         </div>
-                </div> */}
+                </div>
                     </div>
             </section>
             <SubFooter/>
