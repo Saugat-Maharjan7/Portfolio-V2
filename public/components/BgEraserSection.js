@@ -130,7 +130,7 @@ function BGERASER() {
               </p>
             </div>
           </div>
-          <div className="designs-grid-container position-relative" style={{ overflow: 'hidden' }}>
+          <div className="designs-grid-container position-relative MTfxl" style={{ overflow: 'hidden' }}>
             {showTip && (
               <div className="tips position-absolute">
                 <h5>Tip:</h5>

@@ -95,7 +95,7 @@ function SuperKrishak(){
             <StarsCanvas starColor="#AFFFE4" starSize={1.5} numStars={150}/>
             {/* <Image src={Grain} alt="Grain Texture" style={{width:'100%',height:'100%',position:'absolute',zIndex:3,mixBlendMode:'overlay',opacity:0.5,pointerEvents:'none'}}></Image> */}
 
-            <main className="BGProjectsSuperKrishak100" style={{height:'100vh',width:'100%'}}>
+            <main className="" style={{height:'100vh',width:'100%',backgroundColor:project.color}}>
             <section className="projectHero position-relative PBm " >
                 <div className="projectContainer d-flex flex-column MTfxl GAPxxl">
                     <Image src={OrangeBall} className="position-absolute" priority={false} style={{right:0,top:"-100px",zIndex:0,pointerEvents:'none',opacity:0.8}} alt="OrangeBall"></Image>
