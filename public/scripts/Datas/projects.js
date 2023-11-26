@@ -122,14 +122,14 @@ export const projects = [
         ,methodImageLink:'/assets/projects/features/Upkite/Logoconcept.png',
       },
       {
-        methodName:'FINAL DESIGN',
-        methodInfo:"The integration of the initials 'U' and 'K' seamlessly within the design forms a cohesive and recognizable symbol that represents the app's identity. The use of bold and lively elements ensures visibility and makes a memorable impression, reflecting UpKite's commitment to facilitating connections and fostering a vibrant community within a new city."
-        ,methodImageLink:'/assets/projects/features/Upkite/Finallogo.png',
-      },
-      {
         methodName:'COLORS',
         methodInfo:"Inspired by the vibrant hues of urban dawn or dusk and the energetic tones found in nature, I selected lively colors for the UpKite logo. These shades evoke excitement and new beginnings, capturing the app's dynamic spirit and positive vibe."
         ,methodImageLink:'/assets/projects/features/Upkite/Colorpalette.png',
+      },
+      {
+        methodName:'FINAL DESIGN',
+        methodInfo:"The integration of the initials 'U' and 'K' seamlessly within the design forms a cohesive and recognizable symbol that represents the app's identity. The use of bold and lively elements ensures visibility and makes a memorable impression, reflecting UpKite's commitment to facilitating connections and fostering a vibrant community within a new city."
+        ,methodImageLink:'/assets/projects/features/Upkite/Finallogo.png',
       }],
     },
     projectBannerImage: '/assets/projects/ProjectBannerUpkite.jpg',

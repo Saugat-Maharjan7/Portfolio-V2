@@ -233,49 +233,22 @@ function Upkite(){
                     <h3 className="FONTNEXA">{project.projectResearch.Headline}</h3>
                 </div>
                 <div className="researchMethods d-flex flex-column GAPfxl">
-                    <div className="projectInfo d-flex GAPm">
-                        <h5 className="SIZEF12 ">
-                        {project.projectResearch.projectMethods[0].methodName} </h5>
-                        
-                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
-                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[0].methodInfo}</p>
-                          <Image src={project.projectResearch.projectMethods[0].methodImageLink}
-                          alt="Method Banner"
-                          width={1000} // Set an appropriate width
-                          height={814}
-                          layout="responsive"
-                          ></Image>
-                        </div>
-                   </div>
+                {project.projectResearch.projectMethods.map((method, index) => (
+  <div key={index} className="projectInfo d-flex GAPm">
+    <h5 className="SIZEF12">{method.methodName}</h5>
+    <div className="FONTNEXA SIZEF10 d-flex flex-column GAPxl">
+      <p className="FONTNEXA SIZEF10">{method.methodInfo}</p>
+      <Image
+        src={method.methodImageLink}
+        alt="Method Banner"
+        width={1000} // Set an appropriate width
+        height={814}
+        layout="responsive"
+      />
+    </div>
+  </div>
+))}
 
-                   <div className="projectInfo d-flex GAPm ">
-                        <h5 className="SIZEF12 ">
-                        {project.projectResearch.projectMethods[2].methodName} </h5>
-                        
-                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
-                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[2].methodInfo}</p>
-                          <Image src={project.projectResearch.projectMethods[2].methodImageLink}
-                          alt="Method Banner"
-                          width={1000} // Set an appropriate width
-                          height={814}
-                          layout="responsive"
-                          ></Image>
-                        </div>
-                   </div>
-                   <div className="projectInfo d-flex GAPm ">
-                        <h5 className="SIZEF12 ">
-                        {project.projectResearch.projectMethods[1].methodName} </h5>
-                        
-                        <div className=" FONTNEXA SIZEF10 d-flex flex-column GAPxl ">
-                          <p className=" FONTNEXA SIZEF10">{project.projectResearch.projectMethods[1].methodInfo}</p>
-                          <Image src={project.projectResearch.projectMethods[1].methodImageLink}
-                          alt="Method Banner"
-                          width={1000} // Set an appropriate width
-                          height={814}
-                          layout="responsive"
-                          ></Image>
-                        </div>
-                   </div>
                    </div>       
                     
                     </div>
