@@ -1,51 +1,67 @@
-
-import '../styles/globals.css';
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { useState,useEffect } from 'react';
-import "../styles/style.scss";
-import Head from "../public/components/header"
-import Router from "next/router"
-
-
-
-
-
+import { motion, AnimatePresence } from 'framer-motion';
+import '../styles/style.scss';
 
 function MyApp({ Component, pageProps }) {
-const router=useRouter()
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setLoadingProgress((prevProgress) => {
+        if (prevProgress < 100) {
+          return prevProgress + 25; // Increase the progress by 10% every 1 second
+        } else {
+          setIsLoading(false);
+          return 100;
+        }
+      });
+    }, 1000); // 1 second interval
 
-  return( 
-    <AnimatePresence mode='wait'>
-      
-  <motion.div key={router.pathname} 
+    return () => clearInterval(timer);
+  }, []);
 
-className='Base-page' >
-      {/* <Pagetransition/> */}
-      <Component {...pageProps}/>
-{/* Page Transition */}
-      <motion.div 
-      className='slide-in'
-      initial={{scaleY:0}}
-      animate={{scaleY:0}}
-      exit={{scaleY:1}}
-      transition={{duration:1,ease:[0.22,1,0.36,1]}}
-      >
+  if (isLoading) {
+    return (
+      <div className="loader-wrapper">
+        <div>
+          <img src="/assets/rocket.gif" alt="Rocket GIF" />
+          <div className="d-flex flex-column">
+            <p>Initiating Launch</p>
+            <div className="load-bar">
+              <div className="load-fill" style={{ width: `${loadingProgress}%` }}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div key={router.pathname} className="Base-page">
+        {/* Page Transition */}
+        <motion.div
+          className="slide-in"
+          initial={{ scaleY: 0 }}
+          animate={{ scaleY: 0 }}
+          exit={{ scaleY: 1 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        ></motion.div>
+        <Component {...pageProps} />
+        {/* Page Transition */}
+        <motion.div
+          className="slide-out"
+          initial={{ scaleY: 1 }}
+          animate={{ scaleY: 0 }}
+          exit={{ scaleY: 0 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        ></motion.div>
       </motion.div>
-      <motion.div 
-      className='slide-out'
-      initial={{scaleY:1}}
-      animate={{scaleY:0}}
-      exit={{scaleY:0}}
-      transition={{duration:1,ease:[0.22,1,0.36,1]}}
-      >
-      </motion.div>
-</motion.div>
-</AnimatePresence>
-  )
-  return ()=>clearTimeout(timer)
-
+    </AnimatePresence>
+  );
 }
 
-export default MyApp  
+export default MyApp;

@@ -234,20 +234,20 @@ function Upkite(){
                 </div>
                 <div className="researchMethods d-flex flex-column GAPfxl">
                 {project.projectResearch.projectMethods.map((method, index) => (
-  <div key={index} className="projectInfo d-flex GAPm">
-    <h5 className="SIZEF12">{method.methodName}</h5>
-    <div className="FONTNEXA SIZEF10 d-flex flex-column GAPxl">
-      <p className="FONTNEXA SIZEF10">{method.methodInfo}</p>
-      <Image
-        src={method.methodImageLink}
-        alt="Method Banner"
-        width={1000} // Set an appropriate width
-        height={814}
-        layout="responsive"
-      />
-    </div>
-  </div>
-))}
+                  <div key={index} className="projectInfo d-flex GAPm">
+                    <h5 className="SIZEF12">{method.methodName}</h5>
+                    <div className="FONTNEXA SIZEF10 d-flex flex-column GAPxl">
+                      <p className="FONTNEXA SIZEF10">{method.methodInfo}</p>
+                      <Image
+                        src={method.methodImageLink}
+                        alt="Method Banner"
+                        width={1000} // Set an appropriate width
+                        height={814}
+                        layout="responsive"
+                      />
+                    </div>
+                  </div>
+                ))}
 
                    </div>       
                     

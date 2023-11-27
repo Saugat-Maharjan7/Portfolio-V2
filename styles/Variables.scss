@@ -7,8 +7,9 @@
 
 //these are the custom variables
 
-$primary-orange:#FB722E;
+$primary-orange:getColor(Brand,Orange ,500 );
 $primary-vio:#C25FFD;
+$primary-black:getColor(Brand,Black ,500 );
 $primary: #FB722E;
 
 $zindex-dropdown:                   1000 !default;

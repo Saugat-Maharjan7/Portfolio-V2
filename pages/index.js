@@ -16,6 +16,7 @@ import Sidenavigation from "../public/components/side-navigation";
 import Typewriter from 'typewriter-effect';
 import {projects} from '../public/scripts/Datas/projects'; //projects database
 import BGERASER from "../public/components/BgEraserSection";
+// import LocomotiveScroll from 'locomotive-scroll';
 
 
 
