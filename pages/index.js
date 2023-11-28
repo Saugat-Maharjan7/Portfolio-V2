@@ -73,7 +73,7 @@ export default function Home() {
       setTime(torontoTime); 
     }, 1000);
 
-    // timezone has been changed
+    // timezone has been changed please add this
   
     return () => clearInterval(interval);
   }, []);
