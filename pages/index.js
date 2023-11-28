@@ -69,12 +69,13 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       const date = new Date();
-      const localTime = date.toLocaleTimeString();
-      setTime(localTime);
+      const torontoTime = date.toLocaleTimeString('en-US', { timeZone: 'America/Toronto' });
+      setTime(torontoTime);
     }, 1000);
-
+  
     return () => clearInterval(interval);
   }, []);
+  
 
   //side-bar toggle
 
