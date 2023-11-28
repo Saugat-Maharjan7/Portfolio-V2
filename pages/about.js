@@ -74,7 +74,7 @@ function About(){
         </Head>
         <Mouse></Mouse>
         <SubHead></SubHead>
-        <main className='aboutMain BGBrandBlack500'>
+        <main className='aboutMain BGBrandBlack500 pt-8	'>
           
           <section className="about-hero container-fluid position-relative BGNaturalWhite100">
             <img className="blur_purple_1 position-absolute" src="https://i.ibb.co/gMHM5rm/blur-purple.png" alt="purple light" />

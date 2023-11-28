@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/style.scss';
+import '../styles/globals.css';
+
+
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
