@@ -66,17 +66,17 @@ export default function Home() {
     }, []);
 
   //for time
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const date = new Date();
-      const torontoTime = date.toLocaleTimeString('en-US', { timeZone: 'America/Toronto' });
-      setTime(torontoTime); 
-    }, 1000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const date = new Date();
+  //     const torontoTime = date.toLocaleTimeString('en-US', { timeZone: 'America/Toronto' });
+  //     setTime(torontoTime); 
+  //   }, 1000);
 
-    // timezone has been changed
+  //   // timezone has been changed
   
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
   
 
   //side-bar toggle
