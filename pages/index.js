@@ -70,8 +70,10 @@ export default function Home() {
     const interval = setInterval(() => {
       const date = new Date();
       const torontoTime = date.toLocaleTimeString('en-US', { timeZone: 'America/Toronto' });
-      setTime(torontoTime);
+      setTime(torontoTime); 
     }, 1000);
+
+    // timezone has been changed
   
     return () => clearInterval(interval);
   }, []);
