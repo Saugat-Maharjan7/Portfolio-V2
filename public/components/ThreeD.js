@@ -1,21 +1,24 @@
-import { useRef,useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 
 function ThreeD(){
   const porscheVideoref=useRef();
-
+  const modelRow1Ref = useRef();
+  const modelRow2Ref = useRef();
   useEffect(()=>{
     porscheVideoref.current.play()
 
   })
-
+ 
     return(
       
         <section>
       
 
         <div className="container">
-          <div className="border-l-r-b d-flex flex-row container-title">
+          <div style={{borderTop:'1px solid white'}} className="border-l-r-b d-flex flex-row container-title">
             <div className=" container-header d-flex align-items-center" >
               <h2 className="secton-header-h2">3D AND ANIMATION</h2>
             </div>
@@ -32,24 +35,21 @@ function ThreeD(){
         </div>
         <div className="container-fluid models">
           <div className="models-container d-flex flex-column">
-            <div className="model-row1 d-flex flex-row">
+            <div className="model-row1 d-flex flex-row" ref={modelRow1Ref}>
               <div className="threeD " id="threeD-0"><img src="https://i.ibb.co/yVmq85q/iron-man.png" alt="Iron Man" /></div>
               <div className="threeD" id="threeD-1"><img src="https://i.ibb.co/cwtbd4y/omnitrix.png" alt="Omnitrix" /></div>
               <div className="threeD" id="threeD-2">
                 <video className="threeDvideo" src="../assets/videos/horsenft.mp4" id="nft" autoPlay loop muted > 
                 </video></div>
               <div className="threeD" id="threeD-3"><img src="https://i.ibb.co/RBzCRfD/PSG.png" alt="PSG" /></div>
-              <div className="threeD invisible" id="threeD-0" />
             </div>
-            <div className="model-row2 d-flex flex-row ">
-              <div className="threeD invisible" id="threeD-0" />
+            <div className="model-row2 d-flex flex-row " ref={modelRow2Ref}>
               <div className="threeD " id="threeD-0"><img src="https://i.ibb.co/ZNyMWQh/logistics.png" alt="Iron Man" /></div>
               <div className="threeD" id="threeD-2">
               <video ref={porscheVideoref} className="threeDvideo" src="../assets/videos/car.mp4" id="nft" loop muted /> 
               </div>
               <div className="threeD" id="threeD-1"><img src="https://i.ibb.co/C1Ddcps/clonexself.png" alt="Omnitrix" /></div>
               <div className="threeD" id="threeD-3"><img src="https://i.ibb.co/xStFcCQ/arcreactor.png" alt="PSG" /></div>
-              <div className="threeD invisible" id="threeD-0" />
             </div>
           </div>
         </div>
@@ -59,3 +59,4 @@ function ThreeD(){
 }
 
 export default ThreeD;
+

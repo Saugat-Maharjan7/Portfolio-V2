@@ -27,9 +27,11 @@ function MyApp({ Component, pageProps }) {
     return (
       <div className="loader-wrapper">
         <div>
-          <img src="/assets/rocket.gif" alt="Rocket GIF" />
-          <div className="d-flex flex-column">
-            <p>Initiating Launch</p>
+          <img src="/assets/rocketslow.gif" alt="Rocket GIF" />
+          <div className="d-flex flex-column justify-content-between">
+            <div className="d-flex flex-row justify-content-between"><p>Initiating Launch</p>
+            <p>{`${loadingProgress}%`}</p></div>
+            
             <div className="load-bar">
               <div className="load-fill" style={{ width: `${loadingProgress}%` }}></div>
             </div>

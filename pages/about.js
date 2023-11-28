@@ -96,7 +96,7 @@ function About(){
                   </div>
                   <img src="https://i.ibb.co/RNhPV5t/rotate-circle.png" alt="rotate-circle" className="rotation-text" border={0} />
                 </div>
-                <video ref={profileVideoref} src="/assets/videos/profile.mp4" className="prof-video" loop muted plays-inline> 
+                <video ref={profileVideoref} src="/assets/videos/profile.mp4" className="prof-video" loop muted playsInline={true}> 
                     </video>                
               </div>
             </div></div>
@@ -151,7 +151,7 @@ For me, having a solid set of tools and knowledge is an absolute game-changer. T
               ref={arsenalVideoRef} 
               className="arsenal-video"
               src="/assets/videos/Balls.mp4"
-              id="arsenalVideo" muted plays-inline />
+              id="arsenalVideo" muted playsInline={true} />
             </div>
           </section>
           <section className="experience-section"><div className="background">

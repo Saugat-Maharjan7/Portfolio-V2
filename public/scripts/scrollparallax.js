@@ -8,7 +8,7 @@ if(window.innerWidth>990){
     scrollable.addEventListener('scroll',()=>{
         for (let i=0;i<=1000;i++){
             let top=scrollable.scrollTop;
-            t=top+i*.1  
+            let t=top+i*.1  
             let x=t/1000;
             console.log(t)
 

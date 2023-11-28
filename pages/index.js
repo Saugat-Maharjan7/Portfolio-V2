@@ -16,7 +16,7 @@ import Sidenavigation from "../public/components/side-navigation";
 import Typewriter from 'typewriter-effect';
 import {projects} from '../public/scripts/Datas/projects'; //projects database
 import BGERASER from "../public/components/BgEraserSection";
-// import LocomotiveScroll from 'locomotive-scroll';
+import React from 'react';
 
 
 
@@ -35,6 +35,31 @@ export default function Home() {
       { targetClass: "designs-grid-container", hoverClass: "mouse-cursor-brush",pressClass: "mouse-cursor-brushed" },
       // Add more objects for additional target elements and hover classes
     ];
+    
+
+    //for smooth scroll
+    useEffect(() => {
+      const handleScroll = () => {
+        const currentPosition = window.pageYOffset;
+        const sections = document.querySelectorAll('section');
+  
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 50; // Adjust offset as needed
+          const sectionHeight = section.clientHeight;
+  
+          if (currentPosition >= sectionTop && currentPosition < sectionTop + sectionHeight) {
+            const name = section.getAttribute('name');
+            window.history.replaceState(null, null, `#${name}`);
+          }
+        });
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
   //for time
   useEffect(() => {
@@ -190,33 +215,40 @@ YOU'VE SAFELY LANDED ON MY DESIGN WORLD
             <div className="container d-flex flex-row " style={{justifyContent: 'center'}}>
               {/* projects container */}
               <ul className="border-l-r-b project-contents">
-              {projects.filter(project => project.featured === true).map((project) => (
-                   <li className="project d-flex " id={project.title} key={project.id}>
-                   <div className="p-left d-flex flex-column">
-                     <div className="project-detail d-flex flex-column">
-                       <span className="project-leading"> {/* Mapping responsibilities */}
-                        {project.responsibilities.map((responsibility, index) => (
-                          <span className="MRs" key={index}>{responsibility} .</span>
-                        ))}</span>
-                       <h3 className="allCaps">       
-                         {project.title}
-                       </h3>
-                       <p className="project-details"> {project.projectBrief}
-                       </p>
-                     </div>
-                     <Link className="btn btn-outline-primary position-relative" href={project.link}>
-                       VIEW CASE STUDY <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
-                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
-                       </svg></Link>
-                   </div>
-                   <Link href={project.link} className="p-right d-flex align-items-center justify-content-center position-relative">
-                     <div className="position-absolute sub-image"  >
-                      <img src={project.projectMascotImageLink} alt="Project Mascot"></img>
-                     </div>
-                     <img className="rightimg" src={project.featuredImageLink} alt="featured-image" />
-                   </Link>
-                 </li>
-                    ))}
+              {projects.filter(project => project.featured === true).map((project, index, array) => (
+                <React.Fragment key={project.id}>
+                  <li  className="project d-flex" id={project.title} >
+                    <div className="p-left d-flex flex-column">
+                      <div className="project-detail d-flex flex-column">
+                        <span className="project-leading">
+                          {/* Mapping responsibilities */}
+                          
+                            <span className="MRs">{project.responsibilities} .</span>
+                          
+                        </span>
+                        <h3 className="allCaps">{project.title}</h3>
+                        <p className="project-details">{project.projectBrief}</p>
+                      </div>
+                      <Link className="btn btn-outline-primary position-relative" href={project.link}>
+                        VIEW CASE STUDY
+                        <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-send-fill" viewBox="0 0 16 16">
+                          <path d="M15.964.686a.5.5 0 0 0-.65-.65L0.767 5.855H0.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+                        </svg>
+                      </Link>
+                    </div>
+                    <Link href={project.link} className="p-right d-flex align-items-center justify-content-center position-relative">
+                      <div className="position-absolute sub-image">
+                        <img src={project.projectMascotImageLink} alt="Project Mascot" />
+                      </div>
+                      <img className="rightimg" src={project.featuredImageLink} alt="featured-image" />
+                    </Link>
+                    
+                  </li>
+        {index !== array.length - 1 && ( // Add a div except for the last project
+      <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
+    )}
+        </React.Fragment>
+      ))}
                 
                 
               </ul>
