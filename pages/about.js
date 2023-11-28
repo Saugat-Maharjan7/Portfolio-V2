@@ -87,7 +87,7 @@ function About(){
                   <li>UX DESIGNER</li>
                 </ul></div>
             </div>
-            <h6 >In the field for over 5 years. Currently based in Kathmandu.</h6>
+            <h6 >In the field for over 5 years. Currently based in Brampton.</h6>
             <div className="about-video">
             <div className="container-fluid d-flex align-items-center justify-content-center  video-slideshow">
               <div className="video-show position-relative">
