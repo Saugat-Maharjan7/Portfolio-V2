@@ -13,7 +13,6 @@ import ImageGravityCanvas from "../../public/components/ImageGravityCanvas"
 import SubFooter from '../../public/components/subfooter';
 
 
-
 function Upkite(){
 
 
