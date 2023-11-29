@@ -38,10 +38,12 @@ function SuperKrishak(){
 
     useEffect(() => {
       const parallaxEffect = (event) => {
+        
         const parallaxImages = document.querySelectorAll('.parallax-image');
         const deltaY = event.deltaY;
-  
+        
         parallaxImages.forEach((image) => {
+
           const speed = parseFloat(image.getAttribute('data-speed')) || 0.4; // Default speed if not specified
           image.style.transform = `translateY(${deltaY * speed}px)`;
         });
@@ -259,7 +261,7 @@ function SuperKrishak(){
                     height={465}
                     layout="responsive"
                     className="parallax-image"
-                    data-speed="0.2" // Speed of parallax effect
+                    data-speed="20" // Speed of parallax effect
                      style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
                     ></Image>
                      
@@ -315,7 +317,7 @@ function SuperKrishak(){
                     height={814}
                     layout="responsive"
                     className="parallax-image"
-                    data-speed="0.2" // Speed of parallax effect
+                    data-speed="20" // Speed of parallax effect
                     style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
                     ></Image>
                     </div>
@@ -368,7 +370,7 @@ function SuperKrishak(){
                     height={814}
                     layout="responsive"
                     className="parallax-image"
-                    data-speed="0.2" // Speed of parallax effect
+                    data-speed="20" // Speed of parallax effect
                     style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
                     ></Image>
                     </div>

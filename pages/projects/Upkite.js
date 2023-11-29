@@ -191,7 +191,7 @@ function Upkite(){
                     height={465}
                     layout="responsive"
                     className="parallax-image"
-                    data-speed="0.2" // Speed of parallax effect
+                    data-speed="20" // Speed of parallax effect
                      style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
                     ></Image>
                      
