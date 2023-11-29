@@ -135,11 +135,11 @@ export default function Home() {
 
         {/* switch button */}
 
-        <div  ref={exploreref} className={`${styles.toggleWrapper} explore-world` } onClick={()=>setChecked(!checked)}>
+        {/* <div  ref={exploreref} className={`${styles.toggleWrapper} explore-world` } onClick={()=>setChecked(!checked)}>
         <div
           className={`${styles.toggleSwitch} ${checked ? styles.checked : ''} ${!checked ? styles.unchecked:''}`}
         />
-      </div>
+      </div> */}
 
       {/* Mobile Navigation */}
       <Sidenavigation isSidebarOpen={isSidebarOpen}></Sidenavigation>
