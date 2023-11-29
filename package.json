@@ -17,6 +17,7 @@
     "@react-three/fiber": "^8.9.1",
     "@studio-freight/lenis": "^1.0.28",
     "@tokens-studio/sd-transforms": "^0.9.8",
+    "@vercel/analytics": "^1.1.1",
     "bootstrap": "^5.2.3",
     "dat": "^14.0.3",
     "dat.gui": "^0.7.9",
