@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/style.scss';
 import '../styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -46,6 +47,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AnimatePresence mode="wait">
+              <Analytics />
+
       <motion.div key={router.pathname} className="Base-page">
         {/* Page Transition */}
         <motion.div
