@@ -28,6 +28,12 @@ function Upkite(){
   },      
   { message: project.projectPlanning.projectPlanningMethods[2].Research.Questions[2].Question, styles: {backgroundColor:project.colorDarker,width:'fit-content'}
 },
+{ message: project.projectPlanning.projectPlanningMethods[2].Research.Questions[3].Question, styles: {backgroundColor:project.colorDarker,width:'fit-content'}
+},
+{ message: project.projectPlanning.projectPlanningMethods[2].Research.Questions[4].Question, styles: {backgroundColor:project.colorDarker,width:'fit-content'}
+},
+{ message: project.projectPlanning.projectPlanningMethods[2].Research.Questions[5].Question, styles: {backgroundColor:project.colorDarker,width:'fit-content'}
+},
     ];
     const titleLetters = project.LeadingTitle.split('');
 
