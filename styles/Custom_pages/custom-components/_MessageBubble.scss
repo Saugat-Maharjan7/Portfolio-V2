@@ -1,0 +1,24 @@
+@import "../../Variables.scss";
+
+.MessageBulb{
+    padding: getSpacing('xl') getSpacing('s');
+}
+
+.meSender{
+    width: 40px;
+height: 40px;
+border-radius:getBorderRadius(100);
+border: 4px solid white;
+}
+.messages{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .message{
+        padding: getSpacing('m');
+        font-family: 'NexaLight';
+        font-size: 16px;
+        background-color: $primary-orange;
+        border-radius: 0 getBorderRadius('l') getBorderRadius('l') getBorderRadius('l');
+    }
+}

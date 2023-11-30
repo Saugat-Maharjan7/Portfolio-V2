@@ -5,6 +5,7 @@ export const projects = [
     title: 'Super Krishak',
     color:'#15BC84',
     colorLight:'#AFFFE4',
+    colorDarker:'#016F4A',
     link: '/projects/SuperKrishak',
     LeadingTitle: 'Agriculture learning made easier than ever.',
     finishedYear: 2023,
@@ -90,6 +91,7 @@ export const projects = [
     link: '/projects/Upkite',
     color:'#511368',
     colorLight:'#B72FE9',
+    colorDarker: '#420658',
     featured:true,
     featuredImageLink:'/assets/projects/featuredimages/Upkite.png',
     LeadingTitle: 'Essential Partner for Easy Integration in a New City',
@@ -110,13 +112,13 @@ export const projects = [
       Info:'UpKite accelerates familiarity by offering personalized recommendations, connecting users with like-minded individuals, and providing essential information on local services and transportation, expediting their acquaintance with the new city.',
     },
     
-    projectResearch:{
+    projectArtDirection:{
       Headline:'Art Direction',
       Title:'',
       Info:'',
       BannerLink:'',
 
-      projectMethods:[{
+      projectArtDirectionMethods:[{
         methodName:'LOGO CONCEPT',
         methodInfo:"During the creation of the UpKite logo, my focus was on infusing elements of fun and connectivity. I brainstormed playful imagery and activities, aiming to seamlessly integrate the initials 'U' and 'K' into the design. My goal was to craft a logo that not only represents the app's purpose but also embodies a vibrant and engaging spirit."
         ,methodImageLink:'/assets/projects/features/Upkite/Logoconcept.png',
@@ -127,11 +129,63 @@ export const projects = [
         ,methodImageLink:'/assets/projects/features/Upkite/Colorpalette.png',
       },
       {
-        methodName:'FINAL DESIGN',
+        methodName:'FINAL LOGO',
         methodInfo:"The integration of the initials 'U' and 'K' seamlessly within the design forms a cohesive and recognizable symbol that represents the app's identity. The use of bold and lively elements ensures visibility and makes a memorable impression, reflecting UpKite's commitment to facilitating connections and fostering a vibrant community within a new city."
         ,methodImageLink:'/assets/projects/features/Upkite/Finallogo.png',
       }],
     },
+    projectPlanning : {
+      Headline: 'Product Planning and Research',
+      Title: '',
+      Info: '',
+      BannerLink: '',
+      projectPlanningMethods: [
+        {
+          methodName: 'DEFINING THE PROBLEM STATEMENT',
+          methodInfo: {
+            Info: [
+              "The product aims to solve the challenge of simplifying and enhancing travelers' experiences by providing comprehensive guidance for accommodations, dining options, and attractions, ensuring access to the best deals in cities, and offering personalized recommendations based on user preferences within nearby locations."
+              ,
+              "So I reached out to individuals in my social circle who had recently visited or moved to a new place and country, and these were their primary concerns:"
+            ],
+            UserConcerns: "So I reached out to individuals in my social circle who had recently visited or moved to a new place and country, and these were their primary concerns."
+          },
+          methodImageLink: '/assets/projects/features/Upkite/planning1.png'
+        },
+        {
+          methodName: 'USER BASE',
+          methodInfo: {
+            Info: [
+              "The user base  would be a mix of professionals, adventurers, bloggers, frequent flyers, retirees, students, and study abroad participants. Each group has unique travel needs, from business convenience to student affordability, creating a diverse landscape of preferences and priorities within the app.",
+            ],
+          },
+          methodImageLink: '/assets/projects/features/Upkite/planning2.png'
+        },
+        {
+          methodName: 'ASKING THE RIGHT QUESTIONS',
+          methodInfo: {
+            Info: [
+              "During my user interviews for Upkite, patterns emerged in people's responses, prompting me to reconsider my questioning approach. I found that vague questions didn't yield the insights I needed. To address this, I honed in on specific problem areas linked to trip planning, documentation, and sharing. This significantly improved my conversations with potential users as I delved into their pre-, during-, and post-travel planning methods.",
+            ],
+          },  
+          Research:{
+            Questions:[
+              {
+                Question:'How long have/had you been to new city?'
+              },
+              {
+                Question:'What language is mostly used in the country?'
+              },
+              {
+                Question:'In short, what things were very important to take note of while visiting the country/place for the first time?'
+              },
+            ]
+          },       
+        }
+      ],
+
+    },
+   
     projectBannerImage: '/assets/projects/ProjectBannerUpkite.jpg',
     
     projectFirstScreenshots:{

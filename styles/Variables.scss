@@ -449,6 +449,26 @@ $Sizes: (
     @return map-get($Spacing, $abbreviation);
   }
 
+  $BorderRadius: (
+    0:map-get($Sizes, 0 ),      // zero   0
+    xs:map-get($Sizes, 2 ),    // x-small 4px
+    s: map-get($Sizes, 4),    // small    8px
+    m: map-get($Sizes, 8),    // medium   16px
+    l: map-get($Sizes, 12),    // large   24px
+    xl: map-get($Sizes, 16),  // x-large  32px
+    xxl: map-get($Sizes, 20), // xx-large 40px
+    xxxl: map-get($Sizes, 26), // xx-large 52px
+    fxl: map-get($Sizes, 38), // xx-large 58px
+    100:map-get($Sizes, 50)
+
+
+    // Add more abbreviations as needed
+  );
+
+  @function getBorderRadius($radius) {
+    @return map-get($BorderRadius, $radius);
+  }
+
   // Your element using the getSpacing function
 // .your-element {
 //     padding: getSpacing('m'); // Adjust the abbreviation as needed

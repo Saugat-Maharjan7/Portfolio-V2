@@ -11,13 +11,24 @@ import { useInView } from 'react-intersection-observer';
 import { projects } from "../../public/scripts/Datas/projects";
 import ImageGravityCanvas from "../../public/components/ImageGravityCanvas"
 import SubFooter from '../../public/components/subfooter';
+import MessageBubble from "../../public/components/MessageBubble"
 
 
 function Upkite(){
 
+  
+
 
      // Find the project with id: 1
     const project = projects.find((project) => project.id === 2);
+    const messages = [
+      { message: project.projectPlanning.projectPlanningMethods[2].Research.Questions[0].Question, styles: {backgroundColor:project.colorDarker,width:'fit-content'}
+    },
+    { message: project.projectPlanning.projectPlanningMethods[2].Research.Questions[1].Question, styles: {backgroundColor:project.colorDarker,width:'fit-content'}
+  },      
+  { message: project.projectPlanning.projectPlanningMethods[2].Research.Questions[2].Question, styles: {backgroundColor:project.colorDarker,width:'fit-content'}
+},
+    ];
     const titleLetters = project.LeadingTitle.split('');
 
     const mouseTargetElements = [
@@ -26,7 +37,7 @@ function Upkite(){
       // Add more objects for additional target elements and hover classes
     ];
 
-    const numSections = 4; // Define the number of sections you want to handle
+    const numSections = 6; // Define the number of sections you want to handle
 
     const lineControls = Array.from({ length: numSections }, () => useAnimation());
     const linerefs = Array.from({ length: numSections }, () => useInView({ threshold: 0.8 }));
@@ -229,10 +240,10 @@ function Upkite(){
               animate={lineControls[3]}
             ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">03</span>
-                    <h3 className="FONTNEXA">{project.projectResearch.Headline}</h3>
+                    <h3 className="FONTNEXA">{project.projectArtDirection.Headline}</h3>
                 </div>
                 <div className="researchMethods d-flex flex-column GAPfxl">
-                {project.projectResearch.projectMethods.map((method, index) => (
+                {project.projectArtDirection.projectArtDirectionMethods.map((method, index) => (
                   <div key={index} className="projectInfo d-flex GAPm">
                     <h5 className="SIZEF12">{method.methodName}</h5>
                     <div className="FONTNEXA SIZEF10 d-flex flex-column GAPxl">
@@ -249,6 +260,53 @@ function Upkite(){
                 ))}
 
                    </div>       
+                    
+                    </div>
+            </section>
+            <section className="MTfxl PBfxl projectContent">
+            <div className="projectContainer d-flex flex-column MTxl GAPxxl "            >
+                <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                <motion.div
+              className="topLine"
+              ref={linerefs[4][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[4]}
+            ></motion.div>
+                    <span className="FONTMONUMENT SIZEF16">04</span>
+                    <h3 className="FONTNEXA">{project.projectPlanning.Headline}</h3>
+                </div>
+                <div className="researchMethods d-flex flex-column GAPfxl">
+  {project.projectPlanning.projectPlanningMethods.map((method, index) => (
+    <div key={index} className="projectInfo d-flex GAPm">
+      <h5 className="SIZEF12">{method.methodName}</h5>
+      <div className="FONTNEXA SIZEF10 d-flex flex-column GAPxl">
+        {method.methodInfo.Info && method.methodInfo.Info.map((Info, infoIndex) => (
+          <p key={infoIndex} className="FONTNEXA SIZEF10">{Info}</p>
+        ))}
+       {method.methodImageLink && (
+        <Image
+          src={method.methodImageLink}
+          alt="Method Banner"
+          width={1000} // Set an appropriate width
+          height={814}
+          layout="responsive"
+        />
+)}
+        {method.Research && (
+                <MessageBubble messages={messages}/>
+
+)}
+      
+
+       
+      </div>
+    </div>
+  ))}
+  
+</div>
+
+      
                     
                     </div>
             </section>
