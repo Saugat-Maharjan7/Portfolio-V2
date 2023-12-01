@@ -12,12 +12,13 @@ import { projects } from "../../public/scripts/Datas/projects";
 import ImageGravityCanvas from "../../public/components/ImageGravityCanvas"
 import SubFooter from '../../public/components/subfooter';
 import MessageBubble from "../../public/components/MessageBubble"
+import Button from "../../public/components/Button";
 
 
 function Upkite(){
 
   
-
+  
 
      // Find the project with id: 1
     const project = projects.find((project) => project.id === 2);
@@ -300,12 +301,9 @@ function Upkite(){
         />
 )}
         {method.Research && (
-                <MessageBubble messages={messages}/>
-
+                <MessageBubble messages={messages} variant="receiver"/>
+                
 )}
-      
-
-       
       </div>
     </div>
   ))}

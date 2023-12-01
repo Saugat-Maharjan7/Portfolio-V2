@@ -134,16 +134,14 @@
                 gap:2rem;
                 order: 1;
                
-                a{
-                  
-                }
+               
                 
                    // Small devices (Potrait phones, 576px and up)
     
                    @media (min-width: 350px) {
                     order:2;             
                     
-                    a{
+                    button{
                         width: 100%;
                     }
                      }
@@ -152,7 +150,7 @@
                 @media (min-width: 576px) {
                     order:2   ;
                     padding: 2rem 0;
-                    a{
+                    button{
                         width: 100;
                     }             
                 }
@@ -161,7 +159,7 @@
                 @media (min-width: 768px) {
                     order:2    ;
                     padding: 2.5rem 0;
-                    a{
+                    button{
                         width: 100;
                        
                     }            
@@ -171,7 +169,7 @@
                 @media (min-width: 992px) {
                     order:1   ;
                     padding: 4rem 0; 
-                    a{
+                    button{
                         width: fit-content;
                         
                     }      
@@ -182,7 +180,7 @@
                 @media (min-width: 1200px) {
                     order:1   ;
                     padding: 4rem 0;
-                    a{
+                    button{
                         width: fit-content;
                       
                     }         
@@ -192,7 +190,7 @@
                 @media (min-width: 1400px) {
                     order:1 ;
                     padding: 4rem 0;
-                    a{
+                    button{
                         width: fit-content;
                       
                     }

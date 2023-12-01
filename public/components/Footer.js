@@ -1,6 +1,7 @@
 import SubFooter from "./subfooter";
-import IconButton from "./IconButton";
+// import IconButton from "./IconButton";
 import Link from "next/link";
+import Button from "./Button";
 
 function Footer(){
     return(
@@ -13,17 +14,17 @@ function Footer(){
                 <span>We can still keep in touch though...</span>
               </div>
               <div style={{width:'fit-content'}}  className="contact d-flex  flex-row ">
-                <div  className="d-flex flex-row GAPm align-items-center ">
-                <span className="SIZEF8 TXTTailwindGray400">Leave a Message: </span>
-                <Link href="/contact" style={{textDecoration:"none"}}>
-                  <IconButton icon={
-                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chat-right-dots" viewBox="0 0 16 16">
-                   <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
-                   <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                 </svg>
-                  }/>
+              <Link href="/contact" style={{textDecoration:"none"}}>
+                <Button size="medium" 
+                      type="alternate" 
+                      label="message" 
+                      rightIcon={
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
+                        </svg>
+                      } 
+                      />
                   </Link>
-                  </div>
               </div>
               <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
                         <li ><a className='TXTBrandOrange500 SIZEF6' href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
