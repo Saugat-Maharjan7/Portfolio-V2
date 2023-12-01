@@ -210,12 +210,12 @@ const ImageGravityCanvas = () => {
   const [isInView, setIsInView] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
   const images = useRef([
-    { src: '/assets/projects/reviews/SuperKrishak/review1.png', x: 1800, z: 0, y: 0, velocityY: 0 },
-    { src: '/assets/projects/reviews/SuperKrishak/review2.png', x: 0, z: 0, y: 0, velocityY: 0 },
-    { src: '/assets/projects/reviews/SuperKrishak/review3.png', x: 1800, z: 0, y: 0, velocityY: 0 },
-    { src: '/assets/projects/reviews/SuperKrishak/review4.png', x: 0, z: 0, y: 0, velocityY: 0 },
-    { src: '/assets/projects/reviews/SuperKrishak/review5.png', x: 1800, z: 0, y: 0, velocityY: 0 },
-    { src: '/assets/projects/reviews/SuperKrishak/review6.png', x: 0, z: 0, y: 0, velocityY: 0 },
+    { src: '/assets/projects/reviews/SuperKrishak/review1.png', x: 1800, z: 0, y: 0, velocityY: 4 },
+    { src: '/assets/projects/reviews/SuperKrishak/review2.png', x: 0, z: 0, y: 0, velocityY: 4 },
+    { src: '/assets/projects/reviews/SuperKrishak/review3.png', x: 1800, z: 0, y: 0, velocityY: 4 },
+    { src: '/assets/projects/reviews/SuperKrishak/review4.png', x: 0, z: 0, y: 0, velocityY:4 },
+    { src: '/assets/projects/reviews/SuperKrishak/review5.png', x: 1800, z: 0, y: 0, velocityY: 4 },
+    { src: '/assets/projects/reviews/SuperKrishak/review6.png', x: 0, z: 0, y: 0, velocityY: 4},
     // Add more images with their respective src and initial x positions here
   ]);
 
@@ -223,7 +223,7 @@ const ImageGravityCanvas = () => {
   const mouseOffsetX = useRef(0);
   const mouseOffsetY = useRef(0);
   const requestId = useRef(null);
-  const gravity = useRef(0.05);
+  const gravity = useRef(0.4);
   const lastImagePositions = useRef([]);
 
   // Function to check collision between two rectangles
