@@ -29,7 +29,8 @@ font-size: getSize(8);
 }
 
 .alertError{
-    background-color:red;color: white;
+    background-color:$primary-red;
+    color: white;
 }
 
 .AlertIconHolder{
