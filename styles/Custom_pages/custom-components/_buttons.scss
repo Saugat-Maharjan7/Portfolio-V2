@@ -249,8 +249,8 @@
 }
 
 .BTNBrandLoading{
-    background-color: getColor(Brand,Orange,100);
-    border: 1px solid getColor(Brand,Orange,100);
+    background-color: getColor(Brand,AlphaOrange,500);
+    border: 1px solid getColor(Brand,AlphaOrange,500);
     color: $primary-orange;
     transition: ease-in-out 0.2s ;
 
