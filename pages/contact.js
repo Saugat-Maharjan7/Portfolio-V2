@@ -1,8 +1,5 @@
-import Script from 'next/script'
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
-// import "../styles/Custom_pages/Contactpage.scss"
-// import profile from "../public/assets/videos/profile.mp4"
 import { motion as m } from "framer-motion"
 import Mouse from "../public/components/Mouse"
 import SubHead from "../public/components/subheader"
@@ -14,6 +11,8 @@ import Head from 'next/head';
 import IconButton from './../public/components/IconButton';
 import Alert from "../public/components/Alert";
 import Button from '../public/components/Button';
+import Input from '../public/components/input';
+import Textarea from '../public/components/textarea';
 
 
 function Contact(){
@@ -24,6 +23,8 @@ function Contact(){
   const [alertMessage, setAlertMessage] = useState(''); // State for the alert message
   const [viewWidth, setViewWidth] = useState(0);
   const [showAlertMessage, showAlert] = useState(false); // New state for success message
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -75,6 +76,9 @@ setForm({...form,[name]:value})
 
 const handleSubmit = (e) => {
   e.preventDefault(); // Prevents the default form submission behavior
+
+  setFormSubmitted(true);
+
 
    // Checking if any of the fields are empty before sending the email
    if (!form.name || !form.email || !form.message) {
@@ -255,65 +259,43 @@ const handleCopyClick = () => {
               method="post" // Add method="post" to use POST request
 
               >
-                <ul style={{overflowX:'hidden'}}>
-                  <m.li
-                  initial={{
-                    x:100,
-                    opacity:0
-                  }}
-                  
-                  animate={{
-                    x:0,
-                    opacity:1
-                  }}
-                  transition={{
-                    duration:1.5,
-  
-                   
-                  }}
-                  className='input-holder d-flex flex-column'>
-                    <label className='TXTNaturalWhite100'>What is your name?</label>
-                    <input name='name' type='text' id='name' value={form.name} onChange={handleChange} placeholder='e.g. Mike' required></input>
-                  </m.li>
-                  <m.li
-                   initial={{
-                    x:200,
-                    opacity:0
-                  }}
-                  
-                  animate={{
-                    x:0,
-                    opacity:1
-                  }}
-                  transition={{
-                    duration:1.5,
-  
-                   
-                  }}
-                  className='input-holder d-flex flex-column'>
-                    <label>What is your email?</label>
-                    <input name='email' type='email' id='name' value={form.email} onChange={handleChange} placeholder='e.g. Mike@gmail.com' required></input>
-                  </m.li>
-                  <m.li
-                   initial={{
-                    x:300,
-                    opacity:0
-                  }}
-                  
-                  animate={{
-                    x:0,
-                    opacity:1
-                  }}
-                  transition={{
-                    duration:1.5,
-  
-                   
-                  }}
-                  className='input-holder d-flex flex-column'>
-                    <label className='TXTNaturalWhite100'>Your Message</label>
-                    <textarea name='message' rows='7' type='text' id='name' value={form.message} onChange={handleChange} placeholder='Your Message Here' required></textarea>
-                  </m.li>
-                </ul>
+                  <ul  className='d-flex flex-column GAPxl'>
+        <Input
+          InputLabel="What is your name?"
+          type='text'
+          name='name'
+          value={form.name}
+          handleChange={handleChange}
+          placeholder='e.g. Mike'
+          required
+          errorMessage="Please enter your name"
+          formSubmitted={formSubmitted}
+        />
+        <Input
+          InputLabel="What is your email?"
+          type='email'
+          name='email'
+          value={form.email}
+          handleChange={handleChange}
+          placeholder='e.g. Mike@gmail.com'
+          required
+          errorMessage="Please enter a valid email"
+          formSubmitted={formSubmitted}
+
+        />
+        <Textarea
+          InputLabel="Your Message"
+          name='message'
+          rows={10}
+          value={form.message}
+          handleChange={handleChange}
+          placeholder='Your Message Here'
+          required
+          errorMessage="Please enter your message"
+          formSubmitted={formSubmitted}
+
+        />
+      </ul>
 
                 <Button
                 customButtonType=
@@ -324,17 +306,17 @@ const handleCopyClick = () => {
                 type="submit" // Set the type attribute for form submission
                 leftIcon=
                 {
-                  <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                  fill="currentColor"
-                  className="bi bi-send"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
-                </svg>
-                
+                <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={16}
+  height={16}
+  fill="currentColor"
+  className="bi bi-send"
+  viewBox="0 0 16 16"
+>
+  <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+</svg>
+
               }
               />
               
@@ -359,7 +341,3 @@ const handleCopyClick = () => {
 }
 
 export default Contact;
-
-
-
-

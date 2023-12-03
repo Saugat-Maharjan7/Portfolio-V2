@@ -96,7 +96,7 @@ body
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
-    background-color: $primary-black;//this is the main background-color
+    background-color: $primary-black!important;//this is the main background-color
 }
 
 
