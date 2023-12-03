@@ -13,9 +13,13 @@ import SubFooter from '../public/components/subfooter';
 import Head from 'next/head';
 import IconButton from './../public/components/IconButton';
 import Alert from "../public/components/Alert";
+import Button from '../public/components/Button';
 
 
 function Contact(){
+  const [customButtonTypeState, setcustomButtonTypeState]=useState('alternate')
+  const [formButtonLabelState, setformButtonLabelState]=useState('Send Message')
+  const [alertIconState,setAlertIcon]=useState('')
   const [alertState, setAlertState] = useState('')
   const [alertMessage, setAlertMessage] = useState(''); // State for the alert message
   const [viewWidth, setViewWidth] = useState(0);
@@ -70,8 +74,37 @@ setForm({...form,[name]:value})
 //service_395olyt
 
 const handleSubmit = (e) => {
-  e.preventDefault();
+  e.preventDefault(); // Prevents the default form submission behavior
+
+   // Checking if any of the fields are empty before sending the email
+   if (!form.name || !form.email || !form.message) {
+    showAlert(true);
+    setAlertState('error');
+    setAlertIcon(
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={16}
+      height={16}
+      fill="currentColor"
+      className="bi bi-exclamation-octagon"
+      viewBox="0 0 16 16"
+    >
+      <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1z" />
+      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+    </svg>
+      
+    )
+    setAlertMessage('Please fill in all fields');
+    // Hide  message after 3 seconds
+    setTimeout(() => {
+      showAlert(false);
+    }, 3000);
+    return;
+  }
+
   setLoading(true);
+  setcustomButtonTypeState('loading')
+  setformButtonLabelState('Sending Message...'); // Update the button label to "Sending..."
   setLoaded(true);
 
   emailjs
@@ -86,9 +119,19 @@ const handleSubmit = (e) => {
       console.log('Email sent!', response);
       // Show success message after successful submission
       showAlert(true);
+      setcustomButtonTypeState('alternate')
+      setformButtonLabelState('Send Message'); // Update the button label back to "Send" after sending
       setAlertState('success')
+      setAlertIcon(
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+      setformButtonLabelState('Send Message'); // Update the button label back to "Send" after sending
+
       setAlertMessage('Message Sent Successfully');
       setLoading(false);
+      
       setForm({ name: '', email: '', message: '' }); // Optionally reset the form fields
 
       // Hide success message after 3 seconds
@@ -136,10 +179,12 @@ const handleCopyClick = () => {
         </Head>
         <Mouse/>
         <m.div>
-        <Alert message={alertMessage} type={alertState} lefticon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-} className={showAlertMessage ?'alertMessageActive' : ''}/>
+        <Alert
+        message={alertMessage}
+        type={alertState} 
+        lefticon={
+          alertIconState
+        } className={showAlertMessage ?'alertMessageActive' : ''}/>
 
         <SubHead></SubHead>
        
@@ -206,7 +251,10 @@ const handleCopyClick = () => {
               <form 
               className='d-flex flex-column gap-5'
               ref={formref}
-              onSubmit={handleSubmit}>
+              onSubmit={handleSubmit}
+              method="post" // Add method="post" to use POST request
+
+              >
                 <ul style={{overflowX:'hidden'}}>
                   <m.li
                   initial={{
@@ -266,7 +314,30 @@ const handleCopyClick = () => {
                     <textarea name='message' rows='7' type='text' id='name' value={form.message} onChange={handleChange} placeholder='Your Message Here' required></textarea>
                   </m.li>
                 </ul>
-                <button type="submit" className="btn btn-outline-primary position-relative">Send</button>
+
+                <Button
+                customButtonType=
+                {customButtonTypeState} // Set the customButtonType prop
+                size="medium"
+                label={formButtonLabelState}
+                onClick={handleSubmit}
+                type="submit" // Set the type attribute for form submission
+                leftIcon=
+                {
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={16}
+                  height={16}
+                  fill="currentColor"
+                  className="bi bi-send"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                </svg>
+                
+              }
+              />
+              
               </form>
               </div>
 

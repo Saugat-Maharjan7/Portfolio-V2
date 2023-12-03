@@ -19,7 +19,7 @@ border: 4px solid white;
         font-family: 'NexaLight';
         font-size: 16px;
         background-color: $primary-orange;
-        border-radius: 0 getBorderRadius('l') getBorderRadius('l') getBorderRadius('l');
+        border-radius: getBorderRadius('l')   getBorderRadius('l')  getBorderRadius('l') 0;
     }
 
     .message-reverse{
@@ -27,6 +27,6 @@ border: 4px solid white;
         font-family: 'NexaLight';
         font-size: 16px;
         background-color: $primary-orange;
-        border-radius:getBorderRadius('l') 0  getBorderRadius('l') getBorderRadius('l');
+        border-radius:getBorderRadius('l')   getBorderRadius('l') 0 getBorderRadius('l');
     }
 }

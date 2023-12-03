@@ -264,7 +264,7 @@ export default function Home() {
                       </div>
                       <Link  href={project.link}>
                       <Button size="medium" 
-                      type="outline" 
+                      customButtonType="outline" 
                       label="view case study" 
                       rightIcon={
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

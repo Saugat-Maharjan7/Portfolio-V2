@@ -7,7 +7,7 @@ export default function MessageBubble({ messages, variant }) {
 
   if (variant === 'sender') {
     componentToRender = (
-      <div className="MessageBulb d-flex flex-row GAPm">
+      <div className="MessageBulb d-flex flex-row GAPm align-items-end">
         <ul className='messages d-flex flex-column GAPxs align-items-end'>
           {messages.map((msg, index) => (
             <li
@@ -24,7 +24,7 @@ export default function MessageBubble({ messages, variant }) {
     );
   } else if (variant === 'receiver') {
     componentToRender = (
-      <div className="MessageBulb d-flex flex-row GAPm">
+      <div className="MessageBulb d-flex flex-row GAPm align-items-end">
         <Image src={me} alt="me" className="meSender" />
         <ul className='messages d-flex flex-column GAPxs'>
           {messages.map((msg, index) => (

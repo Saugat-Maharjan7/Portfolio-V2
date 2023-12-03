@@ -247,3 +247,23 @@
         background-color: getColor(Brand,Black,600);
     }
 }
+
+.BTNBrandLoading{
+    background-color: getColor(Brand,Orange,100);
+    border: 1px solid getColor(Brand,Orange,100);
+    color: $primary-orange;
+    transition: ease-in-out 0.2s ;
+
+    .spinner {
+        animation: rotateClockwise 1s infinite linear;
+      }
+      
+}
+@keyframes rotateClockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
