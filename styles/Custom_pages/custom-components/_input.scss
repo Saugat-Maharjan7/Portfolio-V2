@@ -15,16 +15,15 @@
     color: getColor(Tailwind, Gray, 500);
   }
 
-&:focus{
+&:hover{
     background-color: getColor(Brand,Black,300);
 }
-
-&::before{
-    content: 'hello';
-    position: absolute;
-    left: 60px;
-    top:12px
-
+&:focus{
+    background-color: getColor(Brand,AlphaOrange,500);
+    
+    &::placeholder {
+        color: getColor(Tailwind, Gray, 500);
+    }
 }
 
   
@@ -85,5 +84,8 @@
     }
 
     .errorMessage{
-        color: $primary-red
+        color: $white;
+        background-color: $primary-red;
+        font-size: getSize(6);
+        padding: getSpacing('xs') getSpacing('s');
     }

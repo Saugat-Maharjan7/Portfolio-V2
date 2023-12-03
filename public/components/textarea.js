@@ -36,7 +36,7 @@ export default function Textarea({
   return (
     <div className='d-flex flex-column GAPs'>
       <label className=' FONTNEXA InputLabel'>{InputLabel}</label>
-      <div className='d-flex flex-column GAPxs'>
+      <div className='d-flex flex-column '>
         <textarea
           className='BRANDInput'
           name={name}

@@ -62,6 +62,7 @@
                 margin: getSpacing(0);
                 li{
                     list-style: none;
+                    padding-bottom: getSpacing('m');
                 }
             }
            
@@ -163,6 +164,11 @@
     
             ul{
                 padding: 0;
+
+                li{
+                    border-bottom: 1px solid grey;
+
+                }
     
                 .input-holder{
                     padding: 2rem 1rem;

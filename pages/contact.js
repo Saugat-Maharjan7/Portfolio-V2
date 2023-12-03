@@ -259,7 +259,8 @@ const handleCopyClick = () => {
               method="post" // Add method="post" to use POST request
 
               >
-                  <ul  className='d-flex flex-column GAPxl'>
+                  <ul  className='d-flex flex-column GAPxxl'>
+                    <li>
         <Input
           InputLabel="What is your name?"
           type='text'
@@ -271,6 +272,7 @@ const handleCopyClick = () => {
           errorMessage="Please enter your name"
           formSubmitted={formSubmitted}
         />
+        </li><li>
         <Input
           InputLabel="What is your email?"
           type='email'
@@ -282,7 +284,7 @@ const handleCopyClick = () => {
           errorMessage="Please enter a valid email"
           formSubmitted={formSubmitted}
 
-        />
+        /></li><li>
         <Textarea
           InputLabel="Your Message"
           name='message'
@@ -294,7 +296,7 @@ const handleCopyClick = () => {
           errorMessage="Please enter your message"
           formSubmitted={formSubmitted}
 
-        />
+        /></li>
       </ul>
 
                 <Button
