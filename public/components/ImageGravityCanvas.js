@@ -27,17 +27,15 @@ const ImageGravityCanvas = ({ type }) => {
     // Add more variants if needed
   };
 
+  
   const images = useRef(imagesVariants[type] || []);
-
-
   const isDragging = useRef(false);
   const mouseOffsetX = useRef(0);
   const mouseOffsetY = useRef(0);
   const requestId = useRef(null);
-  const gravity = useRef(0.3); // Adjust the gravity force here
+  const gravity = useRef(0.3);
   const lastImagePositions = useRef([]);
 
-  // Function to check collision between two rectangles
   const isColliding = (rect1, rect2) => {
     return (
       rect1.x < rect2.x + rect2.width &&
@@ -47,10 +45,8 @@ const ImageGravityCanvas = ({ type }) => {
     );
   };
 
-  // Function to handle collision between images (for stacking)
   const handleImageCollision = (image, otherImage) => {
     if (image.y < otherImage.y + otherImage.height) {
-      // Stack the images vertically on collision
       image.y = otherImage.y - image.height;
       image.velocityY = 0;
     }
@@ -87,33 +83,34 @@ const ImageGravityCanvas = ({ type }) => {
     };
 
     const applyGravity = () => {
-      images.current.forEach((image, index) => {
-        const lastPosition = lastImagePositions.current[index];
-        const updatedY = image.y + image.velocityY;
+      if (!isDragging.current) {
+        images.current.forEach((image, index) => {
+          const lastPosition = lastImagePositions.current[index];
+          const updatedY = image.y + image.velocityY;
 
-        if (!lastPosition || lastPosition.x !== image.x || lastPosition.y !== updatedY) {
-          lastImagePositions.current[index] = { x: image.x, y: updatedY };
-          image.y = updatedY;
+          if (!lastPosition || lastPosition.x !== image.x || lastPosition.y !== updatedY) {
+            lastImagePositions.current[index] = { x: image.x, y: updatedY };
+            image.y = updatedY;
 
-          if (image.y < canvas.height - image.height) {
-            image.velocityY += gravity.current;
-          } else {
-            image.y = canvas.height - image.height;
-            image.velocityY = 0;
-          }
-        }
-
-        handleBoundaryCollision(image, canvas);
-
-        images.current.forEach((otherImage, otherIndex) => {
-          if (index !== otherIndex) {
-            if (isColliding(image, otherImage)) {
-              // Handle collision between images for stacking
-              handleImageCollision(image, otherImage);
+            if (image.y < canvas.height - image.height) {
+              image.velocityY += gravity.current;
+            } else {
+              image.y = canvas.height - image.height;
+              image.velocityY = 0;
             }
           }
+
+          handleBoundaryCollision(image, canvas);
+
+          images.current.forEach((otherImage, otherIndex) => {
+            if (index !== otherIndex) {
+              if (isColliding(image, otherImage)) {
+                handleImageCollision(image, otherImage);
+              }
+            }
+          });
         });
-      });
+      }
 
       drawImages();
       requestId.current = requestAnimationFrame(applyGravity);
@@ -199,12 +196,12 @@ const ImageGravityCanvas = ({ type }) => {
 
   return (
     <canvas
-    className='ImageGravityCanvas'
+      className='ImageGravityCanvas'
       ref={canvasRef}
       style={{
-        position:'absolute',
-        zIndex:5,
-        bottom:0,
+        position: 'absolute',
+        zIndex: 5,
+        bottom: 0,
         width: '100%',
         height: '900px',
         backgroundColor: 'rgba(0, 0, 0, 0)',
