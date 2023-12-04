@@ -180,7 +180,7 @@ export const projects = [
                 Question:'In short, what things were very important to take note of while visiting the country/place for the first time?'
               },
               {
-                Question:'If you had any troubles finding a place to stay? please give a valid statement of problem in short.'
+                Question:'Did you had any troubles finding a place to stay? Please give a valid statement of problem in short.'
               },
               {
                 Question:'For Travelling , what methods did you used on a regular basis?'

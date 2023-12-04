@@ -18,9 +18,8 @@ import Button from "../../public/components/Button";
 function Upkite(){
 
   
-  
 
-     // Find the project with id: 1
+     // Find the project with id: 2
     const project = projects.find((project) => project.id === 2);
     const messages = [
       { message: project.projectPlanning.projectPlanningMethods[2].Research.Questions[0].Question, styles: {backgroundColor:project.colorDarker,width:'fit-content'}
@@ -270,7 +269,7 @@ function Upkite(){
                     
                     </div>
             </section>
-            <section className="MTfxl PBfxl projectContent">
+            <section className="MTfxl PBfxl projectContent position-relative">
             <div className="projectContainer d-flex flex-column MTxl GAPxxl "            >
                 <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
 
@@ -313,7 +312,10 @@ function Upkite(){
       
                     
                     </div>
+                    <ImageGravityCanvas  type="Upkite"/>
+
             </section>
+        
             <SubFooter/>
 
             </main>

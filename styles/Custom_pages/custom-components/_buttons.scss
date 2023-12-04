@@ -245,6 +245,8 @@
 
     &:active{
         background-color: getColor(Brand,Black,600);
+        border: 1px solid getColor(Brand,Black,600);
+
     }
 }
 

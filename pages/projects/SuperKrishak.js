@@ -18,6 +18,8 @@ import SubFooter from '../../public/components/subfooter';
 function SuperKrishak(){
 
 
+  //review images
+  
      // Find the project with id: 1
     const project = projects.find((project) => project.id === 1);
     const titleLetters = project.LeadingTitle.split('');
@@ -513,7 +515,7 @@ function SuperKrishak(){
                   </div>
                   
                   </div>
-                  <ImageGravityCanvas  />
+                  <ImageGravityCanvas  type="SuperKrishak"/>
             </section>
             <SubFooter/>
 
