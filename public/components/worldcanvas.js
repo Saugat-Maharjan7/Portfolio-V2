@@ -62,7 +62,7 @@ function Three(){
     const { camera } = useThree();
 
 
-    const material = new MeshStandardMaterial({ color: (0x1a1a1a),  normalMap: normal,heightTextureMap:height})
+    const material = new MeshStandardMaterial({ color: (0x1a1a1a),  normalMap: normal})
 
 
 

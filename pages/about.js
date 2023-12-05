@@ -66,9 +66,7 @@ function About(){
        <Head>
         
         <meta property="og:image" content="https://i.ibb.co/gPk5DGs/Thumbnail.jpg" />
-        <title>About</title>
-        <link rel="icon" type="image/x-icon" href="https://scontent.xx.fbcdn.net/v/t1.15752-9/314541792_577870877351356_5957186771622315824_n.png?stp=cp0_dst-png&_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=u_olMuCmVgkAX_xU1GZ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTVF-d0zRxLjMQRzXBxcGK7IkhNp2goY33AcADQ3vdOKw&oe=638F3735" />
-        
+        <title>About</title>        
         <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></Script>
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></Script>
         </Head>
@@ -77,7 +75,7 @@ function About(){
         <main className='aboutMain BGBrandBlack500 pt-8	'>
           
           <section className="about-hero container-fluid position-relative BGNaturalWhite100">
-            <img className="blur_purple_1 position-absolute" src="https://i.ibb.co/gMHM5rm/blur-purple.png" alt="purple light" />
+            <img className="blur_purple_1 position-absolute" src="/assets/blurpurple.png" alt="purple light" />
             <div className="about-info d-flex flex-row row TXTBrandBlack600">
               <div className="col"><h1>SHIRISH SHAKYA</h1></div>
               <div className="col"><ul className="featured d-flex flex-column">
@@ -92,9 +90,9 @@ function About(){
             <div className="container-fluid d-flex align-items-center justify-content-center  video-slideshow">
               <div className="video-show position-relative">
                 <div className="gif-area">
-                  <div className="planet-area"><img className="gif" src="https://i.ibb.co/Bg6YSHQ/ezgif-com-gif-maker-1.gif" alt="ezgif-com-gif-maker-1" border={0} />
+                  <div className="planet-area"><img className="gif" src="/assets/smallplanet.gif" alt="ezgif-com-gif-maker-1" border={0} />
                   </div>
-                  <img src="https://i.ibb.co/RNhPV5t/rotate-circle.png" alt="rotate-circle" className="rotation-text" border={0} />
+                  <img src="/assets/rotatecircle.png" alt="rotate-circle" className="rotation-text" border={0} />
                 </div>
                 <video ref={profileVideoref} src="/assets/videos/profile.mp4" className="prof-video" loop muted playsInline={true}> 
                     </video>                
@@ -106,7 +104,7 @@ function About(){
             <div className="container-fluid about-me">
               <div className="bio-pic d-flex ">
                 <div className="image-container">
-                  <img src="https://i.ibb.co/tM8GHfk/transparent-me.png" alt="transparent-me" border={0} />
+                  <img src="/assets/transparentme.png" alt="transparent-me" border={0} />
                 </div>
                 <div className="about-container TXTBrandBlack600">
                   <p>
