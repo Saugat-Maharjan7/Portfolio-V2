@@ -315,7 +315,63 @@ function Upkite(){
                     <ImageGravityCanvas  type="Upkite"/>
 
             </section>
-        
+            <section className="MTfxl PBfxl projectContent">
+            <div className="projectContainer d-flex flex-column MTxl GAPxxl">
+                <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                <motion.div
+              className="topLine"
+              ref={linerefs[5][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[5]}
+            ></motion.div>
+                    <span className="FONTMONUMENT SIZEF16">05</span>
+                    <h3 className="FONTNEXA">{project.projectConceptualization.Headline}</h3>
+                </div>
+                <div className="projectInfo d-flex GAPm">
+                    <h4 className="SIZEF12 ">
+                    {project.projectConceptualization.Title}
+                    </h4>
+                    
+                    <p className=" FONTNEXA SIZEF10">{project.projectConceptualization.Info}</p>
+                </div>
+                
+                    <div className="projectBanner" >
+                    <Image src={project.projectConceptualization.BanenerImage}
+
+                    alt="Project Banner"
+                    width={1000} // Set an appropriate width
+                    height={465}
+                    layout="responsive"
+                    className="parallax-image"
+                    data-speed="0.2" // Speed of parallax effect
+                     style={{ transform: 'translateY(0)' ,transition:'ease-in-out 0.5s all'}}
+                    ></Image>
+                     
+                    </div>
+                    <div className="d-flex flex-column GAPfxl MTfxl PTfxl">
+                    {project.projectConceptualization.methods.map((method, index) => (
+  <div key={index} className="projectInfo d-flex GAPm">
+    <h5 className="SIZEF12">{method.Title}</h5>
+    <div className="FONTNEXA SIZEF10 d-flex flex-column GAPxl">
+      <p className="FONTNEXA SIZEF10">{method.Info}</p>
+      {method.ImageLink && (
+        <Image
+          src={method.ImageLink}
+          alt="Method Banner"
+          width={1000} // Set an appropriate width
+          height={814}
+          layout="responsive"
+        />
+      )}
+    </div>
+  </div>
+))}
+
+  
+</div>
+                    </div>
+            </section>
             <SubFooter/>
 
             </main>

@@ -228,7 +228,37 @@ export const projects = [
       '/assets/projects/Screenshots/Upkite/11.png',
       '/assets/projects/Screenshots/Upkite/12.png',
     ],
-    projectFeatures: [] // No features added for Upkite
+    projectFeatures: [] ,// No features added for Upkite
+
+
+    projectConceptualization:{
+      Headline:'Product Conceptualization/Ideation',
+      Title:'STRATEGIC FRAMEWORK: UPKITE - UNDERSTANDING, PRIORITIZING, DELIVERING',
+      Info:"UpKite's development stemmed from a methodical approach, including empathy mapping to understand emotional and practical challenges, competitive analysis to identify gaps, and prioritization matrices to highlight crucial needs—navigation, service access, and social connections. User flow analysis pinpointed key pain points in information access and integration. Synthesizing these insights, UpKite prioritizes intuitive navigation, a comprehensive service hub, and a dedicated social platform, ensuring a holistic solution for newcomers adapting to a new city.",
+      BanenerImage:'/assets/projects/Conceptualization/Upkite/Banner.jpg',
+      methods:[
+        {
+          Title:'PRIORITIZATION MATRIX',
+          Info:'The UpKite prioritization matrix evaluated features like adding friends for broader connections based on user impact, feasibility, and urgency. For instance, adding friends scored high due to its substantial user impact and feasibility, directing early focus and resource allocation in line with project goals.',
+          ImageLink:'/assets/projects/Conceptualization/Upkite/method1.png'
+        },
+        {
+          Title:'EMPATHY MAPPING',
+          Info:"In crafting UpKite, I delved into the experiences of newcomers in a new city through an empathy map. This highlighted frustrations in navigation, service finding, and social connections, guiding the app's focus on user-friendly features for navigation, service locating, and social connectivity.",
+          ImageLink:'/assets/projects/Conceptualization/Upkite/method2.png'
+        },
+        {
+          Title:'THE CRAZY 8',
+          Info:"The Crazy 8s exercise turbocharged innovation for UpKite, prompting participants to sketch eight rapid-fire solutions to design challenges within a tight time frame. This high-speed brainstorming fueled diverse ideas for improving app features like navigation and social elements, fostering creativity and innovation in UpKite's design process.",
+          ImageLink:'/assets/projects/Conceptualization/Upkite/method3.png'
+        },
+        {
+          Title:'USER FLOW MAPPING',
+          Info:"UpKite's user flow method mapped a newcomer's journey, identifying touchpoints and hurdles in tasks like finding services or social connections. This insight streamlined navigation, enhanced search, and refined social features for a more intuitive experience, aiding individuals adapting to a new city.",
+          ImageLink:'/assets/projects/Conceptualization/Upkite/method4.png'
+        },
+      ]
+    }
   },
   // {
   //   id: 3,
