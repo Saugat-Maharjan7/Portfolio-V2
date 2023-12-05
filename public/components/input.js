@@ -36,7 +36,7 @@ export default function Input({
 
   return (
     <div className='d-flex flex-column GAPs'>
-      <label className=' FONTNEXA InputLabel'>{InputLabel}</label>
+      <span className=' FONTNEXA InputLabel'>{InputLabel}</span>
       <div className='d-flex flex-column '>
         <input
         className='BRANDInput'

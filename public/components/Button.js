@@ -69,7 +69,7 @@ const Button = ({ customButtonType, size, label, leftIcon, rightIcon, onClick, t
     >
       <div className="BTNBrandHighlight"></div>
       {leftIconComponent && <div className="IconHolder">{leftIconComponent}</div>}
-      {label && <label>{label}</label>}
+      {label && <span>{label}</span>}
       {rightIcon && <div className="IconHolder">{rightIcon}</div>}
     </button>
   );
