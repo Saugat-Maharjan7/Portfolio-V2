@@ -232,7 +232,7 @@ export const projects = [
 
 
     projectConceptualization:{
-      Headline:'Product Conceptualization/Ideation',
+      Headline:'Product Conceptualization & Ideation',
       Title:'STRATEGIC FRAMEWORK: UPKITE - UNDERSTANDING, PRIORITIZING, DELIVERING',
       Info:"UpKite's development stemmed from a methodical approach, including empathy mapping to understand emotional and practical challenges, competitive analysis to identify gaps, and prioritization matrices to highlight crucial needs—navigation, service access, and social connections. User flow analysis pinpointed key pain points in information access and integration. Synthesizing these insights, UpKite prioritizes intuitive navigation, a comprehensive service hub, and a dedicated social platform, ensuring a holistic solution for newcomers adapting to a new city.",
       BanenerImage:'/assets/projects/Conceptualization/Upkite/Banner.jpg',
