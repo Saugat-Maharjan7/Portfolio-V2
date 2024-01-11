@@ -258,6 +258,24 @@ export const projects = [
           ImageLink:'/assets/projects/Conceptualization/Upkite/method4.png'
         },
       ]
+    },
+    
+    projectInteraction:{
+      Headline:'Product Interaction',
+      methods:[
+        {
+          Title:'WIREFRAMES AND WIREFRAMES',
+          Info:"For UpKite's wireframing, rapid sketches and basic wireframes swiftly captured initial ideas, focusing on core functionalities like navigation and social features. This quick ideation enabled fast exploration and iteration for a solid foundation in the design process.",
+          ImageLink:'/assets/projects/Conceptualization/Upkite/method5.png',
+          CoverImageLink:false
+        },
+        {
+          Title:'HIGH FIDELITY INTERACTION',
+          Info:"High-fidelity interaction design for UpKite refined detailed wireframes with specific UI elements and interactions. This stage polished the interface, ensuring visual appeal and intuitive user interactions aligned with the app's objectives before development.",
+          CoverImageLink:true
+        },
+      
+      ]
     }
   },
   // {

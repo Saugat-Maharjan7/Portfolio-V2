@@ -241,9 +241,9 @@ function Upkite(){
 
                 <motion.div
               className="topLine"
-              ref={linerefs[3][0]}
+              ref={linerefs[2][0]}
               initial={{ width: 0 }}
-              animate={lineControls[3]}
+              animate={lineControls[2]}
             ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">03</span>
                     <h3 className="FONTNEXA">{project.projectArtDirection.Headline}</h3>
@@ -275,9 +275,9 @@ function Upkite(){
 
                 <motion.div
               className="topLine"
-              ref={linerefs[4][0]}
+              ref={linerefs[3][0]}
               initial={{ width: 0 }}
-              animate={lineControls[4]}
+              animate={lineControls[3]}
             ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">04</span>
                     <h3 className="FONTNEXA">{project.projectPlanning.Headline}</h3>
@@ -321,9 +321,9 @@ function Upkite(){
 
                 <motion.div
               className="topLine"
-              ref={linerefs[5][0]}
+              ref={linerefs[4][0]}
               initial={{ width: 0 }}
-              animate={lineControls[5]}
+              animate={lineControls[4]}
             ></motion.div>
                     <span className="FONTMONUMENT SIZEF16">05</span>
                     <h3 className="FONTNEXA">{project.projectConceptualization.Headline}</h3>
@@ -365,6 +365,50 @@ function Upkite(){
         />
       )}
     </div>
+  </div>
+))}
+
+  
+</div>
+                    </div>
+            </section>
+            <section className=" PBfxl projectContent">
+            <div className="projectContainer d-flex flex-column MTxl GAPxxl">
+                <div className="projectSectionHeader align-items-center GAPm d-flex flex-row ">
+
+                <motion.div
+              className="topLine"
+              ref={linerefs[5][0]}
+              initial={{ width: 0 }}
+              animate={lineControls[5]}
+            ></motion.div>
+                    <span className="FONTMONUMENT SIZEF16">06</span>
+                    <h3 className="FONTNEXA">{project.projectInteraction.Headline}</h3>
+                </div>       
+                    <div className="d-flex flex-column GAPfxl ">
+                    {project.projectInteraction.methods.map((method, index) => (
+  <div key={index} className="flex-column d-flex GAPxl">
+    <div className="projectInfo d-flex GAPm flex-row">
+ <h5 className="SIZEF12">{method.Title}</h5>
+    <div className="FONTNEXA SIZEF10 d-flex flex-column GAPxl">
+      <p className="FONTNEXA SIZEF10">{method.Info}</p>
+      {method.ImageLink && (
+        <Image
+          src={method.ImageLink}
+          alt="Method Banner"
+          width={1000} // Set an appropriate width
+          height={814}
+          layout="responsive"
+        />
+      )}
+    </div>
+    </div>
+   
+    {/* {method.CoverImageLink && (
+      <div className="d-flex flex-row ">
+        hello
+      </div>
+    )} */}
   </div>
 ))}
 

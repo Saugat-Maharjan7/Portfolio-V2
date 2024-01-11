@@ -85,7 +85,10 @@
 
     .errorMessage{
         color: $white;
+        font-family: 'Nexa Bold';
         background-color: $primary-red;
+        font-weight: 700;
         font-size: getSize(6);
+        letter-spacing: 0.48px;
         padding: getSpacing('xs') getSpacing('s');
     }
