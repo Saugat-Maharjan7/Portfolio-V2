@@ -249,7 +249,7 @@ const handleCopyClick = () => {
               </div>
               <div className='d-flex flex-row GAPm'>
               <span className="FONTNEXA SIZEF8 TXTNaturalWhite100">Mobile:</span>
-              <p className='TXTTailwindGray400 FONTNEXA'>+977 9869134750</p>
+              <p className='TXTTailwindGray400 FONTNEXA'>+1 (416) 857-3273</p>
               </div>
               </div>
               </div> 
