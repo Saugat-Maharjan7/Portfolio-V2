@@ -283,13 +283,13 @@ export const projects = [
             {
               Title:"Messaging",
               videoLink:'/assets/animations/upkite/message.mp4',
-              id:"Interests"
+              id:"Message"
             },
-            // {
-            //   Title:"Hari Sir",
-            //   videoLink:'/assets/animations/upkite/interests.mp4',
-            //   id:"Interests"
-            // }
+            {
+              Title:"Adding friends",
+              videoLink:'/assets/animations/upkite/requests.mp4',
+              id:"Requests"
+            }
           ]
         },
       
