@@ -388,7 +388,7 @@ function Upkite(){
                     <div className="d-flex flex-column GAPfxl ">
                     {project.projectInteraction.methods.map((method, index) => (
   <div key={index} className="flex-column d-flex GAPxl">
-    <div className="projectInfo d-flex GAPm flex-row">
+    <div className="projectInfo d-flex GAPm">
  <h5 className="SIZEF12">{method.Title}</h5>
     <div className="FONTNEXA SIZEF10 d-flex flex-column GAPxl">
       <p className="FONTNEXA SIZEF10">{method.Info}</p>
@@ -404,11 +404,28 @@ function Upkite(){
     </div>
     </div>
    
-    {/* {method.CoverImageLink && (
-      <div className="d-flex flex-row ">
-        hello
+    {method.CoverImageLink && (
+  <div className="d-flex flex-column ">
+    {method.threeBlocks && (
+      <div className="d-flex flex-wrap GAPxxxl MTxxl" style={{width:"100%"}}>
+        {method.blocks.map((block, index) => (
+          <div key={index} className="BDRl PADDINGl d-flex flex-column GAPl " style={{ width:'420px', height: '480px', backgroundColor:project.colorDarker }}>
+            
+            
+            <p className="SIZEF8">{block.Title}</p>
+            <div className=" d-flex justify-content-center" style={{width:'100%'}}>
+            <div style={{width:'218px',height:'408px',position:'relative',overflow:'hidden',borderRadius:'36px 36px 0 0',boxShadow:'0px 4px 24px 15px rgba(0, 0, 0, 0.15)'}}>
+            <video src={block.videoLink} id={block.id} autoPlay loop muted style={{position:'absolute', width:'200%',transform:'translateX(-118px)'}} > 
+                </video>
+            </div>
+            </div>
+          </div>
+        ))}
       </div>
-    )} */}
+    )}
+  </div>
+)}
+
   </div>
 ))}
 

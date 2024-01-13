@@ -75,7 +75,7 @@
 
 //--------------------- Border Radius--------------------------
 // Border Radius
-@each $key, $value in $Sizes {
+@each $key, $value in $BorderRadius {
   .BDR#{$key} {
     border-radius: $value!important;
   }

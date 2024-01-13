@@ -272,7 +272,25 @@ export const projects = [
         {
           Title:'HIGH FIDELITY INTERACTION',
           Info:"High-fidelity interaction design for UpKite refined detailed wireframes with specific UI elements and interactions. This stage polished the interface, ensuring visual appeal and intuitive user interactions aligned with the app's objectives before development.",
-          CoverImageLink:true
+          CoverImageLink:true,
+          threeBlocks:true, 
+          blocks:[
+            {
+              Title:"Adding your interests",
+              videoLink:'/assets/animations/upkite/interests.mp4',
+              id:"Interests"
+            },
+            {
+              Title:"Messaging",
+              videoLink:'/assets/animations/upkite/message.mp4',
+              id:"Interests"
+            },
+            // {
+            //   Title:"Hari Sir",
+            //   videoLink:'/assets/animations/upkite/interests.mp4',
+            //   id:"Interests"
+            // }
+          ]
         },
       
       ]
