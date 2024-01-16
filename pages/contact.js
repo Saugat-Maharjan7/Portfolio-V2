@@ -247,10 +247,10 @@ const handleCopyClick = () => {
               {isCopied && <div style={{top:'-100%',left:'-50%'}} className='position-absolute FONTNEXA BGBrandBlack300 BDR4 PLm PTxs PBxs PRm TXTNaturalWhite100'>Copied!</div>}
               </div>
               </div>
-              <div className='d-flex flex-row GAPm'>
+              {/* <div className='d-flex flex-row GAPm'>
               <span className="FONTNEXA SIZEF8 TXTNaturalWhite100">Mobile:</span>
               <p className='TXTTailwindGray400 FONTNEXA'>+1 (416) 857-3273</p>
-              </div>
+              </div> */}
               </div>
               </div> 
 
