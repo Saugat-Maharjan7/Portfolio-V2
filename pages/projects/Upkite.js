@@ -415,8 +415,8 @@ function Upkite(){
             <p className="SIZEF8">{block.Title}</p>
             <div className=" d-flex justify-content-center" style={{width:'100%'}}>
             <div style={{width:'218px',height:'408px',position:'relative',overflow:'hidden',borderRadius:'36px 36px 0 0',boxShadow:'0px 4px 24px 15px rgba(0, 0, 0, 0.15)'}}>
-            <video src={block.videoLink} id={block.id} autoPlay loop muted style={{position:'absolute', width:'200%',transform:'translateX(-118px)'}} > 
-                </video>
+            <video src={block.videoLink} id={block.id} autoPlay loop muted playsInline style={{position:'absolute', width:'200%',transform:'translateX(-118px)'}} > 
+</video>
             </div>
             </div>
           </div>
