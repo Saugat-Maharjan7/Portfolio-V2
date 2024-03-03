@@ -39,16 +39,24 @@ export default function Home() {
     const mouseTargetElements = [
       { targetClass: "p-right", hoverClass: "mouse-cursor-case" },
       { targetClass: "designs-grid-container", hoverClass: "mouse-cursor-brush",pressClass: "mouse-cursor-brushed" },
-      // { targetClass: "particles-sphere", hoverClass: "mouse-cursor-particles" },
+      { targetClass: "particles-sphere", hoverClass: "mouse-cursor-particles" },
       // Add more objects for additional target elements and hover classes
     ];
 
     const titleLetters = landingTitle.split('');
    
-    
+    useEffect(() => {
+      const elements = document.querySelectorAll('.spline-watermark');
+      elements.forEach(element => {
+        element.style.display = 'none';
+      });
+    }, []); 
 
     //for smooth scroll
     useEffect(() => {
+
+      
+
       const handleScroll = () => {
         const currentPosition = window.pageYOffset;
         const sections = document.querySelectorAll('section');
@@ -177,13 +185,31 @@ export default function Home() {
                 <div className="hero border-l-r-b d-flex flex-column">
                   <img className="blur_purple_1" src="/assets/blurpurple.png" alt="purple light" />
                   <img className="sun_light" src="/assets/sun light.png" alt="sun light" />
-                  {/* <iframe className="particles-sphere" style={{position:'absolute',right:'20%',top:'18%',mixBlendMode:'difference',pointerEvents:"auto"}} src="https://my.spline.design/particles-63ff8fa851edb06267c43b23a8cbccf5/" width="800" height="600" frameBorder="0" allowTransparency="true" ></iframe> */}
-                  <div style={{height:"150%", width:"150%",position:'absolute',right:'-25%',top:'-15%',mixBlendMode:'difference',pointerEvents:"auto"}}>
-                  <Spline scene="https://prod.spline.design/AJFfNyuW9IifNkRq/scene.splinecode" />
+                <div
+                >
+                  <iframe className="particles-sphere" style={{position:'absolute',
+                  right:'0%',
+                  bottom:'0%',
+                  width: '100%', // Set initial width to 100%
+                  height: '100%', // Set initial height to 100%
+                  mixBlendMode:'difference',
+                  pointerEvents:"auto",
+                  zIndex:'0'
+                
+                }} 
 
+                  src="https://my.spline.design/particlescopy-0ecfa97a67f6faf0c6a15881cc56d744/" 
+
+                  // width="1200" height="1000" 
+
+                  frameBorder="0" 
+                  allowTransparency="true" >
+                  </iframe>
+
+                  {/* blocker */}
+                  <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"1%",zIndex:'0'}}></div>
                   </div>
 
-                
                   <div className="hero-title d-flex flex-column">
                     <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>SHIRISH SHAKYA</span>
                    
@@ -217,7 +243,7 @@ export default function Home() {
                       
                       
                   </div>
-                  <div className="profile_info_top d-flex w-100">
+                  <div className="profile_info_top d-flex w-100" style={{position:'relative',zIndex:'1'}}>
                     <div className="profile_detail d-flex flex-row">
                       <div className="profile_picture" />
                       <p className="profile_details">Hey!, I’m a product designer based
