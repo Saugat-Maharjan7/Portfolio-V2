@@ -207,7 +207,7 @@ export default function Home() {
                   </iframe>
 
                   {/* blocker */}
-                  <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"1%",zIndex:'0'}}></div>
+                  <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
                   </div>
 
                   <div className="hero-title d-flex flex-column">
