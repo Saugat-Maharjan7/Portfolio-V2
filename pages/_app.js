@@ -31,9 +31,9 @@ function MyApp({ Component, pageProps }) {
     return (
       <div className="loader-wrapper">
         <div>
-          <img src="/assets/rocketslow.gif" alt="Rocket GIF" />
+          <img style={{mixBlendMode:'lighten'}} src="/assets/loom.gif" alt="Rocket GIF" />
           <div className="d-flex flex-column justify-content-between">
-            <div className="d-flex flex-row justify-content-between"><p>Initiating Launch</p>
+            <div className="d-flex flex-row justify-content-between"><p>Loading</p>
             <p>{`${loadingProgress}%`}</p></div>
             
             <div className="load-bar">
