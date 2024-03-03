@@ -17,7 +17,10 @@ import Typewriter from 'typewriter-effect';
 import {projects} from '../public/scripts/Datas/projects'; //projects database
 import BGERASER from "../public/components/BgEraserSection";
 import React from 'react';
-import Button from "../public/components/Button"
+import Button from "../public/components/Button";
+import Spline from '@splinetool/react-spline';
+
+
 
 
 
@@ -36,6 +39,7 @@ export default function Home() {
     const mouseTargetElements = [
       { targetClass: "p-right", hoverClass: "mouse-cursor-case" },
       { targetClass: "designs-grid-container", hoverClass: "mouse-cursor-brush",pressClass: "mouse-cursor-brushed" },
+      // { targetClass: "particles-sphere", hoverClass: "mouse-cursor-particles" },
       // Add more objects for additional target elements and hover classes
     ];
 
@@ -124,9 +128,9 @@ export default function Home() {
         <title>Shirish - The Design World</title>
 
         </Head>
+      
         
 
-        <World></World>
         
         <Toggle></Toggle>
         <Mouse 
@@ -146,8 +150,8 @@ export default function Home() {
       {/* Mobile Navigation */}
       <Sidenavigation isSidebarOpen={isSidebarOpen}></Sidenavigation>
 
-
-        {/* <World/> */}
+             
+      {/* <World/> */}
         <main className={checked ? 'main-inactive' : ''}>
         <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Header>
 
@@ -173,11 +177,16 @@ export default function Home() {
                 <div className="hero border-l-r-b d-flex flex-column">
                   <img className="blur_purple_1" src="/assets/blurpurple.png" alt="purple light" />
                   <img className="sun_light" src="/assets/sun light.png" alt="sun light" />
+                  {/* <iframe className="particles-sphere" style={{position:'absolute',right:'20%',top:'18%',mixBlendMode:'difference',pointerEvents:"auto"}} src="https://my.spline.design/particles-63ff8fa851edb06267c43b23a8cbccf5/" width="800" height="600" frameBorder="0" allowTransparency="true" ></iframe> */}
+                  <div style={{height:"150%", width:"150%",position:'absolute',right:'-25%',top:'-15%',mixBlendMode:'difference',pointerEvents:"auto"}}>
+                  <Spline scene="https://prod.spline.design/AJFfNyuW9IifNkRq/scene.splinecode" />
+
+                  </div>
+
+                
                   <div className="hero-title d-flex flex-column">
                     <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>SHIRISH SHAKYA</span>
-                    {/* <h1>
-                    YOU'VE SAFELY LANDED ON MY DESIGN WORLD
-                    </h1> */}
+                   
                     <h1 className="FONTMONUMENT" >
                       <div>
                                     {titleLetters.map((letter, index) => (
