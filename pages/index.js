@@ -194,7 +194,7 @@ export default function Home() {
                   height: '100%', // Set initial height to 100%
                   mixBlendMode:'difference',
                   pointerEvents:"auto",
-                  zIndex:'0'
+                  
                 
                 }} 
 
