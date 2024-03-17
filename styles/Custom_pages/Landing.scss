@@ -47,6 +47,7 @@ header{
         .time{
             font-family: 'NexaLight';
             font-size: 1.3rem;
+            text-align: left;
         }
         .gradient-shade{
             border-left: 1px solid white;
@@ -170,7 +171,7 @@ header{
                     font-family: 'NexaLight';
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                 }
 
                 h1{
@@ -290,26 +291,26 @@ header{
                         // Medium devices (tablets, 768px and up)
                         @media (min-width: 768px) {
                             font-size: 3rem;
-                            max-width: 518px;
+                            max-width: 818px;
 
                         }
                     
                         // Large devices (desktops, 992px and up)
                         @media (min-width: 992px) {
                             font-size: 4rem;
-                            max-width: 700px;
+                            max-width: 818px;
                         }
                     
                         // X-Large devices (large desktops, 1200px and up)
                         @media (min-width: 1200px) {
                             font-size: 4rem;
-                            max-width: 700px;
+                            max-width: 988px;
                         }
                     
                         // XX-Large devices (larger desktops, 1400px and up)
                         @media (min-width: 1400px) {
                             font-size: 4rem;
-                            max-width: 700px;
+                            max-width: 989px;
                         }
                 }
 
@@ -324,10 +325,11 @@ header{
             }
 
             .profile_info_top{
+                text-align: left !important;
                 // Small devices (Potrait phones, 576px and up)
     
                 @media (min-width: 350px) {
-                  flex-direction: column;
+                  flex-direction: row;
                   gap:1rem
                 }
             
@@ -424,7 +426,7 @@ header{
                 }
 
                 .social_links{
-                    gap:1rem;
+                    gap:.5rem;
                     span{
                         font-family: "NexaLight";
                         font-size: 1.2rem;
@@ -434,7 +436,7 @@ header{
                         gap:1rem;
                         padding:0;
                         margin: 0;
-                        justify-content: end;
+                        justify-content: start;
 
                         li{
                             font-size: 0.875rem;
@@ -480,8 +482,8 @@ header{
                     
                         // Large devices (desktops, 992px and up)
                         @media (min-width: 992px) {
-                            justify-content: right;
-                            text-align: right;
+                            justify-content: left;
+                            text-align: left;
 
                             ul{
                            
@@ -492,8 +494,8 @@ header{
                     
                         // X-Large devices (large desktops, 1200px and up)
                         @media (min-width: 1200px) {
-                            justify-content: right;
-                            text-align: right;
+                            justify-content: left;
+                            text-align: left;
 
                             ul{
                            
@@ -504,8 +506,8 @@ header{
                     
                         // XX-Large devices (larger desktops, 1400px and up)
                         @media (min-width: 1400px) {
-                            justify-content: right;
-                            text-align: right;
+                            justify-content: left;
+                            text-align: left;
 
                             ul{
                            

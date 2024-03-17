@@ -10,8 +10,8 @@ function Footer(){
           <div className="footer-wrapper d-flex flex-row justify-content-between">
             <div className="foot-content d-flex flex-column">
               <div className="footer-contents d-flex flex-column">
-                <h1>RETURNING HOME ALREADY?</h1>
-                <span>We can still keep in touch though...</span>
+                <h1>READY TO COLLABORATE?</h1>
+                <span>Lets hop on a meeting for your project.</span>
               </div>
               <div style={{width:'fit-content'}}  className="contact d-flex  flex-row ">
               <Link href="/contact" style={{textDecoration:"none"}}>
@@ -28,9 +28,10 @@ function Footer(){
                   </Link>
               </div>
               <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
-                        <li ><a className='TXTBrandOrange500 SIZEF6' href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' href="https://www.behance.net/shirishshakya">Behance</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
+                        <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.behance.net/shirishshakya">Behance</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://drive.google.com/file/d/1YVcCpCQQ6g_sIYKn2--uT22rAtxjbcNp/view?usp=sharing">Resume</a></li>
                       </ul>
 
             </div>

@@ -32,7 +32,7 @@ export default function Home() {
   
  
     let exploreref=useRef()
-    const landingTitle="YOU'VE SAFELY LANDED ON MY DESIGN WORLD"
+    const landingTitle="DESIGNING TOMORROW: UNVEILING MY VISIONARY WORLD"
     const [isToggled, setToggled] = useState(false);
     const [time, setTime] = useState('');
 
@@ -215,7 +215,7 @@ export default function Home() {
                    
                     <h1 className="FONTMONUMENT" >
                       <div>
-                                    {titleLetters.map((letter, index) => (
+                            {titleLetters.map((letter, index) => (
                             <m.span
                               key={index}
                               initial={{ y: -100, opacity: 0 }}
@@ -229,7 +229,7 @@ export default function Home() {
                           </div>
                     </h1>
                     
-                      <div className="TypeWriterWrapper ">
+                      {/* <div className="TypeWriterWrapper ">
                     <Typewriter
                     style={{letterSpacing:0}}
                         options={{
@@ -238,13 +238,14 @@ export default function Home() {
                           loop: true,
                         }}
                       />
-                      </div>
+                      </div> */}
                       
+                      <p>Designer at IIBD. Based in Greater Toronto Area</p>
                       
                       
                   </div>
                   <div className="profile_info_top d-flex w-100" style={{position:'relative',zIndex:'1'}}>
-                    <div className="profile_detail d-flex flex-row">
+                    {/* <div className="profile_detail d-flex flex-row">
                       <div className="profile_picture" />
                       <p className="profile_details">Hey!, I’m a product designer based
                         in Canada <span><svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -259,10 +260,16 @@ export default function Home() {
 </svg>
 </span> who brings concepts,
                         art, and ideas into reality.</p>
-                    </div>
+                    </div> */}
                     <div className="social_links d-flex flex-column">
                       <span>shirish.shakya5@gmail.com</span>
                       <div className="time">{time} <span>Local Time</span></div>
+                      <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
+                        <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.behance.net/shirishshakya">Behance</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://drive.google.com/file/d/1YVcCpCQQ6g_sIYKn2--uT22rAtxjbcNp/view?usp=sharing">Resume</a></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
