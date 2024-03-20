@@ -2,6 +2,7 @@ export const projects = [
   {
     id: 1,
     featured:true,
+    link:"/projects/SuperKrishak",
     title: 'Super Krishak',
     color:'#15BC84',
     colorLight:'#AFFFE4',
@@ -296,68 +297,5 @@ export const projects = [
       ]
     }
   },
-  // {
-  //   id: 3,
-  //   title: 'Clean Eats',
-  //   link: '/projects',
-  //   featured:false,
-  //   featuredImageLink:'/assets/projects/featuredimages/SuperKrishak.png',
-  //   LeadingTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  //   finishedYear: 2022,
-  //   responsibilities: ['Creating healthy recipe database', 'Marketing and promotion'],
-  //   LogoLink: 'path/to/clean_eats_logo',
-  //   projectMascotImageLink: 'path/to/clean_eats_image',
-  //   projectChallenge: '',
-  //   projectApproach: '',
-  //   projectVisionTitle: '',
-  //   projectVision: '',
-  //   projectBannerImage: '',
-  //   projectFirstScreenShotsTitle: '',
-  //   projectFirstScreenShotsInfo: '',
-  //   projectScreenShots: [],
-  //   projectFeatures: [] // No features added for Clean Eats
-  // },
-  // {
-  //   id: 4,
-  //   title: 'Phone Care Clinic',
-  //   link: '/projects',
-  //   featured:false,
-  //   featuredImageLink:'/assets/projects/featuredimages/SuperKrishak.png',
-  //   LeadingTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  //   finishedYear: 2023,
-  //   responsibilities: ['Establishing repair procedures', 'Training new technicians'],
-  //   LogoLink: 'path/to/phone_care_clinic_logo',
-  //   projectMascotImageLink: 'path/to/phone_care_clinic_image',
-  //   projectChallenge: '',
-  //   projectApproach: '',
-  //   projectVisionTitle: '',
-  //   projectVision: '',
-  //   projectBannerImage: '',
-  //   projectFirstScreenShotsTitle: '',
-  //   projectFirstScreenShotsInfo: '',
-  //   projectScreenShots: [],
-  //   projectFeatures: [] // No features added for Phone Care Clinic
-  // },
-  // {
-  //   id: 5,
-  //   title: 'Iseaa',
-  //   link: '/projects/iseaa',
-  //   featured:false,
-  //   featuredImageLink:'/assets/projects/featuredimages/SuperKrishak.png',
-  //   LeadingTitle: 'INTERNATIONAL STUDIES PROVIDER CONNECTED',
-  //   finishedYear: 2023,
-  //   responsibilities: ['Web Design', 'Front end Development'],
-  //   LogoLink: 'path/to/iseaa_logo',
-  //   projectMascotImageLink: 'path/to/iseaa_image',
-  //   projectChallenge: '',
-  //   projectApproach: '',
-  //   projectVisionTitle: '',
-  //   projectVision: '',
-  //   projectBannerImage: '',
-  //   projectFirstScreenShotsTitle: '',
-  //   projectFirstScreenShotsInfo: '',
-  //   projectScreenShots: [],
-  //   projectFeatures: [] // No features added for Iseaa
-  // }
-  // Add projectMascotImageLink entries for other projects if needed
+  
 ];

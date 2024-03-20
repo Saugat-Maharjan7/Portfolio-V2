@@ -46,7 +46,7 @@ function About(){
   
       // Create an intersection observer
       const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.5, // Adjust the threshold as needed
+        threshold: 0.1, // Adjust the threshold as needed
       });
   
       // Observe the target element (arsenal video section)

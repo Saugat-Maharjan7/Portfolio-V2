@@ -9,7 +9,7 @@ import OrangeBall from "../../public/assets/textures/ORANGEBALL.png";
 import { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { projects } from "../../public/scripts/Datas/projects";
+import { projects } from "../../public/scripts/Datas/newprojects";
 import ImageGravityCanvas from "../../public/components/ImageGravityCanvas"
 import SubFooter from '../../public/components/subfooter';
 
