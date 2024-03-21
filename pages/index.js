@@ -240,7 +240,7 @@ export default function Home() {
                       />
                       </div> */}
                       
-                      <p>Designer at IIBD. Based in Greater Toronto Area</p>
+                      <p>Designer from Greater Toronto Area</p>
                       
                       
                   </div>
