@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
               <Analytics />
 
       <motion.div key={router.pathname} className="Base-page">
