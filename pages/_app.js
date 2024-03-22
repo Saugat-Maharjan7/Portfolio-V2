@@ -30,6 +30,7 @@ function MyApp({ Component, pageProps }) {
     return () => clearInterval(timer);
   }, []);
 
+  // Render loader if still loading
   if (isLoading) {
     return (
       <div className="loader-wrapper">
@@ -49,14 +50,14 @@ function MyApp({ Component, pageProps }) {
     );
   }
 
+  // Render content once loaded
   return (
-    
     <AnimatePresence mode="wait">
       <Head>
-      <meta property="og:image" content="/assets/websitebanner.jpg" />
+        <meta property="og:image" content="/assets/websitebanner.jpg" />
         <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-    </Head>
+        <meta property="og:image:height" content="630" />
+      </Head>
       <Analytics />
       <motion.div key={router.pathname} className="Base-page">
         {/* Page Transition */}
