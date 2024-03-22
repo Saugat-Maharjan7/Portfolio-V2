@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
+import Head from 'next/head';
 import '../styles/style.scss';
 import '../styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
-import Head from 'next/head';
-
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -16,7 +15,7 @@ function MyApp({ Component, pageProps }) {
     const timer = setInterval(() => {
       setLoadingProgress((prevProgress) => {
         if (prevProgress < 100) {
-          return prevProgress + 25; // Increase the progress by 10% every 1 second
+          return prevProgress + 25; // Increase the progress by 25% every 1 second
         } else {
           setIsLoading(false);
           return 100;
@@ -24,38 +23,40 @@ function MyApp({ Component, pageProps }) {
       });
     }, 1000); // 1 second interval
 
+    // Preload banner image
+    const img = new Image();
+    img.src = "/assets/websitebanner.jpg";
+
     return () => clearInterval(timer);
   }, []);
 
-  // if (isLoading) {
-  //   return (
-    
-  //     <div className="loader-wrapper">
-  //       <div>
-  //         <img style={{mixBlendMode:'lighten'}} src="/assets/loom.gif" alt="Rocket GIF" />
-  //         <div className="d-flex flex-column justify-content-between">
-  //           <div className="d-flex flex-row justify-content-between"><p>Loading</p>
-  //           <p>{`${loadingProgress}%`}</p></div>
-            
-  //           <div className="load-bar">
-  //             <div className="load-fill" style={{ width: `${loadingProgress}%` }}></div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <div className="loader-wrapper">
+        <div>
+          <img style={{ mixBlendMode: 'lighten' }} src="/assets/loom.gif" alt="Rocket GIF" />
+          <div className="d-flex flex-column justify-content-between">
+            <div className="d-flex flex-row justify-content-between">
+              <p>Loading</p>
+              <p>{`${loadingProgress}%`}</p>
+            </div>
+            <div className="load-bar">
+              <div className="load-fill" style={{ width: `${loadingProgress}%` }}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    
     <AnimatePresence mode="wait">
       <Head>
-      <meta property="og:image" content="/assets/websitebanner.jpg" />
+        <meta property="og:image" content="/assets/websitebanner.jpg" />
         <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
+        <meta property="og:image:height" content="630" />
       </Head>
-              <Analytics />
-
+      <Analytics />
       <motion.div key={router.pathname} className="Base-page">
         {/* Page Transition */}
         <motion.div
