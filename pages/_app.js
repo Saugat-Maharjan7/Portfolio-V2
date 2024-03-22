@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/style.scss';
 import '../styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
-
+import Head from 'next/head';
 
 
 function MyApp({ Component, pageProps }) {
@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }) {
 
   if (isLoading) {
     return (
+    
       <div className="loader-wrapper">
         <div>
           <img style={{mixBlendMode:'lighten'}} src="/assets/loom.gif" alt="Rocket GIF" />
@@ -46,7 +47,13 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
+    
     <AnimatePresence mode="wait">
+      <Head>
+      <meta property="og:image" content="/assets/websitebanner.jpg" />
+        <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+      </Head>
               <Analytics />
 
       <motion.div key={router.pathname} className="Base-page">
