@@ -27,23 +27,23 @@ function MyApp({ Component, pageProps }) {
     return () => clearInterval(timer);
   }, []);
 
-  if (isLoading) {
-    return (
-      <div className="loader-wrapper">
-        <div>
-          <img style={{mixBlendMode:'lighten'}} src="/assets/loom.gif" alt="Rocket GIF" />
-          <div className="d-flex flex-column justify-content-between">
-            <div className="d-flex flex-row justify-content-between"><p>Loading</p>
-            <p>{`${loadingProgress}%`}</p></div>
+  // if (isLoading) {
+  //   return (
+  //     <div className="loader-wrapper">
+  //       <div>
+  //         <img style={{mixBlendMode:'lighten'}} src="/assets/loom.gif" alt="Rocket GIF" />
+  //         <div className="d-flex flex-column justify-content-between">
+  //           <div className="d-flex flex-row justify-content-between"><p>Loading</p>
+  //           <p>{`${loadingProgress}%`}</p></div>
             
-            <div className="load-bar">
-              <div className="load-fill" style={{ width: `${loadingProgress}%` }}></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  //           <div className="load-bar">
+  //             <div className="load-fill" style={{ width: `${loadingProgress}%` }}></div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <AnimatePresence>
