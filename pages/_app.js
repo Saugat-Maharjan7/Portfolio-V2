@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
+  const [isBannerLoaded, setIsBannerLoaded] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         if (prevProgress < 100) {
           return prevProgress + 25; // Increase the progress by 25% every 1 second
         } else {
-          setIsLoading(false);
+          setIsLoading(false); // Set isLoading to false when loading is complete
           return 100;
         }
       });
@@ -26,12 +27,15 @@ function MyApp({ Component, pageProps }) {
     // Preload banner image
     const img = new Image();
     img.src = "/assets/websitebanner.jpg";
+    img.onload = () => {
+      setIsBannerLoaded(true); // Set isBannerLoaded to true when the image is loaded
+    };
 
     return () => clearInterval(timer);
   }, []);
 
-  // Render loader if still loading
-  if (isLoading) {
+  // Render loader if still loading or banner image is not loaded yet
+  if (isLoading || !isBannerLoaded) {
     return (
       <div className="loader-wrapper">
         <div>
