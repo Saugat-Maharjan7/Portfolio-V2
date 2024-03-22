@@ -23,59 +23,59 @@ function MyApp({ Component, pageProps }) {
       });
     }, 1000); // 1 second interval
 
-    // Preload banner image
-    const img = new Image();
-    img.src = "/assets/websitebanner.jpg";
-
     return () => clearInterval(timer);
   }, []);
 
-  if (isLoading) {
-    return (
-      <div className="loader-wrapper">
-        <div>
-          <img style={{ mixBlendMode: 'lighten' }} src="/assets/loom.gif" alt="Rocket GIF" />
-          <div className="d-flex flex-column justify-content-between">
-            <div className="d-flex flex-row justify-content-between">
-              <p>Loading</p>
-              <p>{`${loadingProgress}%`}</p>
-            </div>
-            <div className="load-bar">
-              <div className="load-fill" style={{ width: `${loadingProgress}%` }}></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  useEffect(() => {
+    // Preload banner image after initial page load
+    const img = new Image();
+    img.src = "/assets/websitebanner.jpg";
+  }, []);
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <Head>
         <meta property="og:image" content="/assets/websitebanner.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </Head>
       <Analytics />
-      <motion.div key={router.pathname} className="Base-page">
-        {/* Page Transition */}
-        <motion.div
-          className="slide-in"
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 0 }}
-          exit={{ scaleY: 1 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        ></motion.div>
-        <Component {...pageProps} />
-        {/* Page Transition */}
-        <motion.div
-          className="slide-out"
-          initial={{ scaleY: 1 }}
-          animate={{ scaleY: 0 }}
-          exit={{ scaleY: 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        ></motion.div>
-      </motion.div>
+      {isLoading ? (
+        <div className="loader-wrapper">
+          <div>
+            <img style={{ mixBlendMode: 'lighten' }} src="/assets/loom.gif" alt="Rocket GIF" />
+            <div className="d-flex flex-column justify-content-between">
+              <div className="d-flex flex-row justify-content-between">
+                <p>Loading</p>
+                <p>{`${loadingProgress}%`}</p>
+              </div>
+              <div className="load-bar">
+                <div className="load-fill" style={{ width: `${loadingProgress}%` }}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <motion.div key={router.pathname} className="Base-page">
+          {/* Page Transition */}
+          <motion.div
+            className="slide-in"
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 0 }}
+            exit={{ scaleY: 1 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          ></motion.div>
+          <Component {...pageProps} />
+          {/* Page Transition */}
+          <motion.div
+            className="slide-out"
+            initial={{ scaleY: 1 }}
+            animate={{ scaleY: 0 }}
+            exit={{ scaleY: 0 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          ></motion.div>
+        </motion.div>
+      )}
     </AnimatePresence>
   );
 }
