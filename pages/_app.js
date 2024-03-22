@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
     return () => clearInterval(timer);
   }, []);
 
-  // Render loader if still loading or banner image is not loaded yet
+  // Render content once loaded
   if (isLoading || !isBannerLoaded) {
     return (
       <div className="loader-wrapper">
@@ -54,35 +54,35 @@ function MyApp({ Component, pageProps }) {
     );
   }
 
-  // Render content once loaded
   return (
-    <AnimatePresence mode="wait">
+    <>
       <Head>
         <meta property="og:image" content="/assets/websitebanner.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </Head>
-      <Analytics />
-      <motion.div key={router.pathname} className="Base-page">
-        {/* Page Transition */}
-        <motion.div
-          className="slide-in"
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 0 }}
-          exit={{ scaleY: 1 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        ></motion.div>
-        <Component {...pageProps} />
-        {/* Page Transition */}
-        <motion.div
-          className="slide-out"
-          initial={{ scaleY: 1 }}
-          animate={{ scaleY: 0 }}
-          exit={{ scaleY: 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        ></motion.div>
-      </motion.div>
-    </AnimatePresence>
+      <AnimatePresence mode="wait">
+        <motion.div key={router.pathname} className="Base-page">
+          {/* Page Transition */}
+          <motion.div
+            className="slide-in"
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 0 }}
+            exit={{ scaleY: 1 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          ></motion.div>
+          <Component {...pageProps} />
+          {/* Page Transition */}
+          <motion.div
+            className="slide-out"
+            initial={{ scaleY: 1 }}
+            animate={{ scaleY: 0 }}
+            exit={{ scaleY: 0 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          ></motion.div>
+        </motion.div>
+      </AnimatePresence>
+    </>
   );
 }
 
