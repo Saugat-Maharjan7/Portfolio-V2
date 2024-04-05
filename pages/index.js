@@ -19,7 +19,7 @@ import BGERASER from "../public/components/BgEraserSection";
 import React from 'react';
 import Button from "../public/components/Button";
 import Spline from '@splinetool/react-spline';
-
+import { Portal } from "../public/components/Portal"
 
 
 
@@ -99,25 +99,6 @@ export default function Home() {
   function toggleSidebar() {
     setIsSidebarOpen(!isSidebarOpen);
   }
-
-    //for scrolling of the button
-    // useEffect(()=>{
-    //   let scrollable=document.querySelector('main')
-    //   let explore=document.querySelector('.explore-world')
-      
-    //   scrollable.addEventListener('scroll',(e)=>{
-    //     let t=scrollable.scrollTop;
-    //     if (t>0){
-    //       explore.style.display="none"
-
-    //     }
-    //   if(t<=0){
-    //     explore.style.display="block"
-       
-    //   }
-        
-    //   })
-    // })
     const [checked, setChecked] = useState(false);
 
   return (
@@ -144,22 +125,13 @@ export default function Home() {
         <Toggle></Toggle>
         <Mouse 
         mouseTargetElements={mouseTargetElements}
-        // targetClass="p-right" hoverClass="mouse-cursor-case" 
         />
 
-
-        {/* switch button */}
-
-        {/* <div  ref={exploreref} className={`${styles.toggleWrapper} explore-world` } onClick={()=>setChecked(!checked)}>
-        <div
-          className={`${styles.toggleSwitch} ${checked ? styles.checked : ''} ${!checked ? styles.unchecked:''}`}
-        />
-      </div> */}
 
       {/* Mobile Navigation */}
       <Sidenavigation isSidebarOpen={isSidebarOpen}></Sidenavigation>
 
-             
+            
       {/* <World/> */}
         <main className={checked ? 'main-inactive' : ''}>
         <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Header>
@@ -206,8 +178,8 @@ export default function Home() {
                   frameBorder="0" 
                   allowTransparency="true" >
                   </iframe>
-
-                  {/* blocker */}
+                  {/* <Portal/>  */}
+                 
                   <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
                   </div>
 

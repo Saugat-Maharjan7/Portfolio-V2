@@ -6,21 +6,51 @@ Command: npx gltfjsx@6.2.16 portal.glb
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { Canvas } from 'react-three-fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera,OrbitControls } from '@react-three/drei'
+import { Environment,  } from '@react-three/drei'
+import { SphereBufferGeometry, MeshStandardMaterial } from 'three';
+
 
 export function Portal(props) {
+  const sphereRef = useRef();
+
   const { nodes, materials } = useGLTF('../models/portal.glb')
+  // useFrame(() => {
+  //   if (sphereRef.current) {
+  //     sphereRef.current.rotation.x += 0.01;
+  //     sphereRef.current.rotation.y += 0.01;
+  //   }
+  // });
+
   return (
-    <>
-    <Canvas >
-      <PerspectiveCamera makeDefault position={[0,0,2]}/>
+    <div className='portal'>
+    <Canvas 
+    shadows
+    gl={{ alpha: true }}
+    dpr={[1, 1.5]}
+>
+  <OrbitControls/>
+  <Environment background={false} files={'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/hdris/potsdamer-platz/potsdamer_platz_1k.hdr'} />
+  {/* <mesh ref={sphereRef}>
+      <sphereBufferGeometry args={[1, 32, 32]} />
+      <meshStandardMaterial metalness={1} roughness={0} />
+    </mesh> */}
+      <PerspectiveCamera makeDefault position={[0,0,5]}/>
+      <pointLight color="white  " intesity={100} position={[0,3,5]}/>
+      {/* <Sphere ref={sphereRef} args={[1, 32, 32]}>
+      <meshStandardMaterial metalness={1} roughness={0} />
+    </Sphere> */}
+
       <group  dispose={null}>
       <group rotation={[-Math.PI / 2, 0, Math.PI]}>
         <mesh geometry={nodes.Circle_1.geometry} material={materials.black} />
-        <mesh geometry={nodes.Circle_2.geometry} material={materials['Material.001']} />
+        <mesh  geometry={nodes.Circle_2.geometry} material={materials['Material.001']} />
+                {/* <mesh  geometry={nodes.Circle_2.geometry} material={"https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/materials/toon/toon.jpg"} /> */}
+
       </group>
+      
       </group>
-    </Canvas></>
+    </Canvas></div>
     
     
   )
