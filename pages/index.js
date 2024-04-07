@@ -24,7 +24,6 @@ import Spline from '@splinetool/react-spline';
 
 
 
-
 export default function Home() {
 
     //button icons
@@ -139,7 +138,7 @@ export default function Home() {
 
         </Head>
       
-        {/* changes made */}
+        
 
         
         <Toggle></Toggle>
