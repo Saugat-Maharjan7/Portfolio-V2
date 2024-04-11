@@ -4,28 +4,39 @@ import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/style.scss';
 import '../styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import {useProgress} from '@react-three/drei'
 
 
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+      const { progress } = useProgress()
+
   const [isLoading, setIsLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
+  console.log(progress)
+
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setLoadingProgress((prevProgress) => {
-        if (prevProgress < 100) {
-          return prevProgress + 25; // Increase the progress by 10% every 1 second
-        } else {
-          setIsLoading(false);
-          return 100;
+    if (progress === 100) {
+      setIsLoading(false)
         }
-      });
-    }, 1000); // 1 second interval
+        setLoadingProgress(progress); // Update current progress
+}, [progress])
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setLoadingProgress((prevProgress) => {
+  //       if (prevProgress < 100) {
+  //         return prevProgress + 25; // Increase the progress by 10% every 1 second
+  //       } else {
+  //         setIsLoading(false);
+  //         return 100;
+  //       }
+  //     });
+  //   }, 1000); // 1 second interval
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   if (isLoading) {
     return (
