@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
           return 100;
         }
       });
-    }, 10); // 1 second interval
+    }, 1000); // 1 second interval
 
     return () => clearInterval(timer);
   }, []);
