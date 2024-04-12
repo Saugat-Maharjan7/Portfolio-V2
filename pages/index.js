@@ -1,4 +1,4 @@
-
+'use client'
 import Link from "next/link"
 import Header from "../public/components/header"
 import Toggle from "../public/components/togglemenu"
@@ -20,16 +20,20 @@ import React from 'react';
 import Button from "../public/components/Button";
 import Spline from '@splinetool/react-spline';
 import { Portal } from "../public/components/Portal"
-
+// import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 
 
 export default function Home() {
 
     //button icons
-    
+    // const lenis = useLenis(({ scroll }) => {
+    //   // called every scroll
+    // })
   
- 
+    const mainRef = useRef(null);
+    // useLenis(mainRef);
+
     let exploreref=useRef()
     const landingTitle="DESIGNING TOMORROW: UNVEILING MY VISIONARY WORLD"
     const [isToggled, setToggled] = useState(false);
@@ -133,7 +137,9 @@ export default function Home() {
 
             
       {/* <World/> */}
-        <main className={checked ? 'main-inactive' : ''}>
+      
+
+        <main ref={mainRef} className={checked ? 'main-inactive' : ''}>
         <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Header>
 
           <div className="hero-wrapper position-relative">           
@@ -160,7 +166,7 @@ export default function Home() {
                   <img className="sun_light" src="/assets/sun light.png" alt="sun light" />
                 <div
                 >
-                  <iframe className="particles-sphere" style={{position:'absolute',
+                  {/* <iframe className="particles-sphere" style={{position:'absolute',
                   right:'0%',
                   bottom:'0%',
                   width: '100%', // Set initial width to 100%
@@ -177,8 +183,8 @@ export default function Home() {
 
                   frameBorder="0" 
                   allowTransparency="true" >
-                  </iframe>
-                  {/* <Portal/>  */}
+                  </iframe> */}
+                  <Portal/> 
                  
                   <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
                   </div>
@@ -312,6 +318,7 @@ export default function Home() {
          <ThreeD/>
          <Footer/>
         </main>
+       
         <Script type="module" src="/script.js"></Script>
         </m.div>           
       
