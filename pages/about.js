@@ -155,6 +155,7 @@ For me, having a solid set of tools and knowledge is an absolute game-changer. T
           <section className="experience-section"><div className="background">
               <h2 >MY EXPERIENCE</h2>
               <ul className="experience-table">
+              <li><span>2024</span><span>Peer Circles App</span><span>Sr. Product Designer</span></li>
               <li><span>2024</span><span>Inclusivity Institute for Better Data</span><span>Design Lead</span></li>
                <li><span>2023</span><span>GlobalyHub</span><span>Sr. Product Designer</span></li>
                 <li><span>2021</span><span>Proshore</span><span>UX Design, Frontend</span></li>
