@@ -39,6 +39,7 @@
 }
 .contact-section .container .contact ul li {
   list-style: none;
+  padding-bottom: 16px;
 }
 .contact-section .container .headingContainer img {
   top: 3rem;
@@ -112,6 +113,9 @@
 }
 .contact-section .container form ul {
   padding: 0;
+}
+.contact-section .container form ul li {
+  border-bottom: 1px solid grey;
 }
 .contact-section .container form ul .input-holder {
   padding: 2rem 1rem;

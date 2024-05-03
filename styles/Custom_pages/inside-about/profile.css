@@ -92,7 +92,7 @@
   }
 }
 .about-me {
-  background-color: #FB722E;
+  background-color: getColor(Brand, Orange, 500);
   position: relative;
   padding-left: 2rem;
   padding-right: 2rem;

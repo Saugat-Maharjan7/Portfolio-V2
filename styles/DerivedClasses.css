@@ -24,14 +24,6 @@
   background-color: #000000 !important;
 }
 
-.BGAlphaWhite100 {
-  background-color: rgba(255, 255, 255, 0.5764705882) !important;
-}
-
-.BGAlphaBlack100 {
-  background-color: rgba(0, 0, 0, 0.3176470588) !important;
-}
-
 .BGBrandBlack100 {
   background-color: #292828 !important;
 }
@@ -102,6 +94,26 @@
 
 .BGBrandOrange900 {
   background-color: #512322 !important;
+}
+
+.BGBrandAlphaOrange100 {
+  background-color: rgba(251, 114, 46, 0.7490196078) !important;
+}
+
+.BGBrandAlphaOrange200 {
+  background-color: rgba(251, 114, 46, 0.6509803922) !important;
+}
+
+.BGBrandAlphaOrange300 {
+  background-color: rgba(251, 114, 46, 0.5019607843) !important;
+}
+
+.BGBrandAlphaOrange400 {
+  background-color: rgba(251, 114, 46, 0.3490196078) !important;
+}
+
+.BGBrandAlphaOrange500 {
+  background-color: rgba(251, 114, 46, 0.1490196078) !important;
 }
 
 .BGBrandPurple100 {
@@ -948,14 +960,6 @@
   color: #000000 !important;
 }
 
-.TXTAlphaWhite100 {
-  color: rgba(255, 255, 255, 0.5764705882) !important;
-}
-
-.TXTAlphaBlack100 {
-  color: rgba(0, 0, 0, 0.3176470588) !important;
-}
-
 .TXTBrandBlack100 {
   color: #292828 !important;
 }
@@ -1026,6 +1030,26 @@
 
 .TXTBrandOrange900 {
   color: #512322 !important;
+}
+
+.TXTBrandAlphaOrange100 {
+  color: rgba(251, 114, 46, 0.7490196078) !important;
+}
+
+.TXTBrandAlphaOrange200 {
+  color: rgba(251, 114, 46, 0.6509803922) !important;
+}
+
+.TXTBrandAlphaOrange300 {
+  color: rgba(251, 114, 46, 0.5019607843) !important;
+}
+
+.TXTBrandAlphaOrange400 {
+  color: rgba(251, 114, 46, 0.3490196078) !important;
+}
+
+.TXTBrandAlphaOrange500 {
+  color: rgba(251, 114, 46, 0.1490196078) !important;
 }
 
 .TXTBrandPurple100 {
@@ -1872,14 +1896,6 @@
   border-color: #000000 !important;
 }
 
-.BRDRAlphaWhite100 {
-  border-color: rgba(255, 255, 255, 0.5764705882) !important;
-}
-
-.BRDRAlphaBlack100 {
-  border-color: rgba(0, 0, 0, 0.3176470588) !important;
-}
-
 .BRDRBrandBlack100 {
   border-color: #292828 !important;
 }
@@ -1950,6 +1966,26 @@
 
 .BRDRBrandOrange900 {
   border-color: #512322 !important;
+}
+
+.BRDRBrandAlphaOrange100 {
+  border-color: rgba(251, 114, 46, 0.7490196078) !important;
+}
+
+.BRDRBrandAlphaOrange200 {
+  border-color: rgba(251, 114, 46, 0.6509803922) !important;
+}
+
+.BRDRBrandAlphaOrange300 {
+  border-color: rgba(251, 114, 46, 0.5019607843) !important;
+}
+
+.BRDRBrandAlphaOrange400 {
+  border-color: rgba(251, 114, 46, 0.3490196078) !important;
+}
+
+.BRDRBrandAlphaOrange500 {
+  border-color: rgba(251, 114, 46, 0.1490196078) !important;
 }
 
 .BRDRBrandPurple100 {
@@ -2792,6 +2828,18 @@
   font-size: 0px !important;
 }
 
+.SIZEW1 {
+  width: 2px !important;
+}
+
+.SIZEH1 {
+  width: 2px !important;
+}
+
+.SIZEF1 {
+  font-size: 2px !important;
+}
+
 .SIZEW2 {
   width: 4px !important;
 }
@@ -2802,6 +2850,18 @@
 
 .SIZEF2 {
   font-size: 4px !important;
+}
+
+.SIZEW3 {
+  width: 6px !important;
+}
+
+.SIZEH3 {
+  width: 6px !important;
+}
+
+.SIZEF3 {
+  font-size: 6px !important;
 }
 
 .SIZEW4 {
@@ -2816,6 +2876,18 @@
   font-size: 8px !important;
 }
 
+.SIZEW5 {
+  width: 10px !important;
+}
+
+.SIZEH5 {
+  width: 10px !important;
+}
+
+.SIZEF5 {
+  font-size: 10px !important;
+}
+
 .SIZEW6 {
   width: 12px !important;
 }
@@ -2826,6 +2898,18 @@
 
 .SIZEF6 {
   font-size: 12px !important;
+}
+
+.SIZEW7 {
+  width: 14px !important;
+}
+
+.SIZEH7 {
+  width: 14px !important;
+}
+
+.SIZEF7 {
+  font-size: 14px !important;
 }
 
 .SIZEW8 {
@@ -2840,6 +2924,18 @@
   font-size: 16px !important;
 }
 
+.SIZEW9 {
+  width: 18px !important;
+}
+
+.SIZEH9 {
+  width: 18px !important;
+}
+
+.SIZEF9 {
+  font-size: 18px !important;
+}
+
 .SIZEW10 {
   width: 20px !important;
 }
@@ -2850,6 +2946,18 @@
 
 .SIZEF10 {
   font-size: 20px !important;
+}
+
+.SIZEW11 {
+  width: 22px !important;
+}
+
+.SIZEH11 {
+  width: 22px !important;
+}
+
+.SIZEF11 {
+  font-size: 22px !important;
 }
 
 .SIZEW12 {
@@ -2864,6 +2972,18 @@
   font-size: 24px !important;
 }
 
+.SIZEW13 {
+  width: 26px !important;
+}
+
+.SIZEH13 {
+  width: 26px !important;
+}
+
+.SIZEF13 {
+  font-size: 26px !important;
+}
+
 .SIZEW14 {
   width: 28px !important;
 }
@@ -2874,6 +2994,18 @@
 
 .SIZEF14 {
   font-size: 28px !important;
+}
+
+.SIZEW15 {
+  width: 30px !important;
+}
+
+.SIZEH15 {
+  width: 30px !important;
+}
+
+.SIZEF15 {
+  font-size: 30px !important;
 }
 
 .SIZEW16 {
@@ -2888,6 +3020,18 @@
   font-size: 32px !important;
 }
 
+.SIZEW17 {
+  width: 34px !important;
+}
+
+.SIZEH17 {
+  width: 34px !important;
+}
+
+.SIZEF17 {
+  font-size: 34px !important;
+}
+
 .SIZEW18 {
   width: 36px !important;
 }
@@ -2898,6 +3042,18 @@
 
 .SIZEF18 {
   font-size: 36px !important;
+}
+
+.SIZEW19 {
+  width: 38px !important;
+}
+
+.SIZEH19 {
+  width: 38px !important;
+}
+
+.SIZEF19 {
+  font-size: 38px !important;
 }
 
 .SIZEW20 {
@@ -2912,6 +3068,18 @@
   font-size: 40px !important;
 }
 
+.SIZEW21 {
+  width: 42px !important;
+}
+
+.SIZEH21 {
+  width: 42px !important;
+}
+
+.SIZEF21 {
+  font-size: 42px !important;
+}
+
 .SIZEW22 {
   width: 44px !important;
 }
@@ -2922,6 +3090,18 @@
 
 .SIZEF22 {
   font-size: 44px !important;
+}
+
+.SIZEW23 {
+  width: 46px !important;
+}
+
+.SIZEH23 {
+  width: 46px !important;
+}
+
+.SIZEF23 {
+  font-size: 46px !important;
 }
 
 .SIZEW24 {
@@ -2936,6 +3116,18 @@
   font-size: 48px !important;
 }
 
+.SIZEW25 {
+  width: 50px !important;
+}
+
+.SIZEH25 {
+  width: 50px !important;
+}
+
+.SIZEF25 {
+  font-size: 50px !important;
+}
+
 .SIZEW26 {
   width: 52px !important;
 }
@@ -2946,6 +3138,18 @@
 
 .SIZEF26 {
   font-size: 52px !important;
+}
+
+.SIZEW27 {
+  width: 54px !important;
+}
+
+.SIZEH27 {
+  width: 54px !important;
+}
+
+.SIZEF27 {
+  font-size: 54px !important;
 }
 
 .SIZEW28 {
@@ -2960,6 +3164,18 @@
   font-size: 56px !important;
 }
 
+.SIZEW29 {
+  width: 58px !important;
+}
+
+.SIZEH29 {
+  width: 58px !important;
+}
+
+.SIZEF29 {
+  font-size: 58px !important;
+}
+
 .SIZEW30 {
   width: 60px !important;
 }
@@ -2970,6 +3186,18 @@
 
 .SIZEF30 {
   font-size: 60px !important;
+}
+
+.SIZEW31 {
+  width: 62px !important;
+}
+
+.SIZEH31 {
+  width: 62px !important;
+}
+
+.SIZEF31 {
+  font-size: 62px !important;
 }
 
 .SIZEW32 {
@@ -2984,6 +3212,18 @@
   font-size: 64px !important;
 }
 
+.SIZEW33 {
+  width: 66px !important;
+}
+
+.SIZEH33 {
+  width: 66px !important;
+}
+
+.SIZEF33 {
+  font-size: 66px !important;
+}
+
 .SIZEW34 {
   width: 68px !important;
 }
@@ -2994,6 +3234,18 @@
 
 .SIZEF34 {
   font-size: 68px !important;
+}
+
+.SIZEW35 {
+  width: 70px !important;
+}
+
+.SIZEH35 {
+  width: 70px !important;
+}
+
+.SIZEF35 {
+  font-size: 70px !important;
 }
 
 .SIZEW36 {
@@ -3008,6 +3260,18 @@
   font-size: 72px !important;
 }
 
+.SIZEW37 {
+  width: 74px !important;
+}
+
+.SIZEH37 {
+  width: 74px !important;
+}
+
+.SIZEF37 {
+  font-size: 74px !important;
+}
+
 .SIZEW38 {
   width: 76px !important;
 }
@@ -3018,6 +3282,18 @@
 
 .SIZEF38 {
   font-size: 76px !important;
+}
+
+.SIZEW39 {
+  width: 78px !important;
+}
+
+.SIZEH39 {
+  width: 78px !important;
+}
+
+.SIZEF39 {
+  font-size: 78px !important;
 }
 
 .SIZEW40 {
@@ -3032,6 +3308,18 @@
   font-size: 80px !important;
 }
 
+.SIZEW41 {
+  width: 82px !important;
+}
+
+.SIZEH41 {
+  width: 82px !important;
+}
+
+.SIZEF41 {
+  font-size: 82px !important;
+}
+
 .SIZEW42 {
   width: 84px !important;
 }
@@ -3042,6 +3330,18 @@
 
 .SIZEF42 {
   font-size: 84px !important;
+}
+
+.SIZEW43 {
+  width: 86px !important;
+}
+
+.SIZEH43 {
+  width: 86px !important;
+}
+
+.SIZEF43 {
+  font-size: 86px !important;
 }
 
 .SIZEW44 {
@@ -3056,6 +3356,18 @@
   font-size: 88px !important;
 }
 
+.SIZEW45 {
+  width: 90px !important;
+}
+
+.SIZEH45 {
+  width: 90px !important;
+}
+
+.SIZEF45 {
+  font-size: 90px !important;
+}
+
 .SIZEW46 {
   width: 92px !important;
 }
@@ -3066,6 +3378,18 @@
 
 .SIZEF46 {
   font-size: 92px !important;
+}
+
+.SIZEW47 {
+  width: 94px !important;
+}
+
+.SIZEH47 {
+  width: 94px !important;
+}
+
+.SIZEF47 {
+  font-size: 94px !important;
 }
 
 .SIZEW48 {
@@ -3080,6 +3404,18 @@
   font-size: 96px !important;
 }
 
+.SIZEW49 {
+  width: 98px !important;
+}
+
+.SIZEH49 {
+  width: 98px !important;
+}
+
+.SIZEF49 {
+  font-size: 98px !important;
+}
+
 .SIZEW50 {
   width: 100px !important;
 }
@@ -3092,508 +3428,44 @@
   font-size: 100px !important;
 }
 
-.SIZEW52 {
-  width: 104px !important;
-}
-
-.SIZEH52 {
-  width: 104px !important;
-}
-
-.SIZEF52 {
-  font-size: 104px !important;
-}
-
-.SIZEW54 {
-  width: 108px !important;
-}
-
-.SIZEH54 {
-  width: 108px !important;
-}
-
-.SIZEF54 {
-  font-size: 108px !important;
-}
-
-.SIZEW56 {
-  width: 112px !important;
-}
-
-.SIZEH56 {
-  width: 112px !important;
-}
-
-.SIZEF56 {
-  font-size: 112px !important;
-}
-
-.SIZEW58 {
-  width: 116px !important;
-}
-
-.SIZEH58 {
-  width: 116px !important;
-}
-
-.SIZEF58 {
-  font-size: 116px !important;
-}
-
-.SIZEW60 {
-  width: 120px !important;
-}
-
-.SIZEH60 {
-  width: 120px !important;
-}
-
-.SIZEF60 {
-  font-size: 120px !important;
-}
-
-.SIZEW62 {
-  width: 124px !important;
-}
-
-.SIZEH62 {
-  width: 124px !important;
-}
-
-.SIZEF62 {
-  font-size: 124px !important;
-}
-
-.SIZEW64 {
-  width: 128px !important;
-}
-
-.SIZEH64 {
-  width: 128px !important;
-}
-
-.SIZEF64 {
-  font-size: 128px !important;
-}
-
-.SIZEW66 {
-  width: 132px !important;
-}
-
-.SIZEH66 {
-  width: 132px !important;
-}
-
-.SIZEF66 {
-  font-size: 132px !important;
-}
-
-.SIZEW68 {
-  width: 136px !important;
-}
-
-.SIZEH68 {
-  width: 136px !important;
-}
-
-.SIZEF68 {
-  font-size: 136px !important;
-}
-
-.SIZEW70 {
-  width: 140px !important;
-}
-
-.SIZEH70 {
-  width: 140px !important;
-}
-
-.SIZEF70 {
-  font-size: 140px !important;
-}
-
-.SIZEW72 {
-  width: 144px !important;
-}
-
-.SIZEH72 {
-  width: 144px !important;
-}
-
-.SIZEF72 {
-  font-size: 144px !important;
-}
-
-.SIZEW74 {
-  width: 148px !important;
-}
-
-.SIZEH74 {
-  width: 148px !important;
-}
-
-.SIZEF74 {
-  font-size: 148px !important;
-}
-
-.SIZEW76 {
-  width: 152px !important;
-}
-
-.SIZEH76 {
-  width: 152px !important;
-}
-
-.SIZEF76 {
-  font-size: 152px !important;
-}
-
-.SIZEW78 {
-  width: 156px !important;
-}
-
-.SIZEH78 {
-  width: 156px !important;
-}
-
-.SIZEF78 {
-  font-size: 156px !important;
-}
-
-.SIZEW80 {
-  width: 160px !important;
-}
-
-.SIZEH80 {
-  width: 160px !important;
-}
-
-.SIZEF80 {
-  font-size: 160px !important;
-}
-
-.SIZEW82 {
-  width: 164px !important;
-}
-
-.SIZEH82 {
-  width: 164px !important;
-}
-
-.SIZEF82 {
-  font-size: 164px !important;
-}
-
-.SIZEW84 {
-  width: 168px !important;
-}
-
-.SIZEH84 {
-  width: 168px !important;
-}
-
-.SIZEF84 {
-  font-size: 168px !important;
-}
-
-.SIZEW86 {
-  width: 172px !important;
-}
-
-.SIZEH86 {
-  width: 172px !important;
-}
-
-.SIZEF86 {
-  font-size: 172px !important;
-}
-
-.SIZEW88 {
-  width: 176px !important;
-}
-
-.SIZEH88 {
-  width: 176px !important;
-}
-
-.SIZEF88 {
-  font-size: 176px !important;
-}
-
-.SIZEW90 {
-  width: 180px !important;
-}
-
-.SIZEH90 {
-  width: 180px !important;
-}
-
-.SIZEF90 {
-  font-size: 180px !important;
-}
-
-.SIZEW92 {
-  width: 184px !important;
-}
-
-.SIZEH92 {
-  width: 184px !important;
-}
-
-.SIZEF92 {
-  font-size: 184px !important;
-}
-
-.SIZEW94 {
-  width: 188px !important;
-}
-
-.SIZEH94 {
-  width: 188px !important;
-}
-
-.SIZEF94 {
-  font-size: 188px !important;
-}
-
-.SIZEW96 {
-  width: 192px !important;
-}
-
-.SIZEH96 {
-  width: 192px !important;
-}
-
-.SIZEF96 {
-  font-size: 192px !important;
-}
-
-.SIZEW98 {
-  width: 196px !important;
-}
-
-.SIZEH98 {
-  width: 196px !important;
-}
-
-.SIZEF98 {
-  font-size: 196px !important;
-}
-
-.SIZEW100 {
-  width: 200px !important;
-}
-
-.SIZEH100 {
-  width: 200px !important;
-}
-
-.SIZEF100 {
-  font-size: 200px !important;
-}
-
 .BDR0 {
   border-radius: 0px !important;
 }
 
-.BDR2 {
+.BDRxs {
   border-radius: 4px !important;
 }
 
-.BDR4 {
+.BDRs {
   border-radius: 8px !important;
 }
 
-.BDR6 {
-  border-radius: 12px !important;
-}
-
-.BDR8 {
+.BDRm {
   border-radius: 16px !important;
 }
 
-.BDR10 {
-  border-radius: 20px !important;
-}
-
-.BDR12 {
+.BDRl {
   border-radius: 24px !important;
 }
 
-.BDR14 {
-  border-radius: 28px !important;
-}
-
-.BDR16 {
+.BDRxl {
   border-radius: 32px !important;
 }
 
-.BDR18 {
-  border-radius: 36px !important;
-}
-
-.BDR20 {
+.BDRxxl {
   border-radius: 40px !important;
 }
 
-.BDR22 {
-  border-radius: 44px !important;
-}
-
-.BDR24 {
-  border-radius: 48px !important;
-}
-
-.BDR26 {
+.BDRxxxl {
   border-radius: 52px !important;
 }
 
-.BDR28 {
-  border-radius: 56px !important;
-}
-
-.BDR30 {
-  border-radius: 60px !important;
-}
-
-.BDR32 {
-  border-radius: 64px !important;
-}
-
-.BDR34 {
-  border-radius: 68px !important;
-}
-
-.BDR36 {
-  border-radius: 72px !important;
-}
-
-.BDR38 {
+.BDRfxl {
   border-radius: 76px !important;
 }
 
-.BDR40 {
-  border-radius: 80px !important;
-}
-
-.BDR42 {
-  border-radius: 84px !important;
-}
-
-.BDR44 {
-  border-radius: 88px !important;
-}
-
-.BDR46 {
-  border-radius: 92px !important;
-}
-
-.BDR48 {
-  border-radius: 96px !important;
-}
-
-.BDR50 {
-  border-radius: 100px !important;
-}
-
-.BDR52 {
-  border-radius: 104px !important;
-}
-
-.BDR54 {
-  border-radius: 108px !important;
-}
-
-.BDR56 {
-  border-radius: 112px !important;
-}
-
-.BDR58 {
-  border-radius: 116px !important;
-}
-
-.BDR60 {
-  border-radius: 120px !important;
-}
-
-.BDR62 {
-  border-radius: 124px !important;
-}
-
-.BDR64 {
-  border-radius: 128px !important;
-}
-
-.BDR66 {
-  border-radius: 132px !important;
-}
-
-.BDR68 {
-  border-radius: 136px !important;
-}
-
-.BDR70 {
-  border-radius: 140px !important;
-}
-
-.BDR72 {
-  border-radius: 144px !important;
-}
-
-.BDR74 {
-  border-radius: 148px !important;
-}
-
-.BDR76 {
-  border-radius: 152px !important;
-}
-
-.BDR78 {
-  border-radius: 156px !important;
-}
-
-.BDR80 {
-  border-radius: 160px !important;
-}
-
-.BDR82 {
-  border-radius: 164px !important;
-}
-
-.BDR84 {
-  border-radius: 168px !important;
-}
-
-.BDR86 {
-  border-radius: 172px !important;
-}
-
-.BDR88 {
-  border-radius: 176px !important;
-}
-
-.BDR90 {
-  border-radius: 180px !important;
-}
-
-.BDR92 {
-  border-radius: 184px !important;
-}
-
-.BDR94 {
-  border-radius: 188px !important;
-}
-
-.BDR96 {
-  border-radius: 192px !important;
-}
-
-.BDR98 {
-  border-radius: 196px !important;
-}
-
 .BDR100 {
-  border-radius: 200px !important;
+  border-radius: 100px !important;
 }
 
 .MARGIN0 {

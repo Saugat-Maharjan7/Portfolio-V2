@@ -19,7 +19,7 @@
 .page-transition .loader .load-bar {
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, #FB722E 0%, #C25FFD 100%);
+  background: linear-gradient(90deg, getColor(Brand, Orange, 500) 0%, #C25FFD 100%);
   transition: ease-in 3s;
 }
 .page-transition .projectContent {

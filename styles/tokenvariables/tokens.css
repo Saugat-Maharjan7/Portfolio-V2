@@ -1,0 +1,46 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 03 May 2024 22:11:39 GMT
+ */
+
+:root {
+  --size-2: 2px;
+  --size-0: 0px;
+  --globals-alpha-orange-500: #fb722e26;
+  --globals-alpha-orange-400: #fb722e59;
+  --globals-alpha-orange-300: #fb722e80;
+  --globals-alpha-orange-200: #fb722ea6;
+  --globals-alpha-orange-100: #fb722ebf;
+  --globals-black-900: #000000;
+  --globals-black-800: #000000;
+  --globals-black-700: #050505;
+  --globals-black-600: #0b0b0b;
+  --globals-black-500: #161515;
+  --globals-black-400: #161515;
+  --globals-black-300: #1d1c1c;
+  --globals-black-200: #232222;
+  --globals-black-100: #292828; /* $colors-Brand-black */
+  --globals-purple-900: #381333;
+  --globals-purple-800: #4e1966;
+  --globals-purple-700: #641f99;
+  --globals-purple-600: #7a25cc;
+  --globals-purple-500: #8227d9;
+  --globals-purple-400: #a959ff;
+  --globals-purple-300: #c186ff;
+  --globals-purple-200: #d9b3ff;
+  --globals-purple-100: #f2e1ff;
+  --globals-orange-900: #512322;
+  --globals-orange-800: #7d3c30;
+  --globals-orange-700: #a9543f;
+  --globals-orange-600: #d16c4f;
+  --globals-orange-500: #fb722e;
+  --globals-orange-400: #eb9e7b;
+  --globals-orange-300: #f0b79f;
+  --globals-orange-200: #f6d1c2;
+  --globals-orange-100: #fbece6;
+  --spacer-xs: var(--size-2);
+  --spacer-zero: var(--size-0);
+  --theme-primary-300: var(--globals-orange-500);
+  --theme-primary-200: var(--globals-orange-200);
+  --theme-primary-100: var(--globals-orange-100);
+}
