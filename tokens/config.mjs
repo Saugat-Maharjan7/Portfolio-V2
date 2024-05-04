@@ -10,6 +10,7 @@ const config={
   platforms:{
     css:{
       buildPath:"styles/tokenvariables/",
+      prefix:'ss',
       transformGroup:"css",
       files:[
         {

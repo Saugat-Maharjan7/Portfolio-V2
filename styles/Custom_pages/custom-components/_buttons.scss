@@ -189,21 +189,21 @@
 
 //Types
 .BTNBrandOutline{
-    
-    border: 1px solid $primary-orange;
-    color: $primary-orange;
+    border-radius: var(--ss-border-radius-0);
+    border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-rest);
+    color: var(--ss-colors-system-text-action-rest);
     transition: ease-in-out 0.2s ;
 
     &:hover{
         .BTNBrandHighlight{
-            background-color: $primary-orange;
+            background-color: var(--ss-colors-semantic-primary-500);
             left: 200%;
         }
     }
 
     &:active{
-        color: $primary-black;
-        background-color: $primary-orange;
+        color: var(--ss-colors-system-text-onaction-pressed);
+        background-color: var(--ss-colors-system-surface-action-pressed);
     }
 }
 

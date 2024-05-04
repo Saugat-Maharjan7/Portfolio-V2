@@ -22,8 +22,7 @@ import { Source } from "three"
 
 
 
-export default function Home({cmsdata}) {
-  console.log(cmsdata)
+export default function Home() {
 
     //button icons
     // const lenis = useLenis(({ scroll }) => {
@@ -302,13 +301,13 @@ export default function Home({cmsdata}) {
 }
 
 
-export async function getServerSideProps(context){
-  const res = await fetch(`https://eoa1wcoa1epng8i.m.pipedream.net`);
-  const cmsdata = await res.json();
+// export async function getServerSideProps(context){
+//   const res = await fetch(`https://eoa1wcoa1epng8i.m.pipedream.net`);
+//   const cmsdata = await res.json();
   
-  return {
-    props: {
-      cmsdata 
-    }
-  };
-}
+//   return {
+//     props: {
+//       cmsdata 
+//     }
+//   };
+// }
