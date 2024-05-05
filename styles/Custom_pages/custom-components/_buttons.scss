@@ -6,10 +6,10 @@
 }
 
 .btn-down{
-    color: white;
+    color: var(--ss-colors-system-text-onsurface0-default);
     text-transform: lowercase;
     display: flex;
-    gap:.5rem;
+    gap:var(--ss-spacer-s);
     align-items: center;
 
     &:hover{
@@ -28,7 +28,7 @@
 
 
 .btn-outline-primary{
-    border-radius: 0px;
+    border-radius: var(--ss-border-radius-0);
     // border-color:$agentcis-system-text-action ;
     padding: 0.625 1rem;
     overflow: hidden;

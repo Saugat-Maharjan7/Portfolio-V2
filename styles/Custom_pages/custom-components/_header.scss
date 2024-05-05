@@ -2,11 +2,11 @@
 
 
 header{
-    z-index: 100;
-    background: rgba(77, 70, 70, 0.25);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter:blur(8px);
-    border-bottom: 1px solid white;
+    z-index: 900;
+    background: var(--ss-colors-system-surface-surface0transparent-rest);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);    
+    border-bottom: 1px solid var(--ss-colors-system-border-onsurface1-rest);
     position: fixed;
     top:-100px;
     width: 100%;
@@ -24,7 +24,7 @@ header{
        
 
         .Logo{
-            gap: 1rem;
+            gap: var(--ss-spacer-m);
             align-items: center;
 
             .Logo-container{
@@ -44,7 +44,7 @@ header{
         
             .links{
                 ul{
-                    gap:4rem;
+                    gap:var(--ss-spacer-fxl);
                     padding: 0;
                     margin: 0;
             
@@ -54,12 +54,12 @@ header{
                         align-items: center;
 
                         a{
-                            color: white;
+                            color: var(--ss-colors-system-text-onsurface0-rest);
                             text-decoration: none;
                             display: flex;
                             flex-direction: row;
                             align-items: center;
-                            gap:1rem;
+                            gap:var(--ss-spacer-m);
                             transition: ease-in;
 
                             span{                              
@@ -74,7 +74,7 @@ header{
                                 height:32px;
                                 width: 32px;
                                 background: #FFFFFF;
-                                box-shadow: 0px 4px 4px $primary-vio;
+                                box-shadow: 0px 4px 4px var(--ss-colors-primitive-purple-700);
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -214,13 +214,13 @@ header{
                 }   
             }
         
-            // XX-Large devices (larger desktops, 1400px and up)
-            @media (min-width: 1400px) {
+            // XX-Large devices (larger desktops, var(--ss-breakpoints-2xl) and up)
+            @media (min-width: var(--ss-breakpoints-2xl)) {
                 ul{
                     display: flex!important;
                 }   
                 .ham-menu{
-                    display: none;
+                    display: block;
                 }    
             }
 

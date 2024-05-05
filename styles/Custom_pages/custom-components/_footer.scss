@@ -3,10 +3,10 @@ footer{
     .container{
 
     
-    color: white;
-    .copyrights{
-        padding: getSpacing('l') 0;
-        border-top: 1px solid white;
+    color: var(--ss-colors-system-text-onsurface0-rest);
+    .newcontainer{
+        padding: var(--ss-spacer-m) var(--ss-spacer-0);
+        border-top: 1px solid var(--ss-colors-system-border-onsurface0-rest);
 
         span{
             font-size: 1rem;
@@ -18,8 +18,8 @@ footer{
         // Small devices (Potrait phones, 576px and up)
 
         @media (min-width: 350px) {
-            .copyrights{
-                gap:.5rem;
+            .newcontainer{
+                gap:var(--ss-spacer-f);
                 flex-direction: column!important;
                 text-align: center;
             }         
@@ -27,8 +27,8 @@ footer{
     
         // Small devices (landscape phones, 576px and up)
         @media (min-width: 576px) {
-            .copyrights{
-                gap:.5rem;
+            .newcontainer{
+                gap:var(--ss-spacer-s);
                 flex-direction: column!important;
                 text-align: center;
             }          
@@ -36,7 +36,7 @@ footer{
     
         // Medium devices (tablets, 768px and up)
         @media (min-width: 768px) {
-            .copyrights{
+            .newcontainer{
            
                 flex-direction: row!important;
                 text-align: center;
@@ -45,7 +45,7 @@ footer{
     
         // Large devices (desktops, 992px and up)
         @media (min-width: 992px) {
-            .copyrights{
+            .newcontainer{
                 flex-direction: row!important;
                 text-align: center;
             }         
@@ -53,7 +53,7 @@ footer{
     
         // X-Large devices (large desktops, 1200px and up)
         @media (min-width: 1200px) {
-            .copyrights{
+            .newcontainer{
                 flex-direction: row!important;
                 text-align: center;
             }           
@@ -61,7 +61,7 @@ footer{
     
         // XX-Large devices (larger desktops, 1400px and up)
         @media (min-width: 1400px) {
-            .copyrights{
+            .newcontainer{
                 flex-direction: row!important;
                 text-align: center;
                 

@@ -2,7 +2,6 @@
 @import "../../Variables.scss";
 
 .subHeader{
-    background: transparent;
     padding: .8rem 0;
     position:fixed;
     width: 100%;
@@ -18,15 +17,15 @@
 
 
         a{
-            background-color: getColor(Brand,Black,100);
-            border-radius: 100px;
-            padding: .4rem .8rem;
-                gap: .5rem;
+            background-color: var(--ss-colors-system-surface-surface1-rest);
+            border-radius: var(--ss-border-radius-full);
+            padding: var(--ss-spacer-xs) var(--ss-spacer-m);
+                gap: var(--ss-spacer-s);
 
             span{
                 font-size: 1.2rem;
                 font-family: 'NexaLight';
-                color: $white;
+                color: var(--ss-colors-system-text-onsurface1-rest);
             }
 
                 .btn-contain{
@@ -50,7 +49,7 @@
                 }
 
                 span{
-                    color:$primary-orange
+                    color:var(--ss-colors-system-text-action-rest)
 
                 }
             }

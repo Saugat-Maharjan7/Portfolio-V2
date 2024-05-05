@@ -600,8 +600,7 @@
           "value": "{Colors.Primitive.Orange.500}",
           "type": "color",
           "parent": "ColorTokens/Dark",
-          "description": "",
-          "oldValue": "{Colors.Primitive.Purple.500}"
+          "description": ""
         },
         "600": {
           "value": "{Colors.Primitive.Orange.600}",
@@ -1055,7 +1054,7 @@
         },
         "Surface0transparent": {
           "Rest": {
-            "value": "{Colors.Primitive.AlphaBlack.300}",
+            "value": "{Colors.Primitive.AlphaBlack.400}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
@@ -1091,7 +1090,7 @@
             "description": ""
           },
           "Disabled": {
-            "value": "{Colors.Semantic.Neutrals.100}",
+            "value": "{Colors.Semantic.Neutrals.400}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
@@ -1124,20 +1123,26 @@
           }
         },
         "Onsurface0": {
-          "Default": {
+          "Rest": {
             "value": "{Colors.Semantic.Neutrals.100}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
           },
-          "Muted": {
-            "value": "{Colors.Semantic.Neutrals.200}",
+          "Hovered": {
+            "value": "{Colors.Semantic.Neutrals.100}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
           },
           "Disabled": {
             "value": "{Colors.Semantic.Neutrals.400}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "Pressed": {
+            "value": "{Colors.Semantic.Neutrals.100}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
@@ -1172,7 +1177,7 @@
           }
         },
         "Onsurface0": {
-          "Default": {
+          "Rest": {
             "value": "{Colors.Semantic.Neutrals.100}",
             "type": "color",
             "parent": "ColorTokens/Dark",
@@ -1189,10 +1194,22 @@
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
+          },
+          "hovered": {
+            "value": "{Colors.Semantic.Neutrals.100}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "pressed": {
+            "value": "{Colors.Semantic.Neutrals.100}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
           }
         },
         "Onsurface1": {
-          "Default": {
+          "Rest": {
             "value": "{Colors.Semantic.Neutrals.200}",
             "type": "color",
             "parent": "ColorTokens/Dark",
@@ -1209,12 +1226,24 @@
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
+          },
+          "Hovered": {
+            "value": "{Colors.Semantic.Neutrals.100}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "Pressed": {
+            "value": "{Colors.Semantic.Neutrals.100}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
           }
         }
       },
       "Text": {
         "Onsurface0": {
-          "Default": {
+          "Rest": {
             "value": "{Colors.Semantic.Neutrals.100}",
             "type": "color",
             "parent": "ColorTokens/Dark",
@@ -1228,6 +1257,18 @@
           },
           "Disabled": {
             "value": "{Colors.Semantic.Neutrals.400}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "Hovered": {
+            "value": "{Colors.Semantic.Neutrals.100}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "Pressed": {
+            "value": "{Colors.Semantic.Neutrals.100}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
@@ -1293,7 +1334,7 @@
             "description": ""
           },
           "Hovered": {
-            "value": "{Colors.Semantic.Neutrals.200}",
+            "value": "{Colors.Semantic.Neutrals.100}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
@@ -1305,6 +1346,12 @@
             "description": ""
           },
           "Pressed": {
+            "value": "{Colors.Semantic.Neutrals.100}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "Muted": {
             "value": "{Colors.Semantic.Neutrals.200}",
             "type": "color",
             "parent": "ColorTokens/Dark",
