@@ -134,7 +134,7 @@ export default function Home() {
 
             
       {/* <World/> */}
-    <EmblemScene/>
+    {/* <EmblemScene/> */}
       
 
         <main ref={mainRef} className={checked ? 'main-inactive' : ''}>
@@ -164,7 +164,7 @@ export default function Home() {
                   <img className="sun_light" src="/assets/sun light.png" alt="sun light" />
                 <div
                 >
-                  {/* <iframe className="particles-sphere" style={{position:'absolute',
+                  <iframe className="particles-sphere" style={{position:'absolute',
                   right:'0%',
                   bottom:'0%',
                   width: '100%', // Set initial width to 100%
@@ -181,9 +181,9 @@ export default function Home() {
 
                   frameBorder="0" 
                   allowTransparency="true" >
-                  </iframe> */}
+                  </iframe> 
                  
-                  {/* <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div> */}
+                  <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
                   </div>
 
                   <div className="hero-title d-flex flex-column">
