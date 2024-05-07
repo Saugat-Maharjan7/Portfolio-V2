@@ -35,9 +35,9 @@ function Footer(){
                       </ul>
 
             </div>
-            <div className="image-container position-relative">
+            {/* <div className="image-container position-relative">
               <img className="position-absolute astro" src="./../assets/astro.png" alt="astro" />
-            </div>
+            </div> */}
           </div>
           
         </div>

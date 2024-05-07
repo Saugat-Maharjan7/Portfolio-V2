@@ -14,7 +14,7 @@ function ThreeD(){
  
     return(
       
-        <section>
+        <section className='threeDsection'>
       
 
         <div className="container">

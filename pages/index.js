@@ -23,13 +23,9 @@ import EmblemScene from "../public/components/EmblemScene"
 
 export default function Home() {
 
-    //button icons
-    // const lenis = useLenis(({ scroll }) => {
-    //   // called every scroll
-    // })
+   
   
     const mainRef = useRef(null);
-    // useLenis(mainRef);
 
     let exploreref=useRef()
     const landingTitle="CRAFTING TOMORROW'S INNOVATION."
@@ -134,14 +130,16 @@ export default function Home() {
 
             
       {/* <World/> */}
-    {/* <EmblemScene/> */}
-      
+      <EmblemScene/>
+
 
         <main ref={mainRef} className={checked ? 'main-inactive' : ''}>
         <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Header>
 
-          <div className="hero-wrapper position-relative">           
-            <section className="w-100 hero-container" style={{top: 0}} >
+          <div className="hero-wrapper position-relative">
+
+            <section className="w-100 hero-container position-relative" style={{top: 0}} >
+
               <div className="container position-relative">
                 <m.div 
                  initial={{
@@ -164,7 +162,7 @@ export default function Home() {
                   <img className="sun_light" src="/assets/sun light.png" alt="sun light" />
                 <div
                 >
-                  <iframe className="particles-sphere" style={{position:'absolute',
+                  {/* <iframe className="particles-sphere" style={{position:'absolute',
                   right:'0%',
                   bottom:'0%',
                   width: '100%', // Set initial width to 100%
@@ -181,9 +179,9 @@ export default function Home() {
 
                   frameBorder="0" 
                   allowTransparency="true" >
-                  </iframe> 
+                  </iframe>  */}
                  
-                  <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
+                  {/* <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div> */}
                   </div>
 
                   <div className="hero-title d-flex flex-column">

@@ -35,8 +35,7 @@ function Three(){
 
         <>
             <EffectComposer multisampling={5} autoClear={false} >
-              <Bloom mipMap intensity={70} luminanceThreshold={0} luminanceSmoothing={0.1}      mipmapBlur={true} // Enables or disables mipmap blur.
- />
+              {/* <Bloom mipMap intensity={70} luminanceThreshold={0} luminanceSmoothing={0.1}      mipmapBlur={true} /> */}
               <Noise opacity={0.1} />
 
               </EffectComposer>
@@ -78,15 +77,16 @@ function EmblemScene(){
             
 
         <Canvas 
+        
         shadows
          style={{
           
           position:"fixed",
-          zIndex:1
+          zIndex:0
         }}
         id="threed-container" className="webgl"
         >
-                  <color args={['#000000']} attach="background" />
+                  {/* <color args={['#000000']} attach="background" alpha={1} /> */}
 
         <Suspense>
                 
