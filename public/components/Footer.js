@@ -31,7 +31,7 @@ function Footer(){
                         <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
                         <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.behance.net/shirishshakya">Behance</a></li>
                         <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://drive.google.com/file/d/1YVcCpCQQ6g_sIYKn2--uT22rAtxjbcNp/view?usp=sharing">Resume</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://drive.google.com/file/d/1IpyPxFOvWcvw_49_wbatQUEVK4th5vK2/view?usp=drive_link">Resume</a></li>
                       </ul>
 
             </div>
