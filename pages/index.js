@@ -16,10 +16,9 @@ import BGERASER from "../public/components/BgEraserSection";
 import React from 'react';
 import Button from "../public/components/Button";
 import Spline from '@splinetool/react-spline';
-import { Portal } from "../public/components/Portal"
 // import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import { Source } from "three"
-
+import EmblemScene from "../public/components/EmblemScene"
 
 
 export default function Home() {
@@ -33,7 +32,7 @@ export default function Home() {
     // useLenis(mainRef);
 
     let exploreref=useRef()
-    const landingTitle="DESIGNING TOMORROW: UNVEILING MY VISIONARY WORLD"
+    const landingTitle="CRAFTING TOMORROW'S INNOVATION."
     const [isToggled, setToggled] = useState(false);
     const [time, setTime] = useState('');
 
@@ -135,6 +134,7 @@ export default function Home() {
 
             
       {/* <World/> */}
+    <EmblemScene/>
       
 
         <main ref={mainRef} className={checked ? 'main-inactive' : ''}>
@@ -164,7 +164,7 @@ export default function Home() {
                   <img className="sun_light" src="/assets/sun light.png" alt="sun light" />
                 <div
                 >
-                  <iframe className="particles-sphere" style={{position:'absolute',
+                  {/* <iframe className="particles-sphere" style={{position:'absolute',
                   right:'0%',
                   bottom:'0%',
                   width: '100%', // Set initial width to 100%
@@ -181,10 +181,9 @@ export default function Home() {
 
                   frameBorder="0" 
                   allowTransparency="true" >
-                  </iframe>
-                  {/* <Portal/>  */}
+                  </iframe> */}
                  
-                  <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
+                  {/* <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div> */}
                   </div>
 
                   <div className="hero-title d-flex flex-column">

@@ -2,32 +2,20 @@
 @import "../Variables.scss";
 //this is the header
 
-header{
-    z-index: 3;
-    background: rgba(77, 70, 70, 0.25);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter:blur(8px);
-    border-bottom: 1px solid white;
-    position: fixed;
-    top:-100px;
-    width: 100%;
-    transition: ease-in-out top .5s;
+// header{
+//     z-index: 3;
+//     background: rgba(77, 70, 70, 0.25);
+//     backdrop-filter: blur(8px);
+//     -webkit-backdrop-filter:blur(8px);
+//     border-bottom: 1px solid white;
+//     position: fixed;
+//     top:-100px;
+//     width: 100%;
+//     transition: ease-in-out top .5s;
 
   
 
   
-}
-
-
-.TypeWriterWrapper{
-    span{
-        letter-spacing: 0!important;
-        font-size: 1.2rem!important;
-    line-height: 1.56rem!important;
-    font-family: "NexaLight"!important;
-    }
-}
-
 .header-visible{
     top:0px!important;
 }
@@ -52,8 +40,9 @@ header{
             text-align: left;
         }
         .gradient-shade{
-            border-left: 1px solid white;
-            border-right: 1px solid white;
+            border-left: var(--ss-border-width-025) solid   var(--ss-colors-system-border-onsurface0-rest);
+            ;
+            border-right: var(--ss-border-width-025) solid   var(--ss-colors-system-border-onsurface0-rest);
             //this is the gradient at the top acting as a header background --but isn't ofc :)
             
             background: linear-gradient(90deg, $primary-orange 0%, $primary-vio 100%);
@@ -93,7 +82,7 @@ header{
 
         .hero{
             height: 95%;  
-            gap:2rem;
+            gap:var(--ss-spacer-xl);
             display: flex;
             justify-content: flex-end;
 
@@ -101,49 +90,49 @@ header{
             // Small devices (Potrait phones, 576px and up)
     
             @media (min-width: 350px) {
-                padding:0 1rem;
+                padding:0 var(--ss-spacer-m);
                 
-                padding-bottom: 2rem;
+                padding-bottom: var(--ss-spacer-xl);
 
             }
         
             // Small devices (landscape phones, 576px and up)
             @media (min-width: 576px) {
-                padding:0 1rem;
+                padding:0 var(--ss-spacer-m);
                 
-                padding-bottom: 2rem;
+                padding-bottom: var(--ss-spacer-xl);
 
             }
         
             // Medium devices (tablets, 768px and up)
             @media (min-width: 768px) {
-                padding:0 1rem;
+                padding:0 var(--ss-spacer-m);
                 
-                padding-bottom: 2rem;
+                padding-bottom: var(--ss-spacer-xl);
 
             }
         
             // Large devices (desktops, 992px and up)
             @media (min-width: 992px) {
-                padding:0 4rem;
+                padding:0 var(--ss-spacer-fxl);
                 
-                padding-bottom: 2rem;
+                padding-bottom: var(--ss-spacer-xl);
 
             }
         
             // X-Large devices (large desktops, 1200px and up)
             @media (min-width: 1200px) {
-                padding:0 4rem;
+                padding:0 var(--ss-spacer-fxl);
                 
-                padding-bottom: 2rem;
+                padding-bottom: var(--ss-spacer-xl);
 
             }
         
             // XX-Large devices (larger desktops, 1400px and up)
             @media (min-width: 1400px) {
-                padding:0 4rem;
+                padding:0 var(--ss-spacer-fxl);
                 
-                padding-bottom: 2rem;
+                padding-bottom: var(--ss-spacer-xl);
 
             }
 
@@ -166,7 +155,7 @@ header{
             }
 
             .hero-title{
-                gap:1rem;
+                gap:var(--ss-spacer-m);
 
                 span{
                     letter-spacing: 0.425em;
@@ -192,7 +181,7 @@ header{
                         // Small devices (landscape phones, 576px and up)
                         @media (min-width: 576px) {
                             
-                            margin-left: 16px;
+                            margin-left: var(--ss-spacer-m);
                         
                         }
                         
@@ -332,20 +321,20 @@ header{
     
                 @media (min-width: 350px) {
                   flex-direction: row;
-                  gap:1rem
+                  gap:var(--ss-spacer-m)
                 }
             
                 // Small devices (landscape phones, 576px and up)
                 @media (min-width: 576px) {
                     flex-direction: column;
-                    gap:1rem
+                    gap:var(--ss-spacer-m)
 
                 }
             
                 // Medium devices (tablets, 768px and up)
                 @media (min-width: 768px) {
                     flex-direction: column;
-                  gap:1rem
+                  gap:var(--ss-spacer-m)
 
                 }
             
@@ -368,7 +357,7 @@ header{
                 }
 
                 .profile_detail{
-                    gap:1rem;
+                    gap:var(--ss-spacer-m);
 
                     .profile_picture{
                         background-image: url("../../public/static/Images/me.jpg");
@@ -435,7 +424,7 @@ header{
                     }
                     ul{
                         list-style: none;
-                        gap:1rem;
+                        gap:var(--ss-spacer-m);
                         padding:0;
                         margin: 0;
                         justify-content: start;
@@ -567,7 +556,7 @@ header{
 
 }
 .container-header{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-     gap:1rem;
+    padding-top: var(--ss-spacer-m);
+    padding-bottom: var(--ss-spacer-m);
+     gap:var(--ss-spacer-m);
  }

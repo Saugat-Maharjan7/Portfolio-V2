@@ -14,16 +14,16 @@
       
 
     .project-contents{
-        padding-top: 2rem;
-        padding-bottom: 4rem;
+        padding-top: var(--ss-spacer-xl);
+        padding-bottom: var(--ss-spacer-fxl);
         margin-bottom: 0;
 
         .project{
             // border-bottom: 1px solid white;
-            padding: 4rem 0 4rem 0;
+            padding: var(--ss-spacer-fxl) 0 var(--ss-spacer-fxl) 0;
             flex-direction: row;
             width: 100%;
-            gap:1rem;
+            gap:var(--ss-spacer-m);
 
             
 
@@ -131,7 +131,7 @@
             }
 
             .p-left{
-                gap:2rem;
+                gap:var(--ss-spacer-xl);
                 order: 1;
                
                
@@ -149,7 +149,7 @@
                 // Small devices (landscape phones, 576px and up)
                 @media (min-width: 576px) {
                     order:2   ;
-                    padding: 2rem 0;
+                    padding: var(--ss-spacer-xl) 0;
                     button{
                         width: 100;
                     }             
@@ -168,7 +168,7 @@
                 // Large devices (desktops, 992px and up)
                 @media (min-width: 992px) {
                     order:1   ;
-                    padding: 4rem 0; 
+                    padding: var(--ss-spacer-fxl) 0; 
                     button{
                         width: fit-content;
                         
@@ -179,7 +179,7 @@
                 // X-Large devices (large desktops, 1200px and up)
                 @media (min-width: 1200px) {
                     order:1   ;
-                    padding: 4rem 0;
+                    padding: var(--ss-spacer-fxl) 0;
                     button{
                         width: fit-content;
                       
@@ -189,7 +189,7 @@
                 // XX-Large devices (larger desktops, 1400px and up)
                 @media (min-width: 1400px) {
                     order:1 ;
-                    padding: 4rem 0;
+                    padding: var(--ss-spacer-fxl) 0;
                     button{
                         width: fit-content;
                       
@@ -200,8 +200,7 @@
                     gap: 1.5rem;
 
                     p{
-                        background-color: $primary-black;
-                        color: $gray-400;
+                        color: var(--ss-colors-system-text-onsurface0-muted);
                     }
 
 
@@ -210,9 +209,9 @@
             }
 
             .p-right{
-                gap:2rem;
+                gap:var(--ss-spacer-xl);
                 order: 1;
-                padding: 4rem;
+                padding: var(--ss-spacer-fxl);
                 img{
                     width: 100%;
                 }
@@ -220,38 +219,38 @@
     
                    @media (min-width: 350px) {
                     order:1;
-                    padding: 2rem;             
+                    padding: var(--ss-spacer-xl);            
                      }
     
                 // Small devices (landscape phones, 576px and up)
                 @media (min-width: 576px) {
                     order:1;
-                    padding: 2rem;             
+                    padding: var(--ss-spacer-xl);            
                
                 }
     
                 // Medium devices (tablets, 768px and up)
                 @media (min-width: 768px) {
                     order:1    ;
-                    padding: 2rem;             
+                    padding: var(--ss-spacer-xl);             
                  }
     
                 // Large devices (desktops, 992px and up)
                 @media (min-width: 992px) {
                     order:2  ;
-                    padding: 4rem;               
+                    padding: var(--ss-spacer-fxl);               
                  }
     
                 // X-Large devices (large desktops, 1200px and up)
                 @media (min-width: 1200px) {
                     order:2    ;
-                    padding: 4rem;         
+                    padding: var(--ss-spacer-fxl);         
                 }
     
                 // XX-Large devices (larger desktops, 1400px and up)
                 @media (min-width: 1400px) {
                     order:2  ;
-                    padding: 4rem;
+                    padding: var(--ss-spacer-fxl); 
                 }
             }
 

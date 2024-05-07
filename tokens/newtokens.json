@@ -1014,7 +1014,7 @@
             "description": ""
           },
           "Pressed": {
-            "value": "{Colors.Semantic.Primary.500}",
+            "value": "{Colors.Semantic.Primary.600}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
@@ -1055,6 +1055,32 @@
         "Surface0transparent": {
           "Rest": {
             "value": "{Colors.Primitive.AlphaBlack.400}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          }
+        },
+        "Inverse": {
+          "Rest": {
+            "value": "{Colors.Semantic.Neutrals.100}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "Hovered": {
+            "value": "{Colors.Semantic.Neutrals.100}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "Pressed": {
+            "value": "{Colors.Semantic.Neutrals.200}",
+            "type": "color",
+            "parent": "ColorTokens/Dark",
+            "description": ""
+          },
+          "Disabled": {
+            "value": "{Colors.Semantic.Neutrals.400}",
             "type": "color",
             "parent": "ColorTokens/Dark",
             "description": ""
@@ -1250,10 +1276,11 @@
             "description": ""
           },
           "Muted": {
-            "value": "{Colors.Semantic.Neutrals.200}",
+            "value": "{Colors.Semantic.Neutrals.500}",
             "type": "color",
             "parent": "ColorTokens/Dark",
-            "description": ""
+            "description": "",
+            "oldValue": "{Colors.Semantic.Neutrals.300}"
           },
           "Disabled": {
             "value": "{Colors.Semantic.Neutrals.400}",
@@ -1294,10 +1321,11 @@
             "description": ""
           },
           "Disabled": {
-            "value": "{Colors.Semantic.Neutrals.500}",
+            "value": "{Colors.Semantic.Neutrals.400}",
             "type": "color",
             "parent": "ColorTokens/Dark",
-            "description": ""
+            "description": "",
+            "oldValue": "{Colors.Semantic.Neutrals.500}"
           }
         },
         "Onaction": {
@@ -1679,10 +1707,11 @@
       "description": ""
     },
     "fxl": {
-      "value": "{Size.38}",
+      "value": "{Size.32}",
       "type": "dimension",
       "parent": "SizingTokens/Dark",
-      "description": ""
+      "description": "",
+      "oldValue": "{Size.38}"
     }
   },
   "Breakpoints": {

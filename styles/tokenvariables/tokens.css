@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 05 May 2024 06:35:27 GMT
+ * Generated on Mon, 06 May 2024 04:16:43 GMT
  */
 
 :root {
@@ -167,7 +167,7 @@
   --ss-colors-primitive-orange-300: #f0b79f;
   --ss-colors-primitive-orange-200: #f6d1c2;
   --ss-colors-primitive-orange-100: #fbece6;
-  --ss-spacer-fxl: var(--ss-size-38);
+  --ss-spacer-fxl: var(--ss-size-32);
   --ss-spacer-xxxl: var(--ss-size-26);
   --ss-spacer-xxl: var(--ss-size-20);
   --ss-spacer-xl: var(--ss-size-16);
@@ -187,11 +187,11 @@
   --ss-colors-system-text-onaction-disabled: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-text-onaction-hovered: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-text-onaction-rest: var(--ss-colors-semantic-neutrals-100);
-  --ss-colors-system-text-action-disabled: var(--ss-colors-semantic-neutrals-500);
+  --ss-colors-system-text-action-disabled: var(--ss-colors-semantic-neutrals-400);
   --ss-colors-system-text-onsurface0-pressed: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-text-onsurface0-hovered: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-text-onsurface0-disabled: var(--ss-colors-semantic-neutrals-400);
-  --ss-colors-system-text-onsurface0-muted: var(--ss-colors-semantic-neutrals-200);
+  --ss-colors-system-text-onsurface0-muted: var(--ss-colors-semantic-neutrals-500);
   --ss-colors-system-text-onsurface0-rest: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-border-onsurface1-pressed: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-border-onsurface1-hovered: var(--ss-colors-semantic-neutrals-100);
@@ -216,6 +216,10 @@
   --ss-colors-system-icon-onsurface1-hovered: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-icon-onsurface1-rest: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-icon-action-rest: var(--ss-colors-primitive-orange-500);
+  --ss-colors-system-surface-inverse-disabled: var(--ss-colors-semantic-neutrals-400);
+  --ss-colors-system-surface-inverse-pressed: var(--ss-colors-semantic-neutrals-200);
+  --ss-colors-system-surface-inverse-hovered: var(--ss-colors-semantic-neutrals-100);
+  --ss-colors-system-surface-inverse-rest: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-surface-surface0transparent-rest: var(--ss-colors-primitive-alpha-black-400);
   --ss-colors-system-surface-actiontransparent-disabled: var(--ss-colors-semantic-neutrals-400);
   --ss-colors-system-surface-actiontransparent-pressed: var(--ss-colors-primitive-alpha-orange-300);
@@ -285,7 +289,7 @@
   --ss-colors-system-border-action-hovered: var(--ss-colors-semantic-primary-500);
   --ss-colors-system-border-action-rest: var(--ss-colors-semantic-primary-500);
   --ss-colors-system-icon-onaction-pressed: var(--ss-colors-semantic-tertiary-500);
-  --ss-colors-system-surface-action-pressed: var(--ss-colors-semantic-primary-500);
+  --ss-colors-system-surface-action-pressed: var(--ss-colors-semantic-primary-600);
   --ss-colors-system-surface-action-hovered: var(--ss-colors-semantic-primary-500);
   --ss-colors-system-surface-action-rest: var(--ss-colors-semantic-primary-500);
   --ss-colors-system-surface-surface1-pressed: var(--ss-colors-semantic-tertiary-600);

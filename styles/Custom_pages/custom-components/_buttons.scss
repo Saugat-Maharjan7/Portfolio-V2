@@ -101,21 +101,21 @@
 .BTNICON{
     outline: none;
     padding: getSpacing('s');
-    color: $primary-orange;
-    background-color: getColor(Brand,Black,100);
-    padding: getSize(8) getSize(8);
+    color: var(--ss-colors-system-icon-action-rest);
+    background-color: var(--ss-colors-system-surface-surface1-rest);
+    padding: var(--ss-spacer-m);
     text-transform: none;
-    border-radius: getSize(50);
+    border-radius: var(--ss-border-radius-full);
 
     &:hover{
-        border-color: $primary-orange!important;
-        color: $white!important;
-        background-color: getColor(Brand,Black,100);
+        border-color: var(--ss-colors-system-border-action-hovered)!important;
+        color: var(--ss-colors-system-icon-onsurface1-hovered)!important;
+        background-color: var(--ss-colors-system-surface-surface1-hovered);
 
 
     }
     &:active{
-        background-color: getColor(Brand,Black,600);
+        background-color: var(--ss-colors-system-surface-surface1-pressed);
 
     }
 }
@@ -196,65 +196,71 @@
 
     &:hover{
         .BTNBrandHighlight{
+            border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-hovered);
+
             background-color: var(--ss-colors-semantic-primary-500);
             left: 200%;
         }
     }
 
     &:active{
+        border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-pressed);
+
         color: var(--ss-colors-system-text-onaction-pressed);
         background-color: var(--ss-colors-system-surface-action-pressed);
     }
 }
 
 .BTNBrandSolid{
-    background-color: $primary-orange;
-    border: 1px solid $primary-orange;
+    background-color: var(--ss-colors-system-surface-action-rest);
+    border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-rest);
     transition: ease-in-out 0.2s ;
-    color: $white;
+    color: var(--ss-colors-system-text-onaction-rest);
 
 
     &:hover{
+        background-color: var(--ss-colors-system-surface-action-hovered);
 
         .BTNBrandHighlight{
-            background-color: getColor(Brand,Orange,100);
+            background-color: var(--ss-colors-semantic-primary-100);
             left: 200%;
         }
     }
 
     &:active{
-        color: $primary-black;
-        background-color: $primary-orange;
+        background-color: var(--ss-colors-system-surface-action-pressed);
+
+        color: var(--ss-colors-system-text-onaction-pressed);
         text-shadow: 0px 4px 10px #620;
     }
 }
 .BTNBrandAlternate{
-    background-color: getColor(Brand,Black,100);
-    border: 1px solid getColor(Brand,Black,100);
-    color: $primary-orange;
+    background-color: var(--ss-colors-system-surface-surface1-rest);
+    border: var(--ss-colors-system-border-onsurface1-rest);
+    color:var(--ss-colors-system-text-action-rest);
     transition: ease-in-out 0.2s ;
 
 
     &:hover{
+        background-color: var(--ss-colors-system-surface-surface1-hovered);
 
         .BTNBrandHighlight{
-            background-color: getColor(Brand,Orange,100);
+            background-color: var(--ss-colors-semantic-primary-500);
             left: 200%;
         }
     }
 
     &:active{
-        background-color: getColor(Brand,Black,600);
-        border: 1px solid getColor(Brand,Black,600);
+        background-color: var(--ss-colors-system-surface-surface1-pressed);
 
     }
 }
 
 .BTNBrandLoading{
-    background-color: getColor(Brand,AlphaOrange,500);
-    border: 1px solid getColor(Brand,AlphaOrange,500);
-    color: $primary-orange;
+    background-color: var(--ss-colors-system-surface-actiontransparent-rest);
+    color:var(--ss-colors-system-text-action-rest);
     transition: ease-in-out 0.2s ;
+    outline: none;
 
     .spinner {
         animation: rotateClockwise 1s infinite linear;
