@@ -162,7 +162,7 @@ export default function Home() {
                   <img className="sun_light" src="/assets/sun light.png" alt="sun light" />
                 <div
                 >
-                  <iframe className="particles-sphere" style={{position:'absolute',
+                  <iframe className="particles-sphere" style={{position:'absolute',zIndex:2
                   right:'0%',
                   bottom:'0%',
                   width: '100%', // Set initial width to 100%
