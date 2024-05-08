@@ -39,7 +39,7 @@
 .leader-subtitle{   
         font-family: "NexaLight";
         font-size: 1rem;
-        color: $gray-400;
+        color: var(--ss-colors-system-text-onsurface0-muted)!important;
         font-weight: 700;
         line-height: 1rem;
 
@@ -77,20 +77,20 @@
 .project-leading{
     font-family: "NexaLight";
         font-size: 1rem;
-        color: white;
+        color: var(--ss-colors-system-text-onsurface0-rest)!important;
         font-weight: 300;
         line-height: 1rem;
 }
 
 
 .project-details{
-    color: $gray-400;
+    color: var(--ss-colors-system-text-onsurface0-muted)!important;
     font-size: 1.2rem;
 }
 
 
 .section-details{
-    color: $gray-400;
+    color: var(--ss-colors-system-text-onsurface0-muted)!important;
     font-size: 1.2rem;
     line-height: 1.6rem;
 }

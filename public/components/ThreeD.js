@@ -28,7 +28,7 @@ function ThreeD(){
           <div className="border-l-r-b w-100 threedwork-container">
             <div className="">
             {/* phidden class */}
-              <p className=" section-details TXTTailwindGray400">
+              <p className=" section-details ">
               In my design toolbox, 3D modeling and animation work wonders. They let me craft lifelike 3D visuals and bring them to motion, turning static designs into dynamic, engaging experiences. These tools breathe life into ideas, adding depth and interactivity that captivate audiences in exciting ways.</p>
             </div>
           </div>

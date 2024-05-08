@@ -125,7 +125,7 @@ function BGERASER() {
         <div className="border-l-r-b w-100 visual-designcontainer">
           <div>
             <div>
-              <p className="section-details TXTTailwindGray400">
+              <p className="section-details ">
                 Graphic and visual design are the core of my work as a designer. They're the tools I use to tell compelling stories and create engaging experiences, simplifying complex ideas and captivating audiences in a visually-driven world.
               </p>
             </div>

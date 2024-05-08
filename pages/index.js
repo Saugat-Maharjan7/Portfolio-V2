@@ -130,7 +130,7 @@ export default function Home() {
 
             
       {/* <World/> */}
-      <EmblemScene/>
+      {/* <EmblemScene/> */}
 
 
         <main ref={mainRef} className={checked ? 'main-inactive' : ''}>

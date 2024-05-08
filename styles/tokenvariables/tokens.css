@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 06 May 2024 04:16:43 GMT
+ * Generated on Tue, 07 May 2024 22:45:19 GMT
  */
 
 :root {
@@ -190,8 +190,8 @@
   --ss-colors-system-text-action-disabled: var(--ss-colors-semantic-neutrals-400);
   --ss-colors-system-text-onsurface0-pressed: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-text-onsurface0-hovered: var(--ss-colors-semantic-neutrals-100);
-  --ss-colors-system-text-onsurface0-disabled: var(--ss-colors-semantic-neutrals-400);
-  --ss-colors-system-text-onsurface0-muted: var(--ss-colors-semantic-neutrals-500);
+  --ss-colors-system-text-onsurface0-disabled: var(--ss-colors-semantic-neutrals-500);
+  --ss-colors-system-text-onsurface0-muted: var(--ss-colors-semantic-neutrals-300);
   --ss-colors-system-text-onsurface0-rest: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-border-onsurface1-pressed: var(--ss-colors-semantic-neutrals-100);
   --ss-colors-system-border-onsurface1-hovered: var(--ss-colors-semantic-neutrals-100);
