@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"project_name": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Contain"
+						}
+					}
+				]
+			},
+			"date_of_completion": {
+				"__TYPE__": "FieldContent",
+				"type": "Date",
+				"value": "2021-02-14"
+			},
+			"projec_id": {
+				"__TYPE__": "FieldContent",
+				"value": "current",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
