@@ -18,7 +18,7 @@ import {projects} from '../public/scripts/Datas/projects'; //projects database
 import BGERASER from "../public/components/BgEraserSection";
 import React from 'react';
 import Button from "../public/components/Button";
-import Spline from '@splinetool/react-spline';
+// import Spline from '@splinetool/react-spline';
 // import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 
