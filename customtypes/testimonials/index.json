@@ -1,7 +1,7 @@
 {
   "format": "page",
-  "id": "project",
-  "label": "Project",
+  "id": "testimonials",
+  "label": "Testimonials",
   "repeatable": true,
   "status": true,
   "json": {
@@ -9,7 +9,7 @@
       "uid": {
         "config": {
           "label": "UID",
-          "placeholder": ""
+          "placeholder": "testi"
         },
         "type": "UID"
       },
@@ -18,7 +18,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "projects": {
+            "testimonial": {
               "type": "SharedSlice"
             }
           }

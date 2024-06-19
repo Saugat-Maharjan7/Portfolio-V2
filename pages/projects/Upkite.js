@@ -107,7 +107,9 @@ function Upkite(){
         </Head>
             <Mouse mouseTargetElements={mouseTargetElements}></Mouse>
             <SubHead></SubHead>
-            <StarsCanvas starColor={project.colorLight} starSize={1.5} numStars={150}/>
+
+            {/* <StarsCanvas starColor={project.colorLight} starSize={1.5} numStars={150}/> */}
+            
             {/* <Image src={Grain} alt="Grain Texture" style={{width:'100%',height:'100%',position:'absolute',zIndex:3,mixBlendMode:'overlay',opacity:0.5,pointerEvents:'none'}}></Image> */}
 
             <main className="" style={{height:'100vh',width:'100%',backgroundColor:project.color}}>

@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"testimonial_statement": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute elit aute minim cillum sit consectetur enim consequat laborum occaecat ex. Ipsum et amet aliqua et eiusmod ad nostrud nostrud."
+						}
+					}
+				]
+			},
+			"testimonial_person": {
+				"__TYPE__": "FieldContent",
+				"value": "burst",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
