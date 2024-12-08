@@ -34,7 +34,7 @@ export default function Home() {
     // useLenis(mainRef);
 
     let exploreref=useRef()
-    const landingTitle="DESIGNING TOMORROW: UNVEILING MY VISIONARY WORLD"
+    const landingTitle="YOUR DESIGN DRIVEN PRODUCT PARTNER"
     const [isToggled, setToggled] = useState(false);
     const [time, setTime] = useState('');
 
@@ -161,37 +161,20 @@ export default function Home() {
                 }}
                 className="gradient-shade w-100" />
                 <div className="hero border-l-r-b d-flex flex-column">
-                  <img className="blur_purple_1" src="/assets/blurpurple.png" alt="purple light" />
-                  <img className="sun_light" src="/assets/sun light.png" alt="sun light" />
+                  {/* <img className="blur_purple_1" src="/assets/blurpurple.png" alt="purple light" />
+                  <img className="sun_light" src="/assets/sun light.png" alt="sun light" /> */}
                 <div
                 >
-                  <iframe className="particles-sphere" style={{position:'absolute',
-                  right:'0%',
-                  bottom:'0%',
-                  width: '100%', // Set initial width to 100%
-                  height: '100%', // Set initial height to 100%
-                  mixBlendMode:'difference',
-                  pointerEvents:"auto",
                   
-                
-                }} 
-
-                  src="https://my.spline.design/particlescopy-0ecfa97a67f6faf0c6a15881cc56d744/" 
-
-                  // width="1200" height="1000" 
-
-                  frameBorder="0" 
-                  allowTransparency="true" >
-                  </iframe>
                   {/* <Portal/>  */}
                  
                   <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
                   </div>
 
-                  <div className="hero-title d-flex flex-column">
+                  <div className="hero-title d-flex flex-column" style={{marginBottom:'4rem'}}>
                     <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>SHIRISH SHAKYA</span>
                    
-                    <h1 className="FONTMONUMENT" >
+                    <h1 className="FONTMONUMENT" s >
                       <div>
                             {titleLetters.map((letter, index) => (
                             <m.span

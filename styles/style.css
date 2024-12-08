@@ -11001,7 +11001,7 @@ header {
   font-family: "NexaLight";
   font-style: normal;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 2rem;
 }
 .hero-container .container .hero .hero-title h1, .hero-container .container .hero .hero-title .h1 {
   width: 100%;
@@ -11067,21 +11067,21 @@ header {
 }
 @media (min-width: 992px) {
   .hero-container .container .hero .hero-title h1 div span, .hero-container .container .hero .hero-title .h1 div span {
-    font-size: 4rem;
+    font-size: 5rem;
     max-width: 700px;
     margin-left: -28px;
   }
 }
 @media (min-width: 1200px) {
   .hero-container .container .hero .hero-title h1 div span, .hero-container .container .hero .hero-title .h1 div span {
-    font-size: 4rem;
+    font-size: 5rem;
     max-width: 700px;
     margin-left: -28px;
   }
 }
 @media (min-width: 1400px) {
   .hero-container .container .hero .hero-title h1 div span, .hero-container .container .hero .hero-title .h1 div span {
-    font-size: 4rem;
+    font-size: 5rem;
     max-width: 700px;
     margin-left: -28px;
   }
