@@ -118,7 +118,7 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        <title>Shirish - The Design World</title>
+        <title>Shirish Shakya</title>
 
         </Head>
       
@@ -227,9 +227,8 @@ export default function Home() {
                       <div className="time">{time} <span>Local Time</span></div>
                       <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
                         <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.behance.net/shirishshakya">Behance</a></li>
                         <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://drive.google.com/file/d/1IpyPxFOvWcvw_49_wbatQUEVK4th5vK2/view?usp=drive_link">Resume</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://drive.google.com/file/d/1mu6I1kTlQcQORBL2D929pFrkrJ6ejuB1/view?usp=sharing">Resume</a></li>
                       </ul>
                     </div>
                   </div>
@@ -296,8 +295,8 @@ export default function Home() {
               {/* end of project container */}
             </div>
           </section> 
-          <BGERASER/>   
-         <ThreeD/>
+          {/* <BGERASER/>   
+         <ThreeD/> */}
          <Footer/>
         </main>
        
