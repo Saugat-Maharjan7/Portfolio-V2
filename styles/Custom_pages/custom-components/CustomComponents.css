@@ -41,7 +41,7 @@
   position: absolute;
   top: 0;
   left: -1000px;
-  background-color: #FB722E;
+  background-color: #1D4ED8;
   height: 100px;
   width: 10px;
   filter: blur(10px);
@@ -61,11 +61,11 @@
 }
 .btn-outline-primary:hover {
   background: none;
-  color: #FB722E;
-  filter: drop-shadow(0px 0px 10px #FB722E);
+  color: #1D4ED8;
+  filter: drop-shadow(0px 0px 10px #1D4ED8);
 }
 .btn-outline-primary:hover svg {
-  fill: #FB722E;
+  fill: #1D4ED8;
 }
 .btn-outline-primary:hover img {
   left: 100%;

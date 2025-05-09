@@ -46,16 +46,16 @@
 .toggle-menu-section .toggle-wrapper .nav-links li {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  color: #FB722E;
+  color: #1D4ED8;
   padding: 16px;
   gap: 16px;
 }
 .toggle-menu-section .toggle-wrapper .nav-links li:active {
-  border-top: 1px solid #FB722E;
-  border-bottom: 1px solid #FB722E;
+  border-top: 1px solid #1D4ED8;
+  border-bottom: 1px solid #1D4ED8;
 }
 .toggle-menu-section .toggle-wrapper .nav-links li .itemWithoutChildren:active {
-  filter: drop-shadow(0px 0px 10px #FB722E);
+  filter: drop-shadow(0px 0px 10px #1D4ED8);
 }
 .toggle-menu-section .toggle-wrapper .nav-links li ul {
   display: flex;
