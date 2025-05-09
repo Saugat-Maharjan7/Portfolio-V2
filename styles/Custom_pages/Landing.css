@@ -24,7 +24,7 @@
 .hero-container .container .gradient-shade {
   border-left: var(--ss-border-width-025) solid var(--ss-colors-system-border-onsurface0-rest);
   border-right: var(--ss-border-width-025) solid var(--ss-colors-system-border-onsurface0-rest);
-  background: linear-gradient(90deg, getColor(Brand, Orange, 500) 0%, #C25FFD 100%);
+  background: linear-gradient(90deg, #1D4ED8 0%, #22C55E 100%);
 }
 @media (min-width: 350px) {
   .hero-container .container .gradient-shade {
