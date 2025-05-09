@@ -230,6 +230,7 @@ export default function Home() {
                         <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
                         <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
                         <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
+
                       </ul>
                     </div>
                   </div>
