@@ -1,14 +1,22 @@
+@import "./tokenvariables/tokens.css";
 /* Mode 1 */
 /* Brand Default colors */
+@import "./tokenvariables/tokens.css";
+@import "./tokenvariables/tokens.css";
+@import "./tokenvariables/tokens.css";
+@import "./tokenvariables/tokens.css";
+@import "./tokenvariables/tokens.css";
+@import "./tokenvariables/tokens.css";
 .btn {
   text-transform: uppercase;
 }
 
 .btn-down {
-  color: white;
+  color: var(--ss-colors-system-text-onsurface0-default);
   text-transform: lowercase;
   display: flex;
-  gap: 0.5rem;
+  font-family: "NexaLight" !important;
+  gap: var(--ss-spacer-s);
   align-items: center;
 }
 .btn-down:hover {
@@ -23,7 +31,7 @@
 }
 
 .btn-outline-primary {
-  border-radius: 0px;
+  border-radius: var(--ss-border-radius-0);
   padding: 0.625 1rem;
   overflow: hidden;
   position: relative;
@@ -74,19 +82,19 @@
 .BTNICON {
   outline: none;
   padding: 8px;
-  color: getColor(Brand, Orange, 500);
-  background-color: #292828;
-  padding: 16px 16px;
+  color: var(--ss-colors-system-icon-action-rest);
+  background-color: var(--ss-colors-system-surface-surface1-rest);
+  padding: var(--ss-spacer-m);
   text-transform: none;
-  border-radius: 100px;
+  border-radius: var(--ss-border-radius-full);
 }
 .BTNICON:hover {
-  border-color: getColor(Brand, Orange, 500) !important;
-  color: #ffffff !important;
-  background-color: #292828;
+  border-color: var(--ss-colors-system-border-action-hovered) !important;
+  color: var(--ss-colors-system-icon-onsurface1-hovered) !important;
+  background-color: var(--ss-colors-system-surface-surface1-hovered);
 }
 .BTNICON:active {
-  background-color: #0b0b0b;
+  background-color: var(--ss-colors-system-surface-surface1-pressed);
 }
 
 .BTNBrand {
@@ -153,55 +161,63 @@
 }
 
 .BTNBrandOutline {
-  border: 1px solid getColor(Brand, Orange, 500);
-  color: getColor(Brand, Orange, 500);
+  border-radius: var(--ss-border-radius-0);
+  border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-rest);
+  color: var(--ss-colors-system-text-action-rest);
   transition: ease-in-out 0.2s;
 }
 .BTNBrandOutline:hover .BTNBrandHighlight {
-  background-color: getColor(Brand, Orange, 500);
+  border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-hovered);
+  background-color: var(--ss-colors-semantic-primary-500);
   left: 200%;
 }
 .BTNBrandOutline:active {
-  color: getColor(Brand, Black, 500);
-  background-color: getColor(Brand, Orange, 500);
+  border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-pressed);
+  color: var(--ss-colors-system-text-onaction-pressed);
+  background-color: var(--ss-colors-system-surface-action-pressed);
 }
 
 .BTNBrandSolid {
-  background-color: getColor(Brand, Orange, 500);
-  border: 1px solid getColor(Brand, Orange, 500);
+  background-color: var(--ss-colors-system-surface-action-rest);
+  border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-rest);
   transition: ease-in-out 0.2s;
-  color: #ffffff;
+  color: var(--ss-colors-system-text-onaction-rest);
+}
+.BTNBrandSolid:hover {
+  background-color: var(--ss-colors-system-surface-action-hovered);
 }
 .BTNBrandSolid:hover .BTNBrandHighlight {
-  background-color: #fbece6;
+  background-color: var(--ss-colors-semantic-primary-100);
   left: 200%;
 }
 .BTNBrandSolid:active {
-  color: getColor(Brand, Black, 500);
-  background-color: getColor(Brand, Orange, 500);
+  background-color: var(--ss-colors-system-surface-action-pressed);
+  color: var(--ss-colors-system-text-onaction-pressed);
   text-shadow: 0px 4px 10px #620;
 }
 
 .BTNBrandAlternate {
-  background-color: #292828;
-  border: 1px solid #292828;
-  color: getColor(Brand, Orange, 500);
+  background-color: var(--ss-colors-system-surface-surface1-rest);
+  border: var(--ss-colors-system-border-onsurface1-rest);
+  color: var(--ss-colors-system-text-action-rest);
   transition: ease-in-out 0.2s;
 }
+.BTNBrandAlternate:hover {
+  background-color: var(--ss-colors-system-surface-surface1-hovered);
+}
 .BTNBrandAlternate:hover .BTNBrandHighlight {
-  background-color: #fbece6;
+  background-color: var(--ss-colors-semantic-primary-500);
   left: 200%;
 }
 .BTNBrandAlternate:active {
-  background-color: #0b0b0b;
-  border: 1px solid #0b0b0b;
+  background-color: var(--ss-colors-system-surface-surface1-pressed);
 }
 
 .BTNBrandLoading {
-  background-color: rgba(251, 114, 46, 0.1490196078);
-  border: 1px solid rgba(251, 114, 46, 0.1490196078);
-  color: getColor(Brand, Orange, 500);
+  background-color: var(--ss-colors-system-surface-actiontransparent-rest);
+  color: var(--ss-colors-system-text-action-rest);
   transition: ease-in-out 0.2s;
+  outline: none;
 }
 .BTNBrandLoading .spinner {
   animation: rotateClockwise 1s infinite linear;
@@ -228,7 +244,6 @@
 /* Mode 1 */
 /* Brand Default colors */
 .subHeader {
-  background: transparent;
   padding: 0.8rem 0;
   position: fixed;
   width: 100%;
@@ -237,15 +252,15 @@
   top: -100px;
 }
 .subHeader .container a {
-  background-color: #292828;
-  border-radius: 100px;
-  padding: 0.4rem 0.8rem;
-  gap: 0.5rem;
+  background-color: var(--ss-colors-system-surface-surface1-rest);
+  border-radius: var(--ss-border-radius-full);
+  padding: var(--ss-spacer-xs) var(--ss-spacer-m);
+  gap: var(--ss-spacer-s);
 }
 .subHeader .container a span {
   font-size: 1.2rem;
   font-family: "NexaLight";
-  color: #ffffff;
+  color: var(--ss-colors-system-text-onsurface1-rest);
 }
 .subHeader .container a div svg {
   transform: translateX(0px);
@@ -255,7 +270,7 @@
   transform: translateX(-2px);
 }
 .subHeader .container a:hover span {
-  color: #fb722e;
+  color: var(--ss-colors-system-text-action-rest);
 }
 
 /* Mode 1 */
@@ -369,11 +384,11 @@
 /* Mode 1 */
 /* Brand Default colors */
 header {
-  z-index: 100;
-  background: rgba(77, 70, 70, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid white;
+  z-index: 900;
+  background: var(--ss-colors-system-surface-surface0transparent-rest);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ss-colors-system-border-onsurface1-rest);
   position: fixed;
   top: -100px;
   width: 100%;
@@ -390,7 +405,7 @@ header nav {
           backdrop-filter: none;
 }
 header nav .Logo {
-  gap: 1rem;
+  gap: var(--ss-spacer-m);
   align-items: center;
 }
 header nav .Logo .Logo-container {
@@ -404,7 +419,7 @@ header nav .Logo span {
   font-size: 1.5rem;
 }
 header nav .links ul {
-  gap: 4rem;
+  gap: var(--ss-spacer-fxl);
   padding: 0;
   margin: 0;
 }
@@ -414,12 +429,12 @@ header nav .links ul li {
   align-items: center;
 }
 header nav .links ul li a {
-  color: white;
+  color: var(--ss-colors-system-text-onsurface0-rest);
   text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: var(--ss-spacer-m);
   transition: ease-in;
 }
 header nav .links ul li a span {
@@ -433,7 +448,7 @@ header nav .links ul li a .send-btn {
   height: 32px;
   width: 32px;
   background: #FFFFFF;
-  box-shadow: 0px 4px 4px #C25FFD;
+  box-shadow: 0px 4px 4px var(--ss-colors-primitive-purple-700);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,12 +526,12 @@ header nav .links .ham-icon-active .lowRect {
     display: none;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: var(--ss-breakpoints-2xl)) {
   header nav .links ul {
     display: flex !important;
   }
   header nav .links .ham-menu {
-    display: none;
+    display: block;
   }
 }
 
@@ -530,51 +545,52 @@ header nav .links .ham-icon-active .lowRect {
 }
 
 footer .container {
-  color: white;
+  color: var(--ss-colors-system-text-onsurface0-rest);
 }
-footer .container .copyrights {
-  padding: 24px 0;
-  border-top: 1px solid white;
+footer .container .newcontainer {
+  padding: var(--ss-spacer-m) var(--ss-spacer-0);
+  border-top: 1px solid var(--ss-colors-system-border-onsurface0-rest);
 }
-footer .container .copyrights span {
+footer .container .newcontainer span {
   font-size: 1rem;
   font-family: "NexaLight";
   font-weight: 500;
+  color: var(--ss-colors-system-text-onsurface0-muted);
 }
 @media (min-width: 350px) {
-  footer .container .copyrights {
-    gap: 0.5rem;
+  footer .container .newcontainer {
+    gap: var(--ss-spacer-f);
     flex-direction: column !important;
     text-align: center;
   }
 }
 @media (min-width: 576px) {
-  footer .container .copyrights {
-    gap: 0.5rem;
+  footer .container .newcontainer {
+    gap: var(--ss-spacer-s);
     flex-direction: column !important;
     text-align: center;
   }
 }
 @media (min-width: 768px) {
-  footer .container .copyrights {
+  footer .container .newcontainer {
     flex-direction: row !important;
     text-align: center;
   }
 }
 @media (min-width: 992px) {
-  footer .container .copyrights {
+  footer .container .newcontainer {
     flex-direction: row !important;
     text-align: center;
   }
 }
 @media (min-width: 1200px) {
-  footer .container .copyrights {
+  footer .container .newcontainer {
     flex-direction: row !important;
     text-align: center;
   }
 }
 @media (min-width: 1400px) {
-  footer .container .copyrights {
+  footer .container .newcontainer {
     flex-direction: row !important;
     text-align: center;
   }

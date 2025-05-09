@@ -118,7 +118,7 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        <title>Shirish Shakya</title>
+        <title>Saugat Maharjan</title>
 
         </Head>
       
@@ -172,7 +172,7 @@ export default function Home() {
                   </div>
 
                   <div className="hero-title d-flex flex-column" style={{marginBottom:'4rem'}}>
-                    <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>SHIRISH SHAKYA</span>
+                    <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>SAUGAT MAHARJAN</span>
                    
                     <h1 className="FONTMONUMENT" s >
                       <div>
@@ -201,7 +201,7 @@ export default function Home() {
                       />
                       </div> */}
                       
-                      <p>Designer from Greater Toronto Area</p>
+                      <p>Designer from Kathmandu, Nepal</p>
                       
                       
                   </div>

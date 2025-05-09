@@ -131,7 +131,7 @@ function Three(){
 
         <>
         <PerspectiveCamera ref={cameraref} makeDefault position={[0,3,8]}/>
-       <pointLight ref={pointLightRef}  position={[1000, 800, -900]} intensity= {(10)} color={(0xFB722E)}/>
+       <pointLight ref={pointLightRef}  position={[1000, 800, -900]} intensity= {(10)} color={(0x1D4ED8)}/>
        <pointLight   position={[-2000, 900, -900]} intensity= {(10)} color={(0xC25FFD)}/>
         <OrbitControls></OrbitControls>
        

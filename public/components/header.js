@@ -116,7 +116,7 @@ export default function head({ toggleSidebar, isSidebarOpen }) {
         <nav className="d-flex flex-row justify-content-between align-items-center">
           <Link className="Logo d-flex flex-row" style={{ textDecoration: "none", color: "white" }} href="/" id="home">
             <div className="Logo-container" />
-            <span>SHIRISH.</span>
+            <span>SAUGAT.</span>
           </Link>
           <div className="links d-flex flex-row">
             <ul className="navbar-nav me-auto d-flex flex-row">
