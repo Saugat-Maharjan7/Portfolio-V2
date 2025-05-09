@@ -21,6 +21,7 @@ padding: getSpacing('s') !important;
 .dropdown_item{
 padding: .5rem 1.2rem;
 text-decoration: none!important;
+text-transform: uppercase;
 color: getColor(Tailwind, Gray,100);
 border-radius: getSize(4);
 

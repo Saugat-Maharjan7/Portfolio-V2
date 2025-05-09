@@ -39,7 +39,7 @@ export default function Sidebar({ isSidebarOpen }) {
                 </ul>
                 <div className="copyright">
                 <p>
-                    © Shirish Shakya.<span className="dated">{year} </span>
+                    © Saugat Maharjan.<span className="dated">{year} </span>
                 </p>
                 <span className="copyright">All Rights Reserved</span>
                 </div>

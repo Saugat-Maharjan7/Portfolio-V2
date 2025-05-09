@@ -29,7 +29,7 @@
   width: 2rem;
   background-image: url("../../public/static/Images/Logo.png");
   background-size: cover;
-  filter: drop-shadow(0px 4px 6px #b51b00);
+  filter: drop-shadow(0px 4px 6px #A855F7);
 }
 .toggle-menu-section .toggle-wrapper .toggle-header .Logo span {
   font-size: 1.5rem;
@@ -46,16 +46,16 @@
 .toggle-menu-section .toggle-wrapper .nav-links li {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  color: #1D4ED8;
+  color: #A855F7;
   padding: 16px;
   gap: 16px;
 }
 .toggle-menu-section .toggle-wrapper .nav-links li:active {
-  border-top: 1px solid #1D4ED8;
-  border-bottom: 1px solid #1D4ED8;
+  border-top: 1px solid #A855F7;
+  border-bottom: 1px solid #A855F7;
 }
 .toggle-menu-section .toggle-wrapper .nav-links li .itemWithoutChildren:active {
-  filter: drop-shadow(0px 0px 10px #1D4ED8);
+  filter: drop-shadow(0px 0px 10px #A855F7);
 }
 .toggle-menu-section .toggle-wrapper .nav-links li ul {
   display: flex;
@@ -70,7 +70,7 @@
   color: #ffffff;
 }
 .toggle-menu-section .toggle-wrapper .nav-links li ul a:active {
-  color: #fb722e;
+  color: #A855F7;
   background: rgba(255, 255, 255, 0.048);
 }
 .toggle-menu-section .copyright {

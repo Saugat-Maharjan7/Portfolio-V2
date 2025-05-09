@@ -172,7 +172,7 @@ export default function Home() {
                   </div>
 
                   <div className="hero-title d-flex flex-column" style={{marginBottom:'4rem'}}>
-                    <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>SAUGAT MAHARJAN</span>
+                    <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>ER. SAUGAT MAHARJAN</span>
                    
                     <h1 className="FONTMONUMENT" s >
                       <div>
@@ -230,7 +230,6 @@ export default function Home() {
                         <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
                         <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
                         <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="/assets/pdf/Saugat-CV.pdf">Resume</a></li>
                       </ul>
                     </div>
                   </div>

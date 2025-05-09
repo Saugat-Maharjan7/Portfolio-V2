@@ -41,7 +41,7 @@
   position: absolute;
   top: 0;
   left: -1000px;
-  background-color: #1D4ED8;
+  background-color: #A855F7;
   height: 100px;
   width: 10px;
   filter: blur(10px);
@@ -61,11 +61,11 @@
 }
 .btn-outline-primary:hover {
   background: none;
-  color: #1D4ED8;
-  filter: drop-shadow(0px 0px 10px #1D4ED8);
+  color: #A855F7;
+  filter: drop-shadow(0px 0px 10px #A855F7);
 }
 .btn-outline-primary:hover svg {
-  fill: #1D4ED8;
+  fill: #A855F7;
 }
 .btn-outline-primary:hover img {
   left: 100%;
@@ -372,11 +372,12 @@
 .dropdown_menu .dropdown_item {
   padding: 0.5rem 1.2rem;
   text-decoration: none !important;
+  text-transform: uppercase;
   color: #f3f4f6;
   border-radius: 8px;
 }
 .dropdown_menu .dropdown_item:hover {
-  color: #fb722e;
+  color: #A855F7;
   background: #161515;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
 }
@@ -413,7 +414,7 @@ header nav .Logo .Logo-container {
   width: 2rem;
   background-image: url("../../../public/assets/Logo.png");
   background-size: cover;
-  filter: drop-shadow(0px 4px 6px #22C55E);
+  filter: drop-shadow(0px 4px 6px #a855fa);
 }
 header nav .Logo span {
   font-size: 1.5rem;
@@ -454,7 +455,7 @@ header nav .links ul li a .send-btn {
   justify-content: center;
 }
 header nav .links ul li a .send-btn svg {
-  fill: #1D4ED8;
+  fill: #A855F7;
   transition: ease-in-out 0.5s;
 }
 header nav .links ul li:hover a {
@@ -661,13 +662,13 @@ footer .container .newcontainer span {
   padding: 16px;
   font-family: "NexaLight";
   font-size: 16px;
-  background-color: #fb722e;
+  background-color: #A855F7;
   border-radius: 24px 24px 24px 0;
 }
 .messages .message-reverse {
   padding: 16px;
   font-family: "NexaLight";
   font-size: 16px;
-  background-color: #fb722e;
+  background-color: #A855F7;
   border-radius: 24px 24px 0 24px;
 }/*# sourceMappingURL=CustomComponents.css.map */

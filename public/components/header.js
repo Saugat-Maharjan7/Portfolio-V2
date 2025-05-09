@@ -121,7 +121,7 @@ export default function head({ toggleSidebar, isSidebarOpen }) {
           <div className="links d-flex flex-row">
             <ul className="navbar-nav me-auto d-flex flex-row">
               <li className="nav-item d-flex flex-row ">
-                <Link className="anchor " href="about" id="about">about</Link>
+                <Link className="anchor " href="about" id="about">ABOUT</Link>
               </li>
               <li className="nav-item d-flex flex-row ">
                 <Dropdown
@@ -133,6 +133,12 @@ export default function head({ toggleSidebar, isSidebarOpen }) {
                   ))}
                 />
               </li>
+
+              <li className="nav-item d-flex flex-row ">
+                <Link className="anchor " target="_blank" href="/assets/pdf/Saugat-CV.pdf" style={{fontWeight:"bold"}}>RESUME</Link>
+              </li>
+              
+
               <li className="nav-item nav-connect d-flex flex-row" id="contact">
                 <Link className="anchor" href="/contact" id="contact">
                   <span id="contact">LET'S CONNECT</span>

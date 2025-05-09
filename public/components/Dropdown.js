@@ -45,7 +45,7 @@ function Dropdown({dropName,links}) {
   return (
     <div style={{ position: 'relative',fontFamily:'Nexa Light',height:'fit-content' }}>
       <motion.button
-      style={{textDecoration:'none'}}
+      style={{textDecoration:'none',textTransform:'uppercase'}}
         onClick={() => setIsOpen(prev => !prev)}
         className="btn btn-down"
         id="dropButton"
