@@ -85,8 +85,8 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       const date = new Date();
-      const torontoTime = date.toLocaleTimeString('en-US', { timeZone: 'America/Toronto' });
-      setTime(torontoTime); 
+      const kathmanduTime = date.toLocaleTimeString('en-US', { timeZone: 'Asia/Kathmandu' });
+      setTime(kathmanduTime); 
     }, 1000);
 
     // timezone has been changed please add this
@@ -223,12 +223,14 @@ export default function Home() {
                         art, and ideas into reality.</p>
                     </div> */}
                     <div className="social_links d-flex flex-column">
-                      <span>shirish.shakya5@gmail.com</span>
+                      <span>saugatmaharjan11@gmail.com</span>
                       <div className="time">{time} <span>Local Time</span></div>
                       <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
-                        <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://drive.google.com/file/d/1mu6I1kTlQcQORBL2D929pFrkrJ6ejuB1/view?usp=sharing">Resume</a></li>
+                        <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
+                        <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="/assets/pdf/Saugat-CV.pdf">Resume</a></li>
                       </ul>
                     </div>
                   </div>
