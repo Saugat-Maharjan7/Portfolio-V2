@@ -28,10 +28,10 @@ function Footer(){
                   </Link>
               </div>
               <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
-              <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
-                        <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
+                        <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
+                        <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
                       </ul>
 
             </div>

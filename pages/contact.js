@@ -257,9 +257,9 @@ const handleCopyClick = () => {
               <div className='d-flex flex-column GAPm'>
               <span>Socials </span>
               <ul className="contact d-flex flex-column gap-2" >
-                        <li ><a className='TXTBrandOrange500' href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
-                        <li><a className='TXTBrandOrange500' href="https://www.behance.net/shirishshakya">Behance</a></li>
-                        <li><a className='TXTBrandOrange500' href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
+                        <li ><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.linkedin.com/in/shirish-shakya-0bb39a293">Linkedin</a></li>
+                        <li><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.behance.net/shirishshakya">Behance</a></li>
+                        <li><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.instagram.com/shakyastagram/?hl=en">Instagram</a></li>
                       </ul>
 
               </div> 

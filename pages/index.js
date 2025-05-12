@@ -108,6 +108,8 @@ export default function Home() {
     
       
       <m.div>
+
+        {/* Head */}
         <Head>
         <meta property="og:image" content="/assets/websitebanner.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -116,7 +118,7 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-TileColor" content="#A855F7" />
         <meta name="theme-color" content="#ffffff" />
         <title>Saugat Maharjan</title>
 
@@ -226,10 +228,10 @@ export default function Home() {
                       <span>saugatmaharjan11@gmail.com</span>
                       <div className="time">{time} <span>Local Time</span></div>
                       <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
-                        <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
-                        <li ><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
+                        <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
+                        <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
+                        <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
 
                       </ul>
                     </div>
