@@ -240,7 +240,7 @@ export default function Home() {
                       {/* Short Info   */}
                       {/* <div className="profile_detail d-flex flex-row">
                         <div className="profile_picture" />
-                        <p className="profile_details">Hey!, I’m a product designer based in Nepal. Designing with empathy for Solving complex problems through user-centered design.</p>
+                        <p className="profile_details">Hey!, I'm a product designer based in Nepal. Designing with empathy for Solving complex problems through user-centered design.</p>
                       </div> */}
 
                     </div>
@@ -253,7 +253,7 @@ export default function Home() {
 
           </div>
 
-          {/* WORKS SECTION */}
+            {/* WORKS SECTION */}
             <section id="digital-products" className="w-100">
               
               {/* Section TITLE */}
@@ -270,6 +270,194 @@ export default function Home() {
               </div>
               
               {/* Works List */}
+              
+              {/* Static Project List */}
+              <div className="container d-flex flex-row" style={{ justifyContent: 'center' }}>
+
+                <ul className="border-l-r-b project-contents">
+
+                  {/* === PROJECT 1 === */}
+                  <li className="project d-flex" id="gamified-healthy-eating-app">
+
+                    {/* Description */}
+                    <div className="p-left d-flex flex-column">
+
+                      <div className="project-detail d-flex flex-column">
+                        <span className="project-leading">
+                          <span className="MRm">LMS</span>
+                          <span className="MRm">User Interface</span>
+                          <span className="MRm">User Experience</span>
+                          <span className="MRm">App Design</span>
+                        </span>
+
+                        <h3 className="allCaps">UDAAN</h3>
+                                            
+                        <p className="project-details">
+                          UDAAN is a mobile Learning Management System (LMS) aimed at providing accessible education through structured online courses.
+                        </p>
+
+                      </div>
+
+                    <a href="" target="" rel="noopener noreferrer">
+                      <Button
+                        size="medium"
+                        customButtonType="outline"
+                        label="view case study"
+                        rightIcon={
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                          }
+                      />
+                    </a>
+
+                    </div>
+
+                    {/* Image */}
+                    <a href="" className="p-right d-flex align-items-center justify-content-center position-relative">
+                      <img className="rightimg" src="/assets/projects/Udaan.png" alt="featured-image" />
+                    </a>
+
+                  </li>
+
+                  {/* Divider */}
+                  <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
+
+
+                  {/* === PROJECT 2 === */}
+                  <li className="project d-flex" id="gamified-healthy-eating-app">
+
+                    {/* Description */}
+                    <div className="p-left d-flex flex-column">
+
+                      <div className="project-detail d-flex flex-column">
+                        <span className="project-leading">
+                          <span className="MRm">User Interface</span>
+                          <span className="MRm">Responsive Design</span>
+                          <span className="MRm">Content Creations</span>
+                        </span>
+
+                        <h3 className="allCaps">Shanti Yoga Ashram - Website</h3>
+                                            
+                        <p className="project-details">
+                          Shanti Yoga Ashram is an organization who aims to preserve and transmit the knowledge from ancient teachings. This website seeks to offer an enhanced experience to visitors and residents, promoting holistic well-being through yoga, meditation, healthy living, and spiritual growth.
+                        </p>
+
+                      </div>
+
+                    <a href="" target="" rel="noopener noreferrer">
+                      <Button
+                        size="medium"
+                        customButtonType="outline"
+                        label="view case study"
+                        rightIcon={
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                          }
+                      />
+                    </a>
+
+                    </div>
+
+                    {/* Image */}
+                    <a href="" className="p-right d-flex align-items-center justify-content-center position-relative">
+                      <img className="rightimg" src="/assets/projects/ShantiYogaAshram.png" alt="featured-image" />
+                    </a>
+
+                  </li>
+
+                  {/* Divider */}
+                  <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
+
+                  {/* === PROJECT 3 === */}
+                  <li className="project d-flex" id="gamified-healthy-eating-app">
+
+                    {/* Description */}
+                    <div className="p-left d-flex flex-column">
+
+                      <div className="project-detail d-flex flex-column">
+                        <span className="project-leading">
+                          <span className="MRm">UX/UI</span>
+                          <span className="MRm">App Design</span>
+                          <span className="MRm">Design Challenge</span>
+                        </span>
+
+                        <h3 className="allCaps">GAMIFIED HEALTHY EATING APP</h3>
+                        
+                        <p className="project-details">
+                          Gamified mobile app which is playful and helps people to recommend healthy eating lifestyle promoting Healthy Eating Habits for Good Health and Proper Well-Being targeting the users who are forced to deal with fast food on daily basis because of their busy schedule.
+                        </p>
+
+                      </div>
+
+                      <a href="" target="" rel="noopener noreferrer">
+                        <Button
+                          size="medium"
+                          customButtonType="outline"
+                          label="view case study"
+                          rightIcon={
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                          }
+                        />
+                      </a>
+                    </div>
+
+                    {/* Image */}
+                    <a href="" className="p-right d-flex align-items-center justify-content-center position-relative">
+                      <img className="rightimg" src="/assets/projects/HealthyEating.png" alt="featured-image" />
+                    </a>
+
+                  </li>
+
+                  {/* Divider */}
+                  <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
+
+                  {/* === PROJECT 4 === */}
+                  <li className="project d-flex" id="globalyhub-website">
+
+                    {/* Description */}
+                    <div className="p-left d-flex flex-column">
+                      <div className="project-detail d-flex flex-column">
+                        <span className="project-leading">
+                          <span className="MRm">Website Design</span>
+                          <span className="MRm">Webflow</span>
+                          <span className="MRm">Responsive Design</span>
+                        </span>
+                        <h3 className="allCaps">GLOBALYHUB WEBSITE</h3>
+                        <p className="project-details">
+                          Website designed for a product development agency which creates software products that are globally applicable, add values and solve problems of businesses as well as individuals. The website was designed in Figma and completely deployed live with help of site builder, Webflow.
+                        </p>
+                      </div>
+
+                      <a href="#" target="" rel="noopener noreferrer">
+                        <Button
+                          size="medium"
+                          customButtonType="outline"
+                          label="view case study"
+                          rightIcon={
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                          }
+                        />
+                      </a>
+                    </div>
+
+                    {/* Image */}
+                    <a href="#" className="p-right d-flex align-items-center justify-content-center position-relative">
+                      <img className="rightimg" src="/assets/projects/GlobalyHub.png" alt="featured-image" />
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+              
+              {/* Automated Project List */}
+              {false && (
               <div className="container d-flex flex-row " style={{justifyContent: 'center'}}>
 
                 {/* projects container */}
@@ -342,16 +530,17 @@ export default function Home() {
                 {/* end of project container */}
 
               </div>
+              )}
 
             </section> 
 
 
-          {/* <BGERASER/>   
-              <ThreeD/> */}
+            {/* <BGERASER/>   
+                <ThreeD/> */}
 
-          {/* FOOTER */}
-         <Footer/>
-         
+            {/* FOOTER */}
+            <Footer/>
+
         </main>
        
         <Script type="module" src="/script.js"></Script>
