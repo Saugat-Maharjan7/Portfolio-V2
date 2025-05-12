@@ -143,8 +143,11 @@ export default function Home() {
         <main ref={mainRef} className={checked ? 'main-inactive' : ''}>
         <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Header>
 
-          <div className="hero-wrapper position-relative">           
+          <div className="hero-wrapper position-relative">  
+
+            {/* HERO SECTION */}
             <section className="w-100 hero-container" style={{top: 0}} >
+
               <div className="container position-relative">
                 <m.div 
                  initial={{
@@ -162,146 +165,193 @@ export default function Home() {
                  
                 }}
                 className="gradient-shade w-100" />
-                <div className="hero border-l-r-b d-flex flex-column">
-                  {/* <img className="blur_purple_1" src="/assets/blurpurple.png" alt="purple light" />
-                  <img className="sun_light" src="/assets/sun light.png" alt="sun light" /> */}
-                <div
-                >
-                  
-                  {/* <Portal/>  */}
-                 
-                  <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
-                  </div>
 
-                  <div className="hero-title d-flex flex-column" style={{marginBottom:'4rem'}}>
-                    <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>ER. SAUGAT MAHARJAN</span>
-                   
-                    <h1 className="FONTMONUMENT" s >
-                      <div>
-                            {titleLetters.map((letter, index) => (
-                            <m.span
-                              key={index}
-                              initial={{ y: -100, opacity: 0 }}
-                              animate={{ y: 0, opacity: 1 }}
-                              transition={{ delay: index * 0.08, type: 'spring', stiffness: 100 }}
-                              
-                            >
-                              {letter}
-                            </m.span>
-                          ))}
-                          </div>
-                    </h1>
+                  {/* HERO SECTION */}
+                  <div className="hero border-l-r-b d-flex flex-column">
+
+                    {/* BG Gradient */}
+                    {/* <img className="blur_purple_1" src="/assets/blurpurple.png" alt="purple light" />
+                    <img className="sun_light" src="/assets/sun light.png" alt="sun light" /> */}
+
+                    {/* Portal */}
+                    <div>
+                      {/* <Portal/>  */}
+                      <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
+                    </div>
+
+                    {/* Hero Info   */} 
+                    <div className="hero-title d-flex flex-column" style={{marginBottom:'4rem'}}>
+                      <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>ER. SAUGAT MAHARJAN</span>
                     
-                      {/* <div className="TypeWriterWrapper ">
-                    <Typewriter
-                    style={{letterSpacing:0}}
-                        options={{
-                          strings: ['I design', 'I code','I create',''],
-                          autoStart: true,
-                          loop: true,
-                        }}
-                      />
+                      <h1 className="FONTMONUMENT" s >
+                        <div>
+                              {titleLetters.map((letter, index) => (
+                              <m.span
+                                key={index}
+                                initial={{ y: -100, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ delay: index * 0.08, type: 'spring', stiffness: 100 }}
+                                
+                              >
+                                {letter}
+                              </m.span>
+                            ))}
+                            </div>
+                      </h1>
+                      
+                        {/* <div className="TypeWriterWrapper ">
+                      <Typewriter
+                      style={{letterSpacing:0}}
+                          options={{
+                            strings: ['I design', 'I code','I create',''],
+                            autoStart: true,
+                            loop: true,
+                          }}
+                        />
+                        </div> */}
+                        
+                        <p>Designer from Kathmandu, Nepal</p>
+                        
+                        
+                    </div>
+
+                    {/* More Info */}
+                    <div className="profile_info_top d-flex w-100" style={{position:'relative',zIndex:'1'}}>
+
+                      {/* Socials */}
+                      <div className="social_links d-flex flex-column">
+
+                        {/* email */}
+                        <a href="mailto:saugatmaharjan11@gmail.com" target="_blank"> <span>saugatmaharjan11@gmail.com</span> </a>
+
+                        {/* Time */}
+                        <div className="time">{time} <span>Local Time</span></div>
+
+                        {/* Social Media */}
+                        <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
+                          <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
+                          <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
+                          <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
+                          <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
+                        </ul>
+                        
+                      </div>
+
+                      {/* Short Info   */}
+                      {/* <div className="profile_detail d-flex flex-row">
+                        <div className="profile_picture" />
+                        <p className="profile_details">Hey!, I’m a product designer based in Nepal. Designing with empathy for Solving complex problems through user-centered design.</p>
                       </div> */}
-                      
-                      <p>Designer from Kathmandu, Nepal</p>
-                      
-                      
-                  </div>
-                  <div className="profile_info_top d-flex w-100" style={{position:'relative',zIndex:'1'}}>
-                    {/* <div className="profile_detail d-flex flex-row">
-                      <div className="profile_picture" />
-                      <p className="profile_details">Hey!, I’m a product designer based
-                        in Canada <span><svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clipPath="url(#clip0_3249_7064)">
-<path fillRule="evenodd" clipRule="evenodd" d="M12.1043 18.7918C12.484 21.4036 11.9001 23.5128 10.3375 25.6768C9.98629 26.1619 9.61537 26.5525 9.18519 26.9695C9.183 26.3923 8.81427 26.1443 8.25899 26.017C10.5438 23.7586 11.4853 21.2675 11.786 18.7918H11.268C9.5583 18.6228 7.68396 21.5023 5.48478 22.2859C6.53169 20.2754 5.36187 20.0033 2.70618 20.8966C4.69246 18.5262 4.8856 17.6505 2.70618 17.9665C3.8321 17.115 4.87902 16.6255 5.86228 16.4258C3.81455 15.7739 1.99287 14.6765 0.454326 13.0085C3.34267 12.9032 2.63375 10.952 0.00439453 8.01317C3.50069 9.77119 5.34431 9.99287 4.77367 7.97586C5.80741 8.6738 7.13306 10.0104 8.52895 11.5073C7.99123 8.76379 7.58738 6.16516 7.77833 4.22058C9.1369 6.26831 10.6008 4.19643 12.0362 0C13.2455 3.82771 14.5449 5.95226 16.1888 4.40713C16.4017 6.11029 16.1734 7.93196 15.5874 9.8524L15.5501 11.3163C16.913 9.84582 18.2519 8.45652 19.3295 7.92757C18.6601 10.1421 21.0041 9.36955 24 8.01097C21.1643 11.1802 20.9405 12.8527 23.4359 12.969C22.3978 14.5844 20.5674 15.5676 18.4406 16.3117C19.3668 16.5772 20.293 17.0776 21.2192 17.8524C19.3032 17.6944 19.7048 18.9498 21.2741 20.969C18.8774 20.2667 17.6549 20.4576 18.4121 22.2859C15.5786 19.9155 13.5572 18.7676 12.3193 18.7918H12.1043Z" fill="#FF0000"/>
-</g>
-<defs>
-<clipPath id="clip0_3249_7064">
-<rect width="24" height="26.9695" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-</span> who brings concepts,
-                        art, and ideas into reality.</p>
-                    </div> */}
-                    <div className="social_links d-flex flex-column">
-                      <span>saugatmaharjan11@gmail.com</span>
-                      <div className="time">{time} <span>Local Time</span></div>
-                      <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
-                        <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
-                        <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
-                        <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
 
-                      </ul>
                     </div>
+
                   </div>
-                </div>
+
               </div>
+
             </section>
+
           </div>
-          <section id="digital-products" className="w-100">
-            <div className="container position-relative" id="products-container">
-              <div style={{borderTop:"1px solid white"}} className="border-l-r-b d-flex flex-row container-title">
-               
-                <div className=" container-header d-flex align-items-center" >
-                  <h2 className="secton-header-h2">FEATURED PROJECTS</h2>
-                  
+
+          {/* WORKS SECTION */}
+            <section id="digital-products" className="w-100">
+              
+              {/* Section TITLE */}
+              <div className="container position-relative" id="products-container">
+
+                <div style={{borderTop:"1px solid white"}} className="border-l-r-b d-flex flex-row container-title">
+                
+                  <div className=" container-header d-flex align-items-center" >
+                    <h2 className="secton-header-h2">FEATURED PROJECTS</h2>  
+                  </div>
+
                 </div>
+
               </div>
-            </div>
-            <div className="container d-flex flex-row " style={{justifyContent: 'center'}}>
-              {/* projects container */}
-              <ul className="border-l-r-b project-contents">
-              {projects.filter(project => project.featured === true).map((project, index, array) => (
-                <React.Fragment key={project.id}>
-                  <li  className="project d-flex" id={project.title} >
-                    <div className="p-left d-flex flex-column">
-                      <div className="project-detail d-flex flex-column">
-                        <span className="project-leading">
-                          {/* Mapping responsibilities */}
+              
+              {/* Works List */}
+              <div className="container d-flex flex-row " style={{justifyContent: 'center'}}>
+
+                {/* projects container */}
+                <ul className="border-l-r-b project-contents">
+                {projects.filter(project => project.featured === true).map((project, index, array) => (
+                  <React.Fragment key={project.id}>
+
+                    {/* PROJECT LISTS */}
+                    <li  className="project d-flex" id={project.title} >
+
+                      {/* PROJECT DESCRIPTION */}
+                      <div className="p-left d-flex flex-column">
+
+                        <div className="project-detail d-flex flex-column">
                           
-                          {project.responsibilities.map((responsibility, resIndex) => (
-              <span key={resIndex} className="MRm">{responsibility}</span>
-            ))}                          
-                        </span>
-                        <h3 className="allCaps">{project.title}</h3>
-                        <p className="project-details">{project.projectBrief}</p>
+                          {/* Badge Labels */}
+                          <span className="project-leading">
+
+                            {/* Mapping responsibilities */}
+                            
+                            {project.responsibilities.map((responsibility, resIndex) => (
+                            <span key={resIndex} className="MRm">{responsibility}</span>
+                            ))}  
+
+                          </span>
+                          
+                          {/* Project Title */}
+                          <h3 className="allCaps">{project.title}</h3>
+
+                          {/* Project Brief */}
+                          <p className="project-details">{project.projectBrief}</p>
+
+                        </div>
+
+
+                        <Link  href={project.link}>
+                        <Button size="medium" 
+                        customButtonType="outline" 
+                        label="view case study" 
+                        rightIcon={
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                        
+                        } />
+                        </Link>
                       </div>
-                      <Link  href={project.link}>
-                      <Button size="medium" 
-                      customButtonType="outline" 
-                      label="view case study" 
-                      rightIcon={
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                      </svg>
-                      
-                      } />
+
+                      {/* PROJECT IMAGE */}
+                      <Link href={project.link} className="p-right d-flex align-items-center justify-content-center position-relative">
+
+                        <div className="position-absolute sub-image">
+                          <img src={project.projectMascotImageLink} alt="Project Mascot" />
+                        </div>
+
+                        <img className="rightimg" src={project.featuredImageLink} alt="featured-image" />
+
                       </Link>
-                    </div>
-                    <Link href={project.link} className="p-right d-flex align-items-center justify-content-center position-relative">
-                      <div className="position-absolute sub-image">
-                        <img src={project.projectMascotImageLink} alt="Project Mascot" />
-                      </div>
-                      <img className="rightimg" src={project.featuredImageLink} alt="featured-image" />
-                    </Link>
+                      
+                    </li>
                     
-                  </li>
-        {index !== array.length - 1 && ( // Add a div except for the last project
-      <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
-    )}
-        </React.Fragment>
-      ))}
-                
-                
-              </ul>
-              {/* end of project container */}
-            </div>
-          </section> 
+                    {/* No of Projects to Display */}
+                    {index !== array.length - 1 && ( // Add a div except for the last project
+                      <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
+                        )}
+                    </React.Fragment>
+                    ))}
+                  
+                </ul>
+                {/* end of project container */}
+
+              </div>
+
+            </section> 
+
+
           {/* <BGERASER/>   
-         <ThreeD/> */}
+              <ThreeD/> */}
+
+          {/* FOOTER */}
          <Footer/>
+         
         </main>
        
         <Script type="module" src="/script.js"></Script>
