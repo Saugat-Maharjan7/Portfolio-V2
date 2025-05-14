@@ -75,31 +75,42 @@ function About(){
         <main className='aboutMain BGBrandBlack500 pt-8	'>
           
           <section className="about-hero container-fluid position-relative BGNaturalWhite100">
+
+            {/* BG */}
             <img className="blur_purple_1 position-absolute" src="/assets/blurpurple.png" alt="purple light" />
+
+            {/* Title Tags */}
             <div className="about-info d-flex flex-row row TXTBrandBlack600">
-              <div className="col"><h1>SHIRISH SHAKYA</h1></div>
+              <div className="col"><h1>SAUGAT MAHARJAN</h1></div>
               <div className="col"><ul className="featured d-flex flex-column">
-                  <li>CREATIVE DIRECTOR</li>
-                  <li>DIGITAL DESIGNER</li>
-                  <li>CREATIVE DEVELOPER</li>
+                  <li>PRODUCT DESIGNER</li>
                   <li>UX DESIGNER</li>
+                  <li>DIGITAL DESIGNER</li>
+                  <li>REGISTERED IT ENGINEER</li>
                 </ul></div>
             </div>
-            <h6 >In the field for over 5 years. Currently based in Brampton.</h6>
+
+            {/* Experience */}
+            <h6 >In the field for OVER 3 YEARS. Currently based in KATHAMNDU,NEPAL.</h6>
+
+            {/* VIDEO ABOUT */}
             <div className="about-video">
-            <div className="container-fluid d-flex align-items-center justify-content-center  video-slideshow">
-              <div className="video-show position-relative">
-                <div className="gif-area">
-                  <div className="planet-area"><img className="gif" src="/assets/smallplanet.gif" alt="ezgif-com-gif-maker-1" border={0} />
+              <div className="container-fluid d-flex align-items-center justify-content-center  video-slideshow">
+                <div className="video-show position-relative">
+                  <div className="gif-area">
+                    <div className="planet-area"><img className="gif" src="/assets/smallplanet.gif" alt="ezgif-com-gif-maker-1" border={0} />
+                    </div>
+                    <img src="/assets/rotatecircle.png" alt="rotate-circle" className="rotation-text" border={0} />
                   </div>
-                  <img src="/assets/rotatecircle.png" alt="rotate-circle" className="rotation-text" border={0} />
+                  <video ref={profileVideoref} src="/assets/videos/profile.mp4" className="prof-video" loop muted playsInline={true}> 
+                      </video>                
                 </div>
-                <video ref={profileVideoref} src="/assets/videos/profile.mp4" className="prof-video" loop muted playsInline={true}> 
-                    </video>                
               </div>
-            </div></div>
+            </div>
           </section>
           
+
+          {/* ABOUT ME */}
           <section>
             <div className="container-fluid about-me">
               <div className="bio-pic d-flex ">
