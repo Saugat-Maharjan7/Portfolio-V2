@@ -114,48 +114,65 @@ function About(){
           <section>
             <div className="container-fluid about-me">
               <div className="bio-pic d-flex ">
+
+                {/* My IMAGE */}
                 <div className="image-container">
-                  <img src="/assets/transparentme.png" alt="transparent-me" border={0} />
+                  <img src="/assets/transparentme1.png" alt="transparent-me" border={0} />
                 </div>
+
+                {/* ABOUT INFO */}
                 <div className="about-container TXTBrandBlack600">
                   <p>
-                  Greetings! I'm Shirish Shakya, your friendly neighborhood Interactive Designer and Art Director hailing from the land of breathtaking mountains, Nepal!
+                  Namaste! I'm Saugat Maharjan, a dedicated UI/UX Designer with an Engineering degree from Kathmandu, Nepal, and over two years of industry experience. My expertise spans the full design process—from user research to high-fidelity interfaces—focused on delivering visually compelling and functional digital experiences. My passion for design began during my undergraduate studies and has since evolved into a career driven by purpose and creativity.
 
-I've mastered the enchanting craft of storytelling through designs and creative direction. 
+                  {/* <span  className='FONTNEXA SIZEF9'>(Psst, let's keep it between us—don't want those big-shot companies catching wind of my low-key wizardry!) </span>.  */}
 
-
-      <span  className='TXTTailwindOrange600 FONTNEXA SIZEF9'>(Psst, let's keep it between us—don't want those big-shot companies catching wind of my low-key wizardry!) </span>. 
                   </p>
+
                   <p style={{marginTop: '2rem'}}>
-                  I've worn more hats than a hat enthusiast's dream collection—Creative Designer, Art Director, Creative Art Director, UI/UX maestro, Interaction Virtuoso, Product Design Dynamo, Design Director, and all those titles that make your eyes do a little happy dance. 
+                  I believe in the transformative power of design to enhance everyday interactions. Rooted in user-centric principles, my approach emphasizes clarity, usability, and engagement. I continuously seek to innovate by exploring new methodologies and staying current with emerging trends and technologies in the design field. 
                   </p>
                 </div>
+
               </div>
-              <span className='BlendText'> I HAVE A THING FOR SICK BLEND MODES</span>
+
+              {/* BLEND TEXT */}
+              <span className='BlendText'> SIMPLIFYING IDEAS INTO BEAUTIFUL, EFFECTIVE INTERFACES </span>
+
             </div>
           </section>
+
+
+          {/* MARQUEE SECTION */}
           <div className='arsenal-video-section'>
+
           <section className='BGBrandBlack500 '>
             <div className="menu">
               <div className="menu__item">
                 <div className="marquee">
                   <div className="marquee__inner ">
-                    <span>ART DIRECTION . </span>
-                    <span>DIGITAL DESIGN .</span>
-                    <span>LEAN UX .</span>
-                    <span>IMMERSIVE EXPERIENCE</span>
+                    <span> USER INTERFACE . </span>
+                    <span>USER EXPERIENCE .</span>
+                    <span>WEB DEVELOPMENT .</span>
+                    <span>VISUAL DESIGN .</span>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* ROLLING BALLS VIDEO */}
             <div className="rolling-video position-relative">
+
               <div className="arsenal-description position-absolute" style={{zIndex: 1}}>
-                <h2 >LET’S HAVE A
-                  LOOK AT MY ARSENAL</h2>
+
+                <h2 >BEYOND MY ENTHUSIASM FOR TECHNOLOGY</h2>
+
                 <p className='TXTTailwindGray400'>
-For me, having a solid set of tools and knowledge is an absolute game-changer. This toolkit has been my secret sauce, working wonders in keeping me motivated every single day.
+                I have keen interest in traveling, drawing, playing video games, listening to music, learning new things, and embracing exciting challenges. Moreover, I am a food enthusiast who enjoys exploring out different cuisines at all times.
                 </p>
+
               </div>
+
               <video 
               ref={arsenalVideoRef} 
               className="arsenal-video"
@@ -163,19 +180,30 @@ For me, having a solid set of tools and knowledge is an absolute game-changer. T
               id="arsenalVideo" muted playsInline={true} />
             </div>
           </section>
+
+
+          {/* MY EXPERIENCE */}
           <section className="experience-section"><div className="background">
+
               <h2 >MY EXPERIENCE</h2>
-              <ul className="experience-table">
-              <li><span>2024</span><span>Peer Circles App</span><span>Sr. Product Designer</span></li>
-              <li><span>2024</span><span>Inclusivity Institute for Better Data</span><span>Design Lead</span></li>
-               <li><span>2023</span><span>GlobalyHub</span><span>Sr. Product Designer</span></li>
-                <li><span>2021</span><span>Proshore</span><span>UX Design, Frontend</span></li>
-                <li><span>2020 - 2021</span><span>Swivt</span><span>Creative Director</span></li>
-                <li><span>2018 - 2020</span><span>Waayu Studios </span><span>UX designer</span></li>
-              </ul>
-            </div></section>
+
+                <ul className="experience-table">
+
+                <li><span>2025 - Current</span><span>EKbana Solutions</span><span>Mid UI/UX Designer</span></li>
+                <li><span>2025</span><span>Aitrix Labs</span><span>Part-Time Designer</span></li>
+                <li><span>2023 - 2024</span><span>SCSS Consulting</span><span>Freelance Designer</span></li>
+                <li><span>2022 - 2023</span><span>GlobalyHub</span><span>Product Designer</span></li>
+                <li><span>2022</span><span>GlobalyHub</span><span>Associate UI/UX and Graphics Designer</span></li>
+                <li><span>2021 - 2022</span><span>IntroCept</span><span>UI/UX Design Intern</span></li>
+
+                </ul>
+
+            </div>
+          </section>
+            
             <SubFooter/>
             </div>
+
           {/* footer */}
         </main>
         </m.div>
