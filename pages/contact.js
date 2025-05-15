@@ -284,10 +284,10 @@ const handleCopyClick = () => {
 
                       <ul className="contact d-flex flex-column gap-2" >
                         
-                            <li ><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
-                            <li><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://dribbble.com/Saugat7">Dribbble</a></li>
-                            <li><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
-                            <li><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
+                            <li ><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225" target='_blank'>Linkedin</a></li>
+                            <li><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://dribbble.com/Saugat7" target='_blank'>Dribbble</a></li>
+                            <li><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.instagram.com/s.a.u.g.a.t_7/" target='_blank'>Instagram</a></li>
+                            <li><a className='TXTBrandOrange500' style={{ textDecoration: 'underline' }} href="https://www.facebook.com/saugat.maharjan/" target='_blank'>Facebook</a></li>
         
                       </ul>
 

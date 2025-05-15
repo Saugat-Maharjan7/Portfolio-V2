@@ -534,6 +534,168 @@ export default function Home() {
 
             </section> 
 
+            {/* TESTIMONIALS */}
+            <section id="digital-products" className="w-100">
+              
+              {/* Section TITLE */}
+              <div className="container position-relative" id="products-container">
+
+                <div style={{borderTop:"1px solid white"}} className="border-l-r-b d-flex flex-row container-title">
+                
+                  <div className=" container-header d-flex align-items-center" >
+                    <h2 className="secton-header-h2">TESTIMONIALS</h2>  
+                  </div>
+
+                </div>
+
+              </div>
+              
+              {/* Testimonials List */}
+              
+              {/* Static Testimonials */}
+              <div className="container d-flex flex-row" style={{ justifyContent: 'center' }}>
+
+                <ul className="border-l-r-b project-contents">
+
+                  {/* === Testimonial 1 === */}
+                  <li className="project d-flex" id="gamified-healthy-eating-app">
+
+                    {/* Description */}
+                    <div className="p-left d-flex flex-column w-100">
+
+                      <div className="project-detail d-flex flex-column">
+
+                        {/* Sayings */}
+                        <p className="project-details">
+                        “I have worked with Saugat on revamping the marketing site for SCSS Consulting. He is quite prompt with deadlines and focuses on designing with a logical approach that aligns with user needs and design standards. In my opinion Saugat is a very determined designer who tries to achieve effective design and validate his work with feedback. I would say I am impressed with Saugat's work ethic and his ability to transform design problem statements with viable solutions.”
+                        </p>
+
+                        {/* Clients Info */}
+                        <h5 className="allCaps">Aayush Mishra</h5>
+
+                        <span className="project-leading">
+                          <span className="MRm">Project Manager, SCSS Consulting</span>
+                        </span>
+
+                      </div>
+
+                    </div>
+
+                  </li>
+
+                  {/* Divider */}
+                  <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
+
+                  {/* === Testimonial 2 === */}
+                  <li className="project d-flex" id="gamified-healthy-eating-app">
+
+                    {/* Description */}
+                    <div className="p-left d-flex flex-column w-100">
+
+                      <div className="project-detail d-flex flex-column">
+
+                        {/* Sayings */}
+                        <p className="project-details">
+                        “Working with Saugat on our yoga ashram's website was a delight. The dedication to understanding our organization's ethos and operations was impressive, resulting in a design that that exceeds our expectations. The attention to detail and commitment to our vision were evident throughout the process. The website now serves as a perfect reflection of our ashram's values and offerings effectively. Highly recommended for their expertise and dedication.”
+                        </p>
+
+                        {/* Clients Info */}
+                        <h5 className="allCaps">Lilendra Purush Dhakal</h5>
+
+                        <span className="project-leading">
+                          <span className="MRm">Shanti Yoga Ashram</span>
+                        </span>
+
+                      </div>
+
+                    </div>
+
+                  </li>
+
+
+
+                </ul>
+
+              </div>
+              
+              {/* Automated Project List */}
+              {false && (
+              <div className="container d-flex flex-row " style={{justifyContent: 'center'}}>
+
+                {/* projects container */}
+                <ul className="border-l-r-b project-contents">
+                {projects.filter(project => project.featured === true).map((project, index, array) => (
+                  <React.Fragment key={project.id}>
+
+                    {/* PROJECT LISTS */}
+                    <li  className="project d-flex" id={project.title} >
+
+                      {/* PROJECT DESCRIPTION */}
+                      <div className="p-left d-flex flex-column">
+
+                        <div className="project-detail d-flex flex-column">
+                          
+                          {/* Badge Labels */}
+                          <span className="project-leading">
+
+                            {/* Mapping responsibilities */}
+                            
+                            {project.responsibilities.map((responsibility, resIndex) => (
+                            <span key={resIndex} className="MRm">{responsibility}</span>
+                            ))}  
+
+                          </span>
+                          
+                          {/* Project Title */}
+                          <h3 className="allCaps">{project.title}</h3>
+
+                          {/* Project Brief */}
+                          <p className="project-details">{project.projectBrief}</p>
+
+                        </div>
+
+
+                        <Link  href={project.link}>
+                        <Button size="medium" 
+                        customButtonType="outline" 
+                        label="view case study" 
+                        rightIcon={
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                        
+                        } />
+                        </Link>
+                      </div>
+
+                      {/* PROJECT IMAGE */}
+                      <Link href={project.link} className="p-right d-flex align-items-center justify-content-center position-relative">
+
+                        <div className="position-absolute sub-image">
+                          <img src={project.projectMascotImageLink} alt="Project Mascot" />
+                        </div>
+
+                        <img className="rightimg" src={project.featuredImageLink} alt="featured-image" />
+
+                      </Link>
+                      
+                    </li>
+                    
+                    {/* No of Projects to Display */}
+                    {index !== array.length - 1 && ( // Add a div except for the last project
+                      <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
+                        )}
+                    </React.Fragment>
+                    ))}
+                  
+                </ul>
+                {/* end of project container */}
+
+              </div>
+              )}
+
+            </section> 
+
 
             {/* <BGERASER/>   
                 <ThreeD/> */}
