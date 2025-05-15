@@ -120,25 +120,30 @@ export default function head({ toggleSidebar, isSidebarOpen }) {
           </Link>
           <div className="links d-flex flex-row">
             <ul className="navbar-nav me-auto d-flex flex-row">
+
+              {/* ABOUT */}
               <li className="nav-item d-flex flex-row ">
                 <Link className="anchor " href="about" id="about">ABOUT</Link>
               </li>
+
+              {/* PROJECTS */}
               <li className="nav-item d-flex flex-row ">
                 <Dropdown
                   dropName={'projects'}
                   links={projects.map((item) => (
-                    <Link href={item.link} key={item.id} className='dropdown_item'>
+                    <Link href={item.link} key={item.id} className='dropdown_item' target="_blank">
                       {item.title}
                     </Link>
                   ))}
                 />
               </li>
 
+              {/* RESUME */}
               <li className="nav-item d-flex flex-row ">
                 <Link className="anchor " target="_blank" href="/assets/pdf/Saugat-CV.pdf" style={{fontWeight:"bold"}}>RESUME</Link>
               </li>
               
-
+              {/* LETS Connect */}
               <li className="nav-item nav-connect d-flex flex-row" id="contact">
                 <Link className="anchor" href="/contact" id="contact">
                   <span id="contact">LET'S CONNECT</span>

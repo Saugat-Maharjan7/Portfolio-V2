@@ -298,7 +298,7 @@ export default function Home() {
 
                       </div>
 
-                    <a href="" target="" rel="noopener noreferrer">
+                    <a href="https://dribbble.com/shots/25920729-Udaan-V2-0" target="_blank" rel="noopener noreferrer">
                       <Button
                         size="medium"
                         customButtonType="outline"
@@ -314,7 +314,7 @@ export default function Home() {
                     </div>
 
                     {/* Image */}
-                    <a href="" className="p-right d-flex align-items-center justify-content-center position-relative">
+                    <a href="https://dribbble.com/shots/25920729-Udaan-V2-0" target="_blank" className="p-right d-flex align-items-center justify-content-center position-relative">
                       <img className="rightimg" src="/assets/projects/Udaan.png" alt="featured-image" />
                     </a>
 
@@ -345,7 +345,7 @@ export default function Home() {
 
                       </div>
 
-                    <a href="" target="" rel="noopener noreferrer">
+                    <a href="https://dribbble.com/shots/25606934-Shanti-Yoga-Ashram-Website" target="_blank" rel="noopener noreferrer">
                       <Button
                         size="medium"
                         customButtonType="outline"
@@ -361,7 +361,7 @@ export default function Home() {
                     </div>
 
                     {/* Image */}
-                    <a href="" className="p-right d-flex align-items-center justify-content-center position-relative">
+                    <a href="https://dribbble.com/shots/25606934-Shanti-Yoga-Ashram-Website" target="_blank" className="p-right d-flex align-items-center justify-content-center position-relative">
                       <img className="rightimg" src="/assets/projects/ShantiYogaAshram.png" alt="featured-image" />
                     </a>
 
@@ -391,7 +391,7 @@ export default function Home() {
 
                       </div>
 
-                      <a href="" target="" rel="noopener noreferrer">
+                      <a href="https://dribbble.com/shots/25606845-Gamified-Healthy-Eating-App" target="_blank" rel="noopener noreferrer">
                         <Button
                           size="medium"
                           customButtonType="outline"
@@ -406,7 +406,7 @@ export default function Home() {
                     </div>
 
                     {/* Image */}
-                    <a href="" className="p-right d-flex align-items-center justify-content-center position-relative">
+                    <a href="https://dribbble.com/shots/25606845-Gamified-Healthy-Eating-App" target="_blank" className="p-right d-flex align-items-center justify-content-center position-relative">
                       <img className="rightimg" src="/assets/projects/HealthyEating.png" alt="featured-image" />
                     </a>
 
@@ -432,7 +432,7 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <a href="#" target="" rel="noopener noreferrer">
+                      <a href="https://dribbble.com/shots/25606893-GlobalyHub-Company-Website" target="_blank" rel="noopener noreferrer">
                         <Button
                           size="medium"
                           customButtonType="outline"
@@ -447,7 +447,7 @@ export default function Home() {
                     </div>
 
                     {/* Image */}
-                    <a href="#" className="p-right d-flex align-items-center justify-content-center position-relative">
+                    <a href="https://dribbble.com/shots/25606893-GlobalyHub-Company-Website" target="_blank" className="p-right d-flex align-items-center justify-content-center position-relative">
                       <img className="rightimg" src="/assets/projects/GlobalyHub.png" alt="featured-image" />
                     </a>
                   </li>
