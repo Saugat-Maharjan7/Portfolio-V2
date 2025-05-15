@@ -85,13 +85,13 @@ function About(){
               <div className="col"><ul className="featured d-flex flex-column">
                   <li>PRODUCT DESIGNER</li>
                   <li>UX DESIGNER</li>
-                  <li>DIGITAL DESIGNER</li>
+                  <li>UI DESIGNER</li>
                   <li>REGISTERED IT ENGINEER</li>
                 </ul></div>
             </div>
 
             {/* Experience */}
-            <h6 >In the field for OVER 3 YEARS. Currently based in KATHAMNDU,NEPAL.</h6>
+            <h6 >In the field for OVER 3 YEARS. Currently based in KATHAMNDU, NEPAL.</h6>
 
             {/* VIDEO ABOUT */}
             <div className="about-video">
