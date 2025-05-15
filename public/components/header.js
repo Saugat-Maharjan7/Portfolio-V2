@@ -140,7 +140,7 @@ export default function head({ toggleSidebar, isSidebarOpen }) {
 
               {/* RESUME */}
               <li className="nav-item d-flex flex-row ">
-                <Link className="anchor " target="_blank" href="/assets/pdf/Saugat-CV.pdf" style={{fontWeight:"bold"}}>RESUME</Link>
+                <Link className="anchor " target="_blank" href="/assets/pdf/Saugat-CV.pdf" style={{fontWeight:""}}>RESUME</Link>
               </li>
               
               {/* LETS Connect */}

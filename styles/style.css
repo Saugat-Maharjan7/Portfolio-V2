@@ -12019,7 +12019,7 @@ textarea.form-control-lg {
 .aboutMain .about-hero .about-info .featured li {
   padding: 0.5rem;
   border-radius: 100px;
-  border: #161515 2px solid;
+  border: #d1cbcb 2px solid;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -12356,9 +12356,9 @@ textarea.form-control-lg {
   left: 200%;
 }
 .BTNBrandOutline:active {
-  border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-pressed);
+  border: var(--ss-border-width-025) solid #A855F7;
   color: var(--ss-colors-system-text-onaction-pressed);
-  background-color: var(--ss-colors-system-surface-action-pressed);
+  background-color: #A855F7;
 }
 
 .BTNBrandSolid {

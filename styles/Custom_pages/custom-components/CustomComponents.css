@@ -172,9 +172,9 @@
   left: 200%;
 }
 .BTNBrandOutline:active {
-  border: var(--ss-border-width-025) solid var(--ss-colors-system-border-action-pressed);
+  border: var(--ss-border-width-025) solid #A855F7;
   color: var(--ss-colors-system-text-onaction-pressed);
-  background-color: var(--ss-colors-system-surface-action-pressed);
+  background-color: #A855F7;
 }
 
 .BTNBrandSolid {

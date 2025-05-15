@@ -74,14 +74,14 @@ function About(){
         <SubHead></SubHead>
         <main className='aboutMain BGBrandBlack500 pt-8	'>
           
-          <section className="about-hero container-fluid position-relative BGNaturalWhite100">
+          <section className="about-hero container-fluid position-relative BGTailwindStone500">
 
             {/* BG */}
             <img className="blur_purple_1 position-absolute" src="/assets/blurpurple.png" alt="purple light" />
 
             {/* Title Tags */}
             <div className="about-info d-flex flex-row row TXTBrandBlack600">
-              <div className="col"><h1>SAUGAT MAHARJAN</h1></div>
+              <div className="col"><span>ER.</span><h1> SAUGAT MAHARJAN</h1></div>
               <div className="col"><ul className="featured d-flex flex-column">
                   <li>PRODUCT DESIGNER</li>
                   <li>UX DESIGNER</li>
