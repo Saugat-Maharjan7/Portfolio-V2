@@ -543,7 +543,7 @@ export default function Home() {
                 <div style={{borderTop:"1px solid white"}} className="border-l-r-b d-flex flex-row container-title">
                 
                   <div className=" container-header d-flex align-items-center" >
-                    <h2 className="secton-header-h2">TESTIMONIALS</h2>  
+                    <h2 className="secton-header-h2">CLIENT VOICES</h2>  
                   </div>
 
                 </div>
