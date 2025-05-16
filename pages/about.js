@@ -74,7 +74,7 @@ function About(){
         <SubHead></SubHead>
         <main className='aboutMain BGBrandBlack500 pt-8	'>
           
-          <section className="about-hero container-fluid position-relative BGTailwindStone500">
+          <section className="about-hero container-fluid position-relative BGTailwindStone200">
 
             {/* BG */}
             <img className="blur_purple_1 position-absolute" src="/assets/blurpurple.png" alt="purple light" />
