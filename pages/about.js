@@ -74,6 +74,7 @@ function About(){
         <SubHead></SubHead>
         <main className='aboutMain BGBrandBlack500 pt-8	'>
           
+          {/* MAIN HEAD TITLE */}
           <section className="about-hero container-fluid position-relative BGTailwindStone200">
 
             {/* BG */}
@@ -102,13 +103,16 @@ function About(){
                     </div>
                     <img src="/assets/rotatecircle.png" alt="rotate-circle" className="rotation-text" border={0} />
                   </div>
+                  
                   <video ref={profileVideoref} src="/assets/videos/profile.mp4" className="prof-video" loop muted playsInline={true}> 
                       </video>                
                 </div>
               </div>
             </div>
           </section>
-          
+
+
+          {/* MARQUEE SECTION */}
           <section className='BGBrandBlack500 '>
             <div className="menu">
               <div className="menu__item">
@@ -190,6 +194,8 @@ function About(){
                 </p>
 
               </div>
+              
+              {/* <img src="/assets/videos/canon.webp" alt="" /> */}
 
               <video 
               ref={arsenalVideoRef} 
