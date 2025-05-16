@@ -109,6 +109,22 @@ function About(){
             </div>
           </section>
           
+          <section className='BGBrandBlack500 '>
+            <div className="menu">
+              <div className="menu__item">
+                <div className="marquee">
+                  <div className="marquee__inner ">
+                    <span> USER INTERFACE . </span>
+                    <span>USER EXPERIENCE .</span>
+                    <span>WEB DEVELOPMENT .</span>
+                    <span>VISUAL DESIGN .</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
 
           {/* ABOUT ME */}
           <section>
@@ -147,7 +163,9 @@ function About(){
           <div className='arsenal-video-section'>
 
           <section className='BGBrandBlack500 '>
-            <div className="menu">
+
+            {/* Marquee Repeat */}
+            {/* <div className="menu">
               <div className="menu__item">
                 <div className="marquee">
                   <div className="marquee__inner ">
@@ -158,7 +176,7 @@ function About(){
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* ROLLING BALLS VIDEO */}
             <div className="rolling-video position-relative">

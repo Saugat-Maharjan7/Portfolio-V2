@@ -143,115 +143,118 @@ export default function Home() {
         <main ref={mainRef} className={checked ? 'main-inactive' : ''}>
         <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}></Header>
 
-          <div className="hero-wrapper position-relative">  
+            <div className="hero-wrapper position-relative">  
 
-            {/* HERO SECTION */}
-            <section className="w-100 hero-container" style={{top: 0}} >
+              {/* HERO SECTION */}
+              <section className="w-100 hero-container" style={{top: 0}} >
 
-              <div className="container position-relative">
-                <m.div 
-                 initial={{
-                  y:-100,
-                  opacity:0
-                }}
-                
-                animate={{
-                  y:0,
-                  opacity:1
-                }}
-                transition={{
-                  duration:1.5,
+                <div className="container position-relative">
+                  <m.div 
+                  initial={{
+                    y:-100,
+                    opacity:0
+                  }}
+                  
+                  animate={{
+                    y:0,
+                    opacity:1
+                  }}
+                  transition={{
+                    duration:1.5,
 
-                 
-                }}
-                className="gradient-shade w-100" />
+                  
+                  }}
+                  className="gradient-shade w-100" />
 
-                  {/* HERO SECTION */}
-                  <div className="hero border-l-r-b d-flex flex-column">
+                    {/* HERO SECTION */}
+                    <div className="hero border-l-r-b d-flex flex-column">
 
-                    {/* BG Gradient */}
-                    {/* <img className="blur_purple_1" src="/assets/blurpurple.png" alt="purple light" />
-                    <img className="sun_light" src="/assets/sun light.png" alt="sun light" /> */}
+                      {/* BG Gradient */}
+                      {/* <img className="blur_purple_1" src="/assets/blurpurple.png" alt="purple light" />
+                      <img className="sun_light" src="/assets/sun light.png" alt="sun light" /> */}
 
-                    {/* Portal */}
-                    <div>
-                      {/* <Portal/>  */}
-                      <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
-                    </div>
-
-                    {/* Hero Info   */} 
-                    <div className="hero-title d-flex flex-column" style={{marginBottom:'4rem'}}>
-                      <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>ER. SAUGAT MAHARJAN</span>
-                    
-                      <h1 className="FONTMONUMENT" s >
-                        <div>
-                              {titleLetters.map((letter, index) => (
-                              <m.span
-                                key={index}
-                                initial={{ y: -100, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: index * 0.08, type: 'spring', stiffness: 100 }}
-                                
-                              >
-                                {letter}
-                              </m.span>
-                            ))}
-                            </div>
-                      </h1>
-                      
-                        {/* <div className="TypeWriterWrapper ">
-                      <Typewriter
-                      style={{letterSpacing:0}}
-                          options={{
-                            strings: ['I design', 'I code','I create',''],
-                            autoStart: true,
-                            loop: true,
-                          }}
-                        />
-                        </div> */}
-                        
-                        <p>Designer from Kathmandu, Nepal</p>
-                        
-                        
-                    </div>
-
-                    {/* More Info */}
-                    <div className="profile_info_top d-flex w-100" style={{position:'relative',zIndex:'1'}}>
-
-                      {/* Socials */}
-                      <div className="social_links d-flex flex-column">
-
-                        {/* email */}
-                        <a href="mailto:saugatmaharjan11@gmail.com" target="_blank"> <span>saugatmaharjan11@gmail.com</span> </a>
-
-                        {/* Time */}
-                        <div className="time">{time} <span>Local Time</span></div>
-
-                        {/* Social Media */}
-                        <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
-                          <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
-                          <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
-                          <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
-                          <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
-                        </ul>
-                        
+                      {/* Portal */}
+                      <div>
+                        {/* <Portal/>  */}
+                        <div style={{width:"200px",height:'50px',background:"#161515",position:'absolute',bottom:'2%',right:"20px",zIndex:'0'}}></div>
                       </div>
 
-                      {/* Short Info   */}
-                      {/* <div className="profile_detail d-flex flex-row">
-                        <div className="profile_picture" />
-                        <p className="profile_details">Hey!, I'm a product designer based in Nepal. Designing with empathy for Solving complex problems through user-centered design.</p>
-                      </div> */}
+                      {/* Hero Info   */} 
+                      <div className="hero-title d-flex flex-column" style={{marginBottom:'4rem'}}>
+                        <span style={{fontFamily:"Monument Extended Bold", letterSpacing:0.8}}>ER. SAUGAT MAHARJAN</span>
+                      
+                        <h1 className="FONTMONUMENT" s >
+                          <div>
+                                {titleLetters.map((letter, index) => (
+                                <m.span
+                                  key={index}
+                                  initial={{ y: -100, opacity: 0 }}
+                                  animate={{ y: 0, opacity: 1 }}
+                                  transition={{ delay: index * 0.08, type: 'spring', stiffness: 100 }}
+                                  
+                                >
+                                  {letter}
+                                </m.span>
+                              ))}
+                              </div>
+                        </h1>
+                        
+                          
+                        <p>Product Designer from Kathmandu, Nepal <span><img src="/nepal-flag.png" alt="Flag of Nepal" /></span></p>
+
+                        {/* TYPEWRITER EFFECT */}
+                        {/* <div className="TypeWriterWrapper ">
+                        <Typewriter
+                        style={{letterSpacing:0}}
+                            options={{
+                              strings: ['FIGMA . PHOTOSHOP . HTML . CSS . WEBFLOW . ILLUSTRATOR',''],
+                              autoStart: true,
+                              loop: true,
+                            }}
+                          />
+                          </div> */}
+                          
+                          
+                      </div>
+
+                      {/* More Info */}
+                      <div className="profile_info_top d-flex w-100" style={{position:'relative',zIndex:'1'}}>
+
+                        {/* Socials */}
+                        <div className="social_links d-flex flex-column">
+
+                          {/* email */}
+                          <a href="mailto:saugatmaharjan11@gmail.com" target="_blank"> <span>saugatmaharjan11@gmail.com</span> </a>
+
+                          {/* Time */}
+                          <div className="time">{time} <span>Local Time</span></div>
+
+                          {/* Social Media */}
+                          <ul style={{textDecoration:'none',listStyle:'none'}} className="contact d-flex flex-row GAPm PADDING0 " >
+                            <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.linkedin.com/in/er-saugat-maharjan-471a86225">Linkedin</a></li>
+                            <li ><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://dribbble.com/Saugat7">Dribbble</a></li>
+                            <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.instagram.com/s.a.u.g.a.t_7/">Instagram</a></li>
+                            <li><a className='TXTBrandOrange500 SIZEF6' style={{ textDecoration: 'underline' }} target="_blank" href="https://www.facebook.com/saugat.maharjan/">Facebook</a></li>
+                          </ul>
+                          
+                        </div>
+
+                        {/* Short Info   */}
+                        {/* <div className="profile_detail d-flex flex-row">
+                          <div className="profile_picture" />
+                          <p className="profile_details">Hey!, I'm a product designer based in Nepal. Designing with empathy for Solving complex problems through user-centered design.</p>
+                        </div> */}
+
+                      </div>
 
                     </div>
 
-                  </div>
+                </div>
 
-              </div>
+              </section>
 
-            </section>
+            </div>
 
-          </div>
 
             {/* WORKS SECTION */}
             <section id="digital-products" className="w-100">
