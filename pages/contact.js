@@ -112,13 +112,13 @@ if(viewWidth>768){
   setLoaded(true);
 
   emailjs
-    .send('service_50n9tf3', 'template_5wew57s', {
+    .send('service_nv0bpg4', 'template_ai1y807', {
       from_name: form.name,
       to_name: 'Saugat',
       from_email: form.email,
       to_email: 'saugatmaharjan11@gmail.com',
       message: form.message,
-    }, 'SzlVDNiBR3_3JB8YE')
+    }, 'Tz4Ac3nD-us6ixQkb')
     .then((response) => {
       console.log('Email sent!', response);
       // Show success message after successful submission

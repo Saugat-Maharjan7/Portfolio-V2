@@ -13,7 +13,7 @@
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
     "@codaworks/react-glow": "^1.0.3",
-    "@emailjs/browser": "^3.10.0",
+    "@emailjs/browser": "^3.12.1",
     "@prismicio/next": "^1.5.0",
     "@prismicio/react": "^2.8.0",
     "@react-three/drei": "^9.105.3",
@@ -29,6 +29,7 @@
     "dat.gui": "^0.7.9",
     "drei": "^2.2.21",
     "emailjs": "^4.0.1",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^10.2.3",
     "fs": "^0.0.1-security",
     "glslify-loader": "^2.0.0",
