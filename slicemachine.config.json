@@ -1,5 +1,5 @@
 {
-  "repositoryName": "portfolio-v2shirish",
+  "repositoryName": "portfolio-v2saugat",
   "adapter": "@slicemachine/adapter-next",
   "libraries": ["./slices"],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"

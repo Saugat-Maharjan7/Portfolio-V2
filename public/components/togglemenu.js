@@ -7,7 +7,7 @@ function Toggle(){
       <div className="toggle-header d-flex flex-row justify-content-between">
         <div className="Logo d-flex flex-row">
           <div className="Logo-container" />
-          <span>SHIRISH.</span>
+          <span>SAUGAT.</span>
         </div>
         <button className="btn btn-icon close-ham">
           <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-arrows-angle-contract" viewBox="0 0 16 16">
@@ -21,7 +21,7 @@ function Toggle(){
         <li className="anchor" id="works"><Link href="projects" id="works">// Works</Link></li>
         <li className="anchor" id="contact"><a href="#" id="contact">// Contact</a></li>
       </ul>
-      <p>Copy Right shirish</p>
+      <p>Copy Right Saugat</p>
     </div>
   </div>
     )
