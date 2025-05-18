@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node tokens/outdent.mjs && node tokens/config.mjs ",
+    "build": "next build && node tokens/outdent.mjs && node tokens/config.mjs && next export",
     "start": "next start",
     "lint": "next lint",
     "type": "module",
