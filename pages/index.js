@@ -34,7 +34,7 @@ export default function Home() {
     // useLenis(mainRef);
 
     let exploreref=useRef()
-    const landingTitle="CRAFTING DIGITAL EXPERIENCE - ONE PIXEL AT A TIME"
+    const landingTitle="CRAFTING DIGITAL EXPERIENCE - ONE PIXEL AT A TIME."
     const [isToggled, setToggled] = useState(false);
     const [time, setTime] = useState('');
 
