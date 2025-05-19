@@ -37,9 +37,13 @@ function About(){
             arsenalVideoRef.current.play();
           } else {
             // Pause the video when it goes out of view
-            arsenalVideoRef.current.pause();
-            // Reset the video to the beginning
-            arsenalVideoRef.current.currentTime = 0;
+
+            if (arsenalVideoRef.current) {
+              arsenalVideoRef.current.pause();
+
+              // Reset the video to the beginning
+              arsenalVideoRef.current.currentTime = 0;
+            }
           }
         });
       };
