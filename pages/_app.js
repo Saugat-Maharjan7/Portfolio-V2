@@ -3,7 +3,9 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/style.scss';
 import '../styles/globals.css';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/react';
+
 
 
 function MyApp({ Component, pageProps }) {
@@ -17,6 +19,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence mode='wait'>
               <Analytics />
+
+              <SpeedInsights />
 
      
         
