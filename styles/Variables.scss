@@ -9,7 +9,7 @@
 
 //these are the custom variables
 
-$primary-orange: #A855F7;
+$primary-purple: #A855F7;
 $primary-vio:#C25FFD;
 $primary-black:getColor(Brand,Black ,500 );
 $primary: #A855F7;
@@ -32,7 +32,7 @@ $zindex-toast:                      1090 !default;
 $black: #000000;
 $brand-black: getColor(Brand, Black,500 );
 $brand-grey: getColor(Tailwind, Gray,500 );
-$brand-orange: #A855F7;
+$brand-primary: #A855F7;
 $brand-purple: getColor(Brand, Purple,500 );
 $brand-basilgreen: #cbffc2;
 $brand-green: #4bd20b;
@@ -69,15 +69,15 @@ $Colors: (
       900: #000000,
     ),
     Orange: (
-      100: #fbece6,
-      200: #f6d1c2,
-      300: #f0b79f,
-      400: #eb9e7b,
+      100: #EEDDFD,
+      200: #E5CCFD,
+      300: #DCBBFC,
+      400: #CB99FA,
       500: #A855F7,
-      600: #d16c4f, 
-      700: #a9543f,
-      800: #7d3c30,
-      900: #512322,
+      600: #8A44CD, 
+      700: #6C34A2,
+      800: #4F2378,
+      900: #401B63,
     ),
     AlphaOrange: (
       100: #FB722EBF,
