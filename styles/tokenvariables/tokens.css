@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 18 May 2025 09:42:14 GMT
+ * Generated on Tue, 27 May 2025 06:12:21 GMT
  */
 
 :root {
@@ -158,15 +158,15 @@
   --ss-colors-primitive-purple-300: #c186ff;
   --ss-colors-primitive-purple-200: #d9b3ff;
   --ss-colors-primitive-purple-100: #f2e1ff;
-  --ss-colors-primitive-orange-900: #512322;
-  --ss-colors-primitive-orange-800: #7d3c30;
-  --ss-colors-primitive-orange-700: #a9543f;
-  --ss-colors-primitive-orange-600: #d16c4f;
+  --ss-colors-primitive-orange-900: #401B63;
+  --ss-colors-primitive-orange-800: #4F2378;
+  --ss-colors-primitive-orange-700: #6C34A2;
+  --ss-colors-primitive-orange-600: #8A44CD;
   --ss-colors-primitive-orange-500: #A855F7;
-  --ss-colors-primitive-orange-400: #eb9e7b;
-  --ss-colors-primitive-orange-300: #f0b79f;
-  --ss-colors-primitive-orange-200: #f6d1c2;
-  --ss-colors-primitive-orange-100: #fbece6;
+  --ss-colors-primitive-orange-400: #CB99FA;
+  --ss-colors-primitive-orange-300: #DCBBFC;
+  --ss-colors-primitive-orange-200: #E5CCFD;
+  --ss-colors-primitive-orange-100: #EEDDFD;
   --ss-spacer-fxl: var(--ss-size-32);
   --ss-spacer-xxxl: var(--ss-size-26);
   --ss-spacer-xxl: var(--ss-size-20);
