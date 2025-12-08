@@ -571,6 +571,35 @@ export default function Home() {
 
                         {/* Sayings */}
                         <p className="project-details">
+                        “Working with Saugat was really smooth and enjoyable. He didn’t just stick to our ideas but actually brought in new perspectives through user research, competitor analysis, and constant discussions with our stakeholders. From the very beginning — sketching, wireframing, prototyping, user testing — he guided us step by step and made the whole purpose clear, which we honestly didn’t know at first. The final high-fidelity designs and his proper handoff to development made a huge difference. Overall, he gave us great insights and it was genuinely good working with him.”
+                        </p>
+
+                        {/* Clients Info */}
+                        <h5 className="allCaps">Udaan Shaishik Kendra</h5>
+
+                        {/* <span className="project-leading">
+                          <span className="MRm">Project Manager, SCSS Consulting</span>
+                        </span> */}
+
+                      </div>
+
+                    </div>
+
+                  </li>
+
+                  {/* Divider */}
+                  <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
+
+                  {/* === Testimonial 2 === */}
+                  <li className="project d-flex" id="gamified-healthy-eating-app">
+
+                    {/* Description */}
+                    <div className="p-left d-flex flex-column w-100">
+
+                      <div className="project-detail d-flex flex-column">
+
+                        {/* Sayings */}
+                        <p className="project-details">
                         “I have worked with Saugat on revamping the marketing site for SCSS Consulting. He is quite prompt with deadlines and focuses on designing with a logical approach that aligns with user needs and design standards. In my opinion Saugat is a very determined designer who tries to achieve effective design and validate his work with feedback. I would say I am impressed with Saugat's work ethic and his ability to transform design problem statements with viable solutions.”
                         </p>
 
@@ -590,7 +619,7 @@ export default function Home() {
                   {/* Divider */}
                   <div style={{ width: '100%', backgroundColor: 'white', height: '1px' }} />
 
-                  {/* === Testimonial 2 === */}
+                  {/* === Testimonial 3 === */}
                   <li className="project d-flex" id="gamified-healthy-eating-app">
 
                     {/* Description */}
