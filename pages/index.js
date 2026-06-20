@@ -121,7 +121,7 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#A855F7" />
         <meta name="theme-color" content="#ffffff" />
         <title>Saugat Maharjan</title>
-        <meta name="description" content="Namaste! I'm Saugat Maharjan, a dedicated UI/UX Designer with an Engineering degree from Kathmandu, Nepal, and over two years of industry experience. My expertise spans the full design process—from user research to high-fidelity interfaces—focused on delivering visually compelling and functional digital experiences. My passion for design began during my undergraduate studies and has since evolved into a career driven by purpose and creativity." />
+        <meta name="description" content="Namaste! I'm Saugat Maharjan, a dedicated UI/UX Designer with an Engineering degree from Kathmandu, Nepal, and over 4 years of industry experience. My expertise spans the full design process—from user research to high-fidelity interfaces—focused on delivering visually compelling and functional digital experiences. My passion for design began during my undergraduate studies and has since evolved into a career driven by purpose and creativity." />
 
         </Head>
       

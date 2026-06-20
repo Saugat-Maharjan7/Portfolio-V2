@@ -2,6 +2,9 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
   webpack: (config, options) => {
     config.module.rules.push({
         test: /\.(glsl|vs|fs|vert|frag)$/,

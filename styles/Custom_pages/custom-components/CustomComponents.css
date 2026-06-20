@@ -387,7 +387,6 @@
 header {
   z-index: 900;
   background: var(--ss-colors-system-surface-surface0transparent-rest);
-  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--ss-colors-system-border-onsurface1-rest);
   position: fixed;
@@ -396,14 +395,12 @@ header {
   transition: ease-in-out top 0.5s;
 }
 header .container {
-  -webkit-backdrop-filter: none;
-          backdrop-filter: none;
+  backdrop-filter: none;
 }
 header nav {
   align-items: center;
   padding: 0.5rem 1rem;
-  -webkit-backdrop-filter: none;
-          backdrop-filter: none;
+  backdrop-filter: none;
 }
 header nav .Logo {
   gap: var(--ss-spacer-m);
