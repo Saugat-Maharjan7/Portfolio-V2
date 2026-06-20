@@ -36,7 +36,7 @@ function Footer(){
 
             </div>
             <div className="image-container position-relative">
-              <img className="position-absolute astro" src="./../assets/trademark.png" alt="Branding Trademark" />
+              <img className="position-absolute astro" src="/assets/Trademark.png" alt="Branding Trademark" />
             </div>
             {/* <div className="image-container position-relative">
               <img className="position-absolute astro" src="./../assets/astro.png" alt="astro" />
